@@ -1,0 +1,1645 @@
+app_name,category,month,reviews
+Airbnb,lodging_travel,2024-05,122
+Airbnb,lodging_travel,2024-06,502
+Airbnb,lodging_travel,2024-07,715
+Airbnb,lodging_travel,2024-08,477
+Airbnb,lodging_travel,2024-09,610
+Airbnb,lodging_travel,2024-10,1536
+Airbnb,lodging_travel,2024-11,1277
+Airbnb,lodging_travel,2024-12,1274
+Airbnb,lodging_travel,2025-01,1435
+Airbnb,lodging_travel,2025-02,1652
+Airbnb,lodging_travel,2025-03,1391
+Airbnb,lodging_travel,2025-04,1266
+Airbnb,lodging_travel,2025-05,1627
+Airbnb,lodging_travel,2025-06,1708
+Airbnb,lodging_travel,2025-07,1827
+Airbnb,lodging_travel,2025-08,1521
+Airbnb,lodging_travel,2025-09,1297
+Airbnb,lodging_travel,2025-10,1268
+Airbnb,lodging_travel,2025-11,1170
+Airbnb,lodging_travel,2025-12,1401
+Airbnb,lodging_travel,2026-01,1411
+Airbnb,lodging_travel,2026-02,1403
+Airbnb,lodging_travel,2026-03,1697
+Airbnb,lodging_travel,2026-04,1562
+Airbnb,lodging_travel,2026-05,941
+Audible,books_audio,2024-07,1108
+Audible,books_audio,2024-08,2581
+Audible,books_audio,2024-09,2341
+Audible,books_audio,2024-10,2365
+Audible,books_audio,2024-11,2083
+Audible,books_audio,2024-12,2277
+Audible,books_audio,2025-01,2493
+Audible,books_audio,2025-02,2041
+Audible,books_audio,2025-03,2249
+Audible,books_audio,2025-04,2032
+Audible,books_audio,2025-05,2093
+Audible,books_audio,2025-06,1950
+Audible,books_audio,2025-07,2164
+Audible,books_audio,2025-08,2143
+Audible,books_audio,2025-09,1934
+Audible,books_audio,2025-10,2005
+Audible,books_audio,2025-11,1908
+Audible,books_audio,2025-12,1930
+Audible,books_audio,2026-01,2420
+Audible,books_audio,2026-02,1861
+Audible,books_audio,2026-03,1934
+Audible,books_audio,2026-04,1883
+Audible,books_audio,2026-05,976
+Audiomack,music,2024-06,153
+Audiomack,music,2024-07,156
+Audiomack,music,2024-08,143
+Audiomack,music,2024-09,10200
+Audiomack,music,2024-10,14184
+Audiomack,music,2024-11,15123
+Audiomack,music,2024-12,14905
+Audiomack,music,2025-01,15283
+Audiomack,music,2025-02,14356
+Audiomack,music,2025-03,14677
+Audiomack,music,2025-04,14798
+Audiomack,music,2025-05,15980
+Audiomack,music,2025-06,16037
+Audiomack,music,2025-07,16369
+Audiomack,music,2025-08,16348
+Audiomack,music,2025-09,15707
+Audiomack,music,2025-10,15463
+Audiomack,music,2025-11,14082
+Audiomack,music,2025-12,15556
+Audiomack,music,2026-01,14561
+Audiomack,music,2026-02,13118
+Audiomack,music,2026-03,14682
+Audiomack,music,2026-04,11815
+Audiomack,music,2026-05,5815
+Bank of America Mobile Banking,payments_banking,2024-06,189
+Bank of America Mobile Banking,payments_banking,2024-07,914
+Bank of America Mobile Banking,payments_banking,2024-08,2318
+Bank of America Mobile Banking,payments_banking,2024-09,2257
+Bank of America Mobile Banking,payments_banking,2024-10,2464
+Bank of America Mobile Banking,payments_banking,2024-11,2338
+Bank of America Mobile Banking,payments_banking,2024-12,2418
+Bank of America Mobile Banking,payments_banking,2025-01,2462
+Bank of America Mobile Banking,payments_banking,2025-02,2190
+Bank of America Mobile Banking,payments_banking,2025-03,2602
+Bank of America Mobile Banking,payments_banking,2025-04,2791
+Bank of America Mobile Banking,payments_banking,2025-05,2958
+Bank of America Mobile Banking,payments_banking,2025-06,2562
+Bank of America Mobile Banking,payments_banking,2025-07,2731
+Bank of America Mobile Banking,payments_banking,2025-08,2263
+Bank of America Mobile Banking,payments_banking,2025-09,1825
+Bank of America Mobile Banking,payments_banking,2025-10,1795
+Bank of America Mobile Banking,payments_banking,2025-11,1822
+Bank of America Mobile Banking,payments_banking,2025-12,1846
+Bank of America Mobile Banking,payments_banking,2026-01,1728
+Bank of America Mobile Banking,payments_banking,2026-02,1844
+Bank of America Mobile Banking,payments_banking,2026-03,2515
+Bank of America Mobile Banking,payments_banking,2026-04,1619
+Bank of America Mobile Banking,payments_banking,2026-05,767
+Better Me,health_fitness,2024-05,99
+Better Me,health_fitness,2024-06,171
+Better Me,health_fitness,2024-07,949
+Better Me,health_fitness,2024-08,1161
+Better Me,health_fitness,2024-09,1250
+Better Me,health_fitness,2024-10,1642
+Better Me,health_fitness,2024-11,1746
+Better Me,health_fitness,2024-12,1127
+Better Me,health_fitness,2025-01,2145
+Better Me,health_fitness,2025-02,1301
+Better Me,health_fitness,2025-03,1351
+Better Me,health_fitness,2025-04,1236
+Better Me,health_fitness,2025-05,907
+Better Me,health_fitness,2025-06,872
+Better Me,health_fitness,2025-07,749
+Better Me,health_fitness,2025-08,683
+Better Me,health_fitness,2025-09,644
+Better Me,health_fitness,2025-10,801
+Better Me,health_fitness,2025-11,648
+Better Me,health_fitness,2025-12,659
+Better Me,health_fitness,2026-01,1301
+Better Me,health_fitness,2026-02,1099
+Better Me,health_fitness,2026-03,1057
+Better Me,health_fitness,2026-04,807
+Better Me,health_fitness,2026-05,453
+Brave,browsers,2024-06,120
+Brave,browsers,2024-07,166
+Brave,browsers,2024-08,645
+Brave,browsers,2024-09,3289
+Brave,browsers,2024-10,3745
+Brave,browsers,2024-11,3952
+Brave,browsers,2024-12,4105
+Brave,browsers,2025-01,4309
+Brave,browsers,2025-02,3904
+Brave,browsers,2025-03,4342
+Brave,browsers,2025-04,4116
+Brave,browsers,2025-05,4310
+Brave,browsers,2025-06,4362
+Brave,browsers,2025-07,4442
+Brave,browsers,2025-08,4419
+Brave,browsers,2025-09,4617
+Brave,browsers,2025-10,4564
+Brave,browsers,2025-11,4334
+Brave,browsers,2025-12,4439
+Brave,browsers,2026-01,4865
+Brave,browsers,2026-02,3903
+Brave,browsers,2026-03,4277
+Brave,browsers,2026-04,4057
+Brave,browsers,2026-05,2417
+Bumble,dating,2024-06,41
+Bumble,dating,2024-07,1103
+Bumble,dating,2024-08,2155
+Bumble,dating,2024-09,1939
+Bumble,dating,2024-10,2126
+Bumble,dating,2024-11,2149
+Bumble,dating,2024-12,2064
+Bumble,dating,2025-01,2292
+Bumble,dating,2025-02,1861
+Bumble,dating,2025-03,1982
+Bumble,dating,2025-04,1940
+Bumble,dating,2025-05,1703
+Bumble,dating,2025-06,1691
+Bumble,dating,2025-07,1798
+Bumble,dating,2025-08,1863
+Bumble,dating,2025-09,1712
+Bumble,dating,2025-10,1616
+Bumble,dating,2025-11,1468
+Bumble,dating,2025-12,1393
+Bumble,dating,2026-01,1495
+Bumble,dating,2026-02,1296
+Bumble,dating,2026-03,1411
+Bumble,dating,2026-04,1230
+Bumble,dating,2026-05,810
+CapCut,photo_video,2024-09,5205
+CapCut,photo_video,2024-10,4619
+CapCut,photo_video,2024-11,4677
+CapCut,photo_video,2024-12,5183
+CapCut,photo_video,2025-01,2974
+CapCut,photo_video,2025-02,2600
+CapCut,photo_video,2025-03,4081
+CapCut,photo_video,2025-04,1835
+CapCut,photo_video,2025-05,2757
+CapCut,photo_video,2025-06,4319
+CapCut,photo_video,2025-07,2292
+CapCut,photo_video,2025-08,1510
+CapCut,photo_video,2025-09,1126
+CapCut,photo_video,2025-10,1431
+CapCut,photo_video,2025-11,1221
+CapCut,photo_video,2025-12,1475
+CapCut,photo_video,2026-01,1468
+CapCut,photo_video,2026-02,1147
+CapCut,photo_video,2026-03,905
+CapCut,photo_video,2026-04,395
+CapCut,photo_video,2026-05,516
+Capital One Mobile,payments_banking,2024-07,1055
+Capital One Mobile,payments_banking,2024-08,2809
+Capital One Mobile,payments_banking,2024-09,3234
+Capital One Mobile,payments_banking,2024-10,3499
+Capital One Mobile,payments_banking,2024-11,3002
+Capital One Mobile,payments_banking,2024-12,3164
+Capital One Mobile,payments_banking,2025-01,4050
+Capital One Mobile,payments_banking,2025-02,3043
+Capital One Mobile,payments_banking,2025-03,3242
+Capital One Mobile,payments_banking,2025-04,3799
+Capital One Mobile,payments_banking,2025-05,3308
+Capital One Mobile,payments_banking,2025-06,3508
+Capital One Mobile,payments_banking,2025-07,3361
+Capital One Mobile,payments_banking,2025-08,2919
+Capital One Mobile,payments_banking,2025-09,2763
+Capital One Mobile,payments_banking,2025-10,3096
+Capital One Mobile,payments_banking,2025-11,2709
+Capital One Mobile,payments_banking,2025-12,2794
+Capital One Mobile,payments_banking,2026-01,3108
+Capital One Mobile,payments_banking,2026-02,2839
+Capital One Mobile,payments_banking,2026-03,3450
+Capital One Mobile,payments_banking,2026-04,2628
+Capital One Mobile,payments_banking,2026-05,1331
+Cash App,payments_banking,2024-07,648
+Cash App,payments_banking,2024-08,5668
+Cash App,payments_banking,2024-09,5258
+Cash App,payments_banking,2024-10,5679
+Cash App,payments_banking,2024-11,5357
+Cash App,payments_banking,2024-12,5951
+Cash App,payments_banking,2025-01,5541
+Cash App,payments_banking,2025-02,4830
+Cash App,payments_banking,2025-03,5030
+Cash App,payments_banking,2025-04,4873
+Cash App,payments_banking,2025-05,5253
+Cash App,payments_banking,2025-06,4901
+Cash App,payments_banking,2025-07,4679
+Cash App,payments_banking,2025-08,4777
+Cash App,payments_banking,2025-09,4054
+Cash App,payments_banking,2025-10,4342
+Cash App,payments_banking,2025-11,4326
+Cash App,payments_banking,2025-12,4694
+Cash App,payments_banking,2026-01,4181
+Cash App,payments_banking,2026-02,3780
+Cash App,payments_banking,2026-03,4578
+Cash App,payments_banking,2026-04,4037
+Cash App,payments_banking,2026-05,2712
+Character.ai,ai_chat,2024-07,203
+Character.ai,ai_chat,2024-08,13382
+Character.ai,ai_chat,2024-09,8720
+Character.ai,ai_chat,2024-10,7661
+Character.ai,ai_chat,2024-11,13544
+Character.ai,ai_chat,2024-12,3694
+Character.ai,ai_chat,2025-01,11915
+Character.ai,ai_chat,2025-02,6502
+Character.ai,ai_chat,2025-03,11749
+Character.ai,ai_chat,2025-04,8417
+Character.ai,ai_chat,2025-05,7378
+Character.ai,ai_chat,2025-06,7010
+Character.ai,ai_chat,2025-07,12424
+Character.ai,ai_chat,2025-08,10670
+Character.ai,ai_chat,2025-09,7589
+Character.ai,ai_chat,2025-10,7577
+Character.ai,ai_chat,2025-11,8704
+Character.ai,ai_chat,2025-12,9454
+Character.ai,ai_chat,2026-01,8453
+Character.ai,ai_chat,2026-02,11251
+Character.ai,ai_chat,2026-03,19525
+Character.ai,ai_chat,2026-04,25679
+Character.ai,ai_chat,2026-05,13331
+Chess.com,games,2024-07,3
+Chess.com,games,2024-08,468
+Chess.com,games,2024-09,3186
+Chess.com,games,2024-10,3477
+Chess.com,games,2024-11,3234
+Chess.com,games,2024-12,3566
+Chess.com,games,2025-01,3546
+Chess.com,games,2025-02,2737
+Chess.com,games,2025-03,2811
+Chess.com,games,2025-04,2640
+Chess.com,games,2025-05,1936
+Chess.com,games,2025-06,2941
+Chess.com,games,2025-07,3264
+Chess.com,games,2025-08,3425
+Chess.com,games,2025-09,3271
+Chess.com,games,2025-10,3311
+Chess.com,games,2025-11,3030
+Chess.com,games,2025-12,3028
+Chess.com,games,2026-01,3444
+Chess.com,games,2026-02,4249
+Chess.com,games,2026-03,3516
+Chess.com,games,2026-04,2914
+Chess.com,games,2026-05,2356
+Chime,payments_banking,2024-07,1107
+Chime,payments_banking,2024-08,2650
+Chime,payments_banking,2024-09,5765
+Chime,payments_banking,2024-10,7243
+Chime,payments_banking,2024-11,4209
+Chime,payments_banking,2024-12,3628
+Chime,payments_banking,2025-01,3014
+Chime,payments_banking,2025-02,2438
+Chime,payments_banking,2025-03,5326
+Chime,payments_banking,2025-04,5996
+Chime,payments_banking,2025-05,2950
+Chime,payments_banking,2025-06,3383
+Chime,payments_banking,2025-07,2049
+Chime,payments_banking,2025-08,2050
+Chime,payments_banking,2025-09,1935
+Chime,payments_banking,2025-10,3567
+Chime,payments_banking,2025-11,2718
+Chime,payments_banking,2025-12,2240
+Chime,payments_banking,2026-01,2187
+Chime,payments_banking,2026-02,2015
+Chime,payments_banking,2026-03,2222
+Chime,payments_banking,2026-04,2450
+Chime,payments_banking,2026-05,1264
+Coinbase,investing_crypto,2024-05,81
+Coinbase,investing_crypto,2024-06,234
+Coinbase,investing_crypto,2024-07,932
+Coinbase,investing_crypto,2024-08,1351
+Coinbase,investing_crypto,2024-09,1214
+Coinbase,investing_crypto,2024-10,1623
+Coinbase,investing_crypto,2024-11,2866
+Coinbase,investing_crypto,2024-12,3331
+Coinbase,investing_crypto,2025-01,3079
+Coinbase,investing_crypto,2025-02,2093
+Coinbase,investing_crypto,2025-03,1869
+Coinbase,investing_crypto,2025-04,1800
+Coinbase,investing_crypto,2025-05,1652
+Coinbase,investing_crypto,2025-06,1265
+Coinbase,investing_crypto,2025-07,1777
+Coinbase,investing_crypto,2025-08,1507
+Coinbase,investing_crypto,2025-09,1227
+Coinbase,investing_crypto,2025-10,1834
+Coinbase,investing_crypto,2025-11,2538
+Coinbase,investing_crypto,2025-12,1878
+Coinbase,investing_crypto,2026-01,2015
+Coinbase,investing_crypto,2026-02,1793
+Coinbase,investing_crypto,2026-03,1190
+Coinbase,investing_crypto,2026-04,920
+Coinbase,investing_crypto,2026-05,103
+Crunchyroll,video_streaming,2024-07,805
+Crunchyroll,video_streaming,2024-08,3905
+Crunchyroll,video_streaming,2024-09,3258
+Crunchyroll,video_streaming,2024-10,3581
+Crunchyroll,video_streaming,2024-11,3154
+Crunchyroll,video_streaming,2024-12,3071
+Crunchyroll,video_streaming,2025-01,4398
+Crunchyroll,video_streaming,2025-02,3913
+Crunchyroll,video_streaming,2025-03,5006
+Crunchyroll,video_streaming,2025-04,5107
+Crunchyroll,video_streaming,2025-05,4273
+Crunchyroll,video_streaming,2025-06,3883
+Crunchyroll,video_streaming,2025-07,4773
+Crunchyroll,video_streaming,2025-08,4237
+Crunchyroll,video_streaming,2025-09,3650
+Crunchyroll,video_streaming,2025-10,4428
+Crunchyroll,video_streaming,2025-11,3174
+Crunchyroll,video_streaming,2025-12,3396
+Crunchyroll,video_streaming,2026-01,4895
+Crunchyroll,video_streaming,2026-02,4367
+Crunchyroll,video_streaming,2026-03,4760
+Crunchyroll,video_streaming,2026-04,3880
+Crunchyroll,video_streaming,2026-05,5332
+Dave,payments_banking,2024-06,179
+Dave,payments_banking,2024-07,1090
+Dave,payments_banking,2024-08,1253
+Dave,payments_banking,2024-09,1102
+Dave,payments_banking,2024-10,810
+Dave,payments_banking,2024-11,971
+Dave,payments_banking,2024-12,1193
+Dave,payments_banking,2025-01,886
+Dave,payments_banking,2025-02,931
+Dave,payments_banking,2025-03,872
+Dave,payments_banking,2025-04,886
+Dave,payments_banking,2025-05,826
+Dave,payments_banking,2025-06,909
+Dave,payments_banking,2025-07,964
+Dave,payments_banking,2025-08,978
+Dave,payments_banking,2025-09,852
+Dave,payments_banking,2025-10,835
+Dave,payments_banking,2025-11,1065
+Dave,payments_banking,2025-12,1306
+Dave,payments_banking,2026-01,1206
+Dave,payments_banking,2026-02,2002
+Dave,payments_banking,2026-03,1848
+Dave,payments_banking,2026-04,1467
+Dave,payments_banking,2026-05,837
+Depop,shopping,2024-03,36
+Depop,shopping,2024-04,225
+Depop,shopping,2024-05,213
+Depop,shopping,2024-06,379
+Depop,shopping,2024-07,531
+Depop,shopping,2024-08,584
+Depop,shopping,2024-09,562
+Depop,shopping,2024-10,547
+Depop,shopping,2024-11,510
+Depop,shopping,2024-12,467
+Depop,shopping,2025-01,668
+Depop,shopping,2025-02,492
+Depop,shopping,2025-03,628
+Depop,shopping,2025-04,498
+Depop,shopping,2025-05,494
+Depop,shopping,2025-06,515
+Depop,shopping,2025-07,642
+Depop,shopping,2025-08,699
+Depop,shopping,2025-09,617
+Depop,shopping,2025-10,602
+Depop,shopping,2025-11,610
+Depop,shopping,2025-12,622
+Depop,shopping,2026-01,606
+Depop,shopping,2026-02,575
+Depop,shopping,2026-03,664
+Depop,shopping,2026-04,590
+Depop,shopping,2026-05,841
+Depop,shopping,2026-06,1294
+Depop,shopping,2026-07,1950
+Depop,shopping,2026-08,1799
+Depop,shopping,2026-09,1862
+Depop,shopping,2026-10,1243
+Discord,social,2024-08,316
+Discord,social,2024-09,5184
+Discord,social,2024-10,3839
+Discord,social,2024-11,5414
+Discord,social,2024-12,4790
+Discord,social,2025-01,5056
+Discord,social,2025-02,5124
+Discord,social,2025-03,5011
+Discord,social,2025-04,4682
+Discord,social,2025-05,5189
+Discord,social,2025-06,4974
+Discord,social,2025-07,4758
+Discord,social,2025-08,2682
+Discord,social,2025-09,4797
+Discord,social,2025-10,4116
+Discord,social,2025-11,3822
+Discord,social,2025-12,4274
+Discord,social,2026-01,4530
+Discord,social,2026-02,9351
+Discord,social,2026-03,4183
+Discord,social,2026-04,3505
+Discord,social,2026-05,2467
+DoorDash,rides_delivery,2024-07,671
+DoorDash,rides_delivery,2024-08,5120
+DoorDash,rides_delivery,2024-09,4971
+DoorDash,rides_delivery,2024-10,5163
+DoorDash,rides_delivery,2024-11,5342
+DoorDash,rides_delivery,2024-12,5711
+DoorDash,rides_delivery,2025-01,5744
+DoorDash,rides_delivery,2025-02,5206
+DoorDash,rides_delivery,2025-03,5537
+DoorDash,rides_delivery,2025-04,5029
+DoorDash,rides_delivery,2025-05,5494
+DoorDash,rides_delivery,2025-06,5459
+DoorDash,rides_delivery,2025-07,5332
+DoorDash,rides_delivery,2025-08,5118
+DoorDash,rides_delivery,2025-09,4671
+DoorDash,rides_delivery,2025-10,6277
+DoorDash,rides_delivery,2025-11,4808
+DoorDash,rides_delivery,2025-12,5585
+DoorDash,rides_delivery,2026-01,5775
+DoorDash,rides_delivery,2026-02,5349
+DoorDash,rides_delivery,2026-03,5948
+DoorDash,rides_delivery,2026-04,5908
+DoorDash,rides_delivery,2026-05,3088
+Duolingo,learning,2024-08,16382
+Duolingo,learning,2024-09,27198
+Duolingo,learning,2024-10,23249
+Duolingo,learning,2024-11,23018
+Duolingo,learning,2024-12,21262
+Duolingo,learning,2025-01,23465
+Duolingo,learning,2025-02,32521
+Duolingo,learning,2025-03,18223
+Duolingo,learning,2025-04,37247
+Duolingo,learning,2025-05,22967
+Duolingo,learning,2025-06,26876
+Duolingo,learning,2025-07,36012
+Duolingo,learning,2025-08,13135
+Duolingo,learning,2025-09,28575
+Duolingo,learning,2025-10,35258
+Duolingo,learning,2025-11,34722
+Duolingo,learning,2025-12,34215
+Duolingo,learning,2026-01,32157
+Duolingo,learning,2026-02,31004
+Duolingo,learning,2026-03,31718
+Duolingo,learning,2026-04,22862
+Duolingo,learning,2026-05,14471
+Fetch,rewards,2024-07,884
+Fetch,rewards,2024-08,5292
+Fetch,rewards,2024-09,4815
+Fetch,rewards,2024-10,5107
+Fetch,rewards,2024-11,5093
+Fetch,rewards,2024-12,4893
+Fetch,rewards,2025-01,5191
+Fetch,rewards,2025-02,6506
+Fetch,rewards,2025-03,4843
+Fetch,rewards,2025-04,4156
+Fetch,rewards,2025-05,4257
+Fetch,rewards,2025-06,4770
+Fetch,rewards,2025-07,4530
+Fetch,rewards,2025-08,3014
+Fetch,rewards,2025-09,2476
+Fetch,rewards,2025-10,3427
+Fetch,rewards,2025-11,2879
+Fetch,rewards,2025-12,2755
+Fetch,rewards,2026-01,2941
+Fetch,rewards,2026-02,2514
+Fetch,rewards,2026-03,2529
+Fetch,rewards,2026-04,2255
+Fetch,rewards,2026-05,1447
+Flo,health_fitness,2024-06,192
+Flo,health_fitness,2024-07,835
+Flo,health_fitness,2024-08,1807
+Flo,health_fitness,2024-09,1626
+Flo,health_fitness,2024-10,1945
+Flo,health_fitness,2024-11,2865
+Flo,health_fitness,2024-12,2694
+Flo,health_fitness,2025-01,3073
+Flo,health_fitness,2025-02,2608
+Flo,health_fitness,2025-03,2435
+Flo,health_fitness,2025-04,2174
+Flo,health_fitness,2025-05,2021
+Flo,health_fitness,2025-06,2079
+Flo,health_fitness,2025-07,2044
+Flo,health_fitness,2025-08,1981
+Flo,health_fitness,2025-09,1463
+Flo,health_fitness,2025-10,1352
+Flo,health_fitness,2025-11,1342
+Flo,health_fitness,2025-12,1491
+Flo,health_fitness,2026-01,1816
+Flo,health_fitness,2026-02,1486
+Flo,health_fitness,2026-03,1588
+Flo,health_fitness,2026-04,1341
+Flo,health_fitness,2026-05,838
+Hinge,dating,2024-06,143
+Hinge,dating,2024-07,1138
+Hinge,dating,2024-08,1191
+Hinge,dating,2024-09,1461
+Hinge,dating,2024-10,1426
+Hinge,dating,2024-11,1367
+Hinge,dating,2024-12,1437
+Hinge,dating,2025-01,1608
+Hinge,dating,2025-02,1393
+Hinge,dating,2025-03,1788
+Hinge,dating,2025-04,1945
+Hinge,dating,2025-05,1831
+Hinge,dating,2025-06,1779
+Hinge,dating,2025-07,2040
+Hinge,dating,2025-08,1951
+Hinge,dating,2025-09,1668
+Hinge,dating,2025-10,1796
+Hinge,dating,2025-11,1837
+Hinge,dating,2025-12,1830
+Hinge,dating,2026-01,1952
+Hinge,dating,2026-02,1757
+Hinge,dating,2026-03,1864
+Hinge,dating,2026-04,1761
+Hinge,dating,2026-05,1023
+Hoopla,books_audio,2024-06,164
+Hoopla,books_audio,2024-07,1104
+Hoopla,books_audio,2024-08,1299
+Hoopla,books_audio,2024-09,2076
+Hoopla,books_audio,2024-10,2096
+Hoopla,books_audio,2024-11,2031
+Hoopla,books_audio,2024-12,2151
+Hoopla,books_audio,2025-01,2357
+Hoopla,books_audio,2025-02,2019
+Hoopla,books_audio,2025-03,2311
+Hoopla,books_audio,2025-04,1980
+Hoopla,books_audio,2025-05,2323
+Hoopla,books_audio,2025-06,2236
+Hoopla,books_audio,2025-07,2064
+Hoopla,books_audio,2025-08,2056
+Hoopla,books_audio,2025-09,1837
+Hoopla,books_audio,2025-10,2046
+Hoopla,books_audio,2025-11,1511
+Hoopla,books_audio,2025-12,1601
+Hoopla,books_audio,2026-01,1712
+Hoopla,books_audio,2026-02,1595
+Hoopla,books_audio,2026-03,1828
+Hoopla,books_audio,2026-04,1814
+Hoopla,books_audio,2026-05,873
+Indeed,jobs,2024-07,168
+Indeed,jobs,2024-08,153
+Indeed,jobs,2024-09,134
+Indeed,jobs,2024-10,8398
+Indeed,jobs,2024-11,9796
+Indeed,jobs,2024-12,9341
+Indeed,jobs,2025-01,11215
+Indeed,jobs,2025-02,9872
+Indeed,jobs,2025-03,10575
+Indeed,jobs,2025-04,9694
+Indeed,jobs,2025-05,9706
+Indeed,jobs,2025-06,9110
+Indeed,jobs,2025-07,9472
+Indeed,jobs,2025-08,9492
+Indeed,jobs,2025-09,8497
+Indeed,jobs,2025-10,8739
+Indeed,jobs,2025-11,7939
+Indeed,jobs,2025-12,7945
+Indeed,jobs,2026-01,9546
+Indeed,jobs,2026-02,8591
+Indeed,jobs,2026-03,9028
+Indeed,jobs,2026-04,8331
+Indeed,jobs,2026-05,4610
+Intuit Credit Karma,payments_banking,2024-06,97
+Intuit Credit Karma,payments_banking,2024-07,1161
+Intuit Credit Karma,payments_banking,2024-08,829
+Intuit Credit Karma,payments_banking,2024-09,693
+Intuit Credit Karma,payments_banking,2024-10,1435
+Intuit Credit Karma,payments_banking,2024-11,964
+Intuit Credit Karma,payments_banking,2024-12,890
+Intuit Credit Karma,payments_banking,2025-01,1296
+Intuit Credit Karma,payments_banking,2025-02,1009
+Intuit Credit Karma,payments_banking,2025-03,910
+Intuit Credit Karma,payments_banking,2025-04,1120
+Intuit Credit Karma,payments_banking,2025-05,1017
+Intuit Credit Karma,payments_banking,2025-06,837
+Intuit Credit Karma,payments_banking,2025-07,952
+Intuit Credit Karma,payments_banking,2025-08,791
+Intuit Credit Karma,payments_banking,2025-09,756
+Intuit Credit Karma,payments_banking,2025-10,837
+Intuit Credit Karma,payments_banking,2025-11,729
+Intuit Credit Karma,payments_banking,2025-12,723
+Intuit Credit Karma,payments_banking,2026-01,837
+Intuit Credit Karma,payments_banking,2026-02,761
+Intuit Credit Karma,payments_banking,2026-03,851
+Intuit Credit Karma,payments_banking,2026-04,634
+Intuit Credit Karma,payments_banking,2026-05,368
+Kolibri Games,games,2023-08,47
+Kolibri Games,games,2023-09,83
+Kolibri Games,games,2023-10,50
+Kolibri Games,games,2023-11,38
+Kolibri Games,games,2023-12,29
+Kolibri Games,games,2024-01,19
+Kolibri Games,games,2024-02,15
+Kolibri Games,games,2024-03,32
+Kolibri Games,games,2024-04,31
+Kolibri Games,games,2024-05,33
+Kolibri Games,games,2024-06,24
+Kolibri Games,games,2024-07,42
+Kolibri Games,games,2024-08,452
+Kolibri Games,games,2024-09,1958
+Kolibri Games,games,2024-10,2135
+Kolibri Games,games,2024-11,2397
+Kolibri Games,games,2024-12,2624
+Kolibri Games,games,2025-01,2525
+Kolibri Games,games,2025-02,1869
+Kolibri Games,games,2025-03,2508
+Kolibri Games,games,2025-04,2167
+Kolibri Games,games,2025-05,2501
+Kolibri Games,games,2025-06,2379
+Kolibri Games,games,2025-07,2156
+Kolibri Games,games,2025-08,2170
+Kolibri Games,games,2025-09,2054
+Kolibri Games,games,2025-10,2177
+Kolibri Games,games,2025-11,2310
+Kolibri Games,games,2025-12,2239
+Kolibri Games,games,2026-01,2542
+Kolibri Games,games,2026-02,1929
+Kolibri Games,games,2026-03,1798
+Kolibri Games,games,2026-04,1945
+Kolibri Games,games,2026-05,1197
+Lemon8,social,2024-07,365
+Lemon8,social,2024-08,850
+Lemon8,social,2024-09,1258
+Lemon8,social,2024-10,825
+Lemon8,social,2024-11,1094
+Lemon8,social,2024-12,1419
+Lemon8,social,2025-01,977
+Lemon8,social,2025-02,231
+Lemon8,social,2025-03,492
+Lemon8,social,2025-04,357
+Lemon8,social,2025-05,1163
+Lemon8,social,2025-06,838
+Lemon8,social,2025-07,1038
+Lemon8,social,2025-08,989
+Lemon8,social,2025-09,932
+Lemon8,social,2025-10,1349
+Lemon8,social,2025-11,1365
+Lemon8,social,2025-12,1322
+Lemon8,social,2026-01,603
+Lemon8,social,2026-02,389
+Lemon8,social,2026-03,1062
+Lemon8,social,2026-04,1081
+Lemon8,social,2026-05,483
+Libby,books_audio,2024-06,50
+Libby,books_audio,2024-07,1016
+Libby,books_audio,2024-08,2646
+Libby,books_audio,2024-09,2190
+Libby,books_audio,2024-10,2147
+Libby,books_audio,2024-11,2193
+Libby,books_audio,2024-12,1924
+Libby,books_audio,2025-01,2129
+Libby,books_audio,2025-02,1720
+Libby,books_audio,2025-03,1880
+Libby,books_audio,2025-04,1764
+Libby,books_audio,2025-05,1711
+Libby,books_audio,2025-06,1802
+Libby,books_audio,2025-07,1920
+Libby,books_audio,2025-08,1770
+Libby,books_audio,2025-09,1803
+Libby,books_audio,2025-10,1859
+Libby,books_audio,2025-11,1758
+Libby,books_audio,2025-12,1955
+Libby,books_audio,2026-01,2592
+Libby,books_audio,2026-02,1921
+Libby,books_audio,2026-03,1999
+Libby,books_audio,2026-04,1528
+Libby,books_audio,2026-05,890
+Life360,family_location,2024-07,1100
+Life360,family_location,2024-08,2718
+Life360,family_location,2024-09,4667
+Life360,family_location,2024-10,3891
+Life360,family_location,2024-11,1624
+Life360,family_location,2024-12,1426
+Life360,family_location,2025-01,1931
+Life360,family_location,2025-02,1521
+Life360,family_location,2025-03,1720
+Life360,family_location,2025-04,2749
+Life360,family_location,2025-05,1821
+Life360,family_location,2025-06,1902
+Life360,family_location,2025-07,1937
+Life360,family_location,2025-08,1907
+Life360,family_location,2025-09,1807
+Life360,family_location,2025-10,2116
+Life360,family_location,2025-11,1901
+Life360,family_location,2025-12,2309
+Life360,family_location,2026-01,2137
+Life360,family_location,2026-02,1719
+Life360,family_location,2026-03,3698
+Life360,family_location,2026-04,3350
+Life360,family_location,2026-05,1812
+LinkedIn,jobs,2024-08,190
+LinkedIn,jobs,2024-09,236
+LinkedIn,jobs,2024-10,4863
+LinkedIn,jobs,2024-11,5239
+LinkedIn,jobs,2024-12,5213
+LinkedIn,jobs,2025-01,5593
+LinkedIn,jobs,2025-02,4906
+LinkedIn,jobs,2025-03,4984
+LinkedIn,jobs,2025-04,4366
+LinkedIn,jobs,2025-05,2692
+LinkedIn,jobs,2025-06,3569
+LinkedIn,jobs,2025-07,4121
+LinkedIn,jobs,2025-08,3993
+LinkedIn,jobs,2025-09,3786
+LinkedIn,jobs,2025-10,3849
+LinkedIn,jobs,2025-11,3324
+LinkedIn,jobs,2025-12,3437
+LinkedIn,jobs,2026-01,3161
+LinkedIn,jobs,2026-02,2686
+LinkedIn,jobs,2026-03,2471
+LinkedIn,jobs,2026-04,2149
+LinkedIn,jobs,2026-05,807
+Magic Tiles 3,games,2018-12,3
+Magic Tiles 3,games,2019-01,3
+Magic Tiles 3,games,2019-02,6
+Magic Tiles 3,games,2019-03,21
+Magic Tiles 3,games,2019-04,13
+Magic Tiles 3,games,2019-05,23
+Magic Tiles 3,games,2019-06,29
+Magic Tiles 3,games,2019-07,48
+Magic Tiles 3,games,2019-08,48
+Magic Tiles 3,games,2019-09,49
+Magic Tiles 3,games,2019-10,41
+Magic Tiles 3,games,2019-11,43
+Magic Tiles 3,games,2019-12,141
+Magic Tiles 3,games,2020-01,132
+Magic Tiles 3,games,2020-02,113
+Magic Tiles 3,games,2020-03,149
+Magic Tiles 3,games,2020-04,138
+Magic Tiles 3,games,2020-05,117
+Magic Tiles 3,games,2020-06,188
+Magic Tiles 3,games,2020-07,230
+Magic Tiles 3,games,2020-08,206
+Magic Tiles 3,games,2020-09,136
+Magic Tiles 3,games,2020-10,120
+Magic Tiles 3,games,2020-11,101
+Magic Tiles 3,games,2020-12,154
+Magic Tiles 3,games,2021-01,131
+Magic Tiles 3,games,2021-02,99
+Magic Tiles 3,games,2021-03,112
+Magic Tiles 3,games,2021-04,103
+Magic Tiles 3,games,2021-05,117
+Magic Tiles 3,games,2021-06,138
+Magic Tiles 3,games,2021-07,129
+Magic Tiles 3,games,2021-08,149
+Magic Tiles 3,games,2021-09,121
+Magic Tiles 3,games,2021-10,134
+Magic Tiles 3,games,2021-11,136
+Magic Tiles 3,games,2021-12,186
+Magic Tiles 3,games,2022-01,196
+Magic Tiles 3,games,2022-02,124
+Magic Tiles 3,games,2022-03,136
+Magic Tiles 3,games,2022-04,139
+Magic Tiles 3,games,2022-05,123
+Magic Tiles 3,games,2022-06,121
+Magic Tiles 3,games,2022-07,123
+Magic Tiles 3,games,2022-08,86
+Magic Tiles 3,games,2022-09,86
+Magic Tiles 3,games,2022-10,95
+Magic Tiles 3,games,2022-11,99
+Magic Tiles 3,games,2022-12,109
+Magic Tiles 3,games,2023-01,111
+Magic Tiles 3,games,2023-02,103
+Magic Tiles 3,games,2023-03,119
+Magic Tiles 3,games,2023-04,181
+Magic Tiles 3,games,2023-05,144
+Magic Tiles 3,games,2023-06,199
+Magic Tiles 3,games,2023-07,237
+Magic Tiles 3,games,2023-08,260
+Magic Tiles 3,games,2023-09,193
+Magic Tiles 3,games,2023-10,186
+Magic Tiles 3,games,2023-11,166
+Magic Tiles 3,games,2023-12,279
+Magic Tiles 3,games,2024-01,373
+Magic Tiles 3,games,2024-02,273
+Magic Tiles 3,games,2024-03,332
+Magic Tiles 3,games,2024-04,407
+Magic Tiles 3,games,2024-05,935
+Magic Tiles 3,games,2024-06,2409
+Magic Tiles 3,games,2024-07,2506
+Magic Tiles 3,games,2024-08,2382
+Magic Tiles 3,games,2024-09,1762
+Magic Tiles 3,games,2024-10,2358
+Magic Tiles 3,games,2024-11,2314
+Magic Tiles 3,games,2024-12,2469
+Magic Tiles 3,games,2025-01,2085
+Magic Tiles 3,games,2025-02,1816
+Magic Tiles 3,games,2025-03,1934
+Magic Tiles 3,games,2025-04,1628
+Magic Tiles 3,games,2025-05,1677
+Magic Tiles 3,games,2025-06,2349
+Magic Tiles 3,games,2025-07,2599
+Magic Tiles 3,games,2025-08,2275
+Magic Tiles 3,games,2025-09,1754
+Magic Tiles 3,games,2025-10,2007
+Magic Tiles 3,games,2025-11,2005
+Magic Tiles 3,games,2025-12,2398
+Magic Tiles 3,games,2026-01,2578
+Magic Tiles 3,games,2026-02,2223
+Magic Tiles 3,games,2026-03,2468
+Magic Tiles 3,games,2026-04,2220
+Magic Tiles 3,games,2026-05,2345
+Magic Tiles 3,games,2026-06,2623
+Magic Tiles 3,games,2026-07,2226
+Magic Tiles 3,games,2026-08,2092
+Magic Tiles 3,games,2026-09,1783
+Magic Tiles 3,games,2026-10,1478
+My Fitness Pal,health_fitness,2024-06,85
+My Fitness Pal,health_fitness,2024-07,1219
+My Fitness Pal,health_fitness,2024-08,1178
+My Fitness Pal,health_fitness,2024-09,1142
+My Fitness Pal,health_fitness,2024-10,1304
+My Fitness Pal,health_fitness,2024-11,1437
+My Fitness Pal,health_fitness,2024-12,1096
+My Fitness Pal,health_fitness,2025-01,1919
+My Fitness Pal,health_fitness,2025-02,1171
+My Fitness Pal,health_fitness,2025-03,1271
+My Fitness Pal,health_fitness,2025-04,1398
+My Fitness Pal,health_fitness,2025-05,1512
+My Fitness Pal,health_fitness,2025-06,1268
+My Fitness Pal,health_fitness,2025-07,1476
+My Fitness Pal,health_fitness,2025-08,993
+My Fitness Pal,health_fitness,2025-09,1414
+My Fitness Pal,health_fitness,2025-10,1733
+My Fitness Pal,health_fitness,2025-11,946
+My Fitness Pal,health_fitness,2025-12,943
+My Fitness Pal,health_fitness,2026-01,1580
+My Fitness Pal,health_fitness,2026-02,1020
+My Fitness Pal,health_fitness,2026-03,1576
+My Fitness Pal,health_fitness,2026-04,3452
+My Fitness Pal,health_fitness,2026-05,1081
+MyRadar,weather,2023-10,49
+MyRadar,weather,2023-11,49
+MyRadar,weather,2023-12,74
+MyRadar,weather,2024-01,70
+MyRadar,weather,2024-02,51
+MyRadar,weather,2024-03,98
+MyRadar,weather,2024-04,80
+MyRadar,weather,2024-05,100
+MyRadar,weather,2024-06,309
+MyRadar,weather,2024-07,535
+MyRadar,weather,2024-08,334
+MyRadar,weather,2024-09,370
+MyRadar,weather,2024-10,282
+MyRadar,weather,2024-11,181
+MyRadar,weather,2024-12,155
+MyRadar,weather,2025-01,196
+MyRadar,weather,2025-02,157
+MyRadar,weather,2025-03,229
+MyRadar,weather,2025-04,830
+MyRadar,weather,2025-05,15587
+MyRadar,weather,2025-06,7324
+MyRadar,weather,2025-07,4513
+MyRadar,weather,2025-08,2591
+MyRadar,weather,2025-09,1702
+MyRadar,weather,2025-10,1445
+MyRadar,weather,2025-11,1049
+MyRadar,weather,2025-12,984
+MyRadar,weather,2026-01,1213
+MyRadar,weather,2026-02,729
+MyRadar,weather,2026-03,1242
+MyRadar,weather,2026-04,1278
+MyRadar,weather,2026-05,586
+Opera,browsers,2018-10,98
+Opera,browsers,2018-11,37
+Opera,browsers,2018-12,20
+Opera,browsers,2019-01,13
+Opera,browsers,2019-02,23
+Opera,browsers,2019-03,18
+Opera,browsers,2019-04,26
+Opera,browsers,2019-05,70
+Opera,browsers,2019-06,117
+Opera,browsers,2019-07,44
+Opera,browsers,2019-08,70
+Opera,browsers,2019-09,96
+Opera,browsers,2019-10,110
+Opera,browsers,2019-11,88
+Opera,browsers,2019-12,82
+Opera,browsers,2020-01,97
+Opera,browsers,2020-02,82
+Opera,browsers,2020-03,90
+Opera,browsers,2020-04,108
+Opera,browsers,2020-05,86
+Opera,browsers,2020-06,77
+Opera,browsers,2020-07,81
+Opera,browsers,2020-08,78
+Opera,browsers,2020-09,93
+Opera,browsers,2020-10,95
+Opera,browsers,2020-11,72
+Opera,browsers,2020-12,82
+Opera,browsers,2021-01,92
+Opera,browsers,2021-02,80
+Opera,browsers,2021-03,115
+Opera,browsers,2021-04,97
+Opera,browsers,2021-05,115
+Opera,browsers,2021-06,98
+Opera,browsers,2021-07,84
+Opera,browsers,2021-08,106
+Opera,browsers,2021-09,103
+Opera,browsers,2021-10,90
+Opera,browsers,2021-11,110
+Opera,browsers,2021-12,102
+Opera,browsers,2022-01,95
+Opera,browsers,2022-02,96
+Opera,browsers,2022-03,105
+Opera,browsers,2022-04,90
+Opera,browsers,2022-05,111
+Opera,browsers,2022-06,88
+Opera,browsers,2022-07,78
+Opera,browsers,2022-08,84
+Opera,browsers,2022-09,84
+Opera,browsers,2022-10,99
+Opera,browsers,2022-11,76
+Opera,browsers,2022-12,91
+Opera,browsers,2023-01,84
+Opera,browsers,2023-02,115
+Opera,browsers,2023-03,83
+Opera,browsers,2023-04,109
+Opera,browsers,2023-05,92
+Opera,browsers,2023-06,95
+Opera,browsers,2023-07,121
+Opera,browsers,2023-08,119
+Opera,browsers,2023-09,103
+Opera,browsers,2023-10,116
+Opera,browsers,2023-11,145
+Opera,browsers,2023-12,124
+Opera,browsers,2024-01,149
+Opera,browsers,2024-02,141
+Opera,browsers,2024-03,198
+Opera,browsers,2024-04,210
+Opera,browsers,2024-05,163
+Opera,browsers,2024-06,141
+Opera,browsers,2024-07,1103
+Opera,browsers,2024-08,2145
+Opera,browsers,2024-09,1931
+Opera,browsers,2024-10,2282
+Opera,browsers,2024-11,2930
+Opera,browsers,2024-12,2496
+Opera,browsers,2025-01,2235
+Opera,browsers,2025-02,1919
+Opera,browsers,2025-03,1886
+Opera,browsers,2025-04,1810
+Opera,browsers,2025-05,2045
+Opera,browsers,2025-06,1825
+Opera,browsers,2025-07,1922
+Opera,browsers,2025-08,1934
+Opera,browsers,2025-09,1867
+Opera,browsers,2025-10,1829
+Opera,browsers,2025-11,1701
+Opera,browsers,2025-12,1862
+Opera,browsers,2026-01,1766
+Opera,browsers,2026-02,1756
+Opera,browsers,2026-03,2573
+Opera,browsers,2026-04,1943
+Opera,browsers,2026-05,1861
+Opera,browsers,2026-06,2117
+Opera,browsers,2026-07,2028
+Opera,browsers,2026-08,1797
+Opera,browsers,2026-09,2278
+Opera,browsers,2026-10,1424
+PayPal,payments_banking,2024-05,141
+PayPal,payments_banking,2024-06,168
+PayPal,payments_banking,2024-07,614
+PayPal,payments_banking,2024-08,3964
+PayPal,payments_banking,2024-09,3914
+PayPal,payments_banking,2024-10,4220
+PayPal,payments_banking,2024-11,4317
+PayPal,payments_banking,2024-12,4368
+PayPal,payments_banking,2025-01,3988
+PayPal,payments_banking,2025-02,3356
+PayPal,payments_banking,2025-03,3807
+PayPal,payments_banking,2025-04,3763
+PayPal,payments_banking,2025-05,4047
+PayPal,payments_banking,2025-06,4486
+PayPal,payments_banking,2025-07,6080
+PayPal,payments_banking,2025-08,4994
+PayPal,payments_banking,2025-09,3764
+PayPal,payments_banking,2025-10,3927
+PayPal,payments_banking,2025-11,3660
+PayPal,payments_banking,2025-12,3896
+PayPal,payments_banking,2026-01,3137
+PayPal,payments_banking,2026-02,3114
+PayPal,payments_banking,2026-03,3839
+PayPal,payments_banking,2026-04,3381
+PayPal,payments_banking,2026-05,1673
+PhotoRoom,photo_video,2024-05,108
+PhotoRoom,photo_video,2024-06,157
+PhotoRoom,photo_video,2024-07,737
+PhotoRoom,photo_video,2024-08,2184
+PhotoRoom,photo_video,2024-09,2526
+PhotoRoom,photo_video,2024-10,2521
+PhotoRoom,photo_video,2024-11,2058
+PhotoRoom,photo_video,2024-12,2215
+PhotoRoom,photo_video,2025-01,2268
+PhotoRoom,photo_video,2025-02,1998
+PhotoRoom,photo_video,2025-03,2024
+PhotoRoom,photo_video,2025-04,1740
+PhotoRoom,photo_video,2025-05,1467
+PhotoRoom,photo_video,2025-06,1479
+PhotoRoom,photo_video,2025-07,1604
+PhotoRoom,photo_video,2025-08,1965
+PhotoRoom,photo_video,2025-09,2471
+PhotoRoom,photo_video,2025-10,2260
+PhotoRoom,photo_video,2025-11,1480
+PhotoRoom,photo_video,2025-12,1154
+PhotoRoom,photo_video,2026-01,1044
+PhotoRoom,photo_video,2026-02,1141
+PhotoRoom,photo_video,2026-03,1296
+PhotoRoom,photo_video,2026-04,915
+PhotoRoom,photo_video,2026-05,496
+Picsart,photo_video,2024-07,554
+Picsart,photo_video,2024-08,6289
+Picsart,photo_video,2024-09,5160
+Picsart,photo_video,2024-10,6535
+Picsart,photo_video,2024-11,5847
+Picsart,photo_video,2024-12,3990
+Picsart,photo_video,2025-01,3067
+Picsart,photo_video,2025-02,2685
+Picsart,photo_video,2025-03,2722
+Picsart,photo_video,2025-04,7622
+Picsart,photo_video,2025-05,5238
+Picsart,photo_video,2025-06,4506
+Picsart,photo_video,2025-07,6011
+Picsart,photo_video,2025-08,3012
+Picsart,photo_video,2025-09,2490
+Picsart,photo_video,2025-10,2368
+Picsart,photo_video,2025-11,2076
+Picsart,photo_video,2025-12,2239
+Picsart,photo_video,2026-01,2208
+Picsart,photo_video,2026-02,2119
+Picsart,photo_video,2026-03,2276
+Picsart,photo_video,2026-04,1872
+Picsart,photo_video,2026-05,990
+Pinterest,social,2024-08,5601
+Pinterest,social,2024-09,4741
+Pinterest,social,2024-10,5783
+Pinterest,social,2024-11,5428
+Pinterest,social,2024-12,5859
+Pinterest,social,2025-01,6732
+Pinterest,social,2025-02,5474
+Pinterest,social,2025-03,6040
+Pinterest,social,2025-04,6610
+Pinterest,social,2025-05,6145
+Pinterest,social,2025-06,4963
+Pinterest,social,2025-07,4986
+Pinterest,social,2025-08,5373
+Pinterest,social,2025-09,5390
+Pinterest,social,2025-10,6215
+Pinterest,social,2025-11,6312
+Pinterest,social,2025-12,6497
+Pinterest,social,2026-01,6656
+Pinterest,social,2026-02,6615
+Pinterest,social,2026-03,7958
+Pinterest,social,2026-04,6677
+Pinterest,social,2026-05,4287
+Reddit,social,2016-04,16
+Reddit,social,2016-05,37
+Reddit,social,2016-06,131
+Reddit,social,2016-07,127
+Reddit,social,2016-08,131
+Reddit,social,2016-09,172
+Reddit,social,2016-10,97
+Reddit,social,2016-11,181
+Reddit,social,2016-12,229
+Reddit,social,2017-01,202
+Reddit,social,2017-02,277
+Reddit,social,2017-03,242
+Reddit,social,2017-04,271
+Reddit,social,2017-05,335
+Reddit,social,2017-06,228
+Reddit,social,2017-07,176
+Reddit,social,2017-08,291
+Reddit,social,2017-09,286
+Reddit,social,2017-10,119
+Reddit,social,2017-11,87
+Reddit,social,2017-12,96
+Reddit,social,2018-01,86
+Reddit,social,2018-02,53
+Reddit,social,2018-03,84
+Reddit,social,2018-04,78
+Reddit,social,2018-05,77
+Reddit,social,2018-06,89
+Reddit,social,2018-07,68
+Reddit,social,2018-08,66
+Reddit,social,2018-09,61
+Reddit,social,2018-10,64
+Reddit,social,2018-11,52
+Reddit,social,2018-12,74
+Reddit,social,2019-01,85
+Reddit,social,2019-02,66
+Reddit,social,2019-03,68
+Reddit,social,2019-04,88
+Reddit,social,2019-05,147
+Reddit,social,2019-06,137
+Reddit,social,2019-07,102
+Reddit,social,2019-08,132
+Reddit,social,2019-09,100
+Reddit,social,2019-10,131
+Reddit,social,2019-11,135
+Reddit,social,2019-12,152
+Reddit,social,2020-01,150
+Reddit,social,2020-02,151
+Reddit,social,2020-03,163
+Reddit,social,2020-04,135
+Reddit,social,2020-05,287
+Reddit,social,2020-06,335
+Reddit,social,2020-07,251
+Reddit,social,2020-08,162
+Reddit,social,2020-09,151
+Reddit,social,2020-10,159
+Reddit,social,2020-11,160
+Reddit,social,2020-12,150
+Reddit,social,2021-01,186
+Reddit,social,2021-02,144
+Reddit,social,2021-03,137
+Reddit,social,2021-04,149
+Reddit,social,2021-05,150
+Reddit,social,2021-06,196
+Reddit,social,2021-07,376
+Reddit,social,2021-08,171
+Reddit,social,2021-09,157
+Reddit,social,2021-10,146
+Reddit,social,2021-11,155
+Reddit,social,2021-12,136
+Reddit,social,2022-01,164
+Reddit,social,2022-02,176
+Reddit,social,2022-03,202
+Reddit,social,2022-04,188
+Reddit,social,2022-05,121
+Reddit,social,2022-06,141
+Reddit,social,2022-07,140
+Reddit,social,2022-08,135
+Reddit,social,2022-09,101
+Reddit,social,2022-10,105
+Reddit,social,2022-11,105
+Reddit,social,2022-12,128
+Reddit,social,2023-01,101
+Reddit,social,2023-02,90
+Reddit,social,2023-03,106
+Reddit,social,2023-04,115
+Reddit,social,2023-05,125
+Reddit,social,2023-06,1544
+Reddit,social,2023-07,655
+Reddit,social,2023-08,212
+Reddit,social,2023-09,211
+Reddit,social,2023-10,205
+Reddit,social,2023-11,157
+Reddit,social,2023-12,210
+Reddit,social,2024-01,252
+Reddit,social,2024-02,270
+Reddit,social,2024-03,310
+Reddit,social,2024-04,280
+Reddit,social,2024-05,324
+Reddit,social,2024-06,267
+Reddit,social,2024-07,336
+Reddit,social,2024-08,637
+Reddit,social,2024-09,3700
+Reddit,social,2024-10,5169
+Reddit,social,2024-11,5247
+Reddit,social,2024-12,4751
+Reddit,social,2025-01,4852
+Reddit,social,2025-02,4010
+Reddit,social,2025-03,5192
+Reddit,social,2025-04,5545
+Reddit,social,2025-05,4488
+Reddit,social,2025-06,4324
+Reddit,social,2025-07,4224
+Reddit,social,2025-08,4195
+Reddit,social,2025-09,4252
+Reddit,social,2025-10,4055
+Reddit,social,2025-11,3608
+Reddit,social,2025-12,4161
+Reddit,social,2026-01,4197
+Reddit,social,2026-02,4555
+Reddit,social,2026-03,4096
+Reddit,social,2026-04,4128
+Reddit,social,2026-05,2294
+Remini,photo_video,2024-06,174
+Remini,photo_video,2024-07,279
+Remini,photo_video,2024-08,8840
+Remini,photo_video,2024-09,8003
+Remini,photo_video,2024-10,10489
+Remini,photo_video,2024-11,12208
+Remini,photo_video,2024-12,11337
+Remini,photo_video,2025-01,12795
+Remini,photo_video,2025-02,10327
+Remini,photo_video,2025-03,9302
+Remini,photo_video,2025-04,9428
+Remini,photo_video,2025-05,8277
+Remini,photo_video,2025-06,7738
+Remini,photo_video,2025-07,6491
+Remini,photo_video,2025-08,6211
+Remini,photo_video,2025-09,5664
+Remini,photo_video,2025-10,5238
+Remini,photo_video,2025-11,3621
+Remini,photo_video,2025-12,3685
+Remini,photo_video,2026-01,3623
+Remini,photo_video,2026-02,2887
+Remini,photo_video,2026-03,3139
+Remini,photo_video,2026-04,2304
+Remini,photo_video,2026-05,1095
+Robinhood,investing_crypto,2024-05,31
+Robinhood,investing_crypto,2024-06,265
+Robinhood,investing_crypto,2024-07,1027
+Robinhood,investing_crypto,2024-08,1003
+Robinhood,investing_crypto,2024-09,895
+Robinhood,investing_crypto,2024-10,1315
+Robinhood,investing_crypto,2024-11,2002
+Robinhood,investing_crypto,2024-12,2192
+Robinhood,investing_crypto,2025-01,2109
+Robinhood,investing_crypto,2025-02,1254
+Robinhood,investing_crypto,2025-03,1667
+Robinhood,investing_crypto,2025-04,1383
+Robinhood,investing_crypto,2025-05,1331
+Robinhood,investing_crypto,2025-06,925
+Robinhood,investing_crypto,2025-07,838
+Robinhood,investing_crypto,2025-08,840
+Robinhood,investing_crypto,2025-09,830
+Robinhood,investing_crypto,2025-10,951
+Robinhood,investing_crypto,2025-11,604
+Robinhood,investing_crypto,2025-12,724
+Robinhood,investing_crypto,2026-01,697
+Robinhood,investing_crypto,2026-02,628
+Robinhood,investing_crypto,2026-03,720
+Robinhood,investing_crypto,2026-04,750
+Robinhood,investing_crypto,2026-05,1613
+Roku,video_streaming,2024-07,1097
+Roku,video_streaming,2024-08,1978
+Roku,video_streaming,2024-09,1943
+Roku,video_streaming,2024-10,2035
+Roku,video_streaming,2024-11,2098
+Roku,video_streaming,2024-12,2296
+Roku,video_streaming,2025-01,2342
+Roku,video_streaming,2025-02,1903
+Roku,video_streaming,2025-03,2091
+Roku,video_streaming,2025-04,1900
+Roku,video_streaming,2025-05,2323
+Roku,video_streaming,2025-06,2234
+Roku,video_streaming,2025-07,2041
+Roku,video_streaming,2025-08,2115
+Roku,video_streaming,2025-09,1819
+Roku,video_streaming,2025-10,1876
+Roku,video_streaming,2025-11,1950
+Roku,video_streaming,2025-12,2083
+Roku,video_streaming,2026-01,1991
+Roku,video_streaming,2026-02,1855
+Roku,video_streaming,2026-03,1894
+Roku,video_streaming,2026-04,1373
+Roku,video_streaming,2026-05,1041
+Shopify,shopping,2024-07,517
+Shopify,shopping,2024-08,2340
+Shopify,shopping,2024-09,2121
+Shopify,shopping,2024-10,2520
+Shopify,shopping,2024-11,2673
+Shopify,shopping,2024-12,2996
+Shopify,shopping,2025-01,2664
+Shopify,shopping,2025-02,2322
+Shopify,shopping,2025-03,2405
+Shopify,shopping,2025-04,2495
+Shopify,shopping,2025-05,2586
+Shopify,shopping,2025-06,2400
+Shopify,shopping,2025-07,2454
+Shopify,shopping,2025-08,2461
+Shopify,shopping,2025-09,2389
+Shopify,shopping,2025-10,2309
+Shopify,shopping,2025-11,2149
+Shopify,shopping,2025-12,2393
+Shopify,shopping,2026-01,2129
+Shopify,shopping,2026-02,1869
+Shopify,shopping,2026-03,2024
+Shopify,shopping,2026-04,1615
+Shopify,shopping,2026-05,745
+SoundCloud,music,2024-07,1028
+SoundCloud,music,2024-08,2149
+SoundCloud,music,2024-09,1862
+SoundCloud,music,2024-10,2442
+SoundCloud,music,2024-11,2379
+SoundCloud,music,2024-12,2480
+SoundCloud,music,2025-01,2418
+SoundCloud,music,2025-02,2041
+SoundCloud,music,2025-03,2146
+SoundCloud,music,2025-04,2046
+SoundCloud,music,2025-05,2197
+SoundCloud,music,2025-06,1904
+SoundCloud,music,2025-07,1824
+SoundCloud,music,2025-08,1754
+SoundCloud,music,2025-09,1647
+SoundCloud,music,2025-10,1711
+SoundCloud,music,2025-11,1639
+SoundCloud,music,2025-12,1956
+SoundCloud,music,2026-01,1721
+SoundCloud,music,2026-02,1596
+SoundCloud,music,2026-03,1643
+SoundCloud,music,2026-04,1456
+SoundCloud,music,2026-05,829
+Spark Driver,rides_delivery,2024-06,5
+Spark Driver,rides_delivery,2024-07,562
+Spark Driver,rides_delivery,2024-08,724
+Spark Driver,rides_delivery,2024-09,755
+Spark Driver,rides_delivery,2024-10,896
+Spark Driver,rides_delivery,2024-11,1034
+Spark Driver,rides_delivery,2024-12,1262
+Spark Driver,rides_delivery,2025-01,1255
+Spark Driver,rides_delivery,2025-02,928
+Spark Driver,rides_delivery,2025-03,1018
+Spark Driver,rides_delivery,2025-04,1050
+Spark Driver,rides_delivery,2025-05,1101
+Spark Driver,rides_delivery,2025-06,952
+Spark Driver,rides_delivery,2025-07,738
+Spark Driver,rides_delivery,2025-08,413
+Spark Driver,rides_delivery,2025-09,672
+Spark Driver,rides_delivery,2025-10,731
+Spark Driver,rides_delivery,2025-11,599
+Spark Driver,rides_delivery,2025-12,562
+Spark Driver,rides_delivery,2026-01,583
+Spark Driver,rides_delivery,2026-02,627
+Spark Driver,rides_delivery,2026-03,537
+Spark Driver,rides_delivery,2026-04,2295
+Spark Driver,rides_delivery,2026-05,529
+Spotify,music,2024-08,25480
+Spotify,music,2024-09,22841
+Spotify,music,2024-10,17178
+Spotify,music,2024-11,22389
+Spotify,music,2024-12,23186
+Spotify,music,2025-01,19173
+Spotify,music,2025-02,22243
+Spotify,music,2025-03,27942
+Spotify,music,2025-04,3760
+Sweatcoin,rewards,2024-04,82
+Sweatcoin,rewards,2024-05,111
+Sweatcoin,rewards,2024-06,107
+Sweatcoin,rewards,2024-07,87
+Sweatcoin,rewards,2024-08,471
+Sweatcoin,rewards,2024-09,1466
+Sweatcoin,rewards,2024-10,762
+Sweatcoin,rewards,2024-11,539
+Sweatcoin,rewards,2024-12,594
+Sweatcoin,rewards,2025-01,934
+Sweatcoin,rewards,2025-02,522
+Sweatcoin,rewards,2025-03,692
+Sweatcoin,rewards,2025-04,907
+Sweatcoin,rewards,2025-05,976
+Sweatcoin,rewards,2025-06,1196
+Sweatcoin,rewards,2025-07,1193
+Sweatcoin,rewards,2025-08,2236
+Sweatcoin,rewards,2025-09,599
+Sweatcoin,rewards,2025-10,1713
+Sweatcoin,rewards,2025-11,670
+Sweatcoin,rewards,2025-12,361
+Sweatcoin,rewards,2026-01,380
+Sweatcoin,rewards,2026-02,9497
+Sweatcoin,rewards,2026-03,7602
+Sweatcoin,rewards,2026-04,5321
+Sweatcoin,rewards,2026-05,3327
+Temu,shopping,2024-07,135
+Temu,shopping,2024-08,26732
+Temu,shopping,2024-09,24490
+Temu,shopping,2024-10,22143
+Temu,shopping,2024-11,19788
+Temu,shopping,2024-12,17736
+Temu,shopping,2025-01,23057
+Temu,shopping,2025-02,29711
+Temu,shopping,2025-03,32548
+Temu,shopping,2025-04,3634
+Ticketmaster,tickets,2024-06,378
+Ticketmaster,tickets,2024-07,938
+Ticketmaster,tickets,2024-08,1049
+Ticketmaster,tickets,2024-09,1379
+Ticketmaster,tickets,2024-10,1757
+Ticketmaster,tickets,2024-11,1710
+Ticketmaster,tickets,2024-12,1622
+Ticketmaster,tickets,2025-01,1216
+Ticketmaster,tickets,2025-02,1345
+Ticketmaster,tickets,2025-03,1219
+Ticketmaster,tickets,2025-04,1398
+Ticketmaster,tickets,2025-05,2970
+Ticketmaster,tickets,2025-06,2493
+Ticketmaster,tickets,2025-07,2346
+Ticketmaster,tickets,2025-08,1439
+Ticketmaster,tickets,2025-09,976
+Ticketmaster,tickets,2025-10,941
+Ticketmaster,tickets,2025-11,791
+Ticketmaster,tickets,2025-12,554
+Ticketmaster,tickets,2026-01,691
+Ticketmaster,tickets,2026-02,720
+Ticketmaster,tickets,2026-03,795
+Ticketmaster,tickets,2026-04,671
+Ticketmaster,tickets,2026-05,341
+Tinder,dating,2024-07,740
+Tinder,dating,2024-08,4582
+Tinder,dating,2024-09,4215
+Tinder,dating,2024-10,4465
+Tinder,dating,2024-11,4210
+Tinder,dating,2024-12,4131
+Tinder,dating,2025-01,4094
+Tinder,dating,2025-02,3405
+Tinder,dating,2025-03,3538
+Tinder,dating,2025-04,3356
+Tinder,dating,2025-05,3414
+Tinder,dating,2025-06,3460
+Tinder,dating,2025-07,3600
+Tinder,dating,2025-08,3611
+Tinder,dating,2025-09,3403
+Tinder,dating,2025-10,3240
+Tinder,dating,2025-11,2979
+Tinder,dating,2025-12,2833
+Tinder,dating,2026-01,2835
+Tinder,dating,2026-02,4227
+Tinder,dating,2026-03,2636
+Tinder,dating,2026-04,2201
+Tinder,dating,2026-05,1251
+Tubi,video_streaming,2024-04,107
+Tubi,video_streaming,2024-05,114
+Tubi,video_streaming,2024-06,123
+Tubi,video_streaming,2024-07,668
+Tubi,video_streaming,2024-08,3321
+Tubi,video_streaming,2024-09,3095
+Tubi,video_streaming,2024-10,3463
+Tubi,video_streaming,2024-11,3157
+Tubi,video_streaming,2024-12,2608
+Tubi,video_streaming,2025-01,3028
+Tubi,video_streaming,2025-02,2827
+Tubi,video_streaming,2025-03,2159
+Tubi,video_streaming,2025-04,1938
+Tubi,video_streaming,2025-05,1888
+Tubi,video_streaming,2025-06,2027
+Tubi,video_streaming,2025-07,2041
+Tubi,video_streaming,2025-08,1975
+Tubi,video_streaming,2025-09,2000
+Tubi,video_streaming,2025-10,1913
+Tubi,video_streaming,2025-11,2044
+Tubi,video_streaming,2025-12,2006
+Tubi,video_streaming,2026-01,2048
+Tubi,video_streaming,2026-02,1859
+Tubi,video_streaming,2026-03,2060
+Tubi,video_streaming,2026-04,1505
+Tubi,video_streaming,2026-05,862
+UPS,shipping,2024-04,138
+UPS,shipping,2024-05,265
+UPS,shipping,2024-06,272
+UPS,shipping,2024-07,291
+UPS,shipping,2024-08,236
+UPS,shipping,2024-09,226
+UPS,shipping,2024-10,228
+UPS,shipping,2024-11,179
+UPS,shipping,2024-12,248
+UPS,shipping,2025-01,220
+UPS,shipping,2025-02,182
+UPS,shipping,2025-03,1465
+UPS,shipping,2025-04,1285
+UPS,shipping,2025-05,1329
+UPS,shipping,2025-06,1188
+UPS,shipping,2025-07,1368
+UPS,shipping,2025-08,1255
+UPS,shipping,2025-09,1089
+UPS,shipping,2025-10,1023
+UPS,shipping,2025-11,1142
+UPS,shipping,2025-12,1967
+UPS,shipping,2026-01,1293
+UPS,shipping,2026-02,1177
+UPS,shipping,2026-03,1281
+UPS,shipping,2026-04,1173
+UPS,shipping,2026-05,989
+Uber,rides_delivery,2024-07,12434
+Uber,rides_delivery,2024-08,18226
+Uber,rides_delivery,2024-09,18145
+Uber,rides_delivery,2024-10,32899
+Uber,rides_delivery,2024-11,32119
+Uber,rides_delivery,2024-12,32259
+Uber,rides_delivery,2025-01,33278
+Uber,rides_delivery,2025-02,28929
+Uber,rides_delivery,2025-03,33486
+Uber,rides_delivery,2025-04,36229
+Uber,rides_delivery,2025-05,35696
+Uber,rides_delivery,2025-06,32339
+Uber,rides_delivery,2025-07,25846
+Uber,rides_delivery,2025-08,31046
+Uber,rides_delivery,2025-09,25153
+Uber,rides_delivery,2025-10,28491
+Uber,rides_delivery,2025-11,35844
+Uber,rides_delivery,2025-12,32639
+Uber,rides_delivery,2026-01,30255
+Uber,rides_delivery,2026-02,28559
+Uber,rides_delivery,2026-03,34714
+Uber,rides_delivery,2026-04,33299
+Uber,rides_delivery,2026-05,27258
+Uber,rides_delivery,2026-06,16602
+Uber,rides_delivery,2026-07,15762
+Uber,rides_delivery,2026-08,17760
+Uber,rides_delivery,2026-09,16725
+Uber,rides_delivery,2026-10,10913
+Venmo,payments_banking,2024-07,997
+Venmo,payments_banking,2024-08,3540
+Venmo,payments_banking,2024-09,3248
+Venmo,payments_banking,2024-10,3582
+Venmo,payments_banking,2024-11,3464
+Venmo,payments_banking,2024-12,3779
+Venmo,payments_banking,2025-01,3231
+Venmo,payments_banking,2025-02,2714
+Venmo,payments_banking,2025-03,2859
+Venmo,payments_banking,2025-04,2837
+Venmo,payments_banking,2025-05,3084
+Venmo,payments_banking,2025-06,3542
+Venmo,payments_banking,2025-07,3817
+Venmo,payments_banking,2025-08,4152
+Venmo,payments_banking,2025-09,4025
+Venmo,payments_banking,2025-10,4638
+Venmo,payments_banking,2025-11,3681
+Venmo,payments_banking,2025-12,4694
+Venmo,payments_banking,2026-01,3759
+Venmo,payments_banking,2026-02,3619
+Venmo,payments_banking,2026-03,4129
+Venmo,payments_banking,2026-04,3602
+Venmo,payments_banking,2026-05,1881
+Wattpad,books_audio,2024-02,30
+Wattpad,books_audio,2024-03,74
+Wattpad,books_audio,2024-04,103
+Wattpad,books_audio,2024-05,98
+Wattpad,books_audio,2024-06,67
+Wattpad,books_audio,2024-07,683
+Wattpad,books_audio,2024-08,1004
+Wattpad,books_audio,2024-09,1123
+Wattpad,books_audio,2024-10,1251
+Wattpad,books_audio,2024-11,1331
+Wattpad,books_audio,2024-12,1324
+Wattpad,books_audio,2025-01,1337
+Wattpad,books_audio,2025-02,1376
+Wattpad,books_audio,2025-03,1316
+Wattpad,books_audio,2025-04,5214
+Wattpad,books_audio,2025-05,2705
+Wattpad,books_audio,2025-06,2229
+Wattpad,books_audio,2025-07,2236
+Wattpad,books_audio,2025-08,1611
+Wattpad,books_audio,2025-09,1196
+Wattpad,books_audio,2025-10,1103
+Wattpad,books_audio,2025-11,957
+Wattpad,books_audio,2025-12,1024
+Wattpad,books_audio,2026-01,965
+Wattpad,books_audio,2026-02,1032
+Wattpad,books_audio,2026-03,969
+Wattpad,books_audio,2026-04,1026
+Wattpad,books_audio,2026-05,625
+Weather Channel,weather,2024-06,20
+Weather Channel,weather,2024-07,875
+Weather Channel,weather,2024-08,2589
+Weather Channel,weather,2024-09,1743
+Weather Channel,weather,2024-10,1797
+Weather Channel,weather,2024-11,1584
+Weather Channel,weather,2024-12,1231
+Weather Channel,weather,2025-01,1666
+Weather Channel,weather,2025-02,5878
+Weather Channel,weather,2025-03,4600
+Weather Channel,weather,2025-04,1938
+Weather Channel,weather,2025-05,2710
+Weather Channel,weather,2025-06,2115
+Weather Channel,weather,2025-07,1988
+Weather Channel,weather,2025-08,1288
+Weather Channel,weather,2025-09,1297
+Weather Channel,weather,2025-10,1338
+Weather Channel,weather,2025-11,1533
+Weather Channel,weather,2025-12,1411
+Weather Channel,weather,2026-01,1539
+Weather Channel,weather,2026-02,1746
+Weather Channel,weather,2026-03,3287
+Weather Channel,weather,2026-04,3009
+Weather Channel,weather,2026-05,1590
+Zoom,video_calls,2024-07,126
+Zoom,video_calls,2024-08,154
+Zoom,video_calls,2024-09,394
+Zoom,video_calls,2024-10,3073
+Zoom,video_calls,2024-11,3566
+Zoom,video_calls,2024-12,2292
+Zoom,video_calls,2025-01,3404
+Zoom,video_calls,2025-02,2415
+Zoom,video_calls,2025-03,2451
+Zoom,video_calls,2025-04,2293
+Zoom,video_calls,2025-05,2365
+Zoom,video_calls,2025-06,2003
+Zoom,video_calls,2025-07,2263
+Zoom,video_calls,2025-08,2413
+Zoom,video_calls,2025-09,2696
+Zoom,video_calls,2025-10,2065
+Zoom,video_calls,2025-11,1705
+Zoom,video_calls,2025-12,1811
+Zoom,video_calls,2026-01,2429
+Zoom,video_calls,2026-02,1525
+Zoom,video_calls,2026-03,1603
+Zoom,video_calls,2026-04,1218
+Zoom,video_calls,2026-05,669
+eBay,shopping,2024-07,767
+eBay,shopping,2024-08,4472
+eBay,shopping,2024-09,3834
+eBay,shopping,2024-10,4034
+eBay,shopping,2024-11,4128
+eBay,shopping,2024-12,3871
+eBay,shopping,2025-01,4172
+eBay,shopping,2025-02,9120
+eBay,shopping,2025-03,5865
+eBay,shopping,2025-04,7144
+eBay,shopping,2025-05,4434
+eBay,shopping,2025-06,3278
+eBay,shopping,2025-07,4389
+eBay,shopping,2025-08,3117
+eBay,shopping,2025-09,2057
+eBay,shopping,2025-10,2347
+eBay,shopping,2025-11,2176
+eBay,shopping,2025-12,2087
+eBay,shopping,2026-01,2536
+eBay,shopping,2026-02,2329
+eBay,shopping,2026-03,2583
+eBay,shopping,2026-04,2492
+eBay,shopping,2026-05,1197
