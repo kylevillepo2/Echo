@@ -1,0 +1,61 @@
+id,name,category,installs,rate_per_day,rate_delta,source,ios_ratings,android_ratings
+discord,"Discord",social,587546000,180540,0.09,play,3576331,7089187
+reddit,"Reddit",social,128351000,43110,-0.002,play,3511323,4880202
+pinterest,"Pinterest",social,1061699000,262284,0.049,play,5805149,11682891
+lemon8,"Lemon8",social,12912000,6905,-0.044,play,282358,303605
+character-ai,"Character.ai",social,65312000,67862,0.049,play,560287,2452254
+spotify,"Spotify",entertainment,1200650000,313320,0.052,play,42741753,36532990
+soundcloud,"SoundCloud",entertainment,110405000,23145,0.02,play,2056431,7666309
+audible,"Audible",entertainment,131932000,26608,0.067,play,5615473,1767552
+audiomack,"Audiomack",entertainment,135196000,37490,0.103,play,2022681,9190984
+crunchyroll,"Crunchyroll",entertainment,128505000,26647,0.055,play,1519538,4437189
+tubi,"Tubi",entertainment,115941000,31413,-0.068,play,1281758,2624152
+roku,"Roku",entertainment,110000000,24835,0.036,play,6324635,4750219
+duolingo,"Duolingo",learning,671859000,156309,-0.018,play,5530055,51265721
+libby,"Libby",learning,11276000,3606,0.009,play,4581904,756681
+hoopla-digital,"Hoopla Digital",learning,6028000,1409,0.006,play,1393114,219572
+hoopla,"Hoopla",learning,6027000,1414,0.039,play,1393114,219572
+wattpad,"Wattpad",learning,118768000,21483,0.155,play,706070,5020240
+temu,"Temu",shopping,1087318000,995100,0.083,play,2241545,13056046
+ebay,"eBay",shopping,123181000,28671,0.166,play,4969500,5025912
+shopify,"Shopify",shopping,10799000,3415,0.107,play,42981,74178
+depop,"Depop",shopping,11050000,3302,0.005,play,1056870,154295
+fetch,"Fetch",shopping,10721000,4161,0.076,play,7795063,1711647
+sweatcoin,"Sweatcoin",shopping,137091000,54482,0.022,play,401322,3156383
+cash-app,"Cash App",finance,136000000,31234,0.08,play,8771856,4506898
+venmo,"Venmo",finance,62757000,11495,-0.055,play,15473456,925489
+paypal,"PayPal",finance,550000000,212781,0.111,play,6299171,3741568
+chime,"Chime",finance,12539000,3002,0.069,play,1629962,1134200
+capital-one,"Capital One Mobile",finance,57136000,11291,0.169,play,11228348,1717128
+bofa,"Bank of America Mobile Banking",finance,55000000,21677,0.036,play,5025270,1202201
+coinbase,"Coinbase",finance,56722000,12453,0.066,play,1797988,929704
+dave,"Dave",finance,11404000,3554,0.012,play,926929,637244
+credit-karma,"Intuit Credit Karma",finance,61284000,13494,-0.015,play,7769280,3245784
+robinhood,"Robinhood",finance,10877000,2893,0.037,play,4892125,600058
+my-fitness-pal,"My Fitness Pal",health,117361000,22365,0.067,play,2383181,2919837
+better-me,"Better Me",health,11620000,3946,0.058,play,714067,661334
+flo,"Flo",health,136289000,40115,0.035,play,2004734,5157572
+life360,"Life360",health,130690000,24990,0.058,play,3136694,2480975
+remini,"Remini",photo,577622000,285539,0.051,play,357440,5897887
+picsart,"Picsart",photo,1334292000,321020,0.055,play,1196343,12116380
+photoroom,"PhotoRoom",photo,121791000,73652,0.139,play,230865,4028973
+capcut,"CapCut",photo,1157956000,631049,0.118,play,1124843,13111585
+tinder,"Tinder",dating,550000000,124791,0.054,play,1756651,9264564
+hinge,"Hinge",dating,13838000,4473,0.091,play,1133661,492951
+bumble,"Bumble",dating,112868000,31186,0.087,play,1768550,1632021
+uber,"Uber",travel,1061623000,209951,0.01,play,17120084,20222472
+doordash,"DoorDash",travel,54552000,14602,-0.034,play,23467803,6273897
+airbnb,"Airbnb",travel,130978000,27640,0.052,play,703110,1978783
+ups,"UPS",travel,12755000,2425,0.058,play,1226737,330219
+spark-driver,"Spark Driver",travel,5500000,2532,-0.069,play,313059,184742
+ticketmaster,"Ticketmaster",travel,54804000,11961,0.057,play,4234291,204968
+magic-tiles-3,"Magic Tiles 3",games,622455000,214501,0.11,play,845112,3559709
+chess-com,"Chess.com",games,120740000,23901,0.033,play,853404,3450305
+kolibri-games,"Kolibri Games",games,106058000,34052,0.017,play,865909,5866908
+linkedin,"LinkedIn",work,1392555000,258752,-0.015,play,645146,3522960
+indeed,"Indeed",work,125140000,20877,0.052,play,4097778,14157776
+zoom,"Zoom",work,1214438000,256527,0.006,play,3256958,4594482
+weather-channel,"Weather Channel",utility,139626000,23370,-0.071,play,6096297,3610740
+myradar,"MyRadar",utility,12784000,2574,0.011,play,1086025,341395
+opera,"Opera",utility,559562000,106624,0.067,play,263475,5541746
+brave,"Brave",utility,139818000,41765,0.312,play,667943,3934145

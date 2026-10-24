@@ -1,0 +1,5655 @@
+{
+  "discord": {
+    "id": "discord",
+    "name": "Discord",
+    "term": "Discord",
+    "play": [
+      {
+        "appId": "com.discord",
+        "title": "Discord - Talk, Play, Hang Out",
+        "developer": "Discord Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.jakubtomana.discordbotdesinger",
+        "title": "Bot Designer For Discord",
+        "developer": "NilPointer Software Jakub T",
+        "score": 1
+      },
+      {
+        "appId": "com.orbixion.joinDiscordServerLinks",
+        "title": "Server Links for Discord",
+        "developer": "Orbixion",
+        "score": 1
+      },
+      {
+        "appId": "com.reddit.frontpage",
+        "title": "Reddit",
+        "developer": "reddit Inc.",
+        "score": 0
+      },
+      {
+        "appId": "tv.twitch.android.app",
+        "title": "Twitch: Live Streaming",
+        "developer": "Twitch Interactive, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.valvesoftware.android.steam.friendsui",
+        "title": "Steam Chat",
+        "developer": "Valve Corporation",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 985746746,
+        "bundleId": "com.hammerandchisel.discord",
+        "title": "Discord - Talk, Play, Hang Out",
+        "developer": "Discord Inc.",
+        "ratings": 3576331,
+        "released": "2015-05-21T07:08:40Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 835599320,
+        "bundleId": "com.zhiliaoapp.musically",
+        "title": "TikTok - Videos, Shop & LIVE",
+        "developer": "TIKTOK PTE. LTD.",
+        "ratings": 18405258,
+        "released": "2014-04-02T22:44:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 447188370,
+        "bundleId": "com.toyopagroup.picaboo",
+        "title": "Snapchat",
+        "developer": "Snap, Inc.",
+        "ratings": 6019998,
+        "released": "2011-07-13T23:51:40Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 1064216828,
+        "bundleId": "com.reddit.Reddit",
+        "title": "Reddit",
+        "developer": "REDDIT, INC.",
+        "ratings": 3511323,
+        "released": "2016-04-07T08:12:27Z",
+        "score": 0
+      },
+      {
+        "trackId": 333903271,
+        "bundleId": "com.atebits.Tweetie2",
+        "title": "X",
+        "developer": "X Corp.",
+        "ratings": 11134427,
+        "released": "2009-10-09T19:50:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "reddit": {
+    "id": "reddit",
+    "name": "Reddit",
+    "term": "Reddit",
+    "play": [
+      {
+        "appId": "com.reddit.frontpage",
+        "title": "Reddit",
+        "developer": "reddit Inc.",
+        "score": 2.15
+      },
+      {
+        "appId": "com.danielgriffiths.reddit",
+        "title": "Artemis for Reddit",
+        "developer": "Zero Divide",
+        "score": 1
+      },
+      {
+        "appId": "ml.docilealligator.infinityforreddit.plus",
+        "title": "Infinity for Reddit+",
+        "developer": "Docile Alligator",
+        "score": 1
+      },
+      {
+        "appId": "reddit.news",
+        "title": "Relay for reddit",
+        "developer": "DBrady",
+        "score": 1
+      },
+      {
+        "appId": "com.twitter.android",
+        "title": "X",
+        "developer": "X Corp.",
+        "score": 0
+      },
+      {
+        "appId": "com.pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1064216828,
+        "bundleId": "com.reddit.Reddit",
+        "title": "Reddit",
+        "developer": "REDDIT, INC.",
+        "ratings": 3511323,
+        "released": "2016-04-07T08:12:27Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 845422455,
+        "bundleId": "com.rickharrison.narwhal",
+        "title": "Narwhal for Reddit",
+        "developer": "robot swingset, llc.",
+        "ratings": 17188,
+        "released": "2014-04-10T16:53:06Z",
+        "score": 1
+      },
+      {
+        "trackId": 979274575,
+        "bundleId": "com.christianselig.Apollo",
+        "title": "Apollo for Reddit",
+        "developer": "Christian Selig",
+        "ratings": 180266,
+        "released": "2017-10-23T08:48:02Z",
+        "score": 1
+      },
+      {
+        "trackId": 333903271,
+        "bundleId": "com.atebits.Tweetie2",
+        "title": "X",
+        "developer": "X Corp.",
+        "ratings": 11134427,
+        "released": "2009-10-09T19:50:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "pinterest": {
+    "id": "pinterest",
+    "name": "Pinterest",
+    "term": "Pinterest",
+    "play": [
+      {
+        "appId": "com.pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest",
+        "score": 2.15
+      },
+      {
+        "appId": "pin.pinterestvideodownloader.pinvideodownloader.aidroidjadl",
+        "title": "Pinterest Video Downloader",
+        "developer": "AidroidjaTech",
+        "score": 1.15
+      },
+      {
+        "appId": "com.pinterest.shuffles",
+        "title": "Shuffles by Pinterest",
+        "developer": "Pinterest",
+        "score": 1
+      },
+      {
+        "appId": "uk.co.amillionmonkeys.pinx",
+        "title": "Pinx: Viewer for Pinterest",
+        "developer": "amillionmonkeys",
+        "score": 1
+      },
+      {
+        "appId": "pin.pinterest.video.downloader.forpinterest.pinsaver",
+        "title": "Video Downloader for Pinterest",
+        "developer": "ETM Video Downloader",
+        "score": 1
+      },
+      {
+        "appId": "videodownloader.pinterest.video.download.pinterestdownloader",
+        "title": "Video Downloader For Pinterest",
+        "developer": "Hatici Video Downloader Apps",
+        "score": 1
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 429047995,
+        "bundleId": "pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest, Inc.",
+        "ratings": 5805149,
+        "released": "2011-04-28T15:51:13Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 587366035,
+        "bundleId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "ratings": 1196343,
+        "released": "2013-01-02T22:14:40Z",
+        "score": 0
+      },
+      {
+        "trackId": 544007664,
+        "bundleId": "com.google.ios.youtube",
+        "title": "YouTube",
+        "developer": "Google LLC",
+        "ratings": 49563628,
+        "released": "2012-09-11T07:23:19Z",
+        "score": 0
+      },
+      {
+        "trackId": 6448311069,
+        "bundleId": "com.openai.chat",
+        "title": "ChatGPT",
+        "developer": "OpenAI OpCo, LLC",
+        "ratings": 11596753,
+        "released": "2023-05-18T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 284815942,
+        "bundleId": "com.google.GoogleMobile",
+        "title": "Google",
+        "developer": "Google LLC",
+        "ratings": 5266780,
+        "released": "2019-02-12T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "lemon8": {
+    "id": "lemon8",
+    "name": "Lemon8",
+    "term": "Lemon8",
+    "play": [
+      {
+        "appId": "com.bd.nproject",
+        "title": "Lemon8 - Lifestyle Community",
+        "developer": "TikTok Pte. Ltd.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bereal.ft",
+        "title": "BeReal. Your friends for real.",
+        "developer": "VOODOO",
+        "score": 0
+      },
+      {
+        "appId": "com.instagram.barcelona",
+        "title": "Threads",
+        "developer": "Instagram",
+        "score": 0
+      },
+      {
+        "appId": "com.pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest",
+        "score": 0
+      },
+      {
+        "appId": "com.reddit.frontpage",
+        "title": "Reddit",
+        "developer": "reddit Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.instagram.android",
+        "title": "Instagram",
+        "developer": "Instagram",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1498607143,
+        "bundleId": "com.bd.nproject",
+        "title": "Lemon8 - Lifestyle Community",
+        "developer": "TIKTOK PTE. LTD.",
+        "ratings": 282358,
+        "released": "2020-03-12T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 447188370,
+        "bundleId": "com.toyopagroup.picaboo",
+        "title": "Snapchat",
+        "developer": "Snap, Inc.",
+        "ratings": 6019998,
+        "released": "2011-07-13T23:51:40Z",
+        "score": 0
+      },
+      {
+        "trackId": 429047995,
+        "bundleId": "pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest, Inc.",
+        "ratings": 5805149,
+        "released": "2011-04-28T15:51:13Z",
+        "score": 0
+      },
+      {
+        "trackId": 1021171706,
+        "bundleId": "com.komapps.FlatTalk",
+        "title": "LEMON - very fun chat app",
+        "developer": "Huyuko Ishihara",
+        "ratings": 2374,
+        "released": "2015-08-07T20:05:40Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "character-ai": {
+    "id": "character-ai",
+    "name": "Character.ai",
+    "term": "Character AI",
+    "play": [
+      {
+        "appId": "ai.character.app",
+        "title": "Character AI: Chat, Talk, Text",
+        "developer": "Character.AI",
+        "score": 1.15
+      },
+      {
+        "appId": "com.fantasia.ai",
+        "title": "Fantasia: Character AI Chat",
+        "developer": "MINDZEN AI",
+        "score": 1
+      },
+      {
+        "appId": "ai.nextday.mobile.android.pixelchat",
+        "title": "PixelChat - AI Character Chat",
+        "developer": "NextDayAI",
+        "score": 1
+      },
+      {
+        "appId": "com.Beauchamp.Messenger.external",
+        "title": "Chai: Chat AI Platform",
+        "developer": "Chai Research",
+        "score": 0.5
+      },
+      {
+        "appId": "ai.socialapps.speakmaster",
+        "title": "PolyBuzz: Chat with AI Friends",
+        "developer": "CLOUD WHALE INTERACTIVE TECHNOLOGY LLC.",
+        "score": 0.5
+      },
+      {
+        "appId": "com.flow.mobile",
+        "title": "Emochi: Chat With Character",
+        "developer": "FlowGPT",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1671705818,
+        "bundleId": "ai.character.app",
+        "title": "Character AI: Chat, Talk, Text",
+        "developer": "Character Technologies, Inc.",
+        "ratings": 560287,
+        "released": "2023-05-23T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6754301136,
+        "bundleId": "com.mspwl.swerve-chat",
+        "title": "Swerve: AI Chat & Stories",
+        "developer": "MSPW Labs, Inc.",
+        "ratings": 34901,
+        "released": "2025-11-16T08:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1619030760,
+        "bundleId": "com.scatterlab.messenger",
+        "title": "zeta: AI Chat, Story, Play",
+        "developer": "Scatter Lab, Inc.",
+        "ratings": 40140,
+        "released": "2022-05-30T07:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 6467520779,
+        "bundleId": "fm.sakura.app",
+        "title": "Sakura - Chat with AI Bots",
+        "developer": "Sakura AI, LLC",
+        "ratings": 22219,
+        "released": "2023-09-27T07:00:00Z",
+        "score": 0.5
+      }
+    ],
+    "errors": []
+  },
+  "spotify": {
+    "id": "spotify",
+    "name": "Spotify",
+    "term": "Spotify",
+    "play": [
+      {
+        "appId": "com.spotify.music",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify AB",
+        "score": 1.15
+      },
+      {
+        "appId": "com.spotify.tv.android",
+        "title": "Spotify: Music & Podcasts",
+        "developer": "Spotify AB",
+        "score": 1.15
+      },
+      {
+        "appId": "fm.anchor.android",
+        "title": "Spotify for Creators",
+        "developer": "Spotify AB",
+        "score": 1.15
+      },
+      {
+        "appId": "com.spotify.kids",
+        "title": "Spotify Kids",
+        "developer": "Spotify AB",
+        "score": 1.15
+      },
+      {
+        "appId": "com.spotify.s4a",
+        "title": "Spotify for Artists",
+        "developer": "Spotify AB",
+        "score": 1.15
+      },
+      {
+        "appId": "com.apple.android.music",
+        "title": "Apple Music",
+        "developer": "Apple",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 324684580,
+        "bundleId": "com.spotify.client",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify",
+        "ratings": 42741753,
+        "released": "2011-07-14T11:22:37Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 544007664,
+        "bundleId": "com.google.ios.youtube",
+        "title": "YouTube",
+        "developer": "Google LLC",
+        "ratings": 49563628,
+        "released": "2012-09-11T07:23:19Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 1017492454,
+        "bundleId": "com.google.ios.youtubemusic",
+        "title": "YouTube Music",
+        "developer": "Google LLC",
+        "ratings": 1515978,
+        "released": "2015-11-12T15:56:43Z",
+        "score": 0
+      },
+      {
+        "trackId": 336353151,
+        "bundleId": "com.soundcloud.TouchApp",
+        "title": "SoundCloud: Discover New Music",
+        "developer": "SoundCloud Global Limited & Co KG",
+        "ratings": 2056431,
+        "released": "2009-11-03T18:42:46Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "soundcloud": {
+    "id": "soundcloud",
+    "name": "SoundCloud",
+    "term": "SoundCloud",
+    "play": [
+      {
+        "appId": "com.soundcloud.android",
+        "title": "SoundCloud: Discover Music",
+        "developer": "SoundCloud",
+        "score": 1.15
+      },
+      {
+        "appId": "com.repostexchange.app",
+        "title": "RepostExchange - Promote Music",
+        "developer": "Audiu Ltd.",
+        "score": 0
+      },
+      {
+        "appId": "com.spotify.music",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify AB",
+        "score": 0
+      },
+      {
+        "appId": "com.audiomack",
+        "title": "Audiomack: Music Downloader",
+        "developer": "Audiomack Music Apps",
+        "score": 0
+      },
+      {
+        "appId": "com.apple.android.music",
+        "title": "Apple Music",
+        "developer": "Apple",
+        "score": 0
+      },
+      {
+        "appId": "com.aspiro.tidal",
+        "title": "TIDAL Music: HiFi sound",
+        "developer": "TIDAL",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 336353151,
+        "bundleId": "com.soundcloud.TouchApp",
+        "title": "SoundCloud: Discover New Music",
+        "developer": "SoundCloud Global Limited & Co KG",
+        "ratings": 2056431,
+        "released": "2009-11-03T18:42:46Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 324684580,
+        "bundleId": "com.spotify.client",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify",
+        "ratings": 42741753,
+        "released": "2011-07-14T11:22:37Z",
+        "score": 0
+      },
+      {
+        "trackId": 921765888,
+        "bundleId": "com.audiomack.iphone",
+        "title": "Audiomack - Play Music Offline",
+        "developer": "Audiomack, Inc.",
+        "ratings": 2022681,
+        "released": "2014-11-19T20:23:53Z",
+        "score": 0
+      },
+      {
+        "trackId": 6743060074,
+        "bundleId": "org.dieter.brandt.music",
+        "title": "Sound Player : Cloud Music",
+        "developer": "Katerina Pavlou",
+        "ratings": 475,
+        "released": "2025-03-20T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "audible": {
+    "id": "audible",
+    "name": "Audible",
+    "term": "Audible",
+    "play": [
+      {
+        "appId": "com.audible.application",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.amazon.kindle",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "Amazon Mobile LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.blinkslabs.blinkist.android",
+        "title": "Blinkist: Book Summaries Daily",
+        "developer": "Blinks Labs GmbH",
+        "score": 0
+      },
+      {
+        "appId": "com.audiobooks.androidapp",
+        "title": "Audiobooks.com: Books & More",
+        "developer": "Storytel Audiobooks USA LLC",
+        "score": 0
+      },
+      {
+        "appId": "ak.alizandro.smartaudiobookplayer",
+        "title": "Smart AudioBook Player",
+        "developer": "Books Software",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.books",
+        "title": "Google Play Books & Audiobooks",
+        "developer": "Google LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 379693831,
+        "bundleId": "com.audible.iphone",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "ratings": 5615473,
+        "released": "2010-07-10T19:50:29Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 364709193,
+        "bundleId": "com.apple.iBooks",
+        "title": "Apple Books",
+        "developer": "Apple Inc.",
+        "ratings": 114152,
+        "released": "2010-04-02T04:36:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 302584613,
+        "bundleId": "com.amazon.Lassen",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 5877984,
+        "released": "2009-03-04T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1076402606,
+        "bundleId": "com.overdrive.dewey",
+        "title": "Libby, the library app",
+        "developer": "OverDrive, Inc.",
+        "ratings": 4581904,
+        "released": "2016-12-12T21:35:54Z",
+        "score": 0
+      },
+      {
+        "trackId": 6773306508,
+        "bundleId": "com.freeaudiobooks.ios",
+        "title": "FreeAudiobooks: Listen Now",
+        "developer": "Quillbound Studios Ltd",
+        "ratings": 440,
+        "released": "2026-06-04T07:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "audiomack": {
+    "id": "audiomack",
+    "name": "Audiomack",
+    "term": "Audiomack",
+    "play": [
+      {
+        "appId": "com.audiomack",
+        "title": "Audiomack: Music Downloader",
+        "developer": "Audiomack Music Apps",
+        "score": 1.15
+      },
+      {
+        "appId": "com.audiomack.creators",
+        "title": "Audiomack Creator-Upload Music",
+        "developer": "Audiomack Music Apps",
+        "score": 1.15
+      },
+      {
+        "appId": "com.apple.android.music",
+        "title": "Apple Music",
+        "developer": "Apple",
+        "score": 0
+      },
+      {
+        "appId": "com.spotify.music",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify AB",
+        "score": 0
+      },
+      {
+        "appId": "com.soundcloud.android",
+        "title": "SoundCloud: Discover Music",
+        "developer": "SoundCloud",
+        "score": 0
+      },
+      {
+        "appId": "com.amazon.mp3",
+        "title": "Amazon Music: Songs & Podcasts",
+        "developer": "Amazon Mobile LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 921765888,
+        "bundleId": "com.audiomack.iphone",
+        "title": "Audiomack - Play Music Offline",
+        "developer": "Audiomack, Inc.",
+        "ratings": 2022681,
+        "released": "2014-11-19T20:23:53Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1544519256,
+        "bundleId": "com.audiomack.iphone.creators",
+        "title": "Audiomack Creator-Upload Music",
+        "developer": "Audiomack, Inc.",
+        "ratings": 4155,
+        "released": "2021-09-30T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 324684580,
+        "bundleId": "com.spotify.client",
+        "title": "Spotify: Music and Podcasts",
+        "developer": "Spotify",
+        "ratings": 42741753,
+        "released": "2011-07-14T11:22:37Z",
+        "score": 0
+      },
+      {
+        "trackId": 544007664,
+        "bundleId": "com.google.ios.youtube",
+        "title": "YouTube",
+        "developer": "Google LLC",
+        "ratings": 49563628,
+        "released": "2012-09-11T07:23:19Z",
+        "score": 0
+      },
+      {
+        "trackId": 447188370,
+        "bundleId": "com.toyopagroup.picaboo",
+        "title": "Snapchat",
+        "developer": "Snap, Inc.",
+        "ratings": 6019998,
+        "released": "2011-07-13T23:51:40Z",
+        "score": 0
+      },
+      {
+        "trackId": 835599320,
+        "bundleId": "com.zhiliaoapp.musically",
+        "title": "TikTok - Videos, Shop & LIVE",
+        "developer": "TIKTOK PTE. LTD.",
+        "ratings": 18405258,
+        "released": "2014-04-02T22:44:45Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "crunchyroll": {
+    "id": "crunchyroll",
+    "name": "Crunchyroll",
+    "term": "Crunchyroll",
+    "play": [
+      {
+        "appId": "com.crunchyroll.crunchyroid",
+        "title": "Crunchyroll: Anime Streaming",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.crunchyroll.manga",
+        "title": "Crunchyroll Manga",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.crunchyroll.gv.ragingloop.game",
+        "title": "Crunchyroll: Raging Loop",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.crunchyroll.gv.inbento",
+        "title": "Crunchyroll: inbento",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.crunchyroll.gv.thunderray.game",
+        "title": "Crunchyroll: Thunder Ray",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.crunchyroll.gv.battlesuitaces.game",
+        "title": "Crunchyroll: Battle Suit Aces",
+        "developer": "Crunchyroll, LLC",
+        "score": 1.15
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 329913454,
+        "bundleId": "com.crunchyroll.iphone",
+        "title": "Crunchyroll",
+        "developer": "Crunchyroll, LLC",
+        "ratings": 1519538,
+        "released": "2009-12-21T00:15:50Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 6737921252,
+        "bundleId": "com.crunchyroll.manga.ios",
+        "title": "Crunchyroll Manga",
+        "developer": "Crunchyroll, LLC",
+        "ratings": 2151,
+        "released": "2025-10-07T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 363590051,
+        "bundleId": "com.netflix.Netflix",
+        "title": "Netflix",
+        "developer": "Netflix, Inc.",
+        "ratings": 7496851,
+        "released": "2010-04-01T20:41:34Z",
+        "score": 0
+      },
+      {
+        "trackId": 1604162737,
+        "bundleId": "com.poopapps.animex",
+        "title": "AnimeX: Anime on Titan",
+        "developer": "Younes El beriane",
+        "ratings": 39264,
+        "released": "2022-01-20T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 6754819301,
+        "bundleId": "Ani.Kaii.me.animeKaii",
+        "title": "AnimeKai : Watch Anime",
+        "developer": "Iliass Rabib",
+        "ratings": 16497,
+        "released": "2025-11-04T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "tubi": {
+    "id": "tubi",
+    "name": "Tubi",
+    "term": "Tubi",
+    "play": [
+      {
+        "appId": "com.tubitv",
+        "title": "Tubi: Free Movies & Live TV",
+        "developer": "Tubi TV",
+        "score": 1.15
+      },
+      {
+        "appId": "tv.pluto.android",
+        "title": "Pluto TV: Watch Free Movies/TV",
+        "developer": "Pluto, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.peacocktv.peacockandroid",
+        "title": "Peacock TV: Stream TV & Movies",
+        "developer": "Peacock TV LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.plexapp.android",
+        "title": "Plex: Find Movies & TV Shows",
+        "developer": "Plex, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.wbd.stream",
+        "title": "HBO Max: Stream TV & Movies",
+        "developer": "WarnerMedia Global Digital Services, LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.youtube.unplugged",
+        "title": "YouTube TV: Live TV & more",
+        "developer": "Google LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 886445756,
+        "bundleId": "com.adrise.tubitv",
+        "title": "Tubi: Movies & Live TV",
+        "developer": "Tubi, Inc",
+        "ratings": 1281758,
+        "released": "2014-07-24T00:00:41Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 751712884,
+        "bundleId": "tv.pluto.ios",
+        "title": "Pluto TV: Watch Free Movies/TV",
+        "developer": "Pluto, Inc.",
+        "ratings": 1626577,
+        "released": "2014-02-24T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 545519333,
+        "bundleId": "com.amazon.aiv.AIVApp",
+        "title": "Amazon Prime Video",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 3078289,
+        "released": "2012-07-31T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 363590051,
+        "bundleId": "com.netflix.Netflix",
+        "title": "Netflix",
+        "developer": "Netflix, Inc.",
+        "ratings": 7496851,
+        "released": "2010-04-01T20:41:34Z",
+        "score": 0
+      },
+      {
+        "trackId": 1508186374,
+        "bundleId": "com.peacocktv.peacock",
+        "title": "Peacock TV: Stream TV & Movies",
+        "developer": "Peacock TV LLC",
+        "ratings": 3736386,
+        "released": "2020-07-14T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 383457673,
+        "bundleId": "com.plexapp.plex",
+        "title": "Plex: Find Movies and TV Shows",
+        "developer": "Plex Inc.",
+        "ratings": 137889,
+        "released": "2010-08-31T07:32:10Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "roku": {
+    "id": "roku",
+    "name": "Roku",
+    "term": "The Roku App",
+    "play": [
+      {
+        "appId": "com.roku.remote",
+        "title": "Roku Remote (Official)",
+        "developer": "Roku, Inc. & its affiliates",
+        "score": 1.15
+      },
+      {
+        "appId": "com.roku.web.trc",
+        "title": "The Roku Channel",
+        "developer": "Roku, Inc. & its affiliates",
+        "score": 1.15
+      },
+      {
+        "appId": "com.roku.rokuhome",
+        "title": "Roku Smart Home",
+        "developer": "Roku, Inc. & its affiliates",
+        "score": 1.15
+      },
+      {
+        "appId": "com.castify",
+        "title": "Cast to TV+ Chromecast Roku TV",
+        "developer": "Castify",
+        "score": 1
+      },
+      {
+        "appId": "mca.app.tvremote",
+        "title": "Rokie - TV Remote Control",
+        "developer": "New World Apps",
+        "score": 0
+      },
+      {
+        "appId": "com.afl.universalremote",
+        "title": "Universal TV Remote Control",
+        "developer": "Mind Cube Apps",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 482066631,
+        "bundleId": "com.roku.ios.roku",
+        "title": "Roku Remote (Official)",
+        "developer": "ROKU INC",
+        "ratings": 6324635,
+        "released": "2011-12-15T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1626186138,
+        "bundleId": "com.roku.ios.rokuhome",
+        "title": "Roku Smart Home",
+        "developer": "ROKU INC",
+        "ratings": 167029,
+        "released": "2022-10-11T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1016562846,
+        "bundleId": "com.kraftwerk9.rokie",
+        "title": "Rokie - Remote for Roku Player",
+        "developer": "KRAFTWERK 9 LTD",
+        "ratings": 713286,
+        "released": "2015-07-24T21:11:06Z",
+        "score": 1
+      },
+      {
+        "trackId": 6778656605,
+        "bundleId": "org.termuxstudio.rokuremote",
+        "title": "Free Roku Remote .",
+        "developer": "TERMUX LIMITED LIABILITY COMPANY",
+        "ratings": 878,
+        "released": "2026-06-16T07:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 6450893675,
+        "bundleId": "com.rokuremote.app",
+        "title": "Remote Control for Roku TV ◦",
+        "developer": "AV PRO GROUP LTD",
+        "ratings": 8699,
+        "released": "2023-07-05T07:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 1539090879,
+        "bundleId": "evolly.app.rokuremote",
+        "title": "TV Remote - Universal Control",
+        "developer": "EVOLLY.APP PTE. LTD",
+        "ratings": 626700,
+        "released": "2020-11-19T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "duolingo": {
+    "id": "duolingo",
+    "name": "Duolingo",
+    "term": "Duolingo",
+    "play": [
+      {
+        "appId": "com.duolingo",
+        "title": "Duolingo: Learn Languages",
+        "developer": "Duolingo",
+        "score": 1.15
+      },
+      {
+        "appId": "com.duolingo.detmobile",
+        "title": "Duolingo English Test (DET)",
+        "developer": "Duolingo",
+        "score": 1.15
+      },
+      {
+        "appId": "com.duolingo.literacy",
+        "title": "Learn to Read - Duolingo ABC",
+        "developer": "Duolingo",
+        "score": 1
+      },
+      {
+        "appId": "com.languagedrops.drops.international",
+        "title": "Drops: Language Learning Games",
+        "developer": "Drops Languages",
+        "score": 0
+      },
+      {
+        "appId": "com.dinolingo.dinolearning",
+        "title": "Dinolingo Kids Learn Languages",
+        "developer": "Dino Lingo",
+        "score": 0
+      },
+      {
+        "appId": "com.babbel.mobile.android.en",
+        "title": "Babbel - Learn Languages",
+        "developer": "Babbel",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 570060128,
+        "bundleId": "com.duolingo.DuolingoMobile",
+        "title": "Duolingo: Learn Languages",
+        "developer": "Duolingo, Inc",
+        "ratings": 5530055,
+        "released": "2012-11-13T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1440502568,
+        "bundleId": "com.duolingo.literacy",
+        "title": "Learn to Read - Duolingo ABC",
+        "developer": "Duolingo, Inc",
+        "ratings": 3836,
+        "released": "2020-03-23T07:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 829587759,
+        "bundleId": "com.babbel.babbelMulti",
+        "title": "Babbel - Language Learning",
+        "developer": "Babbel GmbH",
+        "ratings": 756839,
+        "released": "2014-06-11T20:26:44Z",
+        "score": 0
+      },
+      {
+        "trackId": 1460579936,
+        "bundleId": "com.moymer.falou",
+        "title": "Falou - Fast language learning",
+        "developer": "Moymer Negocios e Servicos em Tecnologia LTDA.",
+        "ratings": 98295,
+        "released": "2019-06-12T18:03:23Z",
+        "score": 0
+      },
+      {
+        "trackId": 1286609883,
+        "bundleId": "com.selabs.speak-v2",
+        "title": "Speak: Language Learning",
+        "developer": "Speakeasy Labs, Inc",
+        "ratings": 65009,
+        "released": "2017-12-22T02:12:54Z",
+        "score": 0
+      },
+      {
+        "trackId": 6479639235,
+        "bundleId": "com.unacademy.languagelearningapp",
+        "title": "Airlearn - Language Learning",
+        "developer": "UNACADEMY INC",
+        "ratings": 47365,
+        "released": "2024-04-04T07:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "libby": {
+    "id": "libby",
+    "name": "Libby",
+    "term": "Libby OverDrive",
+    "play": [
+      {
+        "appId": "com.overdrive.mobile.android.libby",
+        "title": "Libby: Read Library Books",
+        "developer": "OverDrive, Inc.",
+        "score": 0.5
+      },
+      {
+        "appId": "com.overdrive.mobile.android.automotive.libby",
+        "title": "Libby for Android Automotive",
+        "developer": "OverDrive, Inc.",
+        "score": 0.5
+      },
+      {
+        "appId": "com.hoopladigital.android",
+        "title": "Hoopla: Your Library, Anywhere",
+        "developer": "Midwest Tape LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.kobobooks.android",
+        "title": "Kobo | eBooks & Audiobooks",
+        "developer": "Kobo Books",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.books",
+        "title": "Google Play Books & Audiobooks",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.audible.application",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1076402606,
+        "bundleId": "com.overdrive.dewey",
+        "title": "Libby, the library app",
+        "developer": "OverDrive, Inc.",
+        "ratings": 4581904,
+        "released": "2016-12-12T21:35:54Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 580643740,
+        "bundleId": "com.hoopladigital.hoopla",
+        "title": "Hoopla: Your Library Anywhere",
+        "developer": "Midwest Tape LLC",
+        "ratings": 1393114,
+        "released": "2013-01-24T15:25:31Z",
+        "score": 0
+      },
+      {
+        "trackId": 379693831,
+        "bundleId": "com.audible.iphone",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "ratings": 5615473,
+        "released": "2010-07-10T19:50:29Z",
+        "score": 0
+      },
+      {
+        "trackId": 302584613,
+        "bundleId": "com.amazon.Lassen",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 5877984,
+        "released": "2009-03-04T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 364709193,
+        "bundleId": "com.apple.iBooks",
+        "title": "Apple Books",
+        "developer": "Apple Inc.",
+        "ratings": 114152,
+        "released": "2010-04-02T04:36:45Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "hoopla-digital": {
+    "id": "hoopla-digital",
+    "name": "Hoopla Digital",
+    "term": "Hoopla Digital",
+    "play": [
+      {
+        "appId": "com.hoopladigital.android",
+        "title": "Hoopla: Your Library, Anywhere",
+        "developer": "Midwest Tape LLC",
+        "score": 0.5
+      },
+      {
+        "appId": "com.overdrive.mobile.android.libby",
+        "title": "Libby: Read Library Books",
+        "developer": "OverDrive, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.kanopy",
+        "title": "Kanopy",
+        "developer": "Kanopy, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.audible.application",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.books",
+        "title": "Google Play Books & Audiobooks",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.tubitv",
+        "title": "Tubi: Free Movies & Live TV",
+        "developer": "Tubi TV",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 580643740,
+        "bundleId": "com.hoopladigital.hoopla",
+        "title": "Hoopla: Your Library Anywhere",
+        "developer": "Midwest Tape LLC",
+        "ratings": 1393114,
+        "released": "2013-01-24T15:25:31Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1076402606,
+        "bundleId": "com.overdrive.dewey",
+        "title": "Libby, the library app",
+        "developer": "OverDrive, Inc.",
+        "ratings": 4581904,
+        "released": "2016-12-12T21:35:54Z",
+        "score": 0
+      },
+      {
+        "trackId": 302584613,
+        "bundleId": "com.amazon.Lassen",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 5877984,
+        "released": "2009-03-04T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 364709193,
+        "bundleId": "com.apple.iBooks",
+        "title": "Apple Books",
+        "developer": "Apple Inc.",
+        "ratings": 114152,
+        "released": "2010-04-02T04:36:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 466446054,
+        "bundleId": "com.mmm.cloudlibrary",
+        "title": "CloudLibrary",
+        "developer": "OCLC",
+        "ratings": 262508,
+        "released": "2011-10-03T23:56:55Z",
+        "score": 0
+      },
+      {
+        "trackId": 562843562,
+        "bundleId": "com.bolindadigital.BorrowBoxLibrary",
+        "title": "BorrowBox",
+        "developer": "Bolinda Digital Pty Ltd",
+        "ratings": 871,
+        "released": "2013-05-22T02:51:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "hoopla": {
+    "id": "hoopla",
+    "name": "Hoopla",
+    "term": "hoopla digital",
+    "play": [
+      {
+        "appId": "com.hoopladigital.android",
+        "title": "Hoopla: Your Library, Anywhere",
+        "developer": "Midwest Tape LLC",
+        "score": 0.5
+      },
+      {
+        "appId": "com.overdrive.mobile.android.libby",
+        "title": "Libby: Read Library Books",
+        "developer": "OverDrive, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.kanopy",
+        "title": "Kanopy",
+        "developer": "Kanopy, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.audible.application",
+        "title": "Audible: Audiobooks & Podcasts",
+        "developer": "Audible, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.books",
+        "title": "Google Play Books & Audiobooks",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.tubitv",
+        "title": "Tubi: Free Movies & Live TV",
+        "developer": "Tubi TV",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 580643740,
+        "bundleId": "com.hoopladigital.hoopla",
+        "title": "Hoopla: Your Library Anywhere",
+        "developer": "Midwest Tape LLC",
+        "ratings": 1393114,
+        "released": "2013-01-24T15:25:31Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1076402606,
+        "bundleId": "com.overdrive.dewey",
+        "title": "Libby, the library app",
+        "developer": "OverDrive, Inc.",
+        "ratings": 4581904,
+        "released": "2016-12-12T21:35:54Z",
+        "score": 0
+      },
+      {
+        "trackId": 302584613,
+        "bundleId": "com.amazon.Lassen",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 5877984,
+        "released": "2009-03-04T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 364709193,
+        "bundleId": "com.apple.iBooks",
+        "title": "Apple Books",
+        "developer": "Apple Inc.",
+        "ratings": 114152,
+        "released": "2010-04-02T04:36:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 466446054,
+        "bundleId": "com.mmm.cloudlibrary",
+        "title": "CloudLibrary",
+        "developer": "OCLC",
+        "ratings": 262508,
+        "released": "2011-10-03T23:56:55Z",
+        "score": 0
+      },
+      {
+        "trackId": 562843562,
+        "bundleId": "com.bolindadigital.BorrowBoxLibrary",
+        "title": "BorrowBox",
+        "developer": "Bolinda Digital Pty Ltd",
+        "ratings": 871,
+        "released": "2013-05-22T02:51:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "wattpad": {
+    "id": "wattpad",
+    "name": "Wattpad",
+    "term": "Wattpad",
+    "play": [
+      {
+        "appId": "wp.wattpad",
+        "title": "Wattpad - Read & Write Stories",
+        "developer": "Wattpad.com",
+        "score": 1.15
+      },
+      {
+        "appId": "wp.wpbeta",
+        "title": "Wattpad Beta",
+        "developer": "Wattpad.com",
+        "score": 1.15
+      },
+      {
+        "appId": "com.inkitt.android.hermione",
+        "title": "Inkitt: Books, Novels, Stories",
+        "developer": "Inkitt Inc",
+        "score": 0
+      },
+      {
+        "appId": "com.kobobooks.android",
+        "title": "Kobo | eBooks & Audiobooks",
+        "developer": "Kobo Books",
+        "score": 0
+      },
+      {
+        "appId": "com.amazon.kindle",
+        "title": "Amazon Kindle: Reading App",
+        "developer": "Amazon Mobile LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.books",
+        "title": "Google Play Books & Audiobooks",
+        "developer": "Google LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 306310789,
+        "bundleId": "com.fivemobile.wattpad",
+        "title": "Wattpad - Read & Write Stories",
+        "developer": "Wattpad Corp",
+        "ratings": 706070,
+        "released": "2009-03-08T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 310633997,
+        "bundleId": "net.whatsapp.WhatsApp",
+        "title": "WhatsApp Messenger",
+        "developer": "WhatsApp Inc.",
+        "ratings": 18834651,
+        "released": "2009-05-04T02:43:49Z",
+        "score": 0
+      },
+      {
+        "trackId": 894546091,
+        "bundleId": "com.naver.linewebtoon",
+        "title": "WEBTOON: Manga, Comics, Manhwa",
+        "developer": "NAVER WEBTOON Ltd.",
+        "ratings": 515145,
+        "released": "2014-07-13T04:40:12Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 1386412985,
+        "bundleId": "net.whatsapp.WhatsAppSMB",
+        "title": "WhatsApp Business",
+        "developer": "WhatsApp Inc.",
+        "ratings": 1530775,
+        "released": "2019-04-05T05:53:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 1033598731,
+        "bundleId": "com.inkitt.app.hermione",
+        "title": "Inkitt: Books, Novels, Stories",
+        "developer": "Free Novels Inc",
+        "ratings": 9981,
+        "released": "2015-12-31T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "temu": {
+    "id": "temu",
+    "name": "Temu",
+    "term": "Temu",
+    "play": [
+      {
+        "appId": "com.einnovation.temu",
+        "title": "Temu: Shop Like a Billionaire",
+        "developer": "Temu",
+        "score": 1.15
+      },
+      {
+        "appId": "com.target.ui",
+        "title": "Target: Shop. Style. Save.",
+        "developer": "Target Corporation",
+        "score": 0
+      },
+      {
+        "appId": "com.alibaba.aliexpresshd",
+        "title": "AliExpress - Shopping App",
+        "developer": "Alibaba Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.amazon.mShop.android.shopping",
+        "title": "Amazon Shopping",
+        "developer": "Amazon Mobile LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.ebay.mobile",
+        "title": "eBay online shopping & selling",
+        "developer": "eBay Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.etsy.android",
+        "title": "Etsy: Shop from Real People",
+        "developer": "Etsy, Inc",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1641486558,
+        "bundleId": "com.einnovation.temu",
+        "title": "Temu: Shop Like a Billionaire",
+        "developer": "Whaleco Inc.",
+        "ratings": 2241545,
+        "released": "2022-08-31T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 878577184,
+        "bundleId": "zzkko.com.ZZKKO",
+        "title": "SHEIN - Shopping Online",
+        "developer": "ROADGET BUSINESS PTE. LTD.",
+        "ratings": 3983317,
+        "released": "2014-05-20T03:45:36Z",
+        "score": 0
+      },
+      {
+        "trackId": 436672029,
+        "bundleId": "com.alibaba.iAliexpress",
+        "title": "AliExpress - Shopping App",
+        "developer": "Alibaba.com Singapore E-Commerce Private Limited",
+        "ratings": 686769,
+        "released": "2011-05-27T02:51:53Z",
+        "score": 0
+      },
+      {
+        "trackId": 297606951,
+        "bundleId": "com.amazon.Amazon",
+        "title": "Amazon Shopping",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 8462642,
+        "released": "2008-12-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 503451073,
+        "bundleId": "com.alibaba.sourcing",
+        "title": "Alibaba.com B2B Trade App",
+        "developer": "ALIBABA.COM GLOBAL SUPPLIER SERVICES PTE. LTD.",
+        "ratings": 105319,
+        "released": "2012-02-24T16:58:30Z",
+        "score": 0
+      },
+      {
+        "trackId": 477128284,
+        "bundleId": "com.etsy.etsyforios",
+        "title": "Etsy: Shop from Real People",
+        "developer": "Etsy, Inc.",
+        "ratings": 7343954,
+        "released": "2011-11-16T16:40:25Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "ebay": {
+    "id": "ebay",
+    "name": "eBay",
+    "term": "eBay",
+    "play": [
+      {
+        "appId": "com.ebay.mobile",
+        "title": "eBay online shopping & selling",
+        "developer": "eBay Mobile",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ebay.motorsapp",
+        "title": "eBay Motors: Parts, Cars, more",
+        "developer": "eBay Mobile",
+        "score": 1.15
+      },
+      {
+        "appId": "com.venditmobile.vendit",
+        "title": "Vendit - eBay Listing Tool",
+        "developer": "Vendit",
+        "score": 1
+      },
+      {
+        "appId": "com.mercariapp.mercari",
+        "title": "Mercari: Buy and Sell App",
+        "developer": "Mercari, Inc",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 282614216,
+        "bundleId": "com.ebay.iphone",
+        "title": "eBay online shopping & selling",
+        "developer": "eBay Inc.",
+        "ratings": 4969500,
+        "released": "2019-01-31T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1456156090,
+        "bundleId": "com.ebay.motorsapp",
+        "title": "eBay Motors: Parts, Cars, more",
+        "developer": "eBay Inc.",
+        "ratings": 47889,
+        "released": "2019-12-09T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 297606951,
+        "bundleId": "com.amazon.Amazon",
+        "title": "Amazon Shopping",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 8462642,
+        "released": "2008-12-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 468996152,
+        "bundleId": "com.offerup.iphone.consumer",
+        "title": "OfferUp Buy & Sell Marketplace",
+        "developer": "OfferUp Inc.",
+        "ratings": 4447560,
+        "released": "2011-10-19T02:28:25Z",
+        "score": 0
+      },
+      {
+        "trackId": 896130944,
+        "bundleId": "com.mercariapp.ios.mercari",
+        "title": "Mercari: Buying & Selling App",
+        "developer": "Mercari, Inc.",
+        "ratings": 1958374,
+        "released": "2014-08-06T14:43:12Z",
+        "score": 0
+      },
+      {
+        "trackId": 477128284,
+        "bundleId": "com.etsy.etsyforios",
+        "title": "Etsy: Shop from Real People",
+        "developer": "Etsy, Inc.",
+        "ratings": 7343954,
+        "released": "2011-11-16T16:40:25Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "shopify": {
+    "id": "shopify",
+    "name": "Shopify",
+    "term": "Shopify",
+    "play": [
+      {
+        "appId": "com.shopify.mobile",
+        "title": "Shopify: Sell. Run a business.",
+        "developer": "Shopify Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.shopify.pos",
+        "title": "Shopify Point of Sale (POS)",
+        "developer": "Shopify Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.shopify.ping",
+        "title": "Shopify Inbox",
+        "developer": "Shopify Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.shopify.banking",
+        "title": "Shopify Balance",
+        "developer": "Shopify Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.shopify.tinker",
+        "title": "Tinker by Shopify",
+        "developer": "Shopify Inc.",
+        "score": 1
+      },
+      {
+        "appId": "com.shopify.arrive",
+        "title": "Shop: Track, Pay, Discover",
+        "developer": "Shopify Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 371294472,
+        "bundleId": "com.jadedpixel.shopify",
+        "title": "Shopify: Sell. Run a business.",
+        "developer": "Shopify Inc.",
+        "ratings": 42981,
+        "released": "2010-05-12T17:41:12Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 686830644,
+        "bundleId": "com.jadedpixel.pos",
+        "title": "Shopify Point of Sale (POS)",
+        "developer": "Shopify Inc.",
+        "ratings": 7471,
+        "released": "2013-08-28T06:02:59Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1301681854,
+        "bundleId": "com.shopify.ping",
+        "title": "Shopify Inbox",
+        "developer": "Shopify Inc.",
+        "ratings": 13215,
+        "released": "2018-06-26T14:02:09Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1223471316,
+        "bundleId": "com.jadedlabs.arrive",
+        "title": "Shop: Track, Pay, Discover",
+        "developer": "Shopify Inc.",
+        "ratings": 7215583,
+        "released": "2017-11-16T04:26:51Z",
+        "score": 0
+      },
+      {
+        "trackId": 1591003012,
+        "bundleId": "com.tiktokshop.seller",
+        "title": "TikTok Shop Seller Center",
+        "developer": "TIKTOK PTE. LTD.",
+        "ratings": 26851,
+        "released": "2023-05-29T07:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "depop": {
+    "id": "depop",
+    "name": "Depop",
+    "term": "Depop",
+    "play": [
+      {
+        "appId": "com.depop",
+        "title": "Depop - Buy & Sell Clothes",
+        "developer": "Depop",
+        "score": 1.15
+      },
+      {
+        "appId": "com.offerup",
+        "title": "OfferUp Buy & Sell Marketplace",
+        "developer": "OfferUp Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.ebay.mobile",
+        "title": "eBay online shopping & selling",
+        "developer": "eBay Mobile",
+        "score": 0
+      },
+      {
+        "appId": "fr.vinted",
+        "title": "Vinted: Shop & sell pre-loved",
+        "developer": "Vinted",
+        "score": 0
+      },
+      {
+        "appId": "com.poshmark.app",
+        "title": "Poshmark: Shop & Sell Fashion",
+        "developer": "Poshmark, Inc",
+        "score": 0
+      },
+      {
+        "appId": "com.mercariapp.mercari",
+        "title": "Mercari: Buy and Sell App",
+        "developer": "Mercari, Inc",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 518684914,
+        "bundleId": "com.garageitaly.garage",
+        "title": "Depop - Buy & Sell Clothes",
+        "developer": "Depop Limited",
+        "ratings": 1056870,
+        "released": "2012-08-01T10:07:14Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 470412147,
+        "bundleId": "com.poshmark.poshmark",
+        "title": "Poshmark: Shop & Sell Fashion",
+        "developer": "Poshmark, Inc.",
+        "ratings": 1096683,
+        "released": "2011-10-13T02:16:04Z",
+        "score": 0
+      },
+      {
+        "trackId": 632064380,
+        "bundleId": "lt.manodrabuziai.fr",
+        "title": "Vinted: Pre-loved marketplace",
+        "developer": "Vinted Limited",
+        "ratings": 569468,
+        "released": "2013-04-11T17:12:20Z",
+        "score": 0
+      },
+      {
+        "trackId": 282614216,
+        "bundleId": "com.ebay.iphone",
+        "title": "eBay online shopping & selling",
+        "developer": "eBay Inc.",
+        "ratings": 4969500,
+        "released": "2019-01-31T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 896130944,
+        "bundleId": "com.mercariapp.ios.mercari",
+        "title": "Mercari: Buying & Selling App",
+        "developer": "Mercari, Inc.",
+        "ratings": 1958374,
+        "released": "2014-08-06T14:43:12Z",
+        "score": 0
+      },
+      {
+        "trackId": 468996152,
+        "bundleId": "com.offerup.iphone.consumer",
+        "title": "OfferUp Buy & Sell Marketplace",
+        "developer": "OfferUp Inc.",
+        "ratings": 4447560,
+        "released": "2011-10-19T02:28:25Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "fetch": {
+    "id": "fetch",
+    "name": "Fetch",
+    "term": "Fetch Rewards",
+    "play": [
+      {
+        "appId": "com.fetchrewards.fetchrewards.hop",
+        "title": "Fetch: Earn Rewards Every Day",
+        "developer": "Fetch Rewards",
+        "score": 1
+      },
+      {
+        "appId": "com.coinout.scan",
+        "title": "CoinOut: Receipts for Rewards",
+        "developer": "CoinOut",
+        "score": 0.5
+      },
+      {
+        "appId": "com.fetchpackage.resident",
+        "title": "Fetch Resident",
+        "developer": "Fetch Package Inc",
+        "score": 0.5
+      },
+      {
+        "appId": "com.carevet_fetch.fetchconnect.android",
+        "title": "Fetch Connect",
+        "developer": "CareVet LLC",
+        "score": 0.5
+      },
+      {
+        "appId": "com.infoscout.receipthog",
+        "title": "Receipt Hog: Cash for Receipts",
+        "developer": "Numerator, LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.ibotta.android",
+        "title": "Ibotta: Save & Earn Cash Back",
+        "developer": "Ibotta",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1182474649,
+        "bundleId": "com.FetchRewards.HopBeta",
+        "title": "Fetch: Earn Rewards Every Day",
+        "developer": "Fetch Rewards, LLC",
+        "ratings": 7795063,
+        "released": "2016-12-07T22:45:08Z",
+        "score": 1
+      },
+      {
+        "trackId": 525373618,
+        "bundleId": "com.infoscoutinc.receipthog",
+        "title": "Receipt Hog: Shopping Rewards",
+        "developer": "ScoutIt, Inc.",
+        "ratings": 272630,
+        "released": "2012-05-16T00:01:54Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 640439547,
+        "bundleId": "com.swagbucksApp",
+        "title": "Swagbucks: Earn Real Rewards",
+        "developer": "Prodege LLC",
+        "ratings": 147776,
+        "released": "2013-07-23T19:17:15Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 559887125,
+        "bundleId": "com.ibotta.Ibotta",
+        "title": "Ibotta: Save & Earn Cash Back",
+        "developer": "Ibotta, Inc",
+        "ratings": 1974531,
+        "released": "2012-10-02T04:49:19Z",
+        "score": 0
+      },
+      {
+        "trackId": 1450157256,
+        "bundleId": "com.unocart.unomoney",
+        "title": "ReceiptJar",
+        "developer": "THE U GROUP & CO LIMITED",
+        "ratings": 65461,
+        "released": "2021-06-09T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 723134859,
+        "bundleId": "com.ebates.EbatesMobile",
+        "title": "Rakuten: Cash Back & Deals",
+        "developer": "Ebates Shopping.com, Inc.",
+        "ratings": 361954,
+        "released": "2013-10-23T23:41:45Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "sweatcoin": {
+    "id": "sweatcoin",
+    "name": "Sweatcoin",
+    "term": "Sweatcoin",
+    "play": [
+      {
+        "appId": "in.sweatco.app",
+        "title": "Sweatcoin・Walking Step Counter",
+        "developer": "Sweatco Ltd",
+        "score": 1.15
+      },
+      {
+        "appId": "com.sweatwallet",
+        "title": "Sweat Wallet: Walk Into Crypto",
+        "developer": "The Sweat Foundation",
+        "score": 0
+      },
+      {
+        "appId": "net.blastapp",
+        "title": "Runtopia-Reward Run Tracker",
+        "developer": "Codoon Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.winwalk.android",
+        "title": "Winwalk Step Tracker & Rewards",
+        "developer": "GALA MIX",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.fitness",
+        "title": "Google Fit: Activity Tracking",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.sec.android.app.shealth",
+        "title": "Samsung Health",
+        "developer": "Samsung Electronics Co.,  Ltd.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 971023427,
+        "bundleId": "swc",
+        "title": "Sweatcoin Walking Step Counter",
+        "developer": "Sweatco Ltd",
+        "ratings": 401322,
+        "released": "2016-09-01T23:48:21Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1619316571,
+        "bundleId": "com.sweateconomy.wallet",
+        "title": "Sweat Wallet: Walk Into Crypto",
+        "developer": "The Sweat Foundation Ltd",
+        "ratings": 34324,
+        "released": "2023-08-14T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 6472562569,
+        "bundleId": "com.ghamzastudios.walkfi",
+        "title": "Earn Cash Walk Steps - Walkify",
+        "developer": "Ghamza Studios",
+        "ratings": 14257,
+        "released": "2023-12-12T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1609906813,
+        "bundleId": "com.cashwalklabs.cashwalk",
+        "title": "CashWalk - Daily Step Counter",
+        "developer": "CASHWALK LABS, INC",
+        "ratings": 60578,
+        "released": "2022-06-20T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1454213029,
+        "bundleId": "com.weward",
+        "title": "WeWard - Walking Rewards App",
+        "developer": "WEWARD",
+        "ratings": 128206,
+        "released": "2022-09-20T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1182474649,
+        "bundleId": "com.FetchRewards.HopBeta",
+        "title": "Fetch: Earn Rewards Every Day",
+        "developer": "Fetch Rewards, LLC",
+        "ratings": 7795063,
+        "released": "2016-12-07T22:45:08Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "cash-app": {
+    "id": "cash-app",
+    "name": "Cash App",
+    "term": "Cash App",
+    "play": [
+      {
+        "appId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "score": 2.15
+      },
+      {
+        "appId": "com.moneylion",
+        "title": "MoneyLion: Cash Advance App",
+        "developer": "MoneyLion Inc.",
+        "score": 1
+      },
+      {
+        "appId": "com.dave",
+        "title": "Dave: Credit, Cash & Money App",
+        "developer": "Dave Operating LLC",
+        "score": 1
+      },
+      {
+        "appId": "com.venmo",
+        "title": "Venmo",
+        "developer": "PayPal Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.onedebit.chime",
+        "title": "Chime® – Fee-Free Banking",
+        "developer": "Chime",
+        "score": 0
+      },
+      {
+        "appId": "com.paypal.android.p2pmobile",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal Mobile",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 711923939,
+        "bundleId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "ratings": 8771856,
+        "released": "2013-10-16T07:51:06Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 6476117215,
+        "bundleId": "com.prgventures.moneyapp",
+        "title": "Money App - Cash Advance",
+        "developer": "PRG Ventures, Inc.",
+        "ratings": 27723,
+        "released": "2024-03-01T08:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 836215269,
+        "bundleId": "com.1debit.ChimeProdApp",
+        "title": "Chime® – Mobile Banking",
+        "developer": "Chime Financial, Inc.",
+        "ratings": 1629962,
+        "released": "2014-03-16T05:21:25Z",
+        "score": 0
+      },
+      {
+        "trackId": 283646709,
+        "bundleId": "com.yourcompany.PPClient",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal, Inc.",
+        "ratings": 6299171,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 351727428,
+        "bundleId": "net.kortina.labs.Venmo",
+        "title": "Venmo",
+        "developer": "The Delancey Corporation, LLC",
+        "ratings": 15473456,
+        "released": "2010-04-03T05:41:47Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "venmo": {
+    "id": "venmo",
+    "name": "Venmo",
+    "term": "Venmo",
+    "play": [
+      {
+        "appId": "com.venmo",
+        "title": "Venmo",
+        "developer": "PayPal Mobile",
+        "score": 2.15
+      },
+      {
+        "appId": "com.paypal.android.p2pmobile",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.chase.sig.android",
+        "title": "Chase Mobile",
+        "developer": "JPMorgan Chase",
+        "score": 0
+      },
+      {
+        "appId": "com.wf.wellsfargomobile",
+        "title": "Wells Fargo Mobile®",
+        "developer": "Wells Fargo Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.mercadopago.wallet",
+        "title": "Mercado Pago: cuenta digital",
+        "developer": "Mercado Libre",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 351727428,
+        "bundleId": "net.kortina.labs.Venmo",
+        "title": "Venmo",
+        "developer": "The Delancey Corporation, LLC",
+        "ratings": 15473456,
+        "released": "2010-04-03T05:41:47Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 283646709,
+        "bundleId": "com.yourcompany.PPClient",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal, Inc.",
+        "ratings": 6299171,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 711923939,
+        "bundleId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "ratings": 8771856,
+        "released": "2013-10-16T07:51:06Z",
+        "score": 0
+      },
+      {
+        "trackId": 836215269,
+        "bundleId": "com.1debit.ChimeProdApp",
+        "title": "Chime® – Mobile Banking",
+        "developer": "Chime Financial, Inc.",
+        "ratings": 1629962,
+        "released": "2014-03-16T05:21:25Z",
+        "score": 0
+      },
+      {
+        "trackId": 1494523953,
+        "bundleId": "com.onefinance.one",
+        "title": "OnePay – Mobile Banking",
+        "developer": "One Finance, Inc.",
+        "ratings": 475837,
+        "released": "2020-03-25T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1517676784,
+        "bundleId": "com.varomoney.VaroBank",
+        "title": "Varo Bank: Online Banking",
+        "developer": "Varo Money, Inc.",
+        "ratings": 233533,
+        "released": "2020-10-01T07:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "paypal": {
+    "id": "paypal",
+    "name": "PayPal",
+    "term": "PayPal",
+    "play": [
+      {
+        "appId": "com.paypal.android.p2pmobile",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal Mobile",
+        "score": 1.15
+      },
+      {
+        "appId": "com.paypal.merchant.client",
+        "title": "PayPal Business",
+        "developer": "PayPal Mobile",
+        "score": 1.15
+      },
+      {
+        "appId": "com.izettle.android",
+        "title": "PayPal POS (ex Zettle)",
+        "developer": "PayPal Mobile",
+        "score": 1.15
+      },
+      {
+        "appId": "com.venmo",
+        "title": "Venmo",
+        "developer": "PayPal Mobile",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.walletnfcrel",
+        "title": "Google Wallet",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.xoom.android.app",
+        "title": "Xoom: Send Money & Transfer",
+        "developer": "Xoom, a PayPal Service",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 283646709,
+        "bundleId": "com.yourcompany.PPClient",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal, Inc.",
+        "ratings": 6299171,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1053148887,
+        "bundleId": "com.paypal.merchant",
+        "title": "PayPal Business",
+        "developer": "PayPal, Inc.",
+        "ratings": 29359,
+        "released": "2016-11-29T03:12:57Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 711923939,
+        "bundleId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "ratings": 8771856,
+        "released": "2013-10-16T07:51:06Z",
+        "score": 0
+      },
+      {
+        "trackId": 351727428,
+        "bundleId": "net.kortina.labs.Venmo",
+        "title": "Venmo",
+        "developer": "The Delancey Corporation, LLC",
+        "ratings": 15473456,
+        "released": "2010-04-03T05:41:47Z",
+        "score": 0
+      },
+      {
+        "trackId": 1160481993,
+        "bundleId": "com.apple.Passbook",
+        "title": "Apple Wallet",
+        "developer": "Apple Inc.",
+        "ratings": 7512261,
+        "released": "2019-03-26T04:22:47Z",
+        "score": 0
+      },
+      {
+        "trackId": 836215269,
+        "bundleId": "com.1debit.ChimeProdApp",
+        "title": "Chime® – Mobile Banking",
+        "developer": "Chime Financial, Inc.",
+        "ratings": 1629962,
+        "released": "2014-03-16T05:21:25Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "chime": {
+    "id": "chime",
+    "name": "Chime",
+    "term": "Chime",
+    "play": [
+      {
+        "appId": "com.advitaortho.chime",
+        "title": "Chime",
+        "developer": "Advita Ortho, LLC",
+        "score": 2.15
+      },
+      {
+        "appId": "com.onedebit.chime",
+        "title": "Chime® – Fee-Free Banking",
+        "developer": "Chime",
+        "score": 1.15
+      },
+      {
+        "appId": "com.shrivatsav.chime",
+        "title": "Chime: Private SMS Organizer",
+        "developer": "shrivatsav",
+        "score": 1.15
+      },
+      {
+        "appId": "com.amazon.chime",
+        "title": "Amazon Chime",
+        "developer": "Amazon Mobile LLC",
+        "score": 1
+      },
+      {
+        "appId": "com.caynax.hourlychime.alarmclock.pro",
+        "title": "Hourly chime PRO v2",
+        "developer": "Caynax",
+        "score": 1
+      },
+      {
+        "appId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 836215269,
+        "bundleId": "com.1debit.ChimeProdApp",
+        "title": "Chime® – Mobile Banking",
+        "developer": "Chime Financial, Inc.",
+        "ratings": 1629962,
+        "released": "2014-03-16T05:21:25Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 711923939,
+        "bundleId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "ratings": 8771856,
+        "released": "2013-10-16T07:51:06Z",
+        "score": 0
+      },
+      {
+        "trackId": 283646709,
+        "bundleId": "com.yourcompany.PPClient",
+        "title": "PayPal - Pay, Send, Save",
+        "developer": "PayPal, Inc.",
+        "ratings": 6299171,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 351727428,
+        "bundleId": "net.kortina.labs.Venmo",
+        "title": "Venmo",
+        "developer": "The Delancey Corporation, LLC",
+        "ratings": 15473456,
+        "released": "2010-04-03T05:41:47Z",
+        "score": 0
+      },
+      {
+        "trackId": 1193801909,
+        "bundleId": "com.trydave.dave",
+        "title": "Dave: Credit, Cash & Money App",
+        "developer": "Dave, Inc",
+        "ratings": 926929,
+        "released": "2017-04-20T22:48:39Z",
+        "score": 0
+      },
+      {
+        "trackId": 519817714,
+        "bundleId": "com.creditkarma.mobile",
+        "title": "Intuit Credit Karma",
+        "developer": "Credit Karma, Inc.",
+        "ratings": 7769280,
+        "released": "2012-07-18T07:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "capital-one": {
+    "id": "capital-one",
+    "name": "Capital One Mobile",
+    "term": "Capital One Mobile",
+    "play": [
+      {
+        "appId": "com.konylabs.capitalone",
+        "title": "Capital One Mobile",
+        "developer": "Capital One Services, LLC",
+        "score": 2.15
+      },
+      {
+        "appId": "com.capitalone.intellix.mobile.prod",
+        "title": "Capital One Intellix® Mobile",
+        "developer": "Capital One Services, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.wikibuy.prod.main",
+        "title": "Capital One Shopping",
+        "developer": "capitaloneshopping.com",
+        "score": 1.15
+      },
+      {
+        "appId": "com.capitalone.tz",
+        "title": "Capital One T&Easy",
+        "developer": "Capital One Services, LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.capitalone.credittracker",
+        "title": "CreditWise from Capital One",
+        "developer": "Capital One Services, LLC",
+        "score": 1
+      },
+      {
+        "appId": "com.creditonebank.mobile",
+        "title": "Credit One Bank Mobile",
+        "developer": "Credit One Bank, N.A.",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 407558537,
+        "bundleId": "com.capitalone.enterprisemobilebanking",
+        "title": "Capital One Mobile",
+        "developer": "Capital One Services, LLC",
+        "ratings": 11228348,
+        "released": "2010-12-13T08:00:00Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 1089294040,
+        "bundleId": "com.wikibuy.prod.main",
+        "title": "Capital One Shopping: Save Now",
+        "developer": "Wikibuy, LLC",
+        "ratings": 1706774,
+        "released": "2016-09-04T19:21:36Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1008234539,
+        "bundleId": "com.capitalone.credittracker2",
+        "title": "Capital One CreditWise",
+        "developer": "Capital One Services, LLC",
+        "ratings": 310212,
+        "released": "2015-11-02T15:29:59Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1128712763,
+        "bundleId": "com.creditonebank.mobile",
+        "title": "Credit One Bank Mobile",
+        "developer": "Credit One Bank, National Association",
+        "ratings": 2831132,
+        "released": "2016-09-22T04:38:31Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 298867247,
+        "bundleId": "com.chase",
+        "title": "Chase Mobile®: Bank & Invest",
+        "developer": "JPMorgan Chase Bank, NA",
+        "ratings": 9578415,
+        "released": "2008-12-15T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "bofa": {
+    "id": "bofa",
+    "name": "Bank of America Mobile Banking",
+    "term": "Bank of America",
+    "play": [
+      {
+        "appId": "com.infonow.bofa",
+        "title": "Bank of America Mobile Banking",
+        "developer": "Bank of America",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ustrust.mobileapps.accountaccessandroid",
+        "title": "Bank of America Private Bank",
+        "developer": "Bank of America",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bankofamerica.alumni",
+        "title": "Bank of America Alumni Network",
+        "developer": "Bank of America",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bankofamerica.eventsplanner",
+        "title": "Bank of America Events",
+        "developer": "Bank of America",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bankofamerica.smsmrt",
+        "title": "BofA SM - SMRT",
+        "developer": "Bank of America",
+        "score": 0
+      },
+      {
+        "appId": "com.bofaenterprise.gca.mobile",
+        "title": "BofA Global Card Access",
+        "developer": "Bank of America",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 284847138,
+        "bundleId": "com.bankofamerica.BofA",
+        "title": "Bank of America Mobile Banking",
+        "developer": "Bank of America",
+        "ratings": 5025270,
+        "released": "2019-02-01T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1096813830,
+        "bundleId": "com.ustrust.mobileapps.accountaccessiphone",
+        "title": "Bank of America Private Bank",
+        "developer": "U.S. Trust, Bank of America Private Wealth Management",
+        "ratings": 1902,
+        "released": "2016-04-25T20:22:29Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1323582101,
+        "bundleId": "com.bankofamerica.eventsplanner",
+        "title": "Bank of America Events",
+        "developer": "Bank of America",
+        "ratings": 39,
+        "released": "2017-12-14T21:47:52Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 298867247,
+        "bundleId": "com.chase",
+        "title": "Chase Mobile®: Bank & Invest",
+        "developer": "JPMorgan Chase Bank, NA",
+        "ratings": 9578415,
+        "released": "2008-12-15T08:00:00Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 407558537,
+        "bundleId": "com.capitalone.enterprisemobilebanking",
+        "title": "Capital One Mobile",
+        "developer": "Capital One Services, LLC",
+        "ratings": 11228348,
+        "released": "2010-12-13T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 297606951,
+        "bundleId": "com.amazon.Amazon",
+        "title": "Amazon Shopping",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 8462642,
+        "released": "2008-12-03T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "coinbase": {
+    "id": "coinbase",
+    "name": "Coinbase",
+    "term": "Coinbase",
+    "play": [
+      {
+        "appId": "com.coinbase.android",
+        "title": "Coinbase: Buy Crypto & Stocks",
+        "developer": "Coinbase Inc",
+        "score": 1.15
+      },
+      {
+        "appId": "org.toshi",
+        "title": "Coinbase Wallet: Trade to Win",
+        "developer": "Coinbase Wallet",
+        "score": 1.15
+      },
+      {
+        "appId": "co.mona.android",
+        "title": "Crypto.com: Trade Every Market",
+        "developer": "Crypto Technology Holdings Limited",
+        "score": 0
+      },
+      {
+        "appId": "io.metamask",
+        "title": "MetaMask: Trade Crypto",
+        "developer": "MetaMask Web3 Wallet",
+        "score": 0
+      },
+      {
+        "appId": "com.wallet.crypto.trustapp",
+        "title": "Trust: Crypto & Bitcoin Wallet",
+        "developer": "DApps Platform, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.coinmarketcap.android",
+        "title": "CoinMarketCap: Crypto Tracker",
+        "developer": "CoinMarketCap.com",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 886427730,
+        "bundleId": "com.vilcsak.bitcoin2",
+        "title": "Coinbase: Buy Crypto & Stocks",
+        "developer": "Coinbase, Inc.",
+        "ratings": 1797988,
+        "released": "2014-06-22T05:13:36Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1278383455,
+        "bundleId": "org.toshi.distribution",
+        "title": "Coinbase Wallet: Trade to Win",
+        "developer": "Coinbase Wallet",
+        "ratings": 161379,
+        "released": "2017-09-27T03:16:56Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1262148500,
+        "bundleId": "co.mona.Monaco",
+        "title": "Crypto.com: Trade Every Market",
+        "developer": "CRYPTO Technology Holdings Limited",
+        "ratings": 335741,
+        "released": "2017-08-31T10:47:36Z",
+        "score": 0
+      },
+      {
+        "trackId": 938003185,
+        "bundleId": "com.robinhood.release.Robinhood",
+        "title": "Robinhood: Trading & Investing",
+        "developer": "Robinhood Markets Inc",
+        "ratings": 4892125,
+        "released": "2014-12-11T11:33:44Z",
+        "score": 0
+      },
+      {
+        "trackId": 711923939,
+        "bundleId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "ratings": 8771856,
+        "released": "2013-10-16T07:51:06Z",
+        "score": 0
+      },
+      {
+        "trackId": 1288339409,
+        "bundleId": "com.sixdays.trust",
+        "title": "Trust: Crypto & Bitcoin Wallet",
+        "developer": "DApps Platform Software Services Ltd.",
+        "ratings": 199134,
+        "released": "2017-09-27T04:36:37Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "dave": {
+    "id": "dave",
+    "name": "Dave",
+    "term": "Dave Banking",
+    "play": [
+      {
+        "appId": "com.dave",
+        "title": "Dave: Credit, Cash & Money App",
+        "developer": "Dave Operating LLC",
+        "score": 0.5
+      },
+      {
+        "appId": "com.onedebit.chime",
+        "title": "Chime® – Fee-Free Banking",
+        "developer": "Chime",
+        "score": 0.5
+      },
+      {
+        "appId": "com.moneylion",
+        "title": "MoneyLion: Cash Advance App",
+        "developer": "MoneyLion Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.hellobrigit.Brigit",
+        "title": "Brigit: Cash Advance & Credit",
+        "developer": "Brigit",
+        "score": 0
+      },
+      {
+        "appId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.meetcleo.cleo",
+        "title": "Cleo AI: Cash Advance & Money",
+        "developer": "Cleo AI",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1193801909,
+        "bundleId": "com.trydave.dave",
+        "title": "Dave: Credit, Cash & Money App",
+        "developer": "Dave, Inc",
+        "ratings": 926929,
+        "released": "2017-04-20T22:48:39Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1517676784,
+        "bundleId": "com.varomoney.VaroBank",
+        "title": "Varo Bank: Online Banking",
+        "developer": "Varo Money, Inc.",
+        "ratings": 233533,
+        "released": "2020-10-01T07:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 836215269,
+        "bundleId": "com.1debit.ChimeProdApp",
+        "title": "Chime® – Mobile Banking",
+        "developer": "Chime Financial, Inc.",
+        "ratings": 1629962,
+        "released": "2014-03-16T05:21:25Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1341884073,
+        "bundleId": "com.hellobrigit.Brigit",
+        "title": "Brigit: Cash Advance & Credit",
+        "developer": "Bridge It Inc",
+        "ratings": 580266,
+        "released": "2018-04-22T20:03:04Z",
+        "score": 0
+      },
+      {
+        "trackId": 1136397354,
+        "bundleId": "com.empower.finance",
+        "title": "Tilt: Cash Advance & Credit",
+        "developer": "Tilt Finance, Inc.",
+        "ratings": 469882,
+        "released": "2017-05-09T01:27:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 1395667279,
+        "bundleId": "com.FloatMe.FloatMe-iOS-V1",
+        "title": "FloatMe: Fast Cash Advance App",
+        "developer": "FloatMe Corp",
+        "ratings": 160047,
+        "released": "2018-10-05T19:22:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "credit-karma": {
+    "id": "credit-karma",
+    "name": "Intuit Credit Karma",
+    "term": "Credit Karma",
+    "play": [
+      {
+        "appId": "com.creditkarma.mobile",
+        "title": "Intuit Credit Karma",
+        "developer": "Credit Karma, LLC",
+        "score": 1
+      },
+      {
+        "appId": "com.creditsesame",
+        "title": "Credit Sesame: Grow your score",
+        "developer": "Credit Sesame, Inc.",
+        "score": 0.5
+      },
+      {
+        "appId": "com.experian.android",
+        "title": "Experian®",
+        "developer": "Experian",
+        "score": 0
+      },
+      {
+        "appId": "com.myklarnamobile",
+        "title": "Klarna: Smarter everyday money",
+        "developer": "Klarna Bank AB (publ)",
+        "score": 0
+      },
+      {
+        "appId": "com.capitalone.credittracker",
+        "title": "CreditWise from Capital One",
+        "developer": "Capital One Services, LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.squareup.cash",
+        "title": "Cash App",
+        "developer": "Block, Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 519817714,
+        "bundleId": "com.creditkarma.mobile",
+        "title": "Intuit Credit Karma",
+        "developer": "Credit Karma, Inc.",
+        "ratings": 7769280,
+        "released": "2012-07-18T07:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 714626557,
+        "bundleId": "com.fico.myfico.myFICO",
+        "title": "myFICO - Credit Score Tracking",
+        "developer": "Fair Isaac Corporation",
+        "ratings": 51727,
+        "released": "2013-10-09T22:45:34Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 476718980,
+        "bundleId": "com.creditsesame.mobile.ios.finance",
+        "title": "Credit Sesame: Grow Your Score",
+        "developer": "Credit Sesame, Inc.",
+        "ratings": 436204,
+        "released": "2011-11-29T10:52:45Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1087101090,
+        "bundleId": "com.experian.experianapp",
+        "title": "Experian®",
+        "developer": "CONSUMERINFO.COM, INC.",
+        "ratings": 2725107,
+        "released": "2016-05-16T17:28:24Z",
+        "score": 0
+      },
+      {
+        "trackId": 1115120118,
+        "bundleId": "com.klarna.app",
+        "title": "Klarna: Smarter everyday money",
+        "developer": "Klarna Bank AB",
+        "ratings": 2476745,
+        "released": "2016-06-22T13:33:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "robinhood": {
+    "id": "robinhood",
+    "name": "Robinhood",
+    "term": "Robinhood",
+    "play": [
+      {
+        "appId": "com.robinhood.android",
+        "title": "Robinhood: Trading & Investing",
+        "developer": "Robinhood",
+        "score": 1.15
+      },
+      {
+        "appId": "com.robinhood.money",
+        "title": "Robinhood Banking",
+        "developer": "Robinhood",
+        "score": 1.15
+      },
+      {
+        "appId": "com.robinhood.gateway",
+        "title": "Robinhood Wallet: Swap Crypto",
+        "developer": "Robinhood",
+        "score": 1.15
+      },
+      {
+        "appId": "net.bitstamp.app",
+        "title": "Bitstamp by Robinhood: Buy BTC",
+        "developer": "Bitstamp",
+        "score": 1
+      },
+      {
+        "appId": "com.btcc.hy",
+        "title": "BTCC - Trade Bitcoin & Crypto",
+        "developer": "BTCC.COM",
+        "score": 0
+      },
+      {
+        "appId": "com.fidelity.android",
+        "title": "Fidelity Investments",
+        "developer": "Fidelity Investments",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 938003185,
+        "bundleId": "com.robinhood.release.Robinhood",
+        "title": "Robinhood: Trading & Investing",
+        "developer": "Robinhood Markets Inc",
+        "ratings": 4892125,
+        "released": "2014-12-11T11:33:44Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6462308655,
+        "bundleId": "com.robinhood.release.Money",
+        "title": "Robinhood Banking",
+        "developer": "Robinhood Markets Inc",
+        "ratings": 116140,
+        "released": "2024-04-29T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1634080733,
+        "bundleId": "com.robinhood.release.Gateway",
+        "title": "Robinhood Wallet: Swap Crypto",
+        "developer": "Robinhood Markets Inc",
+        "ratings": 7019,
+        "released": "2023-01-18T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 348177453,
+        "bundleId": "com.fidelity.watchlist",
+        "title": "Fidelity Investments",
+        "developer": "Fidelity Investments",
+        "ratings": 3366726,
+        "released": "2010-02-22T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 886427730,
+        "bundleId": "com.vilcsak.bitcoin2",
+        "title": "Coinbase: Buy Crypto & Stocks",
+        "developer": "Coinbase, Inc.",
+        "ratings": 1797988,
+        "released": "2014-06-22T05:13:36Z",
+        "score": 0
+      },
+      {
+        "trackId": 1179213067,
+        "bundleId": "com.webull.trade",
+        "title": "Webull: Investing & Trading",
+        "developer": "Webull Technologies Pte. Ltd.",
+        "ratings": 342722,
+        "released": "2017-01-18T01:30:51Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "my-fitness-pal": {
+    "id": "my-fitness-pal",
+    "name": "My Fitness Pal",
+    "term": "MyFitnessPal",
+    "play": [
+      {
+        "appId": "com.myfitnesspal.android",
+        "title": "MyFitnessPal: Calorie Counter",
+        "developer": "MyFitnessPal, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.fourtechnologies.mynetdiary.ad",
+        "title": "Calorie Counter - MyNetDiary",
+        "developer": "MyNetDiary.com",
+        "score": 0
+      },
+      {
+        "appId": "com.cronometer.android.gold",
+        "title": "Cronometer: Calorie Counter",
+        "developer": "Cronometer Software Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.fitnow.loseit",
+        "title": "Calorie Counter by Lose It!",
+        "developer": "FitNow, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.fitness",
+        "title": "Google Fit: Activity Tracking",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.fitbit.FitbitMobile",
+        "title": "Google Health (Fitbit)",
+        "developer": "Google LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 341232718,
+        "bundleId": "com.myfitnesspal.mfp",
+        "title": "MyFitnessPal: Calorie Counter",
+        "developer": "MyFitnessPal, Inc.",
+        "ratings": 2383181,
+        "released": "2009-12-08T02:04:45Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6480417616,
+        "bundleId": "com.viraldevelopment.CalAI",
+        "title": "Cal AI - Calorie Tracker",
+        "developer": "Viral Development LLC",
+        "ratings": 372410,
+        "released": "2024-04-08T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 297368629,
+        "bundleId": "com.fitnow.loseit",
+        "title": "Lose It! – Calorie Counter",
+        "developer": "FitNow, Inc.",
+        "ratings": 782294,
+        "released": "2008-11-21T22:54:04Z",
+        "score": 0
+      },
+      {
+        "trackId": 1145935738,
+        "bundleId": "CRONOMETER-GOLD",
+        "title": "Cronometer: Calorie Counter",
+        "developer": "Cronometer Software Inc",
+        "ratings": 99867,
+        "released": "2016-09-09T21:18:55Z",
+        "score": 0
+      },
+      {
+        "trackId": 287529757,
+        "bundleId": "com.mynetdiary.MyNetDiary",
+        "title": "Calorie Counter - MyNetDiary",
+        "developer": "MyNetDiary Inc.",
+        "ratings": 170124,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "better-me": {
+    "id": "better-me",
+    "name": "Better Me",
+    "term": "BetterMe",
+    "play": [
+      {
+        "appId": "com.gen.workoutme",
+        "title": "BetterMe Well-Being Coach",
+        "developer": "BetterMe Limited",
+        "score": 1.15
+      },
+      {
+        "appId": "com.gen.bettermeditation",
+        "title": "BetterMe: Mental Health",
+        "developer": "BetterMe Limited",
+        "score": 1.15
+      },
+      {
+        "appId": "world.betterme.style",
+        "title": "BetterMe Style",
+        "developer": "BetterMe Limited",
+        "score": 1.15
+      },
+      {
+        "appId": "world.betterme.store",
+        "title": "BetterMe Store",
+        "developer": "BetterMe Limited",
+        "score": 1.15
+      },
+      {
+        "appId": "homeworkout.homeworkouts.noequipment",
+        "title": "Home Workout - No Equipment",
+        "developer": "Leap Fitness Group",
+        "score": 0
+      },
+      {
+        "appId": "com.fitnow.loseit",
+        "title": "Calorie Counter by Lose It!",
+        "developer": "FitNow, Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1264546236,
+        "bundleId": "gen.tech.BetterMe",
+        "title": "BetterMe Well-Being Coach",
+        "developer": "BetterMe Limited",
+        "ratings": 714067,
+        "released": "2017-08-22T17:03:57Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1363010081,
+        "bundleId": "com.betterme.meditation",
+        "title": "BetterMe: Mental Health",
+        "developer": "BetterMe Limited",
+        "ratings": 16467,
+        "released": "2018-03-31T23:28:33Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6745645930,
+        "bundleId": "com.oneothergame.calisthenics-workout",
+        "title": "Military Calisthenics Workout",
+        "developer": "Fast Builder Limited",
+        "ratings": 1025,
+        "released": "2025-05-29T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1313192037,
+        "bundleId": "com.abishkking.maleworkout",
+        "title": "Home Workout - No Equipments",
+        "developer": "Leap Health Fitness Limited",
+        "ratings": 127952,
+        "released": "2017-11-18T00:52:27Z",
+        "score": 0
+      },
+      {
+        "trackId": 839285684,
+        "bundleId": "com.oneothergame.7min-fitness",
+        "title": "Workout for Women: Home & Gym",
+        "developer": "Fast Builder Limited",
+        "ratings": 532050,
+        "released": "2014-03-21T16:41:53Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "flo": {
+    "id": "flo",
+    "name": "Flo",
+    "term": "Flo Period Tracker",
+    "play": [
+      {
+        "appId": "org.iggymedia.periodtracker",
+        "title": "Flo Ovulation & Period Tracker",
+        "developer": "Flo Health Inc.",
+        "score": 1
+      },
+      {
+        "appId": "com.lbrc.PeriodCalendar",
+        "title": "Period Tracker and Calendar",
+        "developer": "SimpleInnovation",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.period.tracker.lite",
+        "title": "Period Tracker",
+        "developer": "GP International LLC",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "periodtracker.pregnancy.ovulationtracker",
+        "title": "Ovulation & Period Tracker",
+        "developer": "Leap Fitness Group",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.popularapp.periodcalendar",
+        "title": "Period Calendar Period Tracker",
+        "developer": "Simple Design Ltd.",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.periodtracker.periodcalendar.ovulation.periodcycle",
+        "title": "Period Tracker Ovulation Cycle",
+        "developer": "Macro Tap",
+        "score": 0.6666666666666666
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1038369065,
+        "bundleId": "org.iggymedia.periodtracker",
+        "title": "Flo Cycle & Period Tracker",
+        "developer": "FLO HEALTH UK LIMITED",
+        "ratings": 2004734,
+        "released": "2015-10-03T22:28:36Z",
+        "score": 1
+      },
+      {
+        "trackId": 896501514,
+        "bundleId": "com.abishkking.periodcalendar",
+        "title": "Period Tracker Period Calendar",
+        "developer": "ABISHKKING LIMITED.",
+        "ratings": 174602,
+        "released": "2014-09-30T23:41:17Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 1032267351,
+        "bundleId": "com.lbrc.PeriodCalendar",
+        "title": "Period Tracker and Calendar",
+        "developer": "AppManage LLC",
+        "ratings": 54504,
+        "released": "2015-08-27T21:11:44Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 330376830,
+        "bundleId": "com.gpapps.ptrackerlite",
+        "title": "Period Tracker by GP Apps",
+        "developer": "GP International LLC",
+        "ratings": 78802,
+        "released": "2009-10-14T18:59:15Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 1579369864,
+        "bundleId": "com.period-tracker.lifeplus",
+        "title": "Period Tracker ⋆",
+        "developer": "LUCKY LABS LP",
+        "ratings": 25399,
+        "released": "2021-11-02T07:00:00Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 1459096552,
+        "bundleId": "com.neiman.periodtracker",
+        "title": "My Cycle ؜",
+        "developer": "Aleksei Neiman",
+        "ratings": 102452,
+        "released": "2019-06-16T20:47:51Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "life360": {
+    "id": "life360",
+    "name": "Life360",
+    "term": "Life360",
+    "play": [
+      {
+        "appId": "com.life360.android.safetymapd",
+        "title": "Life360: Family Safety & GPS",
+        "developer": "Life360",
+        "score": 1.15
+      },
+      {
+        "appId": "com.isharing.isharing",
+        "title": "iSharing: GPS Location Tracker",
+        "developer": "iSharingSoft, inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.madredis.geopet",
+        "title": "Familyhood: Family GPS Locator",
+        "developer": "MAD Redis LAB LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.google.android.apps.adm",
+        "title": "Google’s Find Hub",
+        "developer": "Google LLC",
+        "score": 0
+      },
+      {
+        "appId": "org.findmykids.app",
+        "title": "Findmykids: Location tracker",
+        "developer": "LETEM LTD",
+        "score": 0
+      },
+      {
+        "appId": "com.sygic.familywhere.android",
+        "title": "Find my Phone - Family Locator",
+        "developer": "GEO TRACK LABS LTD",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 384830320,
+        "bundleId": "com.life360.safetymap",
+        "title": "Life360: Family Safety & GPS",
+        "developer": "Life360",
+        "ratings": 3136694,
+        "released": "2010-08-10T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1514844621,
+        "bundleId": "com.apple.findmy",
+        "title": "Find My",
+        "developer": "Apple Inc.",
+        "ratings": 18465,
+        "released": "2020-06-22T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 284882215,
+        "bundleId": "com.facebook.Facebook",
+        "title": "Facebook",
+        "developer": "Meta Platforms, Inc.",
+        "ratings": 28889747,
+        "released": "2019-02-05T08:00:00Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "remini": {
+    "id": "remini",
+    "name": "Remini",
+    "term": "Remini",
+    "play": [
+      {
+        "appId": "com.bigwinepot.nwdn.international",
+        "title": "Remini - AI Photo Enhancer",
+        "developer": "Bending Spoons",
+        "score": 1.15
+      },
+      {
+        "appId": "photo.editor.photoeditor.photoeditorpro",
+        "title": "Photo Editor - Polish",
+        "developer": "InShot Inc.",
+        "score": 0
+      },
+      {
+        "appId": "photo.editor.photoeditor.filtersforpictures",
+        "title": "AI Photo Editor - Lumii",
+        "developer": "InShot Video Editor",
+        "score": 0
+      },
+      {
+        "appId": "io.faceapp",
+        "title": "FaceApp: Perfect Face Editor",
+        "developer": "FaceApp Technology Ltd",
+        "score": 0
+      },
+      {
+        "appId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.adobe.lrmobile",
+        "title": "Lightroom Photo & Video Editor",
+        "developer": "Adobe",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1470373330,
+        "bundleId": "com.bigwinepot.nwdn.international",
+        "title": "Remini - AI Photo Enhancer",
+        "developer": "Bending Spoons Apps ApS",
+        "ratings": 357440,
+        "released": "2019-08-01T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 416048305,
+        "bundleId": "com.meitu.mtxx",
+        "title": "Meitu: Photo & Video Editor",
+        "developer": "Meitu Technology Co., Ltd.",
+        "ratings": 80113,
+        "released": "2011-02-15T02:52:45Z",
+        "score": 0
+      },
+      {
+        "trackId": 6448889563,
+        "bundleId": "org.appblue.photoenhancer.distribution",
+        "title": "Enhancer - AI Photo Enhancer",
+        "developer": "AppBlue LLC",
+        "ratings": 86,
+        "released": "2023-05-07T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 6446040018,
+        "bundleId": "com.wowooapps.PhotoEnhancer",
+        "title": "Unblur Clear Image·Enhancer AI",
+        "developer": "Wowoo Dijital Hizmetler Limited Sirketi",
+        "ratings": 266,
+        "released": "2023-06-15T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1180884341,
+        "bundleId": "io.faceapp.ios",
+        "title": "FaceApp: Perfect Face Editor",
+        "developer": "FaceApp Technology Limited",
+        "ratings": 1788731,
+        "released": "2017-01-24T14:13:07Z",
+        "score": 0
+      },
+      {
+        "trackId": 998411110,
+        "bundleId": "com.magicv.AirBrush",
+        "title": "Airbrush: Face Photo Editor",
+        "developer": "PIXOCIAL TECHNOLOGY (SINGAPORE) PTE. LTD.",
+        "ratings": 203744,
+        "released": "2015-10-08T05:51:37Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "picsart": {
+    "id": "picsart",
+    "name": "Picsart",
+    "term": "Picsart",
+    "play": [
+      {
+        "appId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.picsart.draw",
+        "title": "Picsart Color - Painting, Draw",
+        "developer": "PicsArt, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.picsart.apps.video",
+        "title": "Picsart Video Editor & Maker",
+        "developer": "PicsArt, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.picsart.apps.genai",
+        "title": "Picsart: Gen AI Video Editor",
+        "developer": "PicsArt, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.picsart.apps.comicme",
+        "title": "Picsart ComicMe: AI Book Maker",
+        "developer": "PicsArt, Inc.",
+        "score": 1.15
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 587366035,
+        "bundleId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "ratings": 1196343,
+        "released": "2013-01-02T22:14:40Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 897446215,
+        "bundleId": "com.canva.canvaeditor",
+        "title": "Canva AI Photo & Video Editor",
+        "developer": "Canva Pty Ltd",
+        "ratings": 3588582,
+        "released": "2014-10-15T10:23:37Z",
+        "score": 0
+      },
+      {
+        "trackId": 429047995,
+        "bundleId": "pinterest",
+        "title": "Pinterest",
+        "developer": "Pinterest, Inc.",
+        "ratings": 5805149,
+        "released": "2011-04-28T15:51:13Z",
+        "score": 0
+      },
+      {
+        "trackId": 448639966,
+        "bundleId": "com.cardinalblue.PicCollage",
+        "title": "PicCollage: Magic Photo Editor",
+        "developer": "Cardinal Blue Software, Inc",
+        "ratings": 1846289,
+        "released": "2011-07-13T21:30:34Z",
+        "score": 0
+      },
+      {
+        "trackId": 450722833,
+        "bundleId": "jp.ne.ibis.ibisPaintX",
+        "title": "ibis Paint X",
+        "developer": "ibis inc.",
+        "ratings": 300811,
+        "released": "2011-08-01T21:09:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1390423469,
+        "bundleId": "com.camerasideas.Peachy",
+        "title": "Peachy - AI Face & Body Editor",
+        "developer": "SHANTANU PTE. LTD.",
+        "ratings": 178595,
+        "released": "2018-06-29T20:02:55Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "photoroom": {
+    "id": "photoroom",
+    "name": "PhotoRoom",
+    "term": "PhotoRoom AI Photo Editor",
+    "play": [
+      {
+        "appId": "com.photoroom.app",
+        "title": "Photoroom: AI Photo Editor",
+        "developer": "Photoroom AI Photo Editor",
+        "score": 2.15
+      },
+      {
+        "appId": "com.everimaging.photoeffectstudio",
+        "title": "Fotor–AI Photo Editor & Filter",
+        "developer": "AI Art Photo Editor | Everimaging Ltd.",
+        "score": 0.75
+      },
+      {
+        "appId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "score": 0.75
+      },
+      {
+        "appId": "com.canva.editor",
+        "title": "Canva: AI Photo & Video Editor",
+        "developer": "Canva",
+        "score": 0.75
+      },
+      {
+        "appId": "photo.editor.photoeditor.filtersforpictures",
+        "title": "AI Photo Editor - Lumii",
+        "developer": "InShot Video Editor",
+        "score": 0.75
+      },
+      {
+        "appId": "com.adobe.psmobile",
+        "title": "Photoshop Express Photo Editor",
+        "developer": "Adobe",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1455009060,
+        "bundleId": "com.dr1ven.eraser",
+        "title": "Photoroom: AI Photo Editor",
+        "developer": "Photoroom",
+        "ratings": 230865,
+        "released": "2019-03-26T09:30:20Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 897446215,
+        "bundleId": "com.canva.canvaeditor",
+        "title": "Canva AI Photo & Video Editor",
+        "developer": "Canva Pty Ltd",
+        "ratings": 3588582,
+        "released": "2014-10-15T10:23:37Z",
+        "score": 0.75
+      },
+      {
+        "trackId": 587366035,
+        "bundleId": "com.picsart.studio",
+        "title": "Picsart AI Photo Editor, Video",
+        "developer": "PicsArt, Inc.",
+        "ratings": 1196343,
+        "released": "2013-01-02T22:14:40Z",
+        "score": 0.75
+      },
+      {
+        "trackId": 1534785237,
+        "bundleId": "com.circular.pixels",
+        "title": "Pixelcut: AI Photo & Video",
+        "developer": "Pixelcut Inc.",
+        "ratings": 221286,
+        "released": "2020-11-03T08:00:00Z",
+        "score": 0.5
+      }
+    ],
+    "errors": []
+  },
+  "capcut": {
+    "id": "capcut",
+    "name": "CapCut",
+    "term": "CapCut",
+    "play": [
+      {
+        "appId": "com.lemon.lvoverseas",
+        "title": "CapCut - Video Editor",
+        "developer": "Bytedance Pte. Ltd.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.lemon.ccpadpro",
+        "title": "CapCut Pad",
+        "developer": "Bytedance Pte. Ltd.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.camerasideas.trimmer",
+        "title": "YouCut - Video Editor & Maker",
+        "developer": "InShot Video Editor",
+        "score": 0
+      },
+      {
+        "appId": "com.instagram.basel",
+        "title": "Edits: Video Editor",
+        "developer": "Instagram",
+        "score": 0
+      },
+      {
+        "appId": "video.editor.videomaker.effects.fx",
+        "title": "AI Video Editor: ShotCut AI",
+        "developer": "Shotcut Video Workshop",
+        "score": 0
+      },
+      {
+        "appId": "com.nexstreaming.app.kinemasterfree",
+        "title": "KineMaster - AI Video Editor",
+        "developer": "KineMaster, Video Editor Experts Group",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1500855883,
+        "bundleId": "com.lemon.lvoverseas",
+        "title": "CapCut: Photo & Video Editor",
+        "developer": "BYTEDANCE PTE. LTD.",
+        "ratings": 1124843,
+        "released": "2020-04-14T07:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6448311069,
+        "bundleId": "com.openai.chat",
+        "title": "ChatGPT",
+        "developer": "OpenAI OpCo, LLC",
+        "ratings": 11589698,
+        "released": "2023-05-18T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 997362197,
+        "bundleId": "com.camerasideas.InstaShot",
+        "title": "InShot - Video Editor",
+        "developer": "SHANTANU PTE. LTD.",
+        "ratings": 2515174,
+        "released": "2015-06-11T17:51:54Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631082,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 897446215,
+        "bundleId": "com.canva.canvaeditor",
+        "title": "Canva AI Photo & Video Editor",
+        "developer": "Canva Pty Ltd",
+        "ratings": 3588270,
+        "released": "2014-10-15T10:23:37Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "tinder": {
+    "id": "tinder",
+    "name": "Tinder",
+    "term": "Tinder",
+    "play": [
+      {
+        "appId": "com.tinder",
+        "title": "Tinder Dating App: Chat & Date",
+        "developer": "Tinder LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "co.hinge.app",
+        "title": "Hinge Dating App: Date & Chat",
+        "developer": "Hinge, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.bumble.app",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "score": 0
+      },
+      {
+        "appId": "enterprises.dating.boo",
+        "title": "Boo Dating App: Date & Friends",
+        "developer": "Boo Enterprises, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.pof.android",
+        "title": "Plenty of Fish : Dating App",
+        "developer": "Plentyoffish Media ULC",
+        "score": 0
+      },
+      {
+        "appId": "com.badoo.mobile",
+        "title": "Badoo Dating App: Meet & Date",
+        "developer": "Badoo",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 547702041,
+        "bundleId": "com.cardify.tinder",
+        "title": "Tinder Dating App: Date & Chat",
+        "developer": "Tinder LLC",
+        "ratings": 1756651,
+        "released": "2012-08-03T01:43:39Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 930441707,
+        "bundleId": "com.moxco.bumble",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "ratings": 1768550,
+        "released": "2014-11-19T02:18:55Z",
+        "score": 0
+      },
+      {
+        "trackId": 595287172,
+        "bundleId": "co.hinge.mobile.ios",
+        "title": "Hinge Dating App: Match & Date",
+        "developer": "Hinge, Inc.",
+        "ratings": 1133661,
+        "released": "2013-02-06T06:50:22Z",
+        "score": 0
+      },
+      {
+        "trackId": 1673723000,
+        "bundleId": "next.bondee.tech",
+        "title": "Duet Dating App: Chat & Meet",
+        "developer": "WINK TECH LIMITED",
+        "ratings": 106402,
+        "released": "2023-02-26T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 601174087,
+        "bundleId": "com.bwf.BWF",
+        "title": "DOWN: The Casual Dating App",
+        "developer": "Down App, Inc.",
+        "ratings": 131029,
+        "released": "2013-05-01T06:03:46Z",
+        "score": 0
+      },
+      {
+        "trackId": 1042814349,
+        "bundleId": "com.hookupdating",
+        "title": "HUD™ Dating App: Casual & Open",
+        "developer": "HUD STUDIO LIMITED",
+        "ratings": 208336,
+        "released": "2015-10-29T11:23:47Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "hinge": {
+    "id": "hinge",
+    "name": "Hinge",
+    "term": "Hinge",
+    "play": [
+      {
+        "appId": "co.hinge.app",
+        "title": "Hinge Dating App: Date & Chat",
+        "developer": "Hinge, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.hingehealth.phoenix",
+        "title": "Hinge Health",
+        "developer": "Hinge Health, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bumble.app",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "score": 0
+      },
+      {
+        "appId": "com.tinder",
+        "title": "Tinder Dating App: Chat & Date",
+        "developer": "Tinder LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.ftw_and_co.happn",
+        "title": "happn: dating app",
+        "developer": "happn",
+        "score": 0
+      },
+      {
+        "appId": "enterprises.dating.boo",
+        "title": "Boo Dating App: Date & Friends",
+        "developer": "Boo Enterprises, Inc.",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 595287172,
+        "bundleId": "co.hinge.mobile.ios",
+        "title": "Hinge Dating App: Match & Date",
+        "developer": "Hinge, Inc.",
+        "ratings": 1133661,
+        "released": "2013-02-06T06:50:22Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 547702041,
+        "bundleId": "com.cardify.tinder",
+        "title": "Tinder Dating App: Date & Chat",
+        "developer": "Tinder LLC",
+        "ratings": 1756651,
+        "released": "2012-08-03T01:43:39Z",
+        "score": 0
+      },
+      {
+        "trackId": 930441707,
+        "bundleId": "com.moxco.bumble",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "ratings": 1768550,
+        "released": "2014-11-19T02:18:55Z",
+        "score": 0
+      },
+      {
+        "trackId": 1673723000,
+        "bundleId": "next.bondee.tech",
+        "title": "Duet Dating App: Chat & Meet",
+        "developer": "WINK TECH LIMITED",
+        "ratings": 106402,
+        "released": "2023-02-26T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1250946975,
+        "bundleId": "com.hily.ios",
+        "title": "Hily Dating App: Meet. Date.",
+        "developer": "Hily Corp.",
+        "ratings": 384032,
+        "released": "2017-08-14T21:27:38Z",
+        "score": 0
+      },
+      {
+        "trackId": 601174087,
+        "bundleId": "com.bwf.BWF",
+        "title": "DOWN: The Casual Dating App",
+        "developer": "Down App, Inc.",
+        "ratings": 131029,
+        "released": "2013-05-01T06:03:46Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "bumble": {
+    "id": "bumble",
+    "name": "Bumble",
+    "term": "Bumble",
+    "play": [
+      {
+        "appId": "com.bumble.app",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "score": 1.15
+      },
+      {
+        "appId": "co.hinge.app",
+        "title": "Hinge Dating App: Date & Chat",
+        "developer": "Hinge, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.tinder",
+        "title": "Tinder Dating App: Chat & Date",
+        "developer": "Tinder LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.badoo.mobile",
+        "title": "Badoo Dating App: Meet & Date",
+        "developer": "Badoo",
+        "score": 0
+      },
+      {
+        "appId": "enterprises.dating.boo",
+        "title": "Boo Dating App: Date & Friends",
+        "developer": "Boo Enterprises, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.genevachat.prod",
+        "title": "BFF: Make friends & meet up",
+        "developer": "Geneva Technologies, Inc",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 930441707,
+        "bundleId": "com.moxco.bumble",
+        "title": "Bumble Dating App: Meet & Date",
+        "developer": "Bumble Holding Limited",
+        "ratings": 1768550,
+        "released": "2014-11-19T02:18:55Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 547702041,
+        "bundleId": "com.cardify.tinder",
+        "title": "Tinder Dating App: Date & Chat",
+        "developer": "Tinder LLC",
+        "ratings": 1756651,
+        "released": "2012-08-03T01:43:39Z",
+        "score": 0
+      },
+      {
+        "trackId": 595287172,
+        "bundleId": "co.hinge.mobile.ios",
+        "title": "Hinge Dating App: Match & Date",
+        "developer": "Hinge, Inc.",
+        "ratings": 1133661,
+        "released": "2013-02-06T06:50:22Z",
+        "score": 0
+      },
+      {
+        "trackId": 1673723000,
+        "bundleId": "next.bondee.tech",
+        "title": "Duet Dating App: Chat & Meet",
+        "developer": "WINK TECH LIMITED",
+        "ratings": 106402,
+        "released": "2023-02-26T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1250946975,
+        "bundleId": "com.hily.ios",
+        "title": "Hily Dating App: Meet. Date.",
+        "developer": "Hily Corp.",
+        "ratings": 384032,
+        "released": "2017-08-14T21:27:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "uber": {
+    "id": "uber",
+    "name": "Uber",
+    "term": "Uber",
+    "play": [
+      {
+        "appId": "com.ubercab",
+        "title": "Uber: Rides, eats, hotels",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ubercab.driver",
+        "title": "Uber - Driver: Drive & Deliver",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ubercab.eats",
+        "title": "Uber Eats: Food and Grocery",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.uber.restaurants",
+        "title": "Uber Eats Order Manager",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.uber.restaurantmanager",
+        "title": "Uber Eats Manager",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ubercab.fleet",
+        "title": "Uber Fleet",
+        "developer": "Uber Technologies, Inc.",
+        "score": 1.15
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 368677368,
+        "bundleId": "com.ubercab.UberClient",
+        "title": "Uber - Rides, Eats, Hotels",
+        "developer": "Uber Technologies, Inc.",
+        "ratings": 17120084,
+        "released": "2010-05-21T03:11:23Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1131342792,
+        "bundleId": "com.ubercab.UberPartner",
+        "title": "Uber - Driver: Drive & Deliver",
+        "developer": "Uber Technologies, Inc.",
+        "ratings": 657678,
+        "released": "2016-10-18T19:07:11Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1058959277,
+        "bundleId": "com.ubercab.UberEats",
+        "title": "Uber Eats: Food & Groceries",
+        "developer": "Uber Technologies, Inc.",
+        "ratings": 10864352,
+        "released": "2016-03-01T07:53:50Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 529379082,
+        "bundleId": "com.zimride.instant",
+        "title": "Lyft",
+        "developer": "Lyft, Inc.",
+        "ratings": 17844008,
+        "released": "2012-05-31T00:43:05Z",
+        "score": 0
+      },
+      {
+        "trackId": 780125801,
+        "bundleId": "ru.inDriver-ru",
+        "title": "inDrive. Save on city rides",
+        "developer": "SUOL INNOVATIONS LTD",
+        "ratings": 422781,
+        "released": "2013-12-20T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 675033630,
+        "bundleId": "ee.mtakso.client",
+        "title": "Bolt: Request a Ride",
+        "developer": "BOLT TECHNOLOGY OU",
+        "ratings": 180591,
+        "released": "2013-07-24T04:44:15Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "doordash": {
+    "id": "doordash",
+    "name": "DoorDash",
+    "term": "DoorDash",
+    "play": [
+      {
+        "appId": "com.dd.doordash",
+        "title": "DoorDash: Food, Grocery, More",
+        "developer": "DoorDash",
+        "score": 1.15
+      },
+      {
+        "appId": "com.doordash.driverapp",
+        "title": "DoorDash - Dasher",
+        "developer": "DoorDash",
+        "score": 1.15
+      },
+      {
+        "appId": "com.doordash.android.merchant.portal",
+        "title": "DoorDash - Business Manager",
+        "developer": "DoorDash",
+        "score": 1.15
+      },
+      {
+        "appId": "com.dd.ddmerchant",
+        "title": "DoorDash Order Manager",
+        "developer": "DoorDash",
+        "score": 1.15
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 719972451,
+        "bundleId": "doordash.DoorDashConsumer",
+        "title": "DoorDash: Food, Grocery, More",
+        "developer": "DoorDash, Inc.",
+        "ratings": 23467803,
+        "released": "2013-10-10T19:46:20Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1451754591,
+        "bundleId": "com.doordash.dasher",
+        "title": "DoorDash - Dasher",
+        "developer": "DoorDash, Inc.",
+        "ratings": 2464717,
+        "released": "2019-03-13T16:03:13Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1058959277,
+        "bundleId": "com.ubercab.UberEats",
+        "title": "Uber Eats: Food & Groceries",
+        "developer": "Uber Technologies, Inc.",
+        "ratings": 10865756,
+        "released": "2016-03-01T07:53:50Z",
+        "score": 0
+      },
+      {
+        "trackId": 302920553,
+        "bundleId": "com.grubhub.search",
+        "title": "Grubhub: Food Delivery",
+        "developer": "GrubHub Inc",
+        "ratings": 4688361,
+        "released": "2009-02-04T03:37:30Z",
+        "score": 0
+      },
+      {
+        "trackId": 1131342792,
+        "bundleId": "com.ubercab.UberPartner",
+        "title": "Uber - Driver: Drive & Deliver",
+        "developer": "Uber Technologies, Inc.",
+        "ratings": 657668,
+        "released": "2016-10-18T19:07:11Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "airbnb": {
+    "id": "airbnb",
+    "name": "Airbnb",
+    "term": "Airbnb",
+    "play": [
+      {
+        "appId": "com.airbnb.android",
+        "title": "Airbnb",
+        "developer": "Airbnb",
+        "score": 2.15
+      },
+      {
+        "appId": "com.booking",
+        "title": "Booking.com: Hotels & Travel",
+        "developer": "Booking.com Hotels & Vacation Rentals",
+        "score": 0
+      },
+      {
+        "appId": "com.vrbo.android",
+        "title": "Vrbo: Vacation Rentals",
+        "developer": "Vrbo",
+        "score": 0
+      },
+      {
+        "appId": "com.hometogo",
+        "title": "Vacation Rentals - HomeToGo",
+        "developer": "HomeToGo",
+        "score": 0
+      },
+      {
+        "appId": "com.cozycozy.app",
+        "title": "Cozycozy: All accommodations",
+        "developer": "cozycozy.com",
+        "score": 0
+      },
+      {
+        "appId": "com.kayak.android",
+        "title": "KAYAK: Flights, Hotels & Cars",
+        "developer": "KAYAK.com",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 401626263,
+        "bundleId": "com.airbnb.app",
+        "title": "Airbnb",
+        "developer": "Airbnb, Inc.",
+        "ratings": 703110,
+        "released": "2010-11-10T20:28:11Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 1245772818,
+        "bundleId": "com.vrbo.traveler",
+        "title": "Vrbo: Vacation Rentals",
+        "developer": "HomeAway.com, Inc.",
+        "ratings": 3267396,
+        "released": "2017-07-19T15:46:33Z",
+        "score": 0
+      },
+      {
+        "trackId": 367003839,
+        "bundleId": "com.booking.BookingApp",
+        "title": "Booking.com: Hotels & Travel",
+        "developer": "Booking.com B.V.",
+        "ratings": 2204985,
+        "released": "2010-04-14T18:30:24Z",
+        "score": 0
+      },
+      {
+        "trackId": 427916203,
+        "bundleId": "com.expedia.booking",
+        "title": "Expedia: Hotels, Flights, Cars",
+        "developer": "Expedia, Inc.",
+        "ratings": 5985041,
+        "released": "2011-04-07T03:01:27Z",
+        "score": 0
+      },
+      {
+        "trackId": 1454336721,
+        "bundleId": "com.vacasa.guests",
+        "title": "Vacasa - Vacation Rentals",
+        "developer": "Vacasa, LLC",
+        "ratings": 23693,
+        "released": "2019-08-18T20:13:24Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "ups": {
+    "id": "ups",
+    "name": "UPS",
+    "term": "UPS Mobile",
+    "play": [
+      {
+        "appId": "com.ups.mobile.android",
+        "title": "UPS",
+        "developer": "UPS",
+        "score": 2.15
+      },
+      {
+        "appId": "com.ups.mobiledelivery",
+        "title": "UPS Mobile Delivery",
+        "developer": "UPS",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ups.genesispd",
+        "title": "UPS Global Pickup & Delivery",
+        "developer": "UPS",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ups.accesspoint",
+        "title": "UPS Access Point",
+        "developer": "UPS",
+        "score": 1.15
+      },
+      {
+        "appId": "com.ups.ncmmobile",
+        "title": "UPS® Network Carrier Mobile",
+        "developer": "UPS",
+        "score": 1.15
+      },
+      {
+        "appId": "com.mobileapp.siu",
+        "title": "SubItUp Mobile",
+        "developer": "SubItUp Mobile",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 336377331,
+        "bundleId": "com.ups.m.iphone",
+        "title": "UPS",
+        "developer": "UPS",
+        "ratings": 1226737,
+        "released": "2009-10-29T03:14:23Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 1589501614,
+        "bundleId": "com.ups.mda",
+        "title": "UPS Mobile Delivery",
+        "developer": "UPS",
+        "ratings": 145,
+        "released": "2021-11-16T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 339597578,
+        "bundleId": "com.usps.uspsmobile",
+        "title": "USPS Mobile®",
+        "developer": "United States Postal Service",
+        "ratings": 1784569,
+        "released": "2009-12-03T04:50:12Z",
+        "score": 0
+      },
+      {
+        "trackId": 1010729050,
+        "bundleId": "com.fedex.mobile.home",
+        "title": "FedEx Mobile",
+        "developer": "FedEx Corporate Services, Inc.",
+        "ratings": 399089,
+        "released": "2015-11-10T17:48:56Z",
+        "score": 0
+      },
+      {
+        "trackId": 1397865865,
+        "bundleId": "com.pkge.pkge.net",
+        "title": "Package Tracker - pkge Mobile",
+        "developer": "DARADDO APPS LTD",
+        "ratings": 19669,
+        "released": "2018-07-25T21:28:47Z",
+        "score": 0
+      },
+      {
+        "trackId": 1426463073,
+        "bundleId": "com.dhl.exp.dhlmobile",
+        "title": "DHL Express Mobile App",
+        "developer": "DHL Express (Singapore) Pte. Ltd.",
+        "ratings": 18705,
+        "released": "2019-04-23T19:28:32Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "spark-driver": {
+    "id": "spark-driver",
+    "name": "Spark Driver",
+    "term": "Spark Driver",
+    "play": [
+      {
+        "appId": "com.walmart.sparkdriver",
+        "title": "Spark Driver",
+        "developer": "Walmart",
+        "score": 2.15
+      },
+      {
+        "appId": "lt.mediapark.rideshare",
+        "title": "SPARK car sharing",
+        "developer": "SPARK - your electric drive",
+        "score": 0.5
+      },
+      {
+        "appId": "com.ubercab.driver",
+        "title": "Uber - Driver: Drive & Deliver",
+        "developer": "Uber Technologies, Inc.",
+        "score": 0.5
+      },
+      {
+        "appId": "com.doordash.driverapp",
+        "title": "DoorDash - Dasher",
+        "developer": "DoorDash",
+        "score": 0
+      },
+      {
+        "appId": "com.instacart.shopper",
+        "title": "Instacart Shopper: Earn money",
+        "developer": "Instacart",
+        "score": 0
+      },
+      {
+        "appId": "com.amazon.flex.rabbit",
+        "title": "Amazon Flex",
+        "developer": "Amazon Mobile LLC",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1483998235,
+        "bundleId": "com.walmart.sparkdriver",
+        "title": "Spark Driver",
+        "developer": "Walmart",
+        "ratings": 313059,
+        "released": "2019-11-11T08:00:00Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 1436325695,
+        "bundleId": "com.roadie.roadie-driver",
+        "title": "Roadie Driver",
+        "developer": "Roadie, Inc.",
+        "ratings": 131840,
+        "released": "2019-11-18T08:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1454725763,
+        "bundleId": "com.amazon.flex.irabbit",
+        "title": "Amazon Flex",
+        "developer": "AMZN Mobile LLC",
+        "ratings": 447888,
+        "released": "2019-06-14T17:13:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1454056744,
+        "bundleId": "com.instacart.shopper",
+        "title": "Instacart Shopper: Earn money",
+        "developer": "Maplebear Inc",
+        "ratings": 1654059,
+        "released": "2019-05-01T16:55:34Z",
+        "score": 0
+      },
+      {
+        "trackId": 1451754591,
+        "bundleId": "com.doordash.dasher",
+        "title": "DoorDash - Dasher",
+        "developer": "DoorDash, Inc.",
+        "ratings": 2464726,
+        "released": "2019-03-13T16:03:13Z",
+        "score": 0
+      },
+      {
+        "trackId": 976353472,
+        "bundleId": "com.shipt.shopper",
+        "title": "Drive and Shop with Shipt",
+        "developer": "Shipt LLC",
+        "ratings": 231134,
+        "released": "2018-02-05T17:25:44Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "ticketmaster": {
+    "id": "ticketmaster",
+    "name": "Ticketmaster",
+    "term": "Ticketmaster",
+    "play": [
+      {
+        "appId": "com.ticketmaster.mobile.android.na",
+        "title": "Ticketmaster－Buy, Sell Tickets",
+        "developer": "Ticketmaster L.L.C.",
+        "score": 1.15
+      },
+      {
+        "appId": "fr.fan.wallet",
+        "title": "Fan Wallet",
+        "developer": "Ticketmaster L.L.C.",
+        "score": 0
+      },
+      {
+        "appId": "com.stubhub",
+        "title": "StubHub - Live Event Tickets",
+        "developer": "StubHub",
+        "score": 0
+      },
+      {
+        "appId": "com.seatgeek.android",
+        "title": "SeatGeek – Tickets to Events",
+        "developer": "SeatGeek",
+        "score": 0
+      },
+      {
+        "appId": "com.axs.android",
+        "title": "AXS Tickets",
+        "developer": "AXS, LLC",
+        "score": 0
+      },
+      {
+        "appId": "com.vividseats.android",
+        "title": "Vivid Seats | Event Tickets",
+        "developer": "Vivid Seats",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 500003565,
+        "bundleId": "com.ticketmaster.ios.TicketmasterApp",
+        "title": "Ticketmaster－Buy, Sell Tickets",
+        "developer": "Ticketmaster L.L.C",
+        "ratings": 4234291,
+        "released": "2012-02-23T02:09:55Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 582790430,
+        "bundleId": "com.seatgeek.SeatGeek",
+        "title": "SeatGeek - Buy Event Tickets",
+        "developer": "SeatGeek, Inc.",
+        "ratings": 1079325,
+        "released": "2012-12-11T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 789844385,
+        "bundleId": "com.tickpick.tickpickapp",
+        "title": "TickPick: No Fee Tickets",
+        "developer": "TickPick LLC",
+        "ratings": 390225,
+        "released": "2014-01-23T01:14:57Z",
+        "score": 0
+      },
+      {
+        "trackId": 366562751,
+        "bundleId": "com.stubhub.stubhub",
+        "title": "StubHub: Event Tickets",
+        "developer": "Stubhub, Inc",
+        "ratings": 1438687,
+        "released": "2010-06-02T01:57:23Z",
+        "score": 0
+      },
+      {
+        "trackId": 630687854,
+        "bundleId": "com.gametimeunited.gametime",
+        "title": "Gametime - Last Minute Tickets",
+        "developer": "Gametime United Inc.",
+        "ratings": 275323,
+        "released": "2013-05-03T22:21:18Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "magic-tiles-3": {
+    "id": "magic-tiles-3",
+    "name": "Magic Tiles 3",
+    "term": "Magic Tiles 3",
+    "play": [
+      {
+        "appId": "com.youmusic.magictiles",
+        "title": "Magic Tiles 3™ - Piano Game",
+        "developer": "AMANOTES PTE. LTD.",
+        "score": 1.15
+      },
+      {
+        "appId": "com.bunbunstudio.magicblocktiles",
+        "title": "Music Piano 7: Tiles Song Game",
+        "developer": "Melodya Muses",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "com.kooapps.pianotiles2gp",
+        "title": "Piano Tiles 2™ - Piano Game",
+        "developer": "Kooapps Games | Fun Arcade and Casual Action Games",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "com.amanotes.beathopper",
+        "title": "Tiles Hop Music & Ball Game",
+        "developer": "AMANOTES PTE. LTD.",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "beats.color.sing.star.rush",
+        "title": "Magic Level 9 Music Piano Game",
+        "developer": "Beatwave Studio",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "game.piano.music.tiles.challenge",
+        "title": "Piano Game: Classic Music Song",
+        "developer": "Dream Tiles Piano Game Studio",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1443446174,
+        "bundleId": "com.amanotes.magictiles",
+        "title": "Magic Tiles 3™: Piano Game",
+        "developer": "Amanotes Pte Ltd",
+        "ratings": 845112,
+        "released": "2018-12-15T08:55:33Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1446874445,
+        "bundleId": "com.ios.beatshop",
+        "title": "Magic Level 9: Tap Piano Game",
+        "developer": "Kim Nguyen",
+        "ratings": 105536,
+        "released": "2018-12-19T05:26:48Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 1344702806,
+        "bundleId": "com.amanotes.bh",
+        "title": "Tiles Hop: Rhythm Music Ball",
+        "developer": "Amanotes Pte Ltd",
+        "ratings": 71897,
+        "released": "2018-03-06T05:56:58Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 1445343575,
+        "bundleId": "com.kingapp.musictiles",
+        "title": "Music Tiles 2 - Fun Piano Game",
+        "developer": "Doan Le Quyen",
+        "ratings": 21059,
+        "released": "2018-12-20T00:42:09Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 1027688889,
+        "bundleId": "com.cmplay.tiles2",
+        "title": "Piano Tiles 2™: Fun Piano Game",
+        "developer": "KOOAPPS INC.",
+        "ratings": 51148,
+        "released": "2015-08-19T20:26:40Z",
+        "score": 0.3333333333333333
+      }
+    ],
+    "errors": []
+  },
+  "chess-com": {
+    "id": "chess-com",
+    "name": "Chess.com",
+    "term": "Chess.com",
+    "play": [
+      {
+        "appId": "com.chess",
+        "title": "Chess - Play and Learn Online",
+        "developer": "Chess.com",
+        "score": 0.5
+      },
+      {
+        "appId": "com.gamovation.chessclubpilot",
+        "title": "Chess - Offline Board Game",
+        "developer": "GamoVation",
+        "score": 0.5
+      },
+      {
+        "appId": "com.chesskid",
+        "title": "Chess for Kids - Play & Learn",
+        "developer": "Chess.com",
+        "score": 0.5
+      },
+      {
+        "appId": "com.chess.chesscoach",
+        "title": "Learn Chess with Dr. Wolf",
+        "developer": "Chess.com",
+        "score": 0.5
+      },
+      {
+        "appId": "com.splendapps.checkmate",
+        "title": "Chess Online & Offline",
+        "developer": "Splend Apps",
+        "score": 0.5
+      },
+      {
+        "appId": "com.miniclip.chess",
+        "title": "Chess Clash: Online & Offline",
+        "developer": "Miniclip.com",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 329218549,
+        "bundleId": "com.chess.iphone",
+        "title": "Chess.com - Play and Learn",
+        "developer": "Chess.com, LLC",
+        "ratings": 853404,
+        "released": "2009-10-29T03:18:55Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 311395856,
+        "bundleId": "R6WLZBVJLW.ChessFree",
+        "title": "Chess ∙",
+        "developer": "Optime Software LLC",
+        "ratings": 207206,
+        "released": "2009-04-18T17:28:16Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 6443798218,
+        "bundleId": "com.chess.iMessageChess",
+        "title": "Play Chess for iMessage",
+        "developer": "Chess.com, LLC",
+        "ratings": 169,
+        "released": "2022-12-30T08:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 903978215,
+        "bundleId": "com.chessfriends.chessonline",
+        "title": "Chess Online +",
+        "developer": "Entertainment 4Media AG",
+        "ratings": 26998,
+        "released": "2014-08-26T09:27:21Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1353041020,
+        "bundleId": "com.ninthpawn.chesscoach.drthomaswright",
+        "title": "Learn Chess with Dr. Wolf",
+        "developer": "Chess.com, LLC",
+        "ratings": 27094,
+        "released": "2018-07-30T17:41:03Z",
+        "score": 0.5
+      }
+    ],
+    "errors": []
+  },
+  "kolibri-games": {
+    "id": "kolibri-games",
+    "name": "Kolibri Games",
+    "term": "Idle Miner Tycoon",
+    "play": [
+      {
+        "appId": "com.fluffyfairygames.idleminertycoon",
+        "title": "Idle Miner Tycoon: Gold Games",
+        "developer": "Kolibri Games",
+        "score": 1.15
+      },
+      {
+        "appId": "com.TreetopCrew.EarthInc",
+        "title": "Earth Inc. Tycoon Idle Miner",
+        "developer": "Treetop Crew",
+        "score": 1
+      },
+      {
+        "appId": "com.zombie.idleminertycoon",
+        "title": "Idle Zombie Miner: Gold Tycoon",
+        "developer": "Royal Ark",
+        "score": 1
+      },
+      {
+        "appId": "com.hg.idleminingtycoon",
+        "title": "Idle Mining Factory Tycoon",
+        "developer": "Hello Games Team",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.aliensidea.oiltycoon.overseas",
+        "title": "Oil Era - Idle Mining Tycoon",
+        "developer": "SOFISH GAMES",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.fumbgames.minersofbitcoin",
+        "title": "Idle Mine! Tycoon Mining Game",
+        "developer": "Fumb Games",
+        "score": 0.6666666666666666
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1116645064,
+        "bundleId": "com.fluffyfairygames.idleminertycoon",
+        "title": "Idle Miner Tycoon clicker game",
+        "developer": "Kolibri Games GmbH",
+        "ratings": 865909,
+        "released": "2016-07-01T06:43:42Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 6471983323,
+        "bundleId": "com.zombie.idleminertycoon",
+        "title": "Idle Zombie Miner: Gold Tycoon",
+        "developer": "VISTREX LIMITED",
+        "ratings": 28222,
+        "released": "2023-12-13T08:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 6689514329,
+        "bundleId": "com.fumbgames.minersofbitcoin",
+        "title": "Idle Mine! Tycoon Mining Game",
+        "developer": "Fumb Games Ltd.",
+        "ratings": 15155,
+        "released": "2024-10-01T07:00:00Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 927006017,
+        "bundleId": "com.kongregate.mobile.adventurecapitalist",
+        "title": "AdVenture Capitalist Tycoon",
+        "developer": "Hyper Hippo Publishing Ltd.",
+        "ratings": 383569,
+        "released": "2015-02-19T01:26:20Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 1437902659,
+        "bundleId": "com.ktv.weedfactory",
+        "title": "Weed Factory Idle",
+        "developer": "Spider Solitaire",
+        "ratings": 59814,
+        "released": "2018-11-15T17:36:42Z",
+        "score": 0.3333333333333333
+      },
+      {
+        "trackId": 1493358837,
+        "bundleId": "com.idle.digging",
+        "title": "Idle Digging",
+        "developer": "Zplay (Beijing) Info. Tech. Co.,Ltd.",
+        "ratings": 37955,
+        "released": "2020-01-08T08:00:00Z",
+        "score": 0.3333333333333333
+      }
+    ],
+    "errors": []
+  },
+  "linkedin": {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "term": "LinkedIn",
+    "play": [
+      {
+        "appId": "com.linkedin.android",
+        "title": "LinkedIn: Community & Network",
+        "developer": "LinkedIn",
+        "score": 1.15
+      },
+      {
+        "appId": "com.linkedin.android.learning",
+        "title": "LinkedIn Learning",
+        "developer": "LinkedIn",
+        "score": 1.15
+      },
+      {
+        "appId": "com.linkedin.recruiter",
+        "title": "LinkedIn Recruiter",
+        "developer": "LinkedIn",
+        "score": 1.15
+      },
+      {
+        "appId": "com.linkedin.android.salesnavigator",
+        "title": "LinkedIn Sales Navigator",
+        "developer": "LinkedIn",
+        "score": 1.15
+      },
+      {
+        "appId": "com.indeed.android.jobsearch",
+        "title": "Indeed Job Search",
+        "developer": "Indeed Jobs",
+        "score": 0
+      },
+      {
+        "appId": "com.jobstreet.jobstreet",
+        "title": "Jobstreet: Smart job matching",
+        "developer": "Jobstreet.com Private Limited",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 288429040,
+        "bundleId": "com.linkedin.LinkedIn",
+        "title": "LinkedIn: Community & Network",
+        "developer": "LinkedIn Corporation",
+        "ratings": 645146,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 1084807225,
+        "bundleId": "com.linkedin.Learning",
+        "title": "LinkedIn Learning",
+        "developer": "LinkedIn Corporation",
+        "ratings": 77832,
+        "released": "2016-09-22T15:18:14Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 309735670,
+        "bundleId": "com.indeed.JobSearch",
+        "title": "Indeed Job Search",
+        "developer": "Indeed Inc.",
+        "ratings": 4097778,
+        "released": "2009-06-08T04:59:49Z",
+        "score": 0
+      },
+      {
+        "trackId": 6448311069,
+        "bundleId": "com.openai.chat",
+        "title": "ChatGPT",
+        "developer": "OpenAI OpCo, LLC",
+        "ratings": 11596753,
+        "released": "2023-05-18T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 389801252,
+        "bundleId": "com.burbn.instagram",
+        "title": "Instagram",
+        "developer": "Instagram, Inc.",
+        "ratings": 29631995,
+        "released": "2010-10-06T08:12:41Z",
+        "score": 0
+      },
+      {
+        "trackId": 589698942,
+        "bundleId": "com.glassdoor.glassdoor",
+        "title": "Glassdoor | Jobs & Careers",
+        "developer": "Glassdoor, Inc.",
+        "ratings": 789334,
+        "released": "2013-01-11T01:31:30Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "indeed": {
+    "id": "indeed",
+    "name": "Indeed",
+    "term": "Indeed Job Search",
+    "play": [
+      {
+        "appId": "com.indeed.android.jobsearch",
+        "title": "Indeed Job Search",
+        "developer": "Indeed Jobs",
+        "score": 2.15
+      },
+      {
+        "appId": "com.ziprecruiter.android.release",
+        "title": "Job Search by ZipRecruiter",
+        "developer": "ZipRecruiter, Inc.",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.jobrapp.jobr",
+        "title": "Monster Job Search",
+        "developer": "Monster Worldwide",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.syftapp.android",
+        "title": "Indeed Flex",
+        "developer": "Indeed Flex",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "com.glassdoor.app",
+        "title": "Glassdoor | Jobs & Careers",
+        "developer": "Indeed, Inc.",
+        "score": 0
+      },
+      {
+        "appId": "com.linkedin.android",
+        "title": "LinkedIn: Community & Network",
+        "developer": "LinkedIn",
+        "score": 0
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 309735670,
+        "bundleId": "com.indeed.JobSearch",
+        "title": "Indeed Job Search",
+        "developer": "Indeed Inc.",
+        "ratings": 4097778,
+        "released": "2009-06-08T04:59:49Z",
+        "score": 2.15
+      },
+      {
+        "trackId": 1013812731,
+        "bundleId": "com.syft-app.ios",
+        "title": "Indeed Flex - Job Search",
+        "developer": "Indeed Flex, Inc.",
+        "ratings": 7690,
+        "released": "2021-06-09T07:00:00Z",
+        "score": 1
+      },
+      {
+        "trackId": 541933937,
+        "bundleId": "com.ziprecruiter.jobs",
+        "title": "ZipRecruiter Job Search",
+        "developer": "ZipRecruiter, Inc.",
+        "ratings": 592807,
+        "released": "2013-12-29T05:05:27Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 870221491,
+        "bundleId": "com.jobrapp.ios",
+        "title": "Monster Job Search",
+        "developer": "Monster Worldwide, Inc.",
+        "ratings": 86279,
+        "released": "2014-05-04T22:59:10Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 288429040,
+        "bundleId": "com.linkedin.LinkedIn",
+        "title": "LinkedIn: Community & Network",
+        "developer": "LinkedIn Corporation",
+        "ratings": 645146,
+        "released": "2019-02-03T08:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 589698942,
+        "bundleId": "com.glassdoor.glassdoor",
+        "title": "Glassdoor | Jobs & Careers",
+        "developer": "Glassdoor, Inc.",
+        "ratings": 789334,
+        "released": "2013-01-11T01:31:30Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "zoom": {
+    "id": "zoom",
+    "name": "Zoom",
+    "term": "Zoom Workplace",
+    "play": [
+      {
+        "appId": "us.zoom.videomeetings",
+        "title": "Zoom Workplace",
+        "developer": "zoom.com",
+        "score": 2.15
+      },
+      {
+        "appId": "us.zoom.pwa.twa",
+        "title": "Zoom Workplace for Chromebook",
+        "developer": "zoom.com",
+        "score": 1.15
+      },
+      {
+        "appId": "us.zoom.videomeetings4intune",
+        "title": "Zoom Workplace for Intune",
+        "developer": "zoom.com",
+        "score": 1.15
+      },
+      {
+        "appId": "us.zoom.zrc",
+        "title": "Zoom Rooms Controller",
+        "developer": "zoom.com",
+        "score": 0.5
+      },
+      {
+        "appId": "us.zoom.videomeetingsforgood",
+        "title": "Zoom for BlackBerry",
+        "developer": "zoom.com",
+        "score": 0.5
+      },
+      {
+        "appId": "us.zoom.tv",
+        "title": "Zoom - for Home TV",
+        "developer": "zoom.com",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 546505307,
+        "bundleId": "us.zoom.videomeetings",
+        "title": "Zoom Workplace",
+        "developer": "Zoom Communications, Inc.",
+        "ratings": 3256958,
+        "average": 4.66171,
+        "released": "2012-08-15T07:00:00Z",
+        "score": 2
+      },
+      {
+        "trackId": 1462818858,
+        "bundleId": "us.zoom.videomeetings4intune",
+        "title": "Zoom Workplace for Intune",
+        "developer": "Zoom Communications, Inc.",
+        "ratings": 19035,
+        "average": 4.69398,
+        "released": "2019-05-24T00:24:35Z",
+        "score": 1
+      },
+      {
+        "trackId": 900259081,
+        "bundleId": "us.zoom.zpcontroller",
+        "title": "Zoom Rooms",
+        "developer": "Zoom Communications, Inc.",
+        "ratings": 244,
+        "average": 3.36885,
+        "released": "2022-01-10T08:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 944921229,
+        "bundleId": "com.facebook.atwork",
+        "title": "Workplace from Meta",
+        "developer": "Meta Platforms, Inc.",
+        "ratings": 116186,
+        "average": 4.85659,
+        "released": "2015-01-15T09:12:02Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1532789823,
+        "bundleId": "com.thinktapwork.Participant-for-Zoom",
+        "title": "Participant 3rd Party Zoom App",
+        "developer": "Think Tap Work, LLC",
+        "ratings": 7148,
+        "average": 4.72678,
+        "released": "2020-10-22T07:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 535886823,
+        "bundleId": "com.google.chrome.ios",
+        "title": "Google Chrome",
+        "developer": "Google LLC",
+        "ratings": 4015050,
+        "average": 4.68689,
+        "released": "2012-06-28T19:57:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "weather-channel": {
+    "id": "weather-channel",
+    "name": "Weather Channel",
+    "term": "The Weather Channel",
+    "play": [
+      {
+        "appId": "com.weather.Weather",
+        "title": "The Weather Channel - Radar",
+        "developer": "The Weather Channel",
+        "score": 1.15
+      },
+      {
+        "appId": "com.acmeaom.android.myradar",
+        "title": "MyRadar Weather Radar",
+        "developer": "ACME AtronOmatic LLC",
+        "score": 0.5
+      },
+      {
+        "appId": "com.accuweather.android",
+        "title": "AccuWeather: Weather Radar",
+        "developer": "AccuWeather",
+        "score": 0.5
+      },
+      {
+        "appId": "com.windyty.android",
+        "title": "Windy.com - Weather Forecast",
+        "developer": "Windyty SE",
+        "score": 0.5
+      },
+      {
+        "appId": "de.wetteronline.wetterapp",
+        "title": "Weather & Radar Forecast",
+        "developer": "WetterOnline",
+        "score": 0.5
+      },
+      {
+        "appId": "com.neave.zoomearth",
+        "title": "Zoom Earth - Weather Forecast",
+        "developer": "Neave Interactive",
+        "score": 0.5
+      }
+    ],
+    "ios": [],
+    "errors": [
+      "ios: itunes 403"
+    ]
+  },
+  "myradar": {
+    "id": "myradar",
+    "name": "MyRadar",
+    "term": "MyRadar Weather Radar",
+    "play": [
+      {
+        "appId": "com.acmeaom.android.myradar",
+        "title": "MyRadar Weather Radar",
+        "developer": "ACME AtronOmatic LLC",
+        "score": 2.15
+      },
+      {
+        "appId": "com.acmeaom.android.myradarpro",
+        "title": "MyRadar Weather Radar Pro",
+        "developer": "ACME AtronOmatic LLC",
+        "score": 1.15
+      },
+      {
+        "appId": "com.accuweather.android",
+        "title": "AccuWeather: Weather Radar",
+        "developer": "AccuWeather",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.accurate.weather.forecast.live",
+        "title": "Weather Radar, Live Radar",
+        "developer": "Weather Forecast & Widget & Radar",
+        "score": 0.6666666666666666
+      },
+      {
+        "appId": "com.handmark.expressweather",
+        "title": "1Weather Forecasts & Radar",
+        "developer": "OneLouder Apps",
+        "score": 0.3333333333333333
+      },
+      {
+        "appId": "com.radarx.stormmapping.stormmapping",
+        "title": "RadarOmega: Doppler Radar App",
+        "developer": "SDS Weather INC",
+        "score": 0.3333333333333333
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 325683306,
+        "bundleId": "com.fboweb.MyRadarPro",
+        "title": "MyRadar Weather Radar Pro",
+        "developer": "Aviation Data Systems, Inc",
+        "ratings": 43066,
+        "released": "2009-08-10T00:09:30Z",
+        "score": 1.15
+      },
+      {
+        "trackId": 322439990,
+        "bundleId": "com.fboweb.MyRadar",
+        "title": "MyRadar Accurate Weather Radar",
+        "developer": "Aviation Data Systems, Inc",
+        "ratings": 1086025,
+        "released": "2009-07-17T18:02:26Z",
+        "score": 1
+      },
+      {
+        "trackId": 295646461,
+        "bundleId": "com.weather.TWC",
+        "title": "The Weather Channel - Radar",
+        "developer": "The Weather Channel",
+        "ratings": 6096297,
+        "released": "2008-11-09T00:02:43Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 749133753,
+        "bundleId": "com.apalonapps.radarfree",
+        "title": "Clime: NOAA Weather Radar Live",
+        "developer": "Mosaic S.r.l.",
+        "ratings": 1056003,
+        "released": "2013-11-25T23:46:36Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 649264704,
+        "bundleId": "com.itwcalculator.worldradarfree",
+        "title": "Weather Radar - NOAA Channel",
+        "developer": "Impala Studios B.V.",
+        "ratings": 252277,
+        "released": "2013-06-11T08:37:07Z",
+        "score": 0.6666666666666666
+      },
+      {
+        "trackId": 1520179063,
+        "bundleId": "com.weatherradarforecastlive.radar",
+        "title": "NOAA Radar & Weather Forecast",
+        "developer": "Position Mobile Ltd SEZC",
+        "ratings": 76008,
+        "released": "2020-06-25T07:00:00Z",
+        "score": 0.6666666666666666
+      }
+    ],
+    "errors": []
+  },
+  "opera": {
+    "id": "opera",
+    "name": "Opera",
+    "term": "Opera Browser",
+    "play": [
+      {
+        "appId": "com.opera.browser.beta",
+        "title": "Opera browser beta with AI",
+        "developer": "Opera",
+        "score": 1.15
+      },
+      {
+        "appId": "com.opera.browser",
+        "title": "Opera: Private Web Browser",
+        "developer": "Opera",
+        "score": 1
+      },
+      {
+        "appId": "com.opera.mini.native",
+        "title": "Opera Mini: Fast Web Browser",
+        "developer": "Opera",
+        "score": 1
+      },
+      {
+        "appId": "com.opera.gx",
+        "title": "Opera GX: Gaming Browser",
+        "developer": "Opera",
+        "score": 1
+      },
+      {
+        "appId": "com.opera.mini.native.beta",
+        "title": "Opera Mini browser beta",
+        "developer": "Opera",
+        "score": 1
+      },
+      {
+        "appId": "org.mozilla.firefox",
+        "title": "Firefox Fast & Private Browser",
+        "developer": "Mozilla",
+        "score": 0.5
+      }
+    ],
+    "ios": [
+      {
+        "trackId": 1411869974,
+        "bundleId": "com.opera.OperaTouch",
+        "title": "Opera Browser with VPN",
+        "developer": "Opera Norway AS",
+        "ratings": 263475,
+        "average": 4.69303,
+        "released": "2018-10-02T04:10:26Z",
+        "score": 1
+      },
+      {
+        "trackId": 1559740799,
+        "bundleId": "com.opera.gx",
+        "title": "Opera GX",
+        "developer": "Opera Norway AS",
+        "ratings": 97954,
+        "average": 4.82782,
+        "released": "2021-06-15T07:00:00Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 989804926,
+        "bundleId": "org.mozilla.ios.Firefox",
+        "title": "Firefox Fast & Private Browser",
+        "developer": "Mozilla Corporation",
+        "ratings": 218749,
+        "average": 4.64663,
+        "released": "2015-11-12T05:17:25Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1052879175,
+        "bundleId": "com.brave.ios.browser",
+        "title": "Brave Browser & Search Engine",
+        "developer": "Brave Software, Inc.",
+        "ratings": 667943,
+        "average": 4.78277,
+        "released": "2016-02-19T18:55:32Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 1048518592,
+        "bundleId": "com.uc.iphone.browser.international",
+        "title": "UC Browser",
+        "developer": "UCWEB SINGAPORE PTE. LTD.",
+        "ratings": 4899,
+        "average": 4.36456,
+        "released": "2015-11-23T08:21:48Z",
+        "score": 0.5
+      },
+      {
+        "trackId": 663592361,
+        "bundleId": "com.duckduckgo.mobile.ios",
+        "title": "DuckDuckGo, optional Duck.ai",
+        "developer": "Duck Duck Go, Inc.",
+        "ratings": 2413945,
+        "average": 4.84438,
+        "released": "2013-06-27T07:00:00Z",
+        "score": 0
+      },
+      {
+        "trackId": 1288723196,
+        "bundleId": "com.microsoft.msedge",
+        "title": "Microsoft Edge",
+        "developer": "Microsoft Corporation",
+        "ratings": 592274,
+        "average": 4.70078,
+        "released": "2017-11-30T08:21:03Z",
+        "score": 0
+      },
+      {
+        "trackId": 535886823,
+        "bundleId": "com.google.chrome.ios",
+        "title": "Google Chrome",
+        "developer": "Google LLC",
+        "ratings": 4015050,
+        "average": 4.68689,
+        "released": "2012-06-28T19:57:38Z",
+        "score": 0
+      }
+    ],
+    "errors": []
+  },
+  "brave": {
+    "id": "brave",
+    "name": "Brave",
+    "term": "Brave Private Web Browser",
+    "play": [
+      {
+        "appId": "com.brave.browser",
+        "title": "Brave Private Web Browser, VPN",
+        "developer": "Brave Software",
+        "score": 1.15
+      },
+      {
+        "appId": "com.opera.browser",
+        "title": "Opera: Private Web Browser",
+        "developer": "Opera",
+        "score": 0.75
+      },
+      {
+        "appId": "org.mozilla.firefox",
+        "title": "Firefox Fast & Private Browser",
+        "developer": "Mozilla",
+        "score": 0.5
+      },
+      {
+        "appId": "com.aloha.browser",
+        "title": "Aloha Browser - Private VPN",
+        "developer": "Aloha Mobile",
+        "score": 0.5
+      },
+      {
+        "appId": "com.brave.browser_beta",
+        "title": "Brave Beta",
+        "developer": "Brave Software",
+        "score": 0.25
+      },
+      {
+        "appId": "com.brave.browser_nightly",
+        "title": "Brave Nightly",
+        "developer": "Brave Software",
+        "score": 0.25
+      }
+    ],
+    "ios": [],
+    "errors": [
+      "ios: itunes 429"
+    ]
+  }
+}
