@@ -9,6 +9,7 @@ inputs without making API requests or writing output files.
 
 import argparse
 import asyncio
+import copy
 import csv
 import hashlib
 import inspect
@@ -294,17 +295,18 @@ def normalize_json(data, expected_keys):
 
 
 def normalize_partial_json(data, expected_keys):
-    """Validate returned keys while allowing only requested reviews to be absent."""
+    """Keep valid requested entries; the caller retries every missing key."""
     if not isinstance(data, dict) or not isinstance(data.get('reviews'), list):
         raise ValueError('Response is missing the reviews array')
     result = {}
     for item in data['reviews']:
-        if (not isinstance(item, dict) or not isinstance(item.get('aspects'), list)
-                or not isinstance(item.get('behavioral_signals'), list)):
-            raise ValueError('Response contains a malformed review')
+        if not isinstance(item, dict):
+            continue
         key = item.get('review_key')
-        if not isinstance(key, str) or key not in expected_keys:
-            raise ValueError(f'Response has an unexpected review_key: {key}')
+        if (not isinstance(key, str) or key not in expected_keys or
+                not isinstance(item.get('aspects'), list) or
+                not isinstance(item.get('behavioral_signals'), list)):
+            continue
         if key in result:
             # The schema cannot express uniqueness across array items. Models
             # sometimes split one review into two entries with the same key.
@@ -905,10 +907,12 @@ async def async_request_aspects(client, model, rows, max_chars, governor, budget
     payload = [{'review_key': row['review_key'], 'review_title': (row.get('title') or '')[:300],
                 'review_text': row['text'][:max_chars]} for row in rows]
     input_text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
+    expected = {row['review_key'] for row in rows}
+    schema = copy.deepcopy(SCHEMA)
+    schema['properties']['reviews']['items']['properties']['review_key']['enum'] = sorted(expected)
     request = {'model': model, 'instructions': SYSTEM, 'input': input_text,
                'text': {'format': {'type': 'json_schema', 'name': 'review_aspects',
-                                   'schema': SCHEMA, 'strict': True}}}
-    expected = {row['review_key'] for row in rows}
+                                   'schema': schema, 'strict': True}}}
     return await _api_call(client, request, lambda body: normalize_partial_json(body, expected),
                            _estimate_tokens(input_text, SYSTEM, len(rows)), governor, budget,
                            metrics, retries, max_retry_seconds)
