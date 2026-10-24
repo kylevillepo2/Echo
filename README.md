@@ -43,6 +43,8 @@ npm run preview   # preview the build
 
 Node 20+ is recommended. The project was developed on Node 24.
 
+The Python review processing pipeline is in [`review_parsing/`](review_parsing/README.md). Its setup, input requirements, and one-app command are documented there.
+
 ---
 
 ## Using the interface

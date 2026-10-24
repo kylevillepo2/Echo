@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Generated data, checkpoints, and model outputs. These can contain review text.
+embeddings/
+clusters/
+aspects/
+aspect-embeddings/
+aspect-clusters/
+refined-topics/
+pipeline-runs/
+evaluation/
