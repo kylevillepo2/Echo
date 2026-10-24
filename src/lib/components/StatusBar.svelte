@@ -42,7 +42,7 @@
 			</button>
 		</span>
 		<span class="hide-sm"><kbd>⌘K</kbd> search</span>
-		<span class="hide-sm"><kbd>1</kbd><kbd>2</kbd> views</span>
+		<span class="hide-sm"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> views</span>
 		<span class="hide-sm"><kbd>esc</kbd> close</span>
 		<span class="live-line" class:live={studio.isLive}>
 			{studio.isLive ? 'VECTOR STORE CONNECTED' : 'SEEDED DEMO DATA'}

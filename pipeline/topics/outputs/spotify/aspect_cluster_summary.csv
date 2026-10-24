@@ -1,0 +1,589 @@
+aspect_cluster_id,size,reviews,n_negative,n_positive,n_neutral,n_mixed,top_aspect_type,top_canonical_feature,name,top5_descriptions,example_evidence,cohesion
+-1,408,401,103,301,0,4,general_praise,none,general sentiment,overall satisfaction with app | overall dissatisfaction with app | positive opinion of listening to songs | app experience for premium users | music and podcast listening,This app is good,
+0,72,70,68,1,2,1,ads,ads,ads after every song and before playback,ads after every song and before playback | ads after one or two songs | ads play after every song | ads appear after every song | ads after every two songs,putting ads after every song,0.8656
+1,37,35,35,2,0,0,pricing,free tier,premium required to play chosen songs,premium required to play chosen songs | premium required to choose songs | premium required to pick songs | choosing songs requires premium | premium required to play songs,Can't even play a song which I want,0.8714
+2,37,36,35,2,0,0,ads,ads,ads appearing too frequently,ads appearing too frequently | ads occur too frequently | ads appear too frequently | ads appear too often | ads are too frequent,So many ads,0.8662
+3,28,22,28,0,0,0,pricing,free tier,free tier prevents selecting songs,free tier prevents selecting songs | free tier prevents song selection | free tier restricts song selection | free tier limits song selection | free tier cannot skip songs,won't let me select the song I wanna play,0.873
+4,28,28,28,0,0,0,bug,playback,playback stops after each song,playback stops after each song | playback stops during songs | playback stops after one song | playback stops or songs skip | playback stops during listening,playback stops after every song,0.8814
+5,20,20,0,20,0,0,content_catalog,catalog,wide selection of music,wide selection of music | wide variety of music available | variety of available music | wide choice of music | large variety of available music,amazing selection of music,0.8755
+6,19,19,19,0,0,0,ads,ads,too many ads,too many ads | too many advertisements | ads are annoying | thousands of ads to watch,to much ads,0.9686
+7,19,19,1,17,1,0,other,sound quality,sound quality,sound quality | audio sound quality | song audio quality | music quality | music playback sound quality,Great sound quality,0.8626
+8,19,19,18,0,0,1,bug,playlists,playlist plays random songs,playlist plays random songs | playlist plays randomly selected songs | playlist plays random songs instead | random songs added to playlists | songs added to playlists automatically,I just created a playlist for my songs but then it started playing random songs,0.8641
+9,19,18,0,19,0,0,ui_ux,none,app is easy to use,app is easy to use | app is simple to use | app is easy to handle | app is easy to learn | easy and accessible app use,it's easy to use,0.9014
+10,19,19,19,0,0,0,bug,shuffle,shuffle repeats the same songs,shuffle repeats the same songs | shuffle repeats the same songs in order | shuffle adds random songs | shuffle does not randomize songs | shuffle repeats the same order,Why do I keep hearing the same songs over & over when shuffle mode is on?,0.8959
+11,18,18,16,2,0,0,bug,playback,selected song plays different songs,selected song plays different songs | selected song plays a different song | selected song starts a different song | selected music plays different music | selected song changes to another song,"when I click a song or playlist to listen to, it would play a whole different network of songs",0.86
+12,17,16,15,2,0,0,bug,lyrics,lyrics missing for songs,lyrics missing for songs | lyrics missing for some songs | lyrics unavailable for certain songs | lyrics unavailable for music | lyrics missing from several songs,sometimes the lyrics of the song are not shown,0.876
+13,16,16,14,0,2,0,pricing,free tier,limited skips on free tier,limited skips on free tier | limited skips for free users | free tier limits number of skips | skip limit on free tier | free users limited to six skips,amount of skips,0.8603
+14,15,15,15,0,0,0,pricing,free tier,premium required to use app,premium required to use app | premium required to use the app | premium required to enjoy the app | app unusable without premium | premium required for full app potential,Impossible to use without premium.,0.8931
+15,14,13,11,3,0,0,ads,ads,too many ads without premium,too many ads without premium | ads encourage buying premium | ads repeatedly promote premium | ads reduced with premium | frequent ads push users toward premium,To many adds without premium,0.8507
+16,14,14,13,0,1,0,pricing,subscription,subscription costs too much,subscription costs too much | subscription price feels excessive | subscription price increases frequently | subscription price has increased | increasing subscription price,Billings are to much,0.8728
+17,14,14,14,0,0,0,ads,ads,ads in the app,ads in the app | ads shown in the app | presence of ads in app | ads fill the app | app experience centered around ads,the adds,0.9661
+18,14,14,13,1,0,0,bug,playlists,playlists not working correctly,playlists not working correctly | playlist appears empty | unable to choose playlists | song selection unavailable on playlists | some playlists will not play,the playlists are messed up,0.8544
+19,13,13,1,11,1,0,content_catalog,catalog,songs available in the catalog,songs available in the catalog | all songs available in catalog | wide song catalog availability | extensive song catalog | availability of songs,has every song I know of,0.87
+20,12,10,12,0,0,0,pricing,free tier,free users cannot choose songs,free users cannot choose songs | free users cannot choose specific songs | free users cannot skip songs | free users cannot choose songs after a period | limited song selection for free users,I can't choose songs and I have to wait.,0.8957
+21,11,11,11,0,0,0,pricing,free tier,premium required for most features,premium required for most features | premium required for many features | basic features require premium | premium required for most app features | features require paid access,we need to purchase premium for literally everything,0.8875
+22,11,11,1,10,0,0,ui_ux,playlists,making playlists,making playlists | playlists | making playlists in the app | pre-made playlists available | playlists made for the listener,I really enjoy making playlists.,0.8667
+23,11,8,11,0,0,0,pricing,audiobooks,audiobook listening hours capped,audiobook listening hours capped | audiobook listening hours are limited | audiobook listening limited by hours | limit on audiobook listening time | audiobook listening limited to 15 hours,I didn't know I only had so many audiobook listening hours.,0.8954
+24,10,10,10,0,0,0,bug,none,app crashes constantly,app crashes constantly | app crashes repeatedly | app crashes frequently | app crashes | app crashes when trying to open,the so had been crashing constantly,0.8829
+25,8,8,6,1,0,1,recommendations,recommendations,recommended songs play with recommendations off,recommended songs play with recommendations off | recommended songs play instead of chosen songs | recommendations add unwanted songs | song recommendations cannot be removed | suggested songs keep appearing,I have the option for Spotify to play recommended songs off,0.8634
+26,8,8,8,0,0,0,pricing,free tier,daily skips limit song selection,daily skips limit song selection | six hourly skips limit song choice | daily limit on skipping songs | six skips limit song selection | skip limit runs out when skipping songs,with this l can't change to a song that I want to listen to,0.8838
+27,8,8,8,0,0,0,ads,ads,ads interrupt promised uninterrupted listening,ads interrupt promised uninterrupted listening | ads interrupt listening within three minutes | ads interrupt uninterrupted listening | ads interrupt listening too often | ads interrupt listening before 30 minutes,I get an ad after 1 song,0.9337
+28,8,8,3,4,1,0,recommendations,playlists,playlists of similar songs,playlists of similar songs | playlist mixes and recommended playlists | recommendations include songs outside playlist | playlists offer a wide variety of songs | playlists contain many frequently played songs,the play lists of similar songs,0.854
+29,8,8,8,0,0,0,bug,playback,unable to play songs,unable to play songs | songs do not play properly | songs randomly fail to play | can't play selected songs | songs fail to load,it doesn't let me play my songs,0.8817
+30,8,5,7,0,1,0,recommendations,shuffle,smart shuffle suggestions are unwanted,smart shuffle suggestions are unwanted | request to disable smart shuffle | smart shuffle activates automatically | request to stop pushing smart shuffle | smart shuffle is difficult to deactivate,I hate smart shuffle.,0.862
+31,8,7,7,0,1,0,feature_change,queue,queue requires dragging songs individually,queue requires dragging songs individually | songs cannot be removed from queue | queue songs cannot be rearranged | queue does not store previous song | dragging songs to add them to queue,right now you have to manually drag them up one at a time.,0.8565
+32,7,7,4,3,0,0,pricing,subscription,paid subscription worth its price,paid subscription worth its price | premium subscription worth the cost | subscription cost not worth the experience | subscription cost feels like wasted money | subscription worth the price,Worth every penny if youre paying for it,0.9006
+33,7,5,3,4,0,0,other,offline & downloads,premium required for offline listening,premium required for offline listening | offline listening with premium | premium required for ad-free listening | premium required to enjoy listening | premium version supports offline listening,you got to listen offline,0.8874
+34,6,6,5,1,0,0,pricing,free tier,free tier experience without premium,free tier experience without premium | premium subscription experience | premium subscription needed for best experience | app experience with premium subscription,it sucks without premium,0.9024
+35,6,6,6,0,0,0,pricing,free tier,free tier pushes users toward premium,free tier pushes users toward premium | free tier nearly unusable without subscription | free tier offers little functionality | free tier requires payment to be useful,this app forcing us to use premium,0.9055
+36,6,6,6,0,0,0,ads,ads,ads appear during 30-minute ad-free period,ads appear during 30-minute ad-free period | ads appear during promised ad-free time | ads return before ad-free window ends | 30-minute ad-free period not working | ads continue after ad-free notice,i keep on getting ads even when it says i wont for 30 min,0.8954
+37,6,6,6,0,0,0,feature_change,lyrics,premium required to see lyrics,premium required to see lyrics | showing lyrics requires premium | lyrics require payment to view | lyrics moved to subscription plan | lyrics moved behind premium,make people pay to see lyrics,0.8873
+38,6,6,0,6,0,0,content_catalog,podcasts,variety of music and podcasts,variety of music and podcasts | music and podcasts have variety and quality | songs and podcasts are available | unlimited music and podcast listening | finding songs and podcasts,because of its variety w podcasts and everything,0.8632
+39,6,6,6,0,0,0,bug,podcasts,podcast playback skips to another episode,podcast playback skips to another episode | podcast playback stops mid-episode | podcasts autoplay after chosen content | podcasts resume before saved position | podcast playback setting reverts to play all,Stop skipping to another random podcast episode in the middle of an episode you’re already playing!!,0.8664
+40,6,6,3,2,0,1,ads,ads,ads are present but no longer appear,ads are present but no longer appear | ads do not appear | ads cannot be skipped | ads have unengaging content | ads remain tolerable,only downside is ads but great thing is I don’t have ads anymore,0.8646
+41,6,6,6,0,0,0,bug,library,liked songs genre selection shuffles entire library,liked songs genre selection shuffles entire library | genre shuffle fails on liked songs | liked songs genre filter plays other genres | genre sorting plays all liked songs | liked songs no longer filter by genre,"Since new update, I can’t listen to liked songs with a genre chosen. It just shuffles the entire library instead of the genre I chose.",0.8745
+42,6,6,4,0,2,0,other,none,artist payment practices,artist payment practices | artist compensation and musician support | artist compensation levels | money paid to artists | request to increase artist payments,I hate the way they pay the artists.,0.8844
+43,6,4,6,0,0,0,recommendations,recommendations,podcast suggestions ignore not interested,podcast suggestions ignore not interested | podcast suggestions include unwanted channels | inappropriate podcasts appearing in recommendations | no option to skip suggested podcasts | no option to remove podcast suggestions,"Despite selecting MULTIPLE times ""Not Interested"" on some of their podcast suggestions, they kept popping up",0.8705
+44,5,5,5,0,0,0,customer_support,none,support does not answer inquiries,support does not answer inquiries | support provides no help | support was unhelpful | difficulty contacting support | support has not resolved reported issue,Can’t get anyone to answer me??,0.8893
+45,5,5,4,0,0,1,ads,ads,ads on the free tier,ads on the free tier | ads on free tier | ads in the free version | many ads on the free version,because of the ads,0.9276
+46,5,5,1,4,0,0,content_catalog,podcasts,podcasts are enjoyable to listen to,podcasts are enjoyable to listen to | podcast content is interesting | podcast listening experience | favorite podcasts are available | podcast and audiobook suggestions,it has some good podcasts,0.8804
+47,5,5,5,0,0,0,feature_change,none,negative reaction to latest update,negative reaction to latest update | negative reaction to recent update | negative reaction to new update | reaction to the new update | negative reaction to 2024 update,Latest update not good.,0.9148
+48,5,5,5,0,0,0,pricing,free tier,limited plays of chosen songs,limited plays of chosen songs | limited song selections per day | song selection limited by song count | restrictions on choosing songs to play | free song selections limited to six hourly,I am only able to play the song i like only a few times,0.8836
+49,5,5,4,1,0,0,pricing,free tier,free access without payment,free access without payment | free access for users unable to pay | free access now requires payment | paying required to access content | free access is limited,I don’t have to pay for this app,0.874
+50,5,5,5,0,0,0,pricing,free tier,payment required to use app,payment required to use app | payment required for app use | payment required for basic functionality | everything requires payment | payment required for three months free,You have to pay for it,0.8843
+51,5,5,2,0,3,0,other,none,app asks users to rate it,app asks users to rate it | app prompts users to rate it | app requested a rating | app asks users for five-star reviews | plans to rate app after use,they asked me to rate it,0.9159
+52,5,5,1,4,0,0,recommendations,recommendations,option to add recommended songs,option to add recommended songs | recommendations instead of chosen songs | music recommendations system | favorite music can be added to library | discovering new music recommendations,I love that they have an option to add recommended songs,0.8675
+53,5,5,5,0,0,0,feature_change,none,recent app update,recent app update | recent app updates | recent update to the app | repeated updates to the app,New update is worse,0.9201
+54,5,5,2,2,1,0,other,offline & downloads,music can be downloaded for offline listening,music can be downloaded for offline listening | songs can be downloaded for offline playback | downloaded songs unavailable for offline listening | request to listen to music offline | downloaded songs require internet playback,you can download music for when you're offline,0.8923
+55,5,5,4,1,0,0,feature_change,none,updates make the app feel worse,updates make the app feel worse | update made app harder to use | app improved after recent updates | updates do not improve the app | app experience changed after update,"the more it is updated, the worse it gets",0.8904
+56,5,4,5,0,0,0,pricing,audiobooks,extra audiobook hours offered for $13,extra audiobook hours offered for $13 | additional audiobook hours cost over £10 | extra audiobook hours cost more | extra payment required for audiobooks | premium includes fifteen audiobook hours monthly,pay for 10hrs more for like 13$ or wait.,0.8909
+57,5,5,5,0,0,0,pricing,free tier,premium required to turn off shuffle,premium required to turn off shuffle | turning shuffle mood off requires premium | shuffle not allowed with premium | premium required to avoid shuffled playback,Spotify uses premium just to turn off shuffle,0.9117
+58,5,5,5,0,0,0,ads,ads,ads on podcasts despite paying for no ads,ads on podcasts despite paying for no ads | podcast ads remain with premium | ads in podcasts | premium includes podcast ads | ad-free podcasts excluded from free trial,Still getting ads on podcasts while I am PAYING for no ads.,0.9128
+59,4,4,4,0,0,0,performance,none,app takes a long time to load,app takes a long time to load | app performance is laggy | app takes minutes to open | app is laggy on android,And the app takes forever to load as well.,0.8938
+60,4,4,4,0,0,0,bug,free tier,song selection is unavailable,song selection is unavailable | song selection unavailable | music selection stops working | unable to change music,wont let me choose select songs,0.9169
+61,4,4,3,0,1,0,pricing,subscription,premium price beyond affordability,premium price beyond affordability | premium price feels expensive | premium is not always affordable | request for lower premium price,my broke self cant afford to buy premium,0.8825
+62,4,4,4,0,0,0,account_billing,subscription,premium plan details unavailable in app,premium plan details unavailable in app | purchased premium plan not showing | premium mini plan unavailable for purchase | premium features limited to plan manager,why can't I see my premium plan details anywhere?,0.874
+63,4,4,3,1,0,0,bug,none,app has unspecified bugs,app has unspecified bugs | bugs throughout the app | app shows unexplained errors | app works without glitches,Very buggy.,0.8982
+64,4,4,4,0,0,0,pricing,free tier,six skips allowed per hour,six skips allowed per hour | limit of six skips per hour | limited skips per hour,why only 6 skips every hour,0.9631
+65,4,4,0,2,2,0,pricing,free tier,free listening options available,free listening options available | listening available everywhere | listening content is available | more content available for free listening,I love that it has free options,0.8858
+66,4,4,1,0,3,0,feature_request,playlists,choosing playlist playback order,choosing playlist playback order | reordering songs within playlists | request to play songs in chosen order | shuffle plays outside selected playlists,I would rather be able to choose the order my playlist goes in,0.8824
+67,4,4,2,0,2,0,ads,ads,request to remove ads,request to remove ads | request to stop ads | request to remove an ad | request for refund if ads remain,Please remove ads please,0.902
+68,4,4,1,3,0,0,pricing,free tier,music listening available for free,music listening available for free | music playback available for free | playing favorite songs for free | free ad-supported music access,it is free to listen to music,0.8801
+69,4,4,0,4,0,0,content_catalog,none,music listening experience,music listening experience | wide variety of listening content | easy listening to information and music | music available for serious listening,it is brilliant for listening to music,0.8781
+70,4,4,4,0,0,0,account_billing,subscription,subscription cancellation was refused,subscription cancellation was refused | intention to cancel subscription | threat to cancel subscription if unresolved | difficulty ending trial subscription,they refused to cancel my subscription,0.8703
+71,4,4,3,1,0,0,bug,playback,playback stops when leaving the app,playback stops when leaving the app | playback stops until app is reopened | playback stays paused in the app | playback continues with device off,It stops music when leaving app,0.9252
+72,4,4,0,4,0,0,pricing,free tier,app is free to use,app is free to use | free access to the app | free app offers good value | app can be used anytime,it’s free,0.8862
+73,4,4,0,4,0,0,content_catalog,catalog,large song collection,large song collection | large amount of available music | large library of music | large selection of songs,many songs collection,0.9251
+74,4,4,0,4,0,0,content_catalog,audiobooks,audiobooks available alongside music,audiobooks available alongside music | audiobooks available in the app | audiobooks | audiobooks added to the catalog,to have access to audio books as well as music,0.901
+75,4,4,4,0,0,0,ads,ads,ads are too long,ads are too long | ads have excessive length | ads are excessive and long | request for shorter ads,adds are so long,0.9471
+76,4,4,1,0,3,0,feature_request,Wrapped,request to release wrapped,request to release wrapped | request to release wrapped soon | request for wrapped availability | request to provide wrapped,release my wrapped..,0.8974
+77,3,3,0,1,2,0,feature_request,lyrics,request to show lyrics,request to show lyrics | request to add song lyrics | lyrics feature in the app,can you show lyrics,0.9007
+78,3,3,3,0,0,0,pricing,subscription,payment required to avoid advertisements,payment required to avoid advertisements | extra payment for advertisements | charges despite showing advertisements,we give Spotify money to avoid that,0.8953
+79,3,3,1,1,1,0,other,Wrapped,spotify wrapped experience,spotify wrapped experience | spotify wrapped quality | request to access spotify wrapped,stuff like spotify wrapped,0.9017
+80,3,3,1,1,1,0,recommendations,recommendations,songs suggested based on listening taste,songs suggested based on listening taste | suggested songs do not match taste | request for smarter song suggestions,WHILE ALSO SUGGESTING ME SONGS BASED ON MY TASTE!!!,0.8913
+81,3,3,3,0,0,0,bug,account,login loses email and password,login loses email and password | email address not recognized during login | login blocked by email and password use,It looses my email / then it - - oses my Pass woritis,0.8924
+82,3,3,3,0,0,0,pricing,lyrics,lyrics limited to six views hourly,lyrics limited to six views hourly | limited lyric views | monthly limit on viewing lyrics,can only see lyrics 6 times an hour,0.922
+83,3,3,0,3,0,0,ui_ux,none,app interface appearance,app interface appearance | interface appearance | app look and feel,Nice UI,0.92
+84,3,3,3,0,0,0,feature_change,queue,request to restore old queue feature,request to restore old queue feature | request to bring back old queue | queue management option missing,Please revert back to old Queue feature.,0.9137
+85,3,3,3,0,0,0,bug,none,app crashes after update,app crashes after update | updates break the app | app turns off after latest update,Crashing constantly with last update,0.9116
+86,3,3,3,0,0,0,bug,playback,playback switches to phone unexpectedly,playback switches to phone unexpectedly | playback switches to unintended devices | playback starts on phone speaker after disconnect,why does it keep switching to my phone when its playing on my computer?,0.9141
+87,3,3,3,0,0,0,ads,ads,increased number of ads,increased number of ads | fewer ads,There are more ads,0.9438
+88,3,3,0,3,0,0,ui_ux,none,music streaming ease of use,music streaming ease of use | easy access to music | ease of use compared with apple music,easy to use,0.9025
+89,3,2,3,0,0,0,performance,playlists,large playlists take a long time to load,large playlists take a long time to load | large playlists fail to load | songs take a long time to load,or at least takes a long ahh time to do so,0.9274
+90,3,3,3,0,0,0,feature_change,library,liked songs playlist won't play,liked songs playlist won't play | liking songs requires playlist addition | liked songs require queueing to play selections,Can’t play liked songs playlist.,0.9018
+91,3,2,3,0,0,0,bug,library,liked songs not shown across album editions,liked songs not shown across album editions | liked albums and songs not reflected on artist page | liked songs count differs inside and outside,"when there are deluxe editions of albums, it should still show the songs you've liked from the regular version.",0.8944
+92,3,3,3,0,0,0,content_catalog,none,popular songs unavailable,popular songs unavailable | music unavailable in some genres | versions of songs are unavailable,most if the popular songs are not available,0.8953
+93,3,3,3,0,0,0,pricing,subscription,subscription affordability,subscription affordability | subscription affordability for low-income users | premium affordability for ongoing access,Can't afford it,0.929
+94,3,3,3,0,0,0,pricing,subscription,pressure to get premium,pressure to get premium | pressure to buy premium | premium purchase refusal,It force us to get premium.,0.9108
+95,3,3,3,0,0,0,pricing,free tier,free users face broad restrictions,free users face broad restrictions | more restrictions for free users | free users treated poorly,now it restrict everything for its user,0.9183
+96,3,3,3,0,0,0,bug,none,app not working correctly,app not working correctly | app not working at all | app is difficult to use,the whole entire app ain’t working right,0.9074
+97,3,3,0,3,0,0,ui_ux,search,music is easy to find,music is easy to find | songs are easy to find | music content is enjoyable,Easy to find great music to listen to.,0.9135
+98,3,3,3,0,0,0,other,shuffle,shuffle play design,shuffle play design | shuffle mode experience | shuffle quality,Shufffle play is the worst designed thing on any app you can find on the appstore,0.9018
+99,3,2,1,2,0,0,other,sound quality,equalizer allows sound customization,equalizer allows sound customization | sound quality improved with equalizer | equalizer missing from audio settings,you can change the equalizer,0.8873
+100,3,3,3,0,0,0,ads,ads,ads shown despite paid individual plan,ads shown despite paid individual plan | duo plan ads shown to paying customers | ads shown to paying subscribers,Seeing ads even after purchasing an Individual monthly plan,0.9215
+101,3,3,3,0,0,0,account_billing,subscription,family plan access restricted after missed confirmation,family plan access restricted after missed confirmation | family members removed from family plan | unable to switch to family plan,"Kicked me off of a family plan, because I didnt confirm my address within the time limit (wasn't using it so didnt see the request) and has now told me I cant be added to one for 12 months.",0.8805
+102,3,3,3,0,0,0,ads,ads,political ads,political ads | presidential campaign commercials | political advertisements about kamala,the political ads,0.9042
+103,3,3,1,0,2,0,feature_request,Create button,request to remove create button,request to remove create button | request to disable create button,Please delete the create button,0.986
+104,3,3,1,2,0,0,recommendations,AI DJ,ai dj experience,ai dj experience | dj feature experience | ai dj added to the app,AI DJ is something else.,0.8868
+105,3,3,3,0,0,0,bug,playback,streaming frequently stops,streaming frequently stops | streaming issues during playback | streaming buffer causes interruptions,the streaming frequently stops,0.9144
+106,2,2,2,0,0,0,bug,none,app fails to update on samsung galaxy s9+,app fails to update on samsung galaxy s9+ | app updates fail to install,I can't update on my Samsung Galaxy S9+,0.9239
+107,2,2,2,0,0,0,bug,none,app only works intermittently,app only works intermittently | app fails to start without phone restart,an app that only sometimes works!!,0.9219
+108,2,2,1,0,1,0,feature_request,subscription,link to upgrade to premium,link to upgrade to premium | unable to upgrade to premium,at least provide a link to the website where it can be done.,0.9261
+109,2,2,2,0,0,0,bug,search,search plays only part of song,search plays only part of song | songs not loading in search,When u try to search a song it plays a little bit of it not the full song,0.9286
+110,2,2,2,0,0,0,account_billing,subscription,emails after premium cancellation,emails after premium cancellation | premium cancellation process changed,"After canceling premium, you constantly get emails practially begging you to come back",0.913
+111,2,2,2,0,0,0,bug,playback,background music cuts off in other apps,background music cuts off in other apps | app does not support listening to music,Some games I play randomly cut off the music nearly immediently,0.9105
+112,2,2,1,1,0,0,recommendations,recommendations,music recommendations match listening context,music recommendations match listening context | recommendations match listening patterns,"Sometimes when I listen to certain music while doing yoga, it throws off my discovery weekly new songs list of what I like to listen to perhaps to rock out to or something like that or when I’m driving late at night and I need music to stay awake too, I’ll say play something because I’m driving and it starts playing lullabies to put my kids to sleep.",0.936
+113,2,2,0,2,0,0,other,social & sharing,connecting with friends,connecting with friends | connection with other people,good to connect with friends,0.9306
+114,2,2,1,0,1,0,recommendations,recommendations,recommendation algorithm keeps deteriorating,recommendation algorithm keeps deteriorating | request to reset recommendation algorithm,the abysmal and perpetually deteriorating algorithm,0.9122
+115,2,2,1,1,0,0,pricing,free tier,premium offers an improved experience,premium offers an improved experience | free version is worse than premium,If you want an amazing experience I bet premium would be great,0.9091
+116,2,2,1,1,0,0,content_catalog,none,wide range of content available,wide range of content available | content variety,it has everything on there,0.9228
+117,2,2,2,0,0,0,bug,playlists,playlist playback restricts skipping and song order,playlist playback restricts skipping and song order | restrictions on skipping playlist songs,my Spotify playlist does not let me skip songs and play songs in order,0.9336
+118,2,2,2,0,0,0,pricing,free tier,limits on playing songs,limits on playing songs | same song playback limited until tomorrow,limitations song play,0.9189
+119,2,2,2,0,0,0,account_billing,account,account creation blocked by email already in use,account creation blocked by email already in use | account access blocked after signup,I try to create new account it says account already attached to the email I provided.,0.9213
+120,2,2,2,0,0,0,pricing,free tier,free version usability limitations,free version usability limitations | free version difficult to navigate,The free version has become nearly unusable over the years,0.9229
+121,2,2,2,0,0,0,pricing,free tier,shuffle is always enabled for free users,shuffle is always enabled for free users | free users forced to shuffle songs,shuffle is always on,0.9352
+122,2,2,2,0,0,0,ui_ux,playlists,playlist not highlighted in library,playlist not highlighted in library | playlist adding requires searching instead of browsing library,the enture playlist was not highlighted,0.9162
+123,2,2,0,2,0,0,other,none,music helps with focusing,music helps with focusing | music helps with focus and therapy,I rely on it to help me focus,0.9699
+124,2,2,0,2,0,0,pricing,subscription,family plan saves money and includes premium benefits,family plan saves money and includes premium benefits | chooses to pay for family plan,it gives you all the same benefits as a normal premium plan.,0.9245
+125,2,1,1,0,1,0,feature_request,playlists,multiselect songs in playlists,multiselect songs in playlists | multiselect songs in recent listening,I must still add or remove songs one by one on playlists.,0.9443
+126,2,2,1,1,0,0,other,playlists,ai-generated playlists lack quality,ai-generated playlists lack quality | playlist quality,the playlists are often low quality and nonsensical,0.947
+127,2,2,0,0,2,0,feature_request,playlists,request to sort playlists by name and date,request to sort playlists by name and date | library albums sorted by artist and date,add the sort feature like the web player so I can sort my playlist by name or recently added,0.9204
+128,2,2,2,0,0,0,ui_ux,ads,screen rotates to portrait during ads,screen rotates to portrait during ads | ads display sideways in landscape mode,Keeps rotation my screen orientation to portrait from landscape when the ads play,0.9528
+129,2,2,2,0,0,0,bug,offline & downloads,app reports no internet on wifi,app reports no internet on wifi | app requires wi-fi instead of mobile data,Also when i was using app always shows no internet eventhough i commected to WiFi.,0.9199
+130,2,2,0,0,2,0,feature_request,sound quality,lossless audio for premium users,lossless audio for premium users | request for lossless audio option,It would be great if you can provide lossless audio as like apple music for premium users,0.9538
+131,2,2,1,1,0,0,content_catalog,catalog,favorite artists available,favorite artists available | recommendations for lesser-known artists,has all my favorites artist,0.9377
+132,2,2,2,0,0,0,bug,playback,earbud touches turn playback on,earbud touches turn playback on | playback starts when earbuds connect,when you have earbuds connected it'll just turn itself on if u barely touch the ear buds,0.9285
+133,2,2,0,2,0,0,ui_ux,playlists,creating mood playlists,creating mood playlists | playlists customized for different moods,mood playlist creation,0.9709
+134,2,2,2,0,0,0,bug,search,podcast search bar does not work,podcast search bar does not work | podcast feature has changed,it doesn’t search anything,0.9165
+135,2,2,1,1,0,0,other,playlists,playlists made by spotify,playlists made by spotify | dislike of spotify playlists,playlists made by Spotify,0.9419
+136,2,2,2,0,0,0,other,none,company's political stance,company's political stance | company support for trump,Spotify is pro-zionist,0.933
+137,2,2,0,1,1,0,other,podcasts,using the app for podcasts,using the app for podcasts | podcast publishing requires recording and uploading,i wanted to use podcasts,0.9126
+138,2,2,2,0,0,0,ads,ads,same commercials repeat each break,same commercials repeat each break | commercials play too frequently,Cut back on allowing the same person say the same thing every commercial break,0.934
+139,2,2,0,2,0,0,content_catalog,catalog,most wanted songs are available,most wanted songs are available | favorite songs available,95% of songs I want are there,0.9254
+140,2,2,1,1,0,0,bug,library,explicit music filters applied correctly,explicit music filters applied correctly | filters play unrelated songs,I do think Spotify puts explicit music filters on correctly.,0.9318
+141,2,2,2,0,0,0,ui_ux,interface,interface is confusing,interface is confusing | interface is difficult to navigate,confusing interface,0.9182
+142,2,2,2,0,0,0,other,none,music app has restricted content access,music app has restricted content access | explicit songs unavailable despite allowed setting,YTmusic is a more complex and restricted version of the Playstore,0.9083
+143,2,2,2,0,0,0,bug,playback,music starts playing when app opens,music starts playing when app opens | same songs repeat on app launch,"Sometimes when I open the app, it starts playing the music automatically.",0.9347
+144,2,2,2,0,0,0,bug,playback,autoplay starts playback after bluetooth connection,autoplay starts playback after bluetooth connection | random songs start playing after bluetooth connection,Turning autoplay off doesn't stop the app from starting to play when connecting to Bluetooth device,0.9353
+145,2,2,2,0,0,0,bug,playback,unable to hear desired songs on demand,unable to hear desired songs on demand | inability to listen to desired music,I can’t even hear the song I wanna hear when I wanna hear them,0.9321
+146,2,2,2,0,0,0,pricing,free tier,features restricted behind paywall,features restricted behind paywall | features placed behind a paywall,Literally all features behind paywall,0.9791
+147,2,2,2,0,0,0,bug,none,app uninstalls from phone,app uninstalls from phone | not keeping app after free period,This app uninstall my phone,0.9116
+148,2,2,1,1,0,0,customer_support,none,support handles users well,support handles users well | support and service quality,support is quite good.,0.9228
+149,2,2,2,0,0,0,ui_ux,playlists,cannot return to previous song,cannot return to previous song | unable to return to playlist,I can’t go back to the previous song,0.9357
+150,2,2,1,0,1,0,feature_change,none,features added and later reverted,features added and later reverted | request to restore older features,"they always add/change features, and then revert it like a month later.",0.923
+151,2,2,2,0,0,0,bug,playback,playback starts without sound,playback starts without sound | playback indicator shows music playing without sound,if trying to play music would play but there won't be any sound,0.9234
+152,2,2,1,1,0,0,pricing,subscription,premium plan value,premium plan value | premium account value dissatisfaction,well good for premium,0.9151
+153,2,2,2,0,0,0,other,Wrapped,last wrapped was disappointing,last wrapped was disappointing | wrapped felt disappointing this year,the last Spotify wrapped was REALLY disappointing.,0.9515
+154,2,2,0,2,0,0,other,none,app helps with staying calm,app helps with staying calm | app helps reviewer feel calm,It keeps you calm,0.9305
+155,2,2,1,0,1,0,pricing,free tier,request to keep listening pay-only,request to keep listening pay-only | listening requires payment,they should only keep pay to listen,0.9411
+156,2,2,1,1,0,0,ui_ux,playlists,convenience for playlists and tech,convenience for playlists and tech | playlists and music curation made useless,convenient for Playlists and tech,0.9257
+157,2,2,0,2,0,0,other,playback,music plays without interruptions,music plays without interruptions | music plays without interruption,with no interopesion,0.9972
+158,2,2,2,0,0,0,recommendations,recommendations,discovery recommends familiar and popular music,discovery recommends familiar and popular music | recommendations favor mainstream artists,"I get the music I’ve heard before, used to have in my liked songs or playlists, or that is already popular.",0.9269
+159,2,2,2,0,0,0,pricing,subscription,premium price increase and value,premium price increase and value | premium prices are rising,"Premium is almost a scam at this point, especially since the prices went up.",0.9499
+160,2,2,1,1,0,0,ui_ux,shuffle,default shuffle mode makes listening attractive,default shuffle mode makes listening attractive | shuffle set as the default option,default shuffle mode make it more attractive,0.9153
+161,2,2,1,0,1,0,bug,offline & downloads,download button saves files to iphone,download button saves files to iphone | downloads saved to internal storage,I need a iPhone download button to save to my files,0.9084
+162,2,2,1,0,1,0,feature_request,search,lyrics missing from search results,lyrics missing from search results | search using song lyrics,"""couldn't find lyrics""",0.9302
+163,2,2,2,0,0,0,feature_change,none,request to restore old interface,request to restore old interface | request to bring back old interface,old ui back,0.9744
+164,2,2,2,0,0,0,account_billing,subscription,charges continue after cancellation,charges continue after cancellation | full-month charge after cancellation request,I cancelled my subscription months ago but the still keep charging me,0.937
+165,2,2,0,1,1,0,pricing,subscription,reduced subscription rate for service members,reduced subscription rate for service members | service value for subscription price,think premium should have reasonable reduced rate for people that serve their country as we speak abroad,0.916
+166,2,2,2,0,0,0,other,none,modded app versions are banned,modded app versions are banned | access to modded app versions blocked,they even banned all the mods,0.9537
+167,2,2,2,0,0,0,recommendations,recommendations,radio does not provide similar songs,radio does not provide similar songs | radio repeats the same songs,not really providing you with similar songs,0.9524
+168,2,2,1,1,0,0,ui_ux,search,finding artists' new releases,finding artists' new releases | finding artists and their best songs,nor the new releases of artists,0.9156
+169,2,2,2,0,0,0,feature_change,none,request to restore the old update,request to restore the old update | request to restore previous app version,This is very bad. The old update is the best.,0.9228
+170,2,2,1,1,0,0,feature_change,none,recent update worse than previous version,recent update worse than previous version | updated version compared with old version,the way it was before was SOOO much better,0.9206
+171,2,1,0,0,2,0,feature_request,podcasts,delete locked paid episodes,delete locked paid episodes | mark locked paid episodes as played,add a way to delete,0.9334
+172,2,2,2,0,0,0,account_billing,account,unable to log in,unable to log in | website login does not work,Not login,0.9338
+173,2,2,2,0,0,0,pricing,subscription,subscription option is getting worse,subscription option is getting worse | subscription no longer useful for business,Spotify is increasingly becoming a worse and worse subscription option.,0.9296
+174,2,1,2,0,0,0,feature_request,podcasts,podcast listening history controls,podcast listening history controls | automatic podcast playback controls,"There should be the ability to toggle history, such as remove things from your listening history, at least on the podcast side.",0.9367
+175,2,2,2,0,0,0,ui_ux,interface,podcasts are pushed prominently,podcasts are pushed prominently | podcasts clutter the home page,the force on podcasts is quite obvious,0.9461
+176,2,2,2,0,0,0,feature_change,library,other album versions removed,other album versions removed | duplicate versions of the same albums,"Now they got rid of ""other versions"" for albums so you just have to listen to the one that's listed.",0.9285
+177,2,2,2,0,0,0,bug,offline & downloads,offline mode fails to load downloaded albums,offline mode fails to load downloaded albums | downloaded playlists fail to load offline,"90% of the time, I turn on offline mode my downloaded albums still try to load, but i have no reception, & im in offline mode so it never works.",0.9318
+178,2,2,2,0,0,0,bug,offline & downloads,songs cannot be downloaded,songs cannot be downloaded | songs cannot be downloaded after subscribing,can't download the song,0.9492
+179,2,1,0,2,0,0,ui_ux,none,direct app interaction,direct app interaction | interactive app experience,direct,0.9287
+180,2,2,2,0,0,0,feature_change,AI DJ,ai development is not improving the app,ai development is not improving the app | ai performs poorly,Please stop overdeveloping everything with AI. It’s not making it better.,0.9142
+181,2,2,2,0,0,0,bug,none,instagram links do not open the intended song,instagram links do not open the intended song | songs fail to open from links,You can’t even get from an Instagram link to the song you’re trying to get to,0.9194
+182,2,2,2,0,0,0,bug,playlists,hidden playlist songs still play,hidden playlist songs still play | song previews removed before playlist addition,"Sometimes when you hide a song from a Playlist, so that it doesn't play... it still plays",0.9116
+183,2,2,1,0,1,0,feature_request,playlists,request to delete playlists,request to delete playlists | songs cannot be removed from playlist,How about being able to delete playlists too?,0.9244
+184,2,2,2,0,0,0,account_billing,subscription,card charged during promised free trial,card charged during promised free trial | free trial resulted in a $12 charge,my card was of course charged,0.9349
+185,2,2,0,2,0,0,other,playlists,create an album from favorite songs,create an album from favorite songs | creating albums of favorite songs,u can make your own album from your best song,0.9821
+186,2,2,0,0,2,0,feature_request,sound quality,request for surround sound support,request for surround sound support | request to add surround sound,If possible collaborate with Dolby Atmos or DTS -X to include surrond sound for speaker systems.,0.9749
+187,2,2,0,1,1,0,other,none,payouts for artists and podcasters,"payouts for artists and podcasters | artist payout per 10,000 listens",payout for music artists and podcasters,0.9256
+188,2,2,2,0,0,0,account_billing,account,difficulties registering for an account,difficulties registering for an account | unable to open account,some difficulties trying to register,0.9441
+189,2,2,2,0,0,0,pricing,subscription,premium costs more than buying music,premium costs more than buying music | subscription offers worse value than apple music,Cheaper in the long run for those who use premium,0.9371
+190,2,2,2,0,0,0,feature_change,Create button,create button placed over library,create button placed over library | create button replacing your library,I really do not like the placement of the new create button.,0.9456
+191,2,2,1,0,1,0,other,account,reason for requesting date of birth,reason for requesting date of birth | entering date of birth,Why do you need a date of birth,0.9161
+192,2,2,2,0,0,0,bug,library,unable to play a specific song part,unable to play a specific song part | first song plays only a snippet,Can't play a specific part of song,0.9245
+193,2,2,1,1,0,0,feature_change,none,app was better in the past,app was better in the past | app improvements,Spotify was better back then,0.9153
+194,2,2,1,0,1,0,other,playback,inability to repeat songs,inability to repeat songs | songs cannot play on loop,can't repeating songs is fine,0.9339
+195,2,2,2,0,0,0,bug,playback,local files cannot loop playlists or songs,local files cannot loop playlists or songs | local playlists fail to sync between devices,even with your own local files you can't loop the playlist or the song,0.9177
+196,2,1,2,0,0,0,feature_request,devices & casting,spotify connect takes over when desktop opens,spotify connect takes over when desktop opens | option to disable spotify connect,try to take over if I open the desktop app,0.9226
+197,2,2,1,1,0,0,ui_ux,notifications,notifications when songs change on another device,notifications when songs change on another device | uninterrupted music across devices,having it pop up notifications every time a song changes on another device,0.9107
+198,2,1,2,0,0,0,bug,playback,spotify pauses music during discord use,spotify pauses music during discord use | music pauses during discord conversations,There’s no distinction between the voice through my microphone and the music through my headphones that it cannot hear but Discord has to be very careful regardless because of Spotify’s ToS or whatever.,0.9503
+199,2,2,0,2,0,0,ui_ux,none,recommendation to use youtube,recommendation to use youtube | easier to use than youtube,I recommend YouTube,0.9357
+200,2,2,2,0,0,0,bug,offline & downloads,downloads unavailable,downloads unavailable | downloads unavailable after removing downloads elsewhere,I can't download,0.9201
+201,1,1,0,0,1,0,other,none,app is working now,app is working now,Yes it is working now,1.0
+202,1,1,1,0,0,0,pricing,subscription,premium costs exceed the budget,premium costs exceed the budget,I don't have that type of money to buy premium,1.0
+203,1,1,0,0,1,0,feature_request,library,folder view for local files,folder view for local files,a 'folder view' for local files,1.0
+204,1,1,1,0,0,0,other,podcasts,rogan's apology for using a racial slur,rogan's apology for using a racial slur,his apology for the use of word (niggah),1.0
+205,1,1,1,0,0,0,other,podcasts,rogan limits discussion of flat earth claims,rogan limits discussion of flat earth claims,how he treats the flat earth topic as there's huge discrepancies once you actually do the work yet he won't let real people even Eddie bravo truly get into the math on that,1.0
+206,1,1,0,1,0,0,other,library,listening to albums before purchase,listening to albums before purchase,A good way to check out albums before you buy,1.0
+207,1,1,1,0,0,0,feature_request,search,song search unavailable on galaxy watch 4,song search unavailable on galaxy watch 4,No search songs from galaxy watch 4,1.0
+208,1,1,1,0,0,0,bug,interface,widget displays quote marks as text,widget displays quote marks as text,"wont use the "" symbol. instead it writes ""quot""",1.0
+209,1,1,0,0,1,0,feature_request,search,request for search on wear os,request for search on wear os,Where is search option in wear os.,1.0
+210,1,1,1,0,0,0,other,none,trackers active while app is in use,trackers active while app is in use,you all have some very constant trackers while in use,1.0
+211,1,1,1,0,0,0,pricing,free tier,random playback after skip limit,random playback after skip limit,it plays randomly after that,1.0
+212,1,1,1,0,0,0,ui_ux,library,album songs difficult to find,album songs difficult to find,"after a frustrating ten minutes, never got to see the very simple task of seeing/hearing the songs in this artist’s album.",1.0
+213,1,1,1,0,0,0,ui_ux,library,irrelevant content shown on album pages,irrelevant content shown on album pages,"Instead, I’m bombarded with “merch” and spotlights that have nothing to do with it.",1.0
+214,1,1,0,0,1,0,feature_request,offline & downloads,offline playback available for an affordable fee,offline playback available for an affordable fee,"only wishing it optionally, play offline even if that means for a little levy/affordable",1.0
+215,1,1,0,1,0,0,pricing,subscription,family subscription value for larger households,family subscription value for larger households,the premium family subscription is definitely worth it if you have more than two people under the same roof,1.0
+216,1,1,0,0,1,0,feature_request,concerts & merch,concerts shown on homepage,concerts shown on homepage,Please place upcoming concerts on the homepage.,1.0
+217,1,1,1,0,0,0,feature_change,concerts & merch,merchandise links direct to merchbar,merchandise links direct to merchbar,Stop directing merch to Merchbar.,1.0
+218,1,1,1,0,0,0,other,concerts & merch,merchbar orders do not ship,merchbar orders do not ship,Merchbar despite saying in stock never seems to ship.,1.0
+219,1,1,0,0,1,0,feature_request,subscription,mtn payment support requested,mtn payment support requested,Spotify needs to start working with MTN just like APPLE Music is doing based on payment issues,1.0
+220,1,1,1,0,0,0,ads,ads,ads repeat in back-to-back groups,ads repeat in back-to-back groups,I get 7 back to back adds every 5 songs.,1.0
+221,1,1,1,0,0,0,ads,ads,ad-free listening promise not honored,ad-free listening promise not honored,Spotify also doesn’t hole up their promise of if you watch an add you get 30 minutes of add free listening.,1.0
+222,1,1,1,0,0,0,pricing,free tier,free phone accounts restricted to shuffle,free phone accounts restricted to shuffle,I hate having to have a free account on my phone and only having shuffle mode,1.0
+223,1,1,0,1,0,0,pricing,free tier,free tablet accounts can pick music,free tablet accounts can pick music,MY TABLET HAS A FREE ACCOUNT BUT LETS ME PICK MY MUSIC WITHOUT SHUFFLE MODE,1.0
+224,1,1,1,0,0,0,feature_change,free tier,request to restore listening in order,request to restore listening in order,put back free music in order,1.0
+225,1,1,1,0,0,0,content_catalog,podcasts,podcast selection quality,podcast selection quality,podcast election are very mediocre.,1.0
+226,1,1,1,0,0,0,account_billing,subscription,plan manager cannot be changed,plan manager cannot be changed,And you can’t change the plan manager,1.0
+227,1,1,0,1,0,0,content_catalog,podcasts,wide variety of programs and music,wide variety of programs and music,such a wide range of programs and music from incredible podcasting to outstanding music,1.0
+228,1,1,0,1,0,0,ui_ux,none,content accessible with one touch,content accessible with one touch,all accessible by a single touch of your screen,1.0
+229,1,1,1,0,0,0,bug,none,unspecified bugs and glitches,unspecified bugs and glitches,a few small bugs and glitches,1.0
+230,1,1,0,0,1,0,recommendations,recommendations,algorithm manipulation allegations,algorithm manipulation allegations,they have manipulation on the algorithm,1.0
+231,1,1,1,0,0,0,bug,offline & downloads,offline mode does not work well,offline mode does not work well,the offline mode does not work well,1.0
+232,1,1,0,1,0,0,account_billing,account,signing in is easier,signing in is easier,it’s easier to sign in,1.0
+233,1,1,1,0,0,0,bug,devices & casting,app crashes and freezes on apple watch,app crashes and freezes on apple watch,Always crashing.  I use it while running.  Locks up and freezes frequently.,1.0
+234,1,1,1,0,0,0,bug,playlists,playlist cover images fail to upload,playlist cover images fail to upload,"Whenever I try to add cover to my playlist, it won't upload every time.",1.0
+235,1,1,0,0,1,0,feature_request,account,request for verification codes via whatsapp or sms,request for verification codes via whatsapp or sms,"Can you please add ""sent a 6 digit code to (Phone number)WhatsApp"" or ""send a 6 digit code to sms",1.0
+236,1,1,1,0,0,0,ads,ads,advertised products discourage interest,advertised products discourage interest,doesn't make me want the things being advertised either,1.0
+237,1,1,1,0,0,0,pricing,free tier,search results play as playlists,search results play as playlists,I cant even listen to song when I search it up because it is a playlist,1.0
+238,1,1,1,0,0,0,account_billing,account,account login rejected despite existing username,account login rejected despite existing username,Says the email and password combination is incorrect but when I try to sign up for an account it tells me my username is already in use.,1.0
+239,1,1,0,0,1,0,account_billing,subscription,how to become a member,how to become a member,How do I start to become a member?,1.0
+240,1,1,1,0,0,0,account_billing,account,login process,login process,Loging process is very frustrated,1.0
+241,1,1,1,0,0,0,bug,account,phone does not recognize account,phone does not recognize account,My phone doesn’t recognize my account.,1.0
+242,1,1,1,0,0,0,bug,account,verification code does not appear,verification code does not appear,the Code does not appear where it should,1.0
+243,1,1,1,0,0,0,ui_ux,account,code flow navigates between individual apps,code flow navigates between individual apps,it takee you all around the individual Apps,1.0
+244,1,1,1,0,0,0,account_billing,account,account was logged out unexpectedly,account was logged out unexpectedly,Logged me out.,1.0
+245,1,1,1,0,0,0,account_billing,account,login reports incorrect credentials,login reports incorrect credentials,Trying to log in says username or password incorrect.,1.0
+246,1,1,1,0,0,0,customer_support,account,support cannot verify the account email,support cannot verify the account email,"I tried contacting customer service, but I can't because it doesn't recognize my email",1.0
+247,1,1,1,0,0,0,recommendations,recommendations,kamala harris keeps appearing,kamala harris keeps appearing,Kamala Harris won’t stop popping up,1.0
+248,1,1,0,1,0,0,other,none,content moderation policy,content moderation policy,not censoring common sense,1.0
+249,1,1,1,0,0,0,feature_change,playback,playhead no longer available,playhead no longer available,playhead gone,1.0
+250,1,1,1,0,0,0,other,none,content from people who platform traffickers,content from people who platform traffickers,Not willing to use content from people who platform human traffickers,1.0
+251,1,1,0,0,1,0,feature_request,subscription,student option available in el salvador,student option available in el salvador,i would like to have the students option available on my country (El Salvador),1.0
+252,1,1,0,1,0,0,pricing,subscription,spotify subscription worth the price,spotify subscription worth the price,Spotify is worth every penny!,1.0
+253,1,1,0,1,0,0,other,none,favorite songs improve mood,favorite songs improve mood,i js put my favorite songs and life changing,1.0
+254,1,1,0,0,1,0,feature_request,playlists,creating folders to categorize playlists,creating folders to categorize playlists,Creating folders to help categorise,1.0
+255,1,1,0,1,0,0,ui_ux,none,interface design and layout,interface design and layout,Great interface,1.0
+256,1,1,0,1,0,0,other,none,"app as a safe, calm place","app as a safe, calm place",it’s like a safe and calm place💛,1.0
+257,1,1,1,0,0,0,ui_ux,account,friend profiles are hard to find,friend profiles are hard to find,wish it was easier to find friend's profiles,1.0
+258,1,1,0,0,1,0,feature_request,playlists,send blend requests through the app,send blend requests through the app,be able to send blend requests through the app,1.0
+259,1,1,0,0,1,0,feature_request,playlists,playlist collaborations through the app,playlist collaborations through the app,for like playlist collabs and stuff,1.0
+260,1,1,1,0,0,0,other,social & sharing,links blocked from being viewed,links blocked from being viewed,Im blocked from seeing.,1.0
+261,1,1,1,0,0,0,ads,ads,three unskippable ads,three unskippable ads,3 unskipable ads,1.0
+262,1,1,1,0,0,0,other,none,mods are unavailable,mods are unavailable,mod are down,1.0
+263,1,1,1,0,0,0,ui_ux,devices & casting,too many steps to stream to tv,too many steps to stream to tv,cannot stream to my TV without too many steps,1.0
+264,1,1,1,0,0,0,ui_ux,customer support,reporting limited to picture problems,reporting limited to picture problems,all you can report is a pic problem,1.0
+265,1,1,0,0,1,0,other,none,request to follow reviewer account,request to follow reviewer account,"I just wanted to tell you to follow my account ""Silvana Covarrubias""",1.0
+266,1,1,0,1,0,0,ads,ads,fewer advertisements than pandora,fewer advertisements than pandora,I like less advertisement thsn pandora,1.0
+267,1,1,0,1,0,0,content_catalog,none,music selection is better,music selection is better,quantity is better,1.0
+268,1,1,1,0,0,0,other,sound quality,sound quality compared with other services,sound quality compared with other services,mediocre quality vs other services (with good speakers or LDAC / AAC),1.0
+269,1,1,0,0,1,0,other,none,changelog not provided,changelog not provided,No changelog,1.0
+270,1,1,1,0,0,0,feature_request,playback,loop mode is unavailable,loop mode is unavailable,It doesn't have loop mode on,1.0
+271,1,1,1,0,0,0,feature_change,devices & casting,casting to tv no longer works,casting to tv no longer works,I use to be to cast it to my tv but now I can't.,1.0
+272,1,1,1,0,0,0,other,none,political and medical misinformation,political and medical misinformation,Promotes and distributes political and medical misinformation.,1.0
+273,1,1,0,0,1,0,other,none,service available in 184 markets,service available in 184 markets,with a total availability in 184 markets,1.0
+274,1,1,0,0,1,0,other,none,service unavailable in mainland china,service unavailable in mainland china,It has no presence in mainland China,1.0
+275,1,1,0,0,1,0,other,none,service available across device platforms,service available across device platforms,The service is available on most devices,1.0
+276,1,1,1,0,0,0,feature_change,shuffle,old shuffle button no longer available,old shuffle button no longer available,I miss the old shuffle button.,1.0
+277,1,1,1,0,0,0,recommendations,recommendations,recommendations include unfamiliar foreign-language tracks,recommendations include unfamiliar foreign-language tracks,"Hearing tracks from other countries, particularly from different African nations where I don't grasp the language, can be a bit frustrating.",1.0
+278,1,1,0,0,1,0,feature_request,recommendations,selecting specific countries for recommendations,selecting specific countries for recommendations,It would be fantastic to have an option to select specific countries.,1.0
+279,1,1,0,0,1,0,feature_request,playlists,reactions and comments on group playlist songs,reactions and comments on group playlist songs,"The only thing I wish it had was an option to like, love, dislike, or comment(👍❤️👎) on a song if you create a group playlist.",1.0
+280,1,1,0,1,0,0,other,Wrapped,year-end wrapped experience,year-end wrapped experience,I loved Wrapped at the end of the year.,1.0
+281,1,1,0,1,0,0,ui_ux,search,search returns relevant results,search returns relevant results,I was surprised with the results when I searched for 90s music.,1.0
+282,1,1,0,1,0,0,content_catalog,none,tamil song selections are available,tamil song selections are available,All your findings and Tamil song selections are incredibly impressive.,1.0
+283,1,1,1,0,0,0,other,sound quality,sound quality while playing in the car,sound quality while playing in the car,the sound quality seems slightly better when playing in the car,1.0
+284,1,1,0,1,0,0,content_catalog,none,old songs are available for long drives,old songs are available for long drives,It's wonderful to hear those old songs during long drives.,1.0
+285,1,1,0,1,0,0,other,playlists,playlist used throughout entire store,playlist used throughout entire store,My entire store is in my spotify playlist,1.0
+286,1,1,0,0,1,0,feature_request,concerts & merch,notifications for concerts near hometown,notifications for concerts near hometown,"Can you please let me know when they and other singers are coming to my home town, Tottenham NSW 2873",1.0
+287,1,1,1,0,0,0,ads,ads,clorox ads use asmr whispering,clorox ads use asmr whispering,These Clorox adds just do it. It’s the most uncomfortable thing.,1.0
+288,1,1,1,0,0,0,pricing,subscription,premium required to unlock five stars,premium required to unlock five stars,buy premium to unlock 5 stars,1.0
+289,1,1,0,1,0,0,other,sound quality,clear voice audio,clear voice audio,The voice is very clear,1.0
+290,1,1,1,0,0,0,bug,podcasts,episode sorting does not work,episode sorting does not work,Episodes sorting doesn't work,1.0
+291,1,1,1,0,0,0,bug,podcasts,podcast episodes missing from the catalog,podcast episodes missing from the catalog,All podcast episodes gone!,1.0
+292,1,1,1,0,0,0,bug,podcasts,podcast stops when switching networks,podcast stops when switching networks,anytime I switch from wifi to cellular data my podcast stops,1.0
+293,1,1,1,0,0,0,feature_change,podcasts,video addition associated with broken audio,video addition associated with broken audio,You added video and broke the audio on your audio streaming service,1.0
+294,1,1,1,0,0,0,bug,recommendations,selected genre does not stay active,selected genre does not stay active,It doesn’t stay on the selected genre,1.0
+295,1,1,1,0,0,0,recommendations,recommendations,request for fewer jewish people in recommendations,request for fewer jewish people in recommendations,These Jews Keep Popping Up On My Recommend!!!!,1.0
+296,1,1,1,0,0,0,recommendations,recommendations,recommended music does not rhyme,recommended music does not rhyme,recommended music do not rhyme,1.0
+297,1,1,0,1,0,0,other,none,helps with depression,helps with depression,Cures my depression,1.0
+298,1,1,0,1,0,0,recommendations,recommendations,new recommendations every day,new recommendations every day,there are new recommendations everyday,1.0
+299,1,1,0,1,0,0,content_catalog,catalog,music platform for upcoming singers and rappers,music platform for upcoming singers and rappers,best music platform for upcoming singers and rappers,1.0
+300,1,1,0,1,0,0,recommendations,recommendations,recommendations,recommendations,great recommendations,1.0
+301,1,1,1,0,0,0,feature_change,library,share button replaced liked button,share button replaced liked button,Share button replace Liked,1.0
+302,1,1,1,0,0,0,bug,interface,settings do not work properly,settings do not work properly,The settings are faulty,1.0
+303,1,1,1,0,0,0,bug,devices & casting,car mode stays open after deactivation,car mode stays open after deactivation,the app stays open on car mode even if I deactivate the option,1.0
+304,1,1,1,0,0,0,bug,library,liked list starts playing automatically in car,liked list starts playing automatically in car,when I connect it to the car it start playing the liked list by itself,1.0
+305,1,1,1,0,0,0,feature_request,library,no option to disable automatic playback,no option to disable automatic playback,there is no way to deactivate this feature,1.0
+306,1,1,1,0,0,0,ui_ux,library,liked list lacks two sorting options,liked list lacks two sorting options,One cannot sort the liked list in two ways like other playlists.,1.0
+307,1,1,1,0,0,0,pricing,subscription,paid service should offer a better app,paid service should offer a better app,"Considering this is a paid service, I would expect a way better app than this.",1.0
+308,1,1,0,0,1,0,feature_request,playback,loop feature available for free,loop feature available for free,Kindly add the loop feature for free,1.0
+309,1,1,0,1,0,0,content_catalog,catalog,enthusiasm about a song,enthusiasm about a song,YAYAYYA SONG,1.0
+310,1,1,1,0,0,0,ads,ads,ads taking up more space than songs,ads taking up more space than songs,waste full of add not songs,1.0
+311,1,1,1,0,0,0,account_billing,subscription,membership cancellation,membership cancellation,Canceling membership immediately.,1.0
+312,1,1,1,0,0,0,account_billing,subscription,charged full price after promotional offer,charged full price after promotional offer,Just re-downloaded and it said rejoin premium for 1$ for a month just to be charged 11$ for the month,1.0
+313,1,1,1,0,0,0,other,none,suggestion to use another service,suggestion to use another service,Use someone else,1.0
+314,1,1,1,0,0,0,account_billing,subscription,subscription cancellation requires desktop,subscription cancellation requires desktop,Us mobile device users need to use a desktop just to cancel subscription.,1.0
+315,1,1,0,0,1,0,feature_request,interface,request to bring canvas to bangladesh,request to bring canvas to bangladesh,Bring canvas and podcast in bangladesh.,1.0
+316,1,1,1,0,0,0,content_catalog,podcasts,podcasts unavailable in bangladesh,podcasts unavailable in bangladesh,Bring canvas and podcast in bangladesh.,1.0
+317,1,1,1,0,0,0,other,none,music listening tracked like ad id,music listening tracked like ad id,it tracks your tunes like an ad ID.,1.0
+318,1,1,0,1,0,0,content_catalog,library,adding songs stored on phone,adding songs stored on phone,I can add the ones which are on my phone.,1.0
+319,1,1,0,1,0,0,content_catalog,catalog,trending and upcoming music visibility,trending and upcoming music visibility,"you can see your trending music,new ones that are yet to be published",1.0
+320,1,1,0,1,0,0,content_catalog,none,content available in the app,content available in the app,(mostly) great content.,1.0
+321,1,1,0,0,1,0,feature_request,search,search bar placed at bottom,search bar placed at bottom,pleeze put a dedicated search bar OR when you touch search a search bat at botton.,1.0
+322,1,1,1,0,0,0,ui_ux,search,own content promoted during search,own content promoted during search,"except they want promote own stuff at times (imusic,google also).",1.0
+323,1,1,1,0,0,0,feature_change,queue,new queue interface design,new queue interface design,the new Queue UI is horrible.,1.0
+324,1,1,0,0,1,0,feature_request,interface,request for more customization options,request for more customization options,i hope they add more customization,1.0
+325,1,1,1,0,0,0,ui_ux,queue,queue screen can be pulled down accidentally,queue screen can be pulled down accidentally,"it can sometimes get accidently pulled down, which can be annoying at times.",1.0
+326,1,1,1,0,0,0,performance,none,data used while listening,data used while listening,they use our data,1.0
+327,1,1,0,1,0,0,customer_support,customer support,customer service is reliable and helpful,customer service is reliable and helpful,Customer service is reliable and helpful,1.0
+328,1,1,1,0,0,0,ui_ux,none,music app has complex interface,music app has complex interface,just a more complex version of YTmusic.,1.0
+329,1,1,1,0,0,0,performance,playback,phone heats up during music playback,phone heats up during music playback,Iphone 16 pro on ios 18.0.1 is getting hot while listening to the music,1.0
+330,1,1,0,1,0,0,pricing,subscription,service worth the money,service worth the money,Best money I spend,1.0
+331,1,1,0,1,0,0,other,none,music keeps reviewer moving,music keeps reviewer moving,keeps me moving,1.0
+332,1,1,0,0,1,0,content_catalog,catalog,music available through disney+,music available through disney+,that was the only music I could listen to,1.0
+333,1,1,0,0,0,1,recommendations,recommendations,personalized suggestions accumulate over time,personalized suggestions accumulate over time,I love the parlays they create for ne they are not perfect but you can add and recommended suggestions start to pile up.,1.0
+334,1,1,1,0,0,0,bug,playback,song position is lost during playback,song position is lost during playback,loses its spot in the song,1.0
+335,1,1,1,0,0,0,feature_change,playback,latest update introduced playback problems,latest update introduced playback problems,the app didn't have this problem until the latest update,1.0
+336,1,1,1,0,0,0,customer_support,none,request not to redirect feedback to support,request not to redirect feedback to support,Please don't respond asking me to give feedback to your support team,1.0
+337,1,1,1,0,0,0,feature_change,playback,sleep timer stops audio without fading,sleep timer stops audio without fading,"when the sleep timer is set the audio your listening abruptly stops, previously the sleep timer would fade the audio out.",1.0
+338,1,1,0,0,1,0,feature_request,app updates & install,request to pin clipboard items,request to pin clipboard items,Pin clipboard items to stop them expiring after 1 hour,1.0
+339,1,1,1,0,0,0,ads,ads,30-minute free listening ends early,30-minute free listening ends early,"Really 30 minute free listening, liars",1.0
+340,1,1,0,0,1,0,feature_change,none,30-minute uninterrupted listening system restored,30-minute uninterrupted listening system restored,"I want the ""30 minutes of uninterrupted listening"" system back.",1.0
+341,1,1,0,0,1,0,feature_change,none,request to restore previous listening experience,request to restore previous listening experience,I wish it was the way it was when I first started listening to it.,1.0
+342,1,1,1,0,0,0,ads,ads,mickey mouse ads appear,mickey mouse ads appear,I keep getting mikeymouse ads,1.0
+343,1,1,0,1,0,0,content_catalog,none,bands and artists available,bands and artists available,i find all my bands and artists on here,1.0
+344,1,1,0,0,1,0,feature_request,free tier,request for more skips,request for more skips,i recommend that we have more skips,1.0
+345,1,1,1,0,0,0,pricing,offline & downloads,downloads require a subscription,downloads require a subscription,You can't download song without subscription,1.0
+346,1,1,1,0,0,0,pricing,free tier,hourly skip limit requires subscription,hourly skip limit requires subscription,YOU CAN'T EVEN skip songs more than 6 in a hour without subscription,1.0
+347,1,1,0,1,0,0,recommendations,playlists,weekly playlist is improving,weekly playlist is improving,I love their weekly playlist. It's getting better.,1.0
+348,1,1,1,0,0,0,other,subscription,military service not acknowledged,military service not acknowledged,they do not acknowledge military service.,1.0
+349,1,1,1,0,0,0,other,subscription,military college not accepted as valid school,military college not accepted as valid school,just wish it would recognize my military college as being a valid school.,1.0
+350,1,1,1,0,0,0,pricing,subscription,hulu subscription price information is inaccurate,hulu subscription price information is inaccurate,Also states this app is $4.99 if you have hulu neither is true,1.0
+351,1,1,1,0,0,0,bug,playback,listening interrupted repeatedly,listening interrupted repeatedly,constant annoying interruptions make it impossible to listen,1.0
+352,1,1,0,1,0,0,recommendations,recommendations,algorithm improved since first use,algorithm improved since first use,Algorithm is better than when I first used it.,1.0
+353,1,1,0,0,1,0,other,none,has not used app recently,has not used app recently,it's been a while since I don't use it,1.0
+354,1,1,1,0,0,0,feature_change,library,heart button removed from old ui,heart button removed from old ui,WE LIKED THE OLD UI WITH THE HEART BUTTON,1.0
+355,1,1,1,0,0,0,feature_change,interface,frequent changes to existing ui,frequent changes to existing ui,they keep changing things that don't need fixing.,1.0
+356,1,1,1,0,0,0,bug,interface,new ui has bugs,new ui has bugs,that's too buggy to be any good,1.0
+357,1,1,1,0,0,0,bug,interface,navigation bar area displays black cutout,navigation bar area displays black cutout,the area is no longer transparent but a permanent black cut out.,1.0
+358,1,1,1,0,0,0,feature_change,search,search functionality is worse,search functionality is worse,Whatever you did to search has ruined it.,1.0
+359,1,1,1,0,0,0,other,playlists,slur used in playlist titles,slur used in playlist titles,The r slur used against disabled people sometimes is used in made for you playlist.,1.0
+360,1,1,0,1,0,0,other,free tier,ability to play any song,ability to play any song,I could play any song,1.0
+361,1,1,1,0,0,0,bug,social & sharing,joining jams does not work,joining jams does not work,I can't join jams :(. It just doesn't work :(,1.0
+362,1,1,1,0,0,0,feature_change,playlists,adding songs to playlists from watch,adding songs to playlists from watch,I just can't add songs in to a Playlist from watch while I'm working,1.0
+363,1,1,1,0,0,0,bug,playback,tapping songs does nothing,tapping songs does nothing,when I tap a song nothing happens,1.0
+364,1,1,1,0,0,0,account_billing,subscription,gift card rejected during redemption,gift card rejected during redemption,all it says is my cards invalid.,1.0
+365,1,1,1,0,0,0,bug,devices & casting,automatic synchronization with mobile devices,automatic synchronization with mobile devices,it doesn’t automatically synchronize with the app on my iPhone,1.0
+366,1,1,1,0,0,0,bug,devices & casting,compatibility with newest android version,compatibility with newest android version,Doesn't work well with the newest version of the Android operating system.,1.0
+367,1,1,0,1,0,0,other,none,mobile version works adequately,mobile version works adequately,mobile version is ok,1.0
+368,1,1,1,0,0,0,bug,none,amazon fire tv version malfunctioning,amazon fire tv version malfunctioning,the smartTV version (specifically for amazon fire TV) is malfunctioning has been years,1.0
+369,1,1,1,0,0,0,pricing,free tier,free users cannot rewind or fast forward,free users cannot rewind or fast forward,exclusion of seek function(rewind and fast foward features) for free users,1.0
+370,1,1,1,0,0,0,other,none,basic app functions unavailable,basic app functions unavailable,It can't do basic things.,1.0
+371,1,1,0,1,0,0,pricing,free tier,free version for background music,free version for background music,free version is ok if you just want music for background,1.0
+372,1,1,0,1,0,0,content_catalog,none,availability of skyfall,availability of skyfall,they have skyfall,1.0
+373,1,1,1,0,0,0,bug,ads,ad dismiss button not working,ad dismiss button not working,The dismiss button on ads doesn't work on Samsung s23 ultra.,1.0
+374,1,1,1,0,0,0,other,none,qa team competence criticized,qa team competence criticized,Your QA team is incompetent.,1.0
+375,1,1,1,0,0,0,bug,account,birth year rejected during account setup,birth year rejected during account setup,Birth year 1963 why you are not allowing?,1.0
+376,1,1,1,0,0,0,other,sound quality,audio quality below cd quality,audio quality below cd quality,not even CD quality audio,1.0
+377,1,1,1,0,0,0,feature_request,sound quality,request for hi-fi release timing,request for hi-fi release timing,HI-FI before the end of the year. Which year was it?,1.0
+378,1,1,0,1,0,0,content_catalog,catalog,collection of 60s and 70s music,collection of 60s and 70s music,collection of 60s and 70s music,1.0
+379,1,1,0,1,0,0,content_catalog,catalog,songs in continuous rotation,songs in continuous rotation,Love the songs in there continuously rotation.,1.0
+380,1,1,0,1,0,0,other,none,music brings back memories,music brings back memories,So many memories. Brings it all back.,1.0
+381,1,1,0,1,0,0,other,none,smooth vocals from classic singers,smooth vocals from classic singers,Both voices so smooth,1.0
+382,1,1,1,0,0,0,ui_ux,playback,next song button has small tap target,next song button has small tap target,Clicking slightly outside it cause the controls to be minimized,1.0
+383,1,1,1,0,0,0,feature_request,library,request for unlimited pinned items,request for unlimited pinned items,I want unlimited pins.,1.0
+384,1,1,1,0,0,0,feature_change,library,request to bring back hearts,request to bring back hearts,Bring back the hearts,1.0
+385,1,1,0,1,0,0,other,none,fc barcelona sponsorship,fc barcelona sponsorship,being fc barcelona sponsor,1.0
+386,1,1,0,0,1,0,content_catalog,catalog,request to include 528 hz frequency,request to include 528 hz frequency,SHOULD INCLUDE 528 hz frequency.,1.0
+387,1,1,0,0,1,0,feature_request,playback,request to play two songs at once,request to play two songs at once,Spotify should add a feature where you can play two songs at once!,1.0
+388,1,1,1,0,0,0,recommendations,shuffle,downvoted songs return in mixes,downvoted songs return in mixes,Even when I down vote songs they still pop up in shuffles and daily mixes.,1.0
+389,1,1,0,0,1,0,feature_request,sound quality,request for hifi audio,request for hifi audio,I want Hi Fi,1.0
+390,1,1,0,0,1,0,ui_ux,shuffle,repeat option location for specific songs,repeat option location for specific songs,where can I find the option to do so?,1.0
+391,1,1,1,0,0,0,bug,ads,app crashes during kroger ad,app crashes during kroger ad,Crashes On Kroger Ad,1.0
+392,1,1,1,0,0,0,ads,ads,abysmal ad experience,abysmal ad experience,abysmal ad experience,1.0
+393,1,1,1,0,0,0,other,none,poor experience on phones,poor experience on phones,it’s only good on anything but a phone,1.0
+394,1,1,0,0,1,0,feature_request,sound quality,request for 3d or virtualization effects,request for 3d or virtualization effects,Add 3d or virtualization effects,1.0
+395,1,1,0,1,0,0,recommendations,recommendations,compilations tailored to listener,compilations tailored to listener,Perfectly tailor made compilations,1.0
+396,1,1,1,0,0,0,feature_change,lyrics,translation feature removed,translation feature removed,translate,1.0
+397,1,1,1,0,0,0,other,none,ai-generated content in the app,ai-generated content in the app,The ai slop is horrible,1.0
+398,1,1,0,1,0,0,content_catalog,catalog,brazilian funk music availability,brazilian funk music availability,has the best Brazilian funk.,1.0
+399,1,1,0,1,0,0,content_catalog,none,tracks are good,tracks are good,good tracks,1.0
+400,1,1,1,0,0,0,bug,search,search function not working after update,search function not working after update,search function is scuffed in last update,1.0
+401,1,1,0,1,0,0,content_catalog,none,complete tracks available,complete tracks available,complete track,1.0
+402,1,1,1,0,0,0,performance,app updates & install,app installation takes a long time,app installation takes a long time,It will take a bit long time to instolation,1.0
+403,1,1,1,0,0,0,customer_support,customer support,customer support does not reply to emails,customer support does not reply to emails,I sent numerous email and no reply back,1.0
+404,1,1,1,0,0,0,customer_support,customer support,no phone number for customer service,no phone number for customer service,no phone number for customer service,1.0
+405,1,1,1,0,0,0,bug,queue,unable to close the queue page,unable to close the queue page,Still unable to close to queue page sometimes,1.0
+406,1,1,1,0,0,0,account_billing,subscription,payment canceled when using gcash,payment canceled when using gcash,"When i pay for my premium it keeps on canceling my payment,whenever i use gcash",1.0
+407,1,1,1,0,0,0,account_billing,subscription,payment deducted without premium activation,payment deducted without premium activation,It has deducted the amount but it doesn't show that I have purchased premium.,1.0
+408,1,1,1,0,0,0,other,none,support for the democratic party,support for the democratic party,STOP SUPPORTING THE DEMOCRATIC PARTY!!!!!,1.0
+409,1,1,0,1,0,0,content_catalog,podcasts,undertaker has a podcast,undertaker has a podcast,my childhood hero has a podcast?!,1.0
+410,1,1,1,0,0,0,ads,ads,ad feedback ignored despite ratings,ad feedback ignored despite ratings,Why on EARTH  do you ask for our opinions about ads when you pay ZERO attention to the rating vs what is being done…,1.0
+411,1,1,1,0,0,0,pricing,subscription,premium services unaffordable for some,premium services unaffordable for some,those who can’t afford your premium services.,1.0
+412,1,1,1,0,0,0,account_billing,account,website rejects correct password,website rejects correct password,it was still saying it’s wrong,1.0
+413,1,1,0,0,1,0,feature_request,subscription,request for a one-week free package,request for a one-week free package,I want a package for at least 1 week free,1.0
+414,1,1,1,0,0,0,account_billing,subscription,student plan verification eligibility,student plan verification eligibility,I can't verify that im a student. Is it only for collage? Not for high school?,1.0
+415,1,1,1,0,0,0,feature_request,none,vpn support unavailable,vpn support unavailable,the lack of support for VPNs,1.0
+416,1,1,1,0,0,0,ads,ads,radio includes commercial content,radio includes commercial content,very commercial,1.0
+417,1,1,0,1,0,0,content_catalog,catalog,older opm and band music available,older opm and band music available,"I can play Original Rilipino Music (OPM) from my younger years (1970s to 1990s) and also by the bands such as Beatles, Bee Gees and so much more",1.0
+418,1,1,0,0,1,0,feature_request,none,enjoying music together with friends,enjoying music together with friends,njoy together with freinds,1.0
+419,1,1,1,0,0,0,recommendations,recommendations,recommendations feature a blocked artist,recommendations feature a blocked artist,now they comprise 99% of my recommended list🚮it's quite annoying even though I chose the option to not have this artist played.,1.0
+420,1,1,1,0,0,0,feature_change,catalog,professor cal whimpering men audios removed,professor cal whimpering men audios removed,you guys removed the professor cal whimpering men audios,1.0
+421,1,1,1,0,0,0,other,none,mix of songs,mix of songs,the mic up of songs is very disappointing,1.0
+422,1,1,0,1,0,0,content_catalog,catalog,positive opinion of nba youngboy,positive opinion of nba youngboy,Nba youngboy the goat,1.0
+423,1,1,1,0,0,0,ui_ux,search,finding content after the update,finding content after the update,Can't find anything anymore,1.0
+424,1,1,0,1,0,0,content_catalog,catalog,heavy metal music,heavy metal music,Heavy metal just better.,1.0
+425,1,1,0,1,0,0,content_catalog,recommendations,spotify helped discover kendrick lamar,spotify helped discover kendrick lamar,if it wasn’t for Spotify I wouldn’t have heard of my glorious king… KENDRICK LAMAR🥹,1.0
+426,1,1,1,0,0,0,bug,none,replying is unavailable,replying is unavailable,I couldn’t reply,1.0
+427,1,1,1,0,0,0,feature_change,none,features appear and disappear unpredictably,features appear and disappear unpredictably,"features are missing, they come and go at will.",1.0
+428,1,1,1,0,0,0,ads,ads,political content in music ads,political content in music ads,But strongly dislike the political ads being aired.,1.0
+429,1,1,1,0,0,0,pricing,free tier,skipping commercials without subscription,skipping commercials without subscription,If u could skip commercials it would be 5 stars even without a subscription.,1.0
+430,1,1,1,0,0,0,other,none,app policing vehicle use,app policing vehicle use,IT IS NOT YOUR BUSINESS WHEN I AM CONNECTED TO MY VEHICLE.,1.0
+431,1,1,1,0,0,0,pricing,subscription,having to pay money,having to pay money,we have to participate With money,1.0
+432,1,1,1,0,0,0,bug,podcasts,episodes close unexpectedly,episodes close unexpectedly,It will also force close episodes randomly,1.0
+433,1,1,1,0,0,0,bug,none,windows app is broken,windows app is broken,the windows app is broken,1.0
+434,1,1,1,0,0,0,bug,none,app repeatedly requests granted permissions,app repeatedly requests granted permissions,"the app continuously asks for background permissions, even though it has them.",1.0
+435,1,1,1,0,0,0,content_catalog,podcasts,favourite podcasts may move elsewhere,favourite podcasts may move elsewhere,"As soon as my favourite podcasts move to YouTube music, I'm gone.",1.0
+436,1,1,1,0,0,0,bug,podcasts,video podcast options menu goes blank,video podcast options menu goes blank,which causes the menu to go blank,1.0
+437,1,1,0,1,0,0,content_catalog,catalog,good music for listening while working,good music for listening while working,enjoying the company of good music as I work,1.0
+438,1,1,1,0,0,0,pricing,subscription,duo subscribers receive different subscription levels,duo subscribers receive different subscription levels,Give both subscribers the same frickin level of subscription.,1.0
+439,1,1,0,1,0,0,content_catalog,none,more music and artists than apple,more music and artists than apple,Spotify has a lot of music/artist that Apple doesnt.,1.0
+440,1,1,0,0,0,1,pricing,subscription,premium required for recommendation,premium required for recommendation,"Yes, if you're will to pay for premium, and no if you aren't willing to pay",1.0
+441,1,1,0,0,1,0,other,devices & casting,connection to samsung devices,connection to samsung devices,i can connect to all my samsung devices.,1.0
+442,1,1,1,0,0,0,bug,none,bugs remain unfixed,bugs remain unfixed,There are way too many constant bugs that never get fixed.,1.0
+443,1,1,1,0,0,0,bug,sound quality,sonos volume adjustments do not work,sonos volume adjustments do not work,"This app has never, ever worked properly with volume adjustments on Sonos speakers.",1.0
+444,1,1,1,0,0,0,feature_change,sound quality,volume slider requires phone buttons,volume slider requires phone buttons,"The newest solution pops up a volume slider in the app, only after you hit the volume buttons on the side of your phone.",1.0
+445,1,1,1,0,0,0,bug,sound quality,volume control unavailable outside the app,volume control unavailable outside the app,Can’t control volume outside of app.,1.0
+446,1,1,1,0,0,0,other,sound quality,playback volume lower than other services,playback volume lower than other services,The volume seems to be lower than youtube music.,1.0
+447,1,1,1,0,0,0,ui_ux,playback,device switching cannot be disabled,device switching cannot be disabled,can't disable it,1.0
+448,1,1,1,0,0,0,bug,sound quality,dolby atmos unavailable,dolby atmos unavailable,not Dolby Atmos available,1.0
+449,1,1,1,0,0,0,other,podcasts,repetition when choosing channels,repetition when choosing channels,A lot of repetition in choosing channels,1.0
+450,1,1,1,0,0,0,pricing,free tier,free users cannot listen freely,free users cannot listen freely,Forget about listening to music freely,1.0
+451,1,1,1,0,0,0,ui_ux,account,location changes require website access,location changes require website access,I have to go to your stupid website and change the location there,1.0
+452,1,1,1,0,0,0,pricing,free tier,playing favorite songs online requires recharge,playing favorite songs online requires recharge,can't even ply my fav song on online i have to reacharge for that also,1.0
+453,1,1,1,0,0,0,feature_request,offline & downloads,automatic downloads cannot be stopped,automatic downloads cannot be stopped,no option to stop auto download. keeps downloading unnecessary without permission.,1.0
+454,1,1,1,0,0,0,pricing,subscription,poor value for money,poor value for money,waste of money.,1.0
+455,1,1,1,0,0,0,bug,playlists,previous data disappears after a few days,previous data disappears after a few days,After the first few days you lose everything you had before,1.0
+456,1,1,0,1,0,0,content_catalog,none,limited use of bad language,limited use of bad language,There are not many bad words.,1.0
+457,1,1,1,0,0,0,feature_request,Wrapped,request to avoid ai in the app,request to avoid ai in the app,I don’t want ai to take out the heart and creativity of this app.,1.0
+458,1,1,0,0,1,0,ui_ux,none,complex app interface,complex app interface,Complex,1.0
+459,1,1,0,1,0,0,ui_ux,Wrapped,year-end event shows listening history,year-end event shows listening history,i love the end of the year event on how it tells you what you listening has shown about your self,1.0
+460,1,1,1,0,0,0,feature_change,recommendations,ai used to find music,ai used to find music,Spotify has gone to use AI to find music for its listeners.,1.0
+461,1,1,1,0,0,0,recommendations,recommendations,certain songs pushed by executives,certain songs pushed by executives,Ceos push certain songs,1.0
+462,1,1,1,0,0,0,other,none,business practices are criticized,business practices are criticized,toxic cheap business practices,1.0
+463,1,1,1,0,0,0,recommendations,recommendations,recommended content quality has declined,recommended content quality has declined,the quality of recommended content has been in the toilet,1.0
+464,1,1,0,0,1,0,feature_request,devices & casting,request for apple homepod support,request for apple homepod support,Please support Apple HomePod.,1.0
+465,1,1,1,0,0,0,pricing,subscription,app monetization practices,app monetization practices,Money hungry,1.0
+466,1,1,1,0,0,0,ui_ux,none,formatting is difficult to use,formatting is difficult to use,horrible formatting,1.0
+467,1,1,1,0,0,0,pricing,subscription,frequent requests for payment,frequent requests for payment,They begging for money every single second,1.0
+468,1,1,1,0,0,0,feature_request,none,request to ban israeli users,request to ban israeli users,"don't help israel then and ban israel, if you banned russia",1.0
+469,1,1,1,0,0,0,performance,recommendations,frame drops on daylist page,frame drops on daylist page,Drop frames at the daylist page,1.0
+470,1,1,0,1,0,0,ui_ux,interface,labels show where options lead,labels show where options lead,There’s titles on what it leads to,1.0
+471,1,1,1,0,0,0,feature_request,queue,play next option unavailable,play next option unavailable,There is no option as play next,1.0
+472,1,1,0,0,1,0,feature_request,library,request to delete songs and artists in bulk,request to delete songs and artists in bulk,There needs to be an option to delete songs and artists complete list or album.,1.0
+473,1,1,1,0,0,0,ads,ads,repeated abortion promotional ads,repeated abortion promotional ads,there was always popping about saying she is a nurse and promoting about abortions!,1.0
+474,1,1,1,0,0,0,ads,ads,ads play at high volume,ads play at high volume,Ads absurdly on high volume.,1.0
+475,1,1,0,0,1,0,feature_request,lyrics,request for guitar chords,request for guitar chords,Should have guitar chords on it,1.0
+476,1,1,0,1,0,0,content_catalog,none,better selection of hollywood songs,better selection of hollywood songs,More better for Hollywood songs,1.0
+477,1,1,0,1,0,0,other,library,liked songs feature,liked songs feature,I love the liked song feature.,1.0
+478,1,1,0,1,0,0,other,none,helps the reviewer relax,helps the reviewer relax,it also helps me relax,1.0
+479,1,1,1,0,0,0,other,sound quality,audio volume was loud,audio volume was loud,It was loud.,1.0
+480,1,1,0,0,1,0,other,none,kinder treatment of artists,kinder treatment of artists,be more kinder to the artists,1.0
+481,1,1,1,0,0,0,other,none,efforts to limit media voices,efforts to limit media voices,They make active efforts to limit the reach of certain voices in the media.,1.0
+482,1,1,1,0,0,0,bug,playlists,playlist song count and length do not update,playlist song count and length do not update,"I will add songs, but the total length or amount of songs displayed doesn't change.",1.0
+483,1,1,1,0,0,0,content_catalog,podcasts,episodes being deleted,episodes being deleted,the unreasonable deleting if episodes,1.0
+484,1,1,1,0,0,0,pricing,subscription,complaint about money-driven pricing,complaint about money-driven pricing,The way they are money hungry,1.0
+485,1,1,1,0,0,0,ads,ads,ads include chewing and whispering,ads include chewing and whispering,"when they have a gum commercial and chew in your ear, or a Reese’s ads where they whisper in your ear.",1.0
+486,1,1,0,0,1,0,feature_request,ads,request for mood-aware ad timing,request for mood-aware ad timing,spotify should detect if I'm in the mood to get ads,1.0
+487,1,1,0,0,1,0,customer_support,subscription,request for help with cancellation,request for help with cancellation,Can I get come help.,1.0
+488,1,1,1,0,0,0,account_billing,account,unauthorized access persists after logout,unauthorized access persists after logout,it keeps connect to my spotify everytime i login to my account,1.0
+489,1,1,1,0,0,0,account_billing,subscription,membership purchase payment not working,membership purchase payment not working,I can’t buy a membership on Spotify..,1.0
+490,1,1,1,0,0,0,account_billing,account,phone login unavailable while xbox account remains logged in,phone login unavailable while xbox account remains logged in,I am logged into my Xbox Spotify account but not my phone,1.0
+491,1,1,0,0,1,0,other,library,pin limit of four items,pin limit of four items,Only 4 pins.,1.0
+492,1,1,1,0,0,0,feature_change,notifications,new music notifications were removed,new music notifications were removed,bring back the new music notifications,1.0
+493,1,1,0,0,1,0,feature_change,lyrics,translations added to all songs,translations added to all songs,the translation has been added to all songs,1.0
+494,1,1,1,0,0,0,account_billing,subscription,premium voucher redemption option unavailable,premium voucher redemption option unavailable,there is no redeem option neither in flipkart nor in Spotify.,1.0
+495,1,1,1,0,0,0,feature_change,playlists,people replaced by ai playlist makers,people replaced by ai playlist makers,replacing people with ai making playlists,1.0
+496,1,1,1,0,0,0,feature_change,recommendations,not interested option removed from feed,not interested option removed from feed,"now I don't even have the option to say ""Not Interested""",1.0
+497,1,1,1,0,0,0,bug,library,genre categories disappear from library,genre categories disappear from library,the genre categories keeps disappearing,1.0
+498,1,1,1,0,0,0,feature_change,library,your library button position changed,your library button position changed,Move the Your Library button back to bottom right you idiots!,1.0
+499,1,1,0,0,1,0,feature_request,library,request for alphabetical sorting,request for alphabetical sorting,Sorting option should be available,1.0
+500,1,1,1,0,0,0,bug,playlists,playlist edits cannot be saved,playlist edits cannot be saved,So you literally can’t update your playlist and it’s order,1.0
+501,1,1,1,0,0,0,ui_ux,interface,tablet layout is poorly designed,tablet layout is poorly designed,Not well designed for tablets.,1.0
+502,1,1,0,0,1,0,account_billing,subscription,subscription status possibly affects playback,subscription status possibly affects playback,is this because I have stop the subscription?,1.0
+503,1,1,0,0,1,0,ads,ads,ads are acceptable to reviewer,ads are acceptable to reviewer,I don’t care about the ads honestly,1.0
+504,1,1,1,0,0,0,bug,search,keyboard does not appear for text input,keyboard does not appear for text input,the keyboard just don’t show up.,1.0
+505,1,1,1,0,0,0,bug,library,album songs and order not displayed,album songs and order not displayed,it just shows me the music cover and nothing else like I can’t see all the songs in order,1.0
+506,1,1,1,0,0,0,pricing,free tier,repeated prompts to upgrade,repeated prompts to upgrade,THIS APP JUST SPAMS YOU TO UPGRADE,1.0
+507,1,1,1,0,0,0,other,Wrapped,free-tier listening makes wrapped less meaningful,free-tier listening makes wrapped less meaningful,there really isn't a point to Spotify Wrapped since half the time the stuff you listened to wasithe stuff you wanted to listen to in that moment,1.0
+508,1,1,0,0,1,0,feature_request,playback,custom sleep timer for playlists,custom sleep timer for playlists,a custom sleep timer for playlist etc,1.0
+509,1,1,1,0,0,0,pricing,free tier,ad removal requires payment,ad removal requires payment,I know I’m not finna pay no app to ge rid of the ads though.,1.0
+510,1,1,0,0,1,0,other,podcasts,upcoming video feature,upcoming video feature,Spotify is going to be doing video soon,1.0
+511,1,1,0,0,0,1,content_catalog,podcasts,qur'an recitations repeatedly removed and restored,qur'an recitations repeatedly removed and restored,Qur'an recitation are constantly getting removed time and time again.,1.0
+512,1,1,1,0,0,0,pricing,subscription,subscription value depends on content availability,subscription value depends on content availability,subscription to this app is something that is not value added.,1.0
+513,1,1,1,0,0,0,recommendations,Wrapped,wrapped algorithm accuracy,wrapped algorithm accuracy,"The wrapped algorithm might need some work, it doesn’t seem super accurate.",1.0
+514,1,1,1,0,0,0,other,Wrapped,quality of the wrapped recap,quality of the wrapped recap,YOU CALL THAT A WRAP ABSOLUTE DOG WATER,1.0
+515,1,1,0,1,0,0,other,none,playing dj in family cars,playing dj in family cars,I like it because I get to be dj in my dad’s car and sometimes my mom’s car too,1.0
+516,1,1,1,0,0,0,other,Wrapped,2024 wrapped experience quality,2024 wrapped experience quality,Wrapped 24 Sucked.,1.0
+517,1,1,1,0,0,0,recommendations,recommendations,discover weekly rarely introduces new music,discover weekly rarely introduces new music,weekly discover hardly ever exposed us to new music anymore,1.0
+518,1,1,1,0,0,0,feature_request,AI DJ,more voice options for dj,more voice options for dj,until more voice options are made available for the DJ,1.0
+519,1,1,0,1,0,0,other,none,enjoys djing with music,enjoys djing with music,Love to dj.,1.0
+520,1,1,0,1,0,0,content_catalog,catalog,music from 1930 to present,music from 1930 to present,Enjoy music from 1930 to present.,1.0
+521,1,1,1,0,0,0,feature_change,none,apk files are banned,apk files are banned,DID IT REALLY HAVE TO BAN THE APKS?,1.0
+522,1,1,1,0,0,0,recommendations,interface,unwanted clips shown on home page,unwanted clips shown on home page,Stop showing clips of the guy who said my people eat cats on my home page.,1.0
+523,1,1,1,0,0,0,other,none,access for working class outside america,access for working class outside america,"Inaccessible for the working class outside of america, where most of their users are",1.0
+524,1,1,0,0,1,0,feature_request,playback,request for delay before songs start,request for delay before songs start,Need a few seconds before songs start,1.0
+525,1,1,1,0,0,0,account_billing,subscription,card charged after leaving platform,card charged after leaving platform,they don’t let you go easy and keep charging your card for months,1.0
+526,1,1,1,0,0,0,customer_support,none,customer service failed to resolve issue,customer service failed to resolve issue,"After reaching out to the customer service got absolutely nowhere, with a sprinkle of attitude on top",1.0
+527,1,1,1,0,0,0,account_billing,subscription,changing subscription plans is difficult,changing subscription plans is difficult,Unfortunately I am having a heck of a time changing plans.,1.0
+528,1,1,1,0,0,0,other,notifications,emails sent in the wrong language,emails sent in the wrong language,they send important or even critical emails to users written in one language that isn't theirs,1.0
+529,1,1,1,0,0,0,pricing,subscription,premium promotion for free users,premium promotion for free users,Only begging for people to take premium!!!,1.0
+530,1,1,1,0,0,0,pricing,free tier,basic functions require premium,basic functions require premium,every single basic function is legit premium,1.0
+531,1,1,0,1,0,0,content_catalog,catalog,shivrajkumar songs available,shivrajkumar songs available,because of shivrajkumar bhairathi ranagal songs,1.0
+532,1,1,1,0,0,0,bug,account,login reports offline while connected,login reports offline while connected,it said i’m offline when I was connected to internet,1.0
+533,1,1,1,0,0,0,ui_ux,devices & casting,car use is not safe,car use is not safe,Not safe for the car.,1.0
+534,1,1,1,0,0,0,bug,devices & casting,google assistant cannot play requested songs,google assistant cannot play requested songs,Don't expect that it will work with Google Assistant either.,1.0
+535,1,1,1,0,0,0,content_catalog,search,similar song titles lead to wrong playback,similar song titles lead to wrong playback,Their catalog has been so spammed with various different spelled-alike song titles that if you ask for it to play a song it will do anything but play the song that you asked it to play.,1.0
+536,1,1,1,0,0,0,pricing,free tier,more than six skips require payment,more than six skips require payment,pay for more than 6 skips,1.0
+537,1,1,1,0,0,0,pricing,free tier,premium required to turn off remix,premium required to turn off remix,I had to have PREMIUM TO TURN OFF REMIX!,1.0
+538,1,1,1,0,0,0,content_catalog,playlists,political content in daily drive playlist,political content in daily drive playlist,inundated by a bunch of npr left wing extremist propaganda,1.0
+539,1,1,0,0,1,0,feature_request,playlists,option to choose what to hear,option to choose what to hear,give us an option of what we want to hear,1.0
+540,1,1,0,1,0,0,ads,ads,ability to dislike individual ads,ability to dislike individual ads,you can dislike any ad’s you don’t like.,1.0
+541,1,1,0,1,0,0,ui_ux,playlists,customize playlist cover images,customize playlist cover images,you can customize the cover of you’re playlist.,1.0
+542,1,1,0,1,0,0,recommendations,recommendations,similar song recommendations with previews,similar song recommendations with previews,you can find similar songs or recommendations for the playlist and it lets you listen too a portion of the song.,1.0
+543,1,1,1,0,0,0,pricing,free tier,request to make fewer features premium,request to make fewer features premium,i think spotify just needs too make less things premium,1.0
+544,1,1,1,0,0,0,bug,library,chosen sorting resets to default,chosen sorting resets to default,You non-stop break it and overwrite the sorting I choose and put it back to the default.,1.0
+545,1,1,1,0,0,0,feature_change,playback,play in order removed,play in order removed,"taking away ""play in order""",1.0
+546,1,1,1,0,0,0,recommendations,recommendations,vibe mix picks ruin listening mood,vibe mix picks ruin listening mood,it completely DESTROYED my mood to listen to music,1.0
+547,1,1,1,0,0,0,content_catalog,catalog,songs are randomly deleted,songs are randomly deleted,u also randomly delete songs,1.0
+548,1,1,1,0,0,0,bug,devices & casting,spotify unavailable across household alexa devices,spotify unavailable across household alexa devices,Spotify will not work with multiple users in your household that have Alexa devices at the same time.,1.0
+549,1,1,1,0,0,0,other,social & sharing,inappropriate uploaded images visible to children,inappropriate uploaded images visible to children,people can upload inappropriate images that my kids can visually see.,1.0
+550,1,1,1,0,0,0,bug,offline & downloads,desktop app must close to turn offline,desktop app must close to turn offline,having to close Spotify on the desktop just so i can turn this stupid thing offline!,1.0
+551,1,1,1,0,0,0,bug,none,spotify disconnects bluetooth watch,spotify disconnects bluetooth watch,my ble watch loses connection?,1.0
+552,1,1,1,0,0,0,ui_ux,devices & casting,dedicated sync control is hard to find,dedicated sync control is hard to find,There does not seem to be a dedicated sync (at least not one that is easily useable).,1.0
+553,1,1,1,0,0,0,other,none,switching to youtube after discord pauses,switching to youtube after discord pauses,will make me stop using Spotify and use YouTube instead every time.,1.0
+554,1,1,1,0,0,0,other,none,prefers buying music over app inconvenience,prefers buying music over app inconvenience,I’ll just buy the music rather than deal with the inconvenience that is company-to-company legality or the application’s bugginess.,1.0
+555,1,1,1,0,0,0,bug,none,browser page needs frequent reloading,browser page needs frequent reloading,I have to reload the browser page very often,1.0
+556,1,1,1,0,0,0,recommendations,AI DJ,ai dj is obnoxious,ai dj is obnoxious,The AI DJ  can be obnoxious.,1.0
+557,1,1,1,0,0,0,feature_change,offline & downloads,local music playback removed,local music playback removed,Used to be able to listen to music locally on your device but can't anymore,1.0
+558,1,1,1,0,0,0,bug,account,technical error after logging back in,technical error after logging back in,tried to log out and log in back but shows some technical error.,1.0
+559,1,1,1,0,0,0,bug,interface,screenshots cannot be taken in app,screenshots cannot be taken in app,Unable to take screenshot too.,1.0
+560,1,1,1,0,0,0,bug,none,app traps users in screens,app traps users in screens,Malfunctions sometimes by trapping you in a screen out of app,1.0
+561,1,1,0,1,0,0,content_catalog,catalog,imperial march available to play,imperial march available to play,can play even the imperial March off of star wars,1.0
+562,1,1,1,0,0,0,ui_ux,interface,buttons crowding the song name,buttons crowding the song name,"the - + buttons weren't squished in beside the song/artist name, making the song name constantly scroll horizontally because there's no room to display it.",1.0
+563,1,1,0,0,1,0,feature_request,playlists,request to add more playlist pins,request to add more playlist pins,can you just let us add more pins,1.0
+564,1,1,1,0,0,0,content_catalog,podcasts,naked videos available on app,naked videos available on app,Ther are naked videos on thes ap,1.0
+565,1,1,1,0,0,0,recommendations,recommendations,youtube videos suggested in recommendations,youtube videos suggested in recommendations,why are you suggesting YouTube videos to me?,1.0
+566,1,1,1,0,0,0,feature_change,ads,random banners introduce new content,random banners introduce new content,Take the random banners out!,1.0
+567,1,1,1,0,0,0,ui_ux,catalog,getting to personal music,getting to personal music,We want to get Toto our music,1.0
+568,1,1,1,0,0,0,bug,social & sharing,shared songs missing in whatsapp,shared songs missing in whatsapp,"When I share a song in WhatsApp, it doesn't show up.",1.0
+569,1,1,1,0,0,0,bug,playback,playback on microsoft devices,playback on microsoft devices,Its supposed to play in microsoft also,1.0
+570,1,1,0,0,1,0,feature_request,offline & downloads,request for a download section,request for a download section,Please have a download section,1.0
+571,1,1,1,0,0,0,account_billing,subscription,student plan changed to premium,student plan changed to premium,They changed my plan from student to premium without notice.,1.0
+572,1,1,1,0,0,0,account_billing,subscription,new family plan rules,new family plan rules,These new family plan rules,1.0
+573,1,1,1,0,0,0,other,offline & downloads,downloads limited across devices,downloads limited across devices,limiting download devices is okay,1.0
+574,1,1,1,0,0,0,feature_request,subscription,request to buy plans in app,request to buy plans in app,you can not buy plans on the app,1.0
+575,1,1,1,0,0,0,recommendations,recommendations,mixes are getting repetitive,mixes are getting repetitive,Getting repetitive on mixez,1.0
+576,1,1,1,0,0,0,pricing,subscription,paid plan offers no additional benefits,paid plan offers no additional benefits,there are no additional benefits,1.0
+577,1,1,1,0,0,0,ui_ux,none,outdated app design,outdated app design,app is prehistoric,1.0
+578,1,1,0,0,1,0,other,none,question about network access,question about network access,How much network access,1.0
+579,1,1,0,0,1,0,feature_request,subscription,request to see the listening contract,request to see the listening contract,I would LOVE to see the contract regarding this.,1.0
+580,1,1,0,0,1,0,feature_request,search,search episodes by description,search episodes by description,Episode Description Search,1.0
+581,1,1,0,1,0,0,content_catalog,catalog,instrumental and vocal music availability,instrumental and vocal music availability,I can find any kind of music whether it be instrumental or singing,1.0
+582,1,1,0,1,0,0,other,library,music library available wherever users go,music library available wherever users go,an entire music library can be carried with us wherever we go,1.0
+583,1,1,0,1,0,0,pricing,subscription,monthly subscription costs about one album,monthly subscription costs about one album,maintaining it no more expensive than the cost of an album per month,1.0
+584,1,1,0,1,0,0,performance,none,service responds quickly,service responds quickly,Fast,1.0
+585,1,1,0,0,1,0,feature_request,none,request for more services,request for more services,Provide a lot of services,1.0
+586,1,1,1,0,0,0,feature_change,none,platform has changed,platform has changed,Changed the platform.,1.0

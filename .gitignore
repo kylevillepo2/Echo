@@ -21,3 +21,12 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+# Big pipeline files stay out of git (see pipeline/README.md)
+*.npy
+*.joblib
+*.parquet

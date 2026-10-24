@@ -1,0 +1,9 @@
+# switching/ uses only the Python standard library (3.10+).
+# topics/ needs these:
+numpy
+pandas
+pyarrow
+scikit-learn
+joblib
+sentence-transformers
+torch

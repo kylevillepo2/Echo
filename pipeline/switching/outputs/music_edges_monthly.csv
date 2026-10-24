@@ -1,0 +1,1239 @@
+month,source,target,kind,observed_in_reviews_of,count,weight,reviewed_app_volume,weight_per_10k_reviews
+2024-06,Audiomack,Apple Music,preference,Audiomack,1,0.175,153,11.438
+2024-06,SoundCloud,Audiomack,preference,Audiomack,1,0.25,153,16.34
+2024-06,Spotify,Audiomack,preference,Audiomack,8,1.925,153,125.817
+2024-06,YouTube,Audiomack,preference,Audiomack,1,0.175,153,11.438
+2024-07,Apple Music,Audiomack,preference,Audiomack,1,0.25,156,16.026
+2024-07,Apple Music,Audiomack,switch,Audiomack,1,0.7,156,44.872
+2024-07,Apple Music,SoundCloud,preference,SoundCloud,4,0.925,1028,8.998
+2024-07,Audiomack,Apple Music,preference,Audiomack,1,0.25,156,16.026
+2024-07,Audiomack,Pandora,preference,Audiomack,1,0.25,156,16.026
+2024-07,Audiomack,SoundCloud,preference,Audiomack,1,0.25,156,16.026
+2024-07,Audiomack,Spotify,preference,Audiomack,2,0.5,156,32.051
+2024-07,Pandora,SoundCloud,preference,SoundCloud,1,0.25,1028,2.432
+2024-07,SoundCloud,Apple Music,preference,SoundCloud,4,0.925,1028,8.998
+2024-07,SoundCloud,Bandcamp,preference,SoundCloud,1,0.25,1028,2.432
+2024-07,SoundCloud,Musi,intent,SoundCloud,2,1.0,1028,9.728
+2024-07,SoundCloud,Spotify,intent,SoundCloud,3,1.5,1028,14.591
+2024-07,SoundCloud,Spotify,preference,SoundCloud,10,2.125,1028,20.671
+2024-07,SoundCloud,YouTube,preference,SoundCloud,3,0.6,1028,5.837
+2024-07,SoundCloud,YouTube,switch,SoundCloud,1,1.0,1028,9.728
+2024-07,Spotify,Audiomack,preference,Audiomack,7,1.6,156,102.564
+2024-07,Spotify,Audiomack,switch,Audiomack,1,1.0,156,64.103
+2024-07,Spotify,SoundCloud,preference,SoundCloud,41,9.95,1028,96.79
+2024-07,Spotify,SoundCloud,switch,SoundCloud,3,2.4,1028,23.346
+2024-07,YouTube,SoundCloud,preference,SoundCloud,1,0.25,1028,2.432
+2024-08,Amazon Music,SoundCloud,preference,SoundCloud,1,0.25,2149,1.163
+2024-08,Amazon Music,Spotify,preference,Spotify,17,3.8,25480,1.491
+2024-08,Amazon Music,Spotify,switch,Spotify,5,4.7,25480,1.845
+2024-08,Apple Music,Audiomack,preference,Audiomack,2,0.425,143,29.72
+2024-08,Apple Music,SoundCloud,preference,SoundCloud,6,1.5,2149,6.98
+2024-08,Apple Music,Spotify,preference,Spotify,110,26.825,25480,10.528
+2024-08,Apple Music,Spotify,return,Spotify,4,4.0,25480,1.57
+2024-08,Apple Music,Spotify,switch,Spotify,17,16.1,25480,6.319
+2024-08,Audiomack,Apple Music,preference,Audiomack,2,0.425,143,29.72
+2024-08,Audiomack,Spotify,preference,Audiomack,1,0.25,143,17.483
+2024-08,Audiomack,Spotify,preference,Spotify,1,0.175,25480,0.069
+2024-08,Audiomack,Spotify,switch,Spotify,1,1.0,25480,0.392
+2024-08,Boomplay,SoundCloud,preference,SoundCloud,1,0.25,2149,1.163
+2024-08,Boomplay,Spotify,preference,Spotify,1,0.175,25480,0.069
+2024-08,Deezer,SoundCloud,preference,SoundCloud,1,0.25,2149,1.163
+2024-08,Deezer,Spotify,switch,Spotify,1,1.0,25480,0.392
+2024-08,JioSaavn,Spotify,preference,Spotify,1,0.25,25480,0.098
+2024-08,Pandora,SoundCloud,preference,SoundCloud,1,0.25,2149,1.163
+2024-08,Pandora,Spotify,preference,Spotify,47,11.075,25480,4.347
+2024-08,Pandora,Spotify,switch,Spotify,21,19.2,25480,7.535
+2024-08,SoundCloud,Amazon Music,intent,SoundCloud,1,0.35,2149,1.629
+2024-08,SoundCloud,Amazon Music,preference,SoundCloud,1,0.175,2149,0.814
+2024-08,SoundCloud,Apple Music,intent,SoundCloud,1,0.5,2149,2.327
+2024-08,SoundCloud,Apple Music,preference,SoundCloud,1,0.25,2149,1.163
+2024-08,SoundCloud,Musi,preference,SoundCloud,2,0.35,2149,1.629
+2024-08,SoundCloud,Spotify,intent,SoundCloud,3,1.35,2149,6.282
+2024-08,SoundCloud,Spotify,preference,SoundCloud,7,1.6,2149,7.445
+2024-08,SoundCloud,Spotify,preference,Spotify,6,1.35,25480,0.53
+2024-08,SoundCloud,Spotify,return,Spotify,1,0.7,25480,0.275
+2024-08,SoundCloud,Spotify,switch,SoundCloud,4,3.7,2149,17.217
+2024-08,SoundCloud,YouTube,intent,SoundCloud,1,0.35,2149,1.629
+2024-08,SoundCloud,YouTube,preference,SoundCloud,3,0.6,2149,2.792
+2024-08,Spotify,Amazon Music,intent,Spotify,8,3.85,25480,1.511
+2024-08,Spotify,Amazon Music,preference,Spotify,12,2.775,25480,1.089
+2024-08,Spotify,Amazon Music,switch,Spotify,4,3.7,25480,1.452
+2024-08,Spotify,Anghami,preference,Spotify,1,0.25,25480,0.098
+2024-08,Spotify,Apple Music,intent,Spotify,48,23.4,25480,9.184
+2024-08,Spotify,Apple Music,preference,Spotify,64,14.725,25480,5.779
+2024-08,Spotify,Apple Music,switch,Spotify,12,11.1,25480,4.356
+2024-08,Spotify,Audiomack,preference,Audiomack,3,0.6,143,41.958
+2024-08,Spotify,Audiomack,preference,Spotify,1,0.25,25480,0.098
+2024-08,Spotify,Bandcamp,intent,Spotify,1,0.5,25480,0.196
+2024-08,Spotify,Bandcamp,preference,Spotify,2,0.5,25480,0.196
+2024-08,Spotify,Deezer,intent,Spotify,2,0.85,25480,0.334
+2024-08,Spotify,Deezer,preference,Spotify,2,0.425,25480,0.167
+2024-08,Spotify,JioSaavn,intent,Spotify,1,0.35,25480,0.137
+2024-08,Spotify,JioSaavn,preference,Spotify,6,1.275,25480,0.5
+2024-08,Spotify,JioSaavn,switch,Spotify,2,1.7,25480,0.667
+2024-08,Spotify,Musi,intent,Spotify,8,3.7,25480,1.452
+2024-08,Spotify,Musi,preference,Spotify,10,2.2,25480,0.863
+2024-08,Spotify,Musi,switch,Spotify,1,1.0,25480,0.392
+2024-08,Spotify,Pandora,intent,Spotify,5,2.35,25480,0.922
+2024-08,Spotify,Pandora,preference,Spotify,24,5.325,25480,2.09
+2024-08,Spotify,Pandora,switch,Spotify,5,5.0,25480,1.962
+2024-08,Spotify,Qobuz,intent,Spotify,1,0.5,25480,0.196
+2024-08,Spotify,SoundCloud,intent,Spotify,4,2.0,25480,0.785
+2024-08,Spotify,SoundCloud,preference,SoundCloud,99,23.775,2149,110.633
+2024-08,Spotify,SoundCloud,preference,Spotify,27,6.075,25480,2.384
+2024-08,Spotify,SoundCloud,switch,SoundCloud,4,4.0,2149,18.613
+2024-08,Spotify,SoundCloud,switch,Spotify,3,3.0,25480,1.177
+2024-08,Spotify,Tidal,intent,Spotify,3,1.35,25480,0.53
+2024-08,Spotify,Tidal,preference,Spotify,12,2.7,25480,1.06
+2024-08,Spotify,Tidal,switch,Spotify,1,1.0,25480,0.392
+2024-08,Spotify,YouTube,intent,Spotify,26,11.65,25480,4.572
+2024-08,Spotify,YouTube,preference,Spotify,87,19.35,25480,7.594
+2024-08,Spotify,YouTube,switch,Spotify,11,9.8,25480,3.846
+2024-08,Spotify,YouTube Music,intent,Spotify,43,20.3,25480,7.967
+2024-08,Spotify,YouTube Music,preference,Spotify,94,21.625,25480,8.487
+2024-08,Spotify,YouTube Music,switch,Spotify,18,17.7,25480,6.947
+2024-08,Spotify,iHeartRadio,preference,Spotify,2,0.5,25480,0.196
+2024-08,Tidal,Spotify,preference,Spotify,2,0.5,25480,0.196
+2024-08,YouTube,SoundCloud,preference,SoundCloud,2,0.425,2149,1.978
+2024-08,YouTube,Spotify,preference,Spotify,29,5.9,25480,2.316
+2024-08,YouTube,Spotify,switch,Spotify,8,7.4,25480,2.904
+2024-08,YouTube Music,SoundCloud,switch,SoundCloud,1,1.0,2149,4.653
+2024-08,YouTube Music,Spotify,preference,Spotify,35,8.675,25480,3.405
+2024-08,YouTube Music,Spotify,return,Spotify,2,2.0,25480,0.785
+2024-08,YouTube Music,Spotify,switch,Spotify,9,8.4,25480,3.297
+2024-08,iHeartRadio,Spotify,preference,Spotify,3,0.675,25480,0.265
+2024-08,iHeartRadio,Spotify,switch,Spotify,2,2.0,25480,0.785
+2024-09,Amazon Music,Spotify,preference,Spotify,15,3.525,22841,1.543
+2024-09,Amazon Music,Spotify,return,Spotify,1,1.0,22841,0.438
+2024-09,Amazon Music,Spotify,switch,Spotify,5,4.7,22841,2.058
+2024-09,Apple Music,Audiomack,preference,Audiomack,3,0.675,10200,0.662
+2024-09,Apple Music,SoundCloud,preference,SoundCloud,9,2.25,1862,12.084
+2024-09,Apple Music,Spotify,preference,Spotify,96,23.1,22841,10.113
+2024-09,Apple Music,Spotify,return,Spotify,2,2.0,22841,0.876
+2024-09,Apple Music,Spotify,switch,Spotify,11,10.4,22841,4.553
+2024-09,Audiomack,Spotify,intent,Audiomack,1,0.35,10200,0.343
+2024-09,Audiomack,Spotify,preference,Audiomack,2,0.5,10200,0.49
+2024-09,Audiomack,Spotify,preference,Spotify,1,0.25,22841,0.109
+2024-09,Audiomack,Spotify,switch,Audiomack,2,2.0,10200,1.961
+2024-09,Audiomack,YouTube Music,preference,Audiomack,1,0.175,10200,0.172
+2024-09,Boomplay,Audiomack,preference,Audiomack,6,1.35,10200,1.324
+2024-09,Boomplay,Audiomack,switch,Audiomack,1,1.0,10200,0.98
+2024-09,Boomplay,Spotify,preference,Spotify,1,0.25,22841,0.109
+2024-09,Deezer,SoundCloud,preference,SoundCloud,1,0.25,1862,1.343
+2024-09,Deezer,Spotify,switch,Spotify,1,1.0,22841,0.438
+2024-09,JioSaavn,Spotify,switch,Spotify,1,1.0,22841,0.438
+2024-09,Musi,Spotify,preference,Spotify,1,0.25,22841,0.109
+2024-09,Pandora,Audiomack,preference,Audiomack,1,0.25,10200,0.245
+2024-09,Pandora,Spotify,preference,Spotify,44,10.7,22841,4.685
+2024-09,Pandora,Spotify,switch,Spotify,13,12.7,22841,5.56
+2024-09,SoundCloud,Apple Music,preference,SoundCloud,1,0.175,1862,0.94
+2024-09,SoundCloud,Audiomack,switch,Audiomack,1,0.7,10200,0.686
+2024-09,SoundCloud,Musi,preference,SoundCloud,1,0.25,1862,1.343
+2024-09,SoundCloud,Spotify,intent,SoundCloud,2,1.0,1862,5.371
+2024-09,SoundCloud,Spotify,preference,SoundCloud,11,2.525,1862,13.561
+2024-09,SoundCloud,Spotify,preference,Spotify,6,1.5,22841,0.657
+2024-09,SoundCloud,Spotify,switch,Spotify,2,2.0,22841,0.876
+2024-09,SoundCloud,YouTube,preference,SoundCloud,2,0.425,1862,2.282
+2024-09,SoundCloud,YouTube Music,preference,SoundCloud,3,0.675,1862,3.625
+2024-09,Spotify,Amazon Music,intent,Spotify,10,4.7,22841,2.058
+2024-09,Spotify,Amazon Music,preference,Spotify,7,1.525,22841,0.668
+2024-09,Spotify,Amazon Music,switch,Spotify,1,1.0,22841,0.438
+2024-09,Spotify,Apple Music,intent,Spotify,47,22.45,22841,9.829
+2024-09,Spotify,Apple Music,preference,Spotify,53,12.35,22841,5.407
+2024-09,Spotify,Apple Music,switch,Spotify,11,10.7,22841,4.685
+2024-09,Spotify,Audiomack,intent,Spotify,1,0.35,22841,0.153
+2024-09,Spotify,Audiomack,preference,Audiomack,59,14.3,10200,14.02
+2024-09,Spotify,Audiomack,preference,Spotify,1,0.25,22841,0.109
+2024-09,Spotify,Audiomack,switch,Audiomack,1,1.0,10200,0.98
+2024-09,Spotify,Audiomack,switch,Spotify,1,0.7,22841,0.306
+2024-09,Spotify,Bandcamp,preference,Spotify,1,0.175,22841,0.077
+2024-09,Spotify,Deezer,intent,Spotify,4,2.0,22841,0.876
+2024-09,Spotify,Deezer,switch,Spotify,2,2.0,22841,0.876
+2024-09,Spotify,JioSaavn,preference,Spotify,4,0.85,22841,0.372
+2024-09,Spotify,JioSaavn,switch,Spotify,1,1.0,22841,0.438
+2024-09,Spotify,Musi,intent,Spotify,2,0.85,22841,0.372
+2024-09,Spotify,Musi,preference,Spotify,6,1.275,22841,0.558
+2024-09,Spotify,Musi,switch,Spotify,1,1.0,22841,0.438
+2024-09,Spotify,Pandora,intent,Spotify,14,6.4,22841,2.802
+2024-09,Spotify,Pandora,preference,Spotify,17,3.875,22841,1.697
+2024-09,Spotify,Pandora,switch,Spotify,3,3.0,22841,1.313
+2024-09,Spotify,Qobuz,preference,Spotify,2,0.425,22841,0.186
+2024-09,Spotify,SoundCloud,intent,Spotify,12,6.0,22841,2.627
+2024-09,Spotify,SoundCloud,preference,SoundCloud,64,15.55,1862,83.512
+2024-09,Spotify,SoundCloud,preference,Spotify,25,5.725,22841,2.506
+2024-09,Spotify,SoundCloud,switch,SoundCloud,2,1.7,1862,9.13
+2024-09,Spotify,SoundCloud,switch,Spotify,6,5.7,22841,2.496
+2024-09,Spotify,Tidal,intent,Spotify,6,2.85,22841,1.248
+2024-09,Spotify,Tidal,preference,Spotify,12,2.775,22841,1.215
+2024-09,Spotify,Tidal,switch,Spotify,3,2.7,22841,1.182
+2024-09,Spotify,YouTube,intent,Spotify,30,13.5,22841,5.91
+2024-09,Spotify,YouTube,preference,Spotify,67,14.575,22841,6.381
+2024-09,Spotify,YouTube,switch,Spotify,14,12.5,22841,5.473
+2024-09,Spotify,YouTube Music,intent,Spotify,27,13.05,22841,5.713
+2024-09,Spotify,YouTube Music,preference,Spotify,73,16.525,22841,7.235
+2024-09,Spotify,YouTube Music,switch,Spotify,15,14.7,22841,6.436
+2024-09,Spotify,iHeartRadio,switch,Spotify,1,1.0,22841,0.438
+2024-09,Tidal,Spotify,preference,Spotify,2,0.5,22841,0.219
+2024-09,YouTube,Audiomack,preference,Audiomack,4,0.775,10200,0.76
+2024-09,YouTube,SoundCloud,preference,SoundCloud,2,0.425,1862,2.282
+2024-09,YouTube,Spotify,preference,Spotify,25,5.125,22841,2.244
+2024-09,YouTube,Spotify,switch,Spotify,10,8.2,22841,3.59
+2024-09,YouTube Music,Audiomack,preference,Audiomack,6,1.275,10200,1.25
+2024-09,YouTube Music,Audiomack,switch,Audiomack,1,0.7,10200,0.686
+2024-09,YouTube Music,SoundCloud,preference,SoundCloud,3,0.75,1862,4.028
+2024-09,YouTube Music,SoundCloud,switch,SoundCloud,1,0.7,1862,3.759
+2024-09,YouTube Music,Spotify,preference,Spotify,28,6.625,22841,2.9
+2024-09,YouTube Music,Spotify,return,Spotify,1,1.0,22841,0.438
+2024-09,YouTube Music,Spotify,switch,Spotify,7,6.1,22841,2.671
+2024-09,iHeartRadio,Spotify,preference,Spotify,4,0.85,22841,0.372
+2024-09,iHeartRadio,Spotify,switch,Spotify,1,0.7,22841,0.306
+2024-10,Amazon Music,Audiomack,preference,Audiomack,1,0.25,14184,0.176
+2024-10,Amazon Music,Spotify,preference,Spotify,11,2.75,17178,1.601
+2024-10,Amazon Music,Spotify,return,Spotify,1,1.0,17178,0.582
+2024-10,Amazon Music,Spotify,switch,Spotify,5,4.7,17178,2.736
+2024-10,Apple Music,Audiomack,preference,Audiomack,3,0.675,14184,0.476
+2024-10,Apple Music,SoundCloud,preference,SoundCloud,7,1.6,2442,6.552
+2024-10,Apple Music,Spotify,preference,Spotify,105,24.75,17178,14.408
+2024-10,Apple Music,Spotify,return,Spotify,2,1.7,17178,0.99
+2024-10,Apple Music,Spotify,switch,Spotify,9,8.4,17178,4.89
+2024-10,Audiomack,Amazon Music,preference,Audiomack,1,0.175,14184,0.123
+2024-10,Audiomack,Apple Music,preference,Audiomack,1,0.175,14184,0.123
+2024-10,Audiomack,Boomplay,preference,Audiomack,1,0.25,14184,0.176
+2024-10,Audiomack,SoundCloud,intent,Audiomack,1,0.5,14184,0.353
+2024-10,Audiomack,Spotify,preference,Audiomack,5,1.1,14184,0.776
+2024-10,Audiomack,Spotify,preference,Spotify,3,0.675,17178,0.393
+2024-10,Audiomack,YouTube,switch,Audiomack,1,0.7,14184,0.494
+2024-10,Audiomack,iHeartRadio,preference,Audiomack,1,0.175,14184,0.123
+2024-10,Boomplay,Audiomack,preference,Audiomack,6,1.425,14184,1.005
+2024-10,Boomplay,Audiomack,switch,Audiomack,2,1.7,14184,1.199
+2024-10,Boomplay,Spotify,preference,Spotify,1,0.25,17178,0.146
+2024-10,Deezer,Spotify,return,Spotify,1,0.7,17178,0.407
+2024-10,Musi,SoundCloud,switch,SoundCloud,1,0.7,2442,2.867
+2024-10,Musi,Spotify,switch,Spotify,3,2.4,17178,1.397
+2024-10,Pandora,Audiomack,preference,Audiomack,2,0.5,14184,0.353
+2024-10,Pandora,Spotify,preference,Spotify,38,9.425,17178,5.487
+2024-10,Pandora,Spotify,return,Spotify,1,1.0,17178,0.582
+2024-10,Pandora,Spotify,switch,Spotify,11,10.4,17178,6.054
+2024-10,SoundCloud,Apple Music,intent,SoundCloud,2,0.7,2442,2.867
+2024-10,SoundCloud,Apple Music,preference,SoundCloud,1,0.175,2442,0.717
+2024-10,SoundCloud,Audiomack,preference,Audiomack,1,0.25,14184,0.176
+2024-10,SoundCloud,Audiomack,switch,Audiomack,1,1.0,14184,0.705
+2024-10,SoundCloud,Spotify,intent,SoundCloud,6,2.85,2442,11.671
+2024-10,SoundCloud,Spotify,preference,SoundCloud,16,3.625,2442,14.844
+2024-10,SoundCloud,Spotify,preference,Spotify,6,1.5,17178,0.873
+2024-10,SoundCloud,Spotify,switch,SoundCloud,4,4.0,2442,16.38
+2024-10,SoundCloud,Spotify,switch,Spotify,2,1.7,17178,0.99
+2024-10,SoundCloud,Tidal,preference,SoundCloud,1,0.175,2442,0.717
+2024-10,SoundCloud,YouTube,intent,SoundCloud,1,0.35,2442,1.433
+2024-10,SoundCloud,YouTube,preference,SoundCloud,4,0.7,2442,2.867
+2024-10,SoundCloud,YouTube Music,preference,SoundCloud,3,0.675,2442,2.764
+2024-10,Spotify,Amazon Music,intent,Spotify,3,1.35,17178,0.786
+2024-10,Spotify,Amazon Music,preference,Spotify,12,2.625,17178,1.528
+2024-10,Spotify,Amazon Music,switch,Spotify,2,2.0,17178,1.164
+2024-10,Spotify,Apple Music,intent,Spotify,36,17.1,17178,9.955
+2024-10,Spotify,Apple Music,preference,Spotify,44,10.175,17178,5.923
+2024-10,Spotify,Apple Music,switch,Spotify,5,5.0,17178,2.911
+2024-10,Spotify,Audiomack,preference,Audiomack,56,13.1,14184,9.236
+2024-10,Spotify,Audiomack,preference,Spotify,2,0.5,17178,0.291
+2024-10,Spotify,Audiomack,switch,Spotify,1,1.0,17178,0.582
+2024-10,Spotify,Deezer,preference,Spotify,2,0.35,17178,0.204
+2024-10,Spotify,JioSaavn,preference,Spotify,1,0.25,17178,0.146
+2024-10,Spotify,Musi,intent,Spotify,5,2.35,17178,1.368
+2024-10,Spotify,Musi,preference,Spotify,4,0.925,17178,0.538
+2024-10,Spotify,Pandora,intent,Spotify,5,2.35,17178,1.368
+2024-10,Spotify,Pandora,preference,Spotify,22,5.125,17178,2.983
+2024-10,Spotify,Pandora,switch,Spotify,5,4.7,17178,2.736
+2024-10,Spotify,Qobuz,intent,Spotify,1,0.35,17178,0.204
+2024-10,Spotify,SoundCloud,intent,Spotify,7,3.2,17178,1.863
+2024-10,Spotify,SoundCloud,preference,SoundCloud,85,20.5,2442,83.948
+2024-10,Spotify,SoundCloud,preference,Spotify,14,3.2,17178,1.863
+2024-10,Spotify,SoundCloud,return,SoundCloud,1,0.7,2442,2.867
+2024-10,Spotify,SoundCloud,switch,SoundCloud,6,5.4,2442,22.113
+2024-10,Spotify,SoundCloud,switch,Spotify,3,3.0,17178,1.746
+2024-10,Spotify,Tidal,intent,Spotify,3,1.2,17178,0.699
+2024-10,Spotify,Tidal,preference,Spotify,5,1.1,17178,0.64
+2024-10,Spotify,Tidal,switch,Spotify,3,3.0,17178,1.746
+2024-10,Spotify,YouTube,intent,Spotify,26,11.35,17178,6.607
+2024-10,Spotify,YouTube,preference,Spotify,68,14.6,17178,8.499
+2024-10,Spotify,YouTube,switch,Spotify,7,6.7,17178,3.9
+2024-10,Spotify,YouTube Music,intent,Spotify,13,6.05,17178,3.522
+2024-10,Spotify,YouTube Music,preference,Spotify,49,11.35,17178,6.607
+2024-10,Spotify,YouTube Music,switch,Spotify,11,10.7,17178,6.229
+2024-10,Tidal,Spotify,return,Spotify,1,1.0,17178,0.582
+2024-10,Tidal,Spotify,switch,Spotify,1,1.0,17178,0.582
+2024-10,YouTube,Audiomack,preference,Audiomack,3,0.6,14184,0.423
+2024-10,YouTube,SoundCloud,preference,SoundCloud,6,1.425,2442,5.835
+2024-10,YouTube,SoundCloud,switch,SoundCloud,3,2.4,2442,9.828
+2024-10,YouTube,Spotify,preference,Spotify,32,7.1,17178,4.133
+2024-10,YouTube,Spotify,return,Spotify,1,1.0,17178,0.582
+2024-10,YouTube,Spotify,switch,Spotify,9,8.7,17178,5.065
+2024-10,YouTube Music,Audiomack,preference,Audiomack,5,1.25,14184,0.881
+2024-10,YouTube Music,SoundCloud,preference,SoundCloud,4,1.0,2442,4.095
+2024-10,YouTube Music,Spotify,preference,Spotify,31,7.6,17178,4.424
+2024-10,YouTube Music,Spotify,return,Spotify,1,0.7,17178,0.407
+2024-10,YouTube Music,Spotify,switch,Spotify,7,7.0,17178,4.075
+2024-10,iHeartRadio,Spotify,preference,Spotify,3,0.75,17178,0.437
+2024-11,Amazon Music,Spotify,preference,Spotify,14,3.5,22389,1.563
+2024-11,Amazon Music,Spotify,switch,Spotify,6,5.7,22389,2.546
+2024-11,Apple Music,Audiomack,preference,Audiomack,2,0.5,15123,0.331
+2024-11,Apple Music,SoundCloud,preference,SoundCloud,7,1.75,2379,7.356
+2024-11,Apple Music,Spotify,preference,Spotify,98,24.05,22389,10.742
+2024-11,Apple Music,Spotify,return,Spotify,1,1.0,22389,0.447
+2024-11,Apple Music,Spotify,switch,Spotify,12,11.1,22389,4.958
+2024-11,Audiomack,Apple Music,intent,Audiomack,1,0.35,15123,0.231
+2024-11,Audiomack,Apple Music,preference,Audiomack,1,0.25,15123,0.165
+2024-11,Audiomack,Boomplay,intent,Audiomack,2,1.0,15123,0.661
+2024-11,Audiomack,Boomplay,preference,Audiomack,2,0.425,15123,0.281
+2024-11,Audiomack,Musi,preference,Audiomack,3,0.675,15123,0.446
+2024-11,Audiomack,SoundCloud,preference,Audiomack,2,0.425,15123,0.281
+2024-11,Audiomack,Spotify,preference,Audiomack,3,0.675,15123,0.446
+2024-11,Audiomack,Spotify,preference,Spotify,3,0.75,22389,0.335
+2024-11,Audiomack,Spotify,switch,Audiomack,1,1.0,15123,0.661
+2024-11,Audiomack,YouTube,preference,Audiomack,2,0.35,15123,0.231
+2024-11,Audiomack,YouTube,switch,Audiomack,1,0.7,15123,0.463
+2024-11,Audiomack,YouTube Music,preference,Audiomack,1,0.25,15123,0.165
+2024-11,Boomplay,Audiomack,preference,Audiomack,15,3.6,15123,2.38
+2024-11,Boomplay,Spotify,preference,Spotify,1,0.25,22389,0.112
+2024-11,Deezer,Spotify,preference,Spotify,1,0.25,22389,0.112
+2024-11,JioSaavn,Spotify,preference,Spotify,2,0.5,22389,0.223
+2024-11,Musi,Audiomack,switch,Audiomack,2,2.0,15123,1.322
+2024-11,Musi,Spotify,preference,Spotify,1,0.25,22389,0.112
+2024-11,Musi,Spotify,switch,Spotify,6,5.7,22389,2.546
+2024-11,Pandora,Spotify,preference,Spotify,41,9.95,22389,4.444
+2024-11,Pandora,Spotify,return,Spotify,1,1.0,22389,0.447
+2024-11,Pandora,Spotify,switch,Spotify,14,13.7,22389,6.119
+2024-11,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,2379,1.786
+2024-11,SoundCloud,Audiomack,preference,Audiomack,1,0.25,15123,0.165
+2024-11,SoundCloud,Bandcamp,preference,SoundCloud,1,0.175,2379,0.736
+2024-11,SoundCloud,Musi,intent,SoundCloud,1,0.5,2379,2.102
+2024-11,SoundCloud,Pandora,intent,SoundCloud,1,0.5,2379,2.102
+2024-11,SoundCloud,Pandora,preference,SoundCloud,1,0.175,2379,0.736
+2024-11,SoundCloud,Spotify,intent,SoundCloud,2,1.0,2379,4.203
+2024-11,SoundCloud,Spotify,preference,SoundCloud,15,3.375,2379,14.187
+2024-11,SoundCloud,Spotify,preference,Spotify,7,1.675,22389,0.748
+2024-11,SoundCloud,Spotify,switch,SoundCloud,5,5.0,2379,21.017
+2024-11,SoundCloud,Spotify,switch,Spotify,2,2.0,22389,0.893
+2024-11,SoundCloud,Tidal,intent,SoundCloud,1,0.5,2379,2.102
+2024-11,SoundCloud,YouTube,intent,SoundCloud,3,1.35,2379,5.675
+2024-11,SoundCloud,YouTube,preference,SoundCloud,1,0.25,2379,1.051
+2024-11,SoundCloud,YouTube Music,preference,SoundCloud,1,0.25,2379,1.051
+2024-11,SoundCloud,YouTube Music,switch,SoundCloud,1,1.0,2379,4.203
+2024-11,Spotify,Amazon Music,intent,Spotify,9,4.2,22389,1.876
+2024-11,Spotify,Amazon Music,preference,Spotify,10,2.275,22389,1.016
+2024-11,Spotify,Amazon Music,switch,Spotify,2,2.0,22389,0.893
+2024-11,Spotify,Apple Music,intent,Spotify,43,20.9,22389,9.335
+2024-11,Spotify,Apple Music,preference,Spotify,49,11.425,22389,5.103
+2024-11,Spotify,Apple Music,switch,Spotify,1,1.0,22389,0.447
+2024-11,Spotify,Audiomack,intent,Spotify,2,0.85,22389,0.38
+2024-11,Spotify,Audiomack,preference,Audiomack,71,16.775,15123,11.092
+2024-11,Spotify,Audiomack,preference,Spotify,1,0.25,22389,0.112
+2024-11,Spotify,Audiomack,switch,Audiomack,5,4.1,15123,2.711
+2024-11,Spotify,Audiomack,switch,Spotify,1,1.0,22389,0.447
+2024-11,Spotify,Bandcamp,preference,Spotify,2,0.5,22389,0.223
+2024-11,Spotify,Bandcamp,switch,Spotify,1,0.7,22389,0.313
+2024-11,Spotify,Boomplay,preference,Spotify,1,0.25,22389,0.112
+2024-11,Spotify,Deezer,preference,Spotify,1,0.25,22389,0.112
+2024-11,Spotify,JioSaavn,intent,Spotify,2,1.0,22389,0.447
+2024-11,Spotify,JioSaavn,preference,Spotify,2,0.425,22389,0.19
+2024-11,Spotify,Musi,intent,Spotify,3,1.35,22389,0.603
+2024-11,Spotify,Musi,preference,Spotify,5,1.1,22389,0.491
+2024-11,Spotify,Musi,switch,Spotify,1,1.0,22389,0.447
+2024-11,Spotify,Pandora,intent,Spotify,7,3.35,22389,1.496
+2024-11,Spotify,Pandora,preference,Spotify,14,3.125,22389,1.396
+2024-11,Spotify,Pandora,switch,Spotify,3,2.7,22389,1.206
+2024-11,Spotify,Qobuz,preference,Spotify,2,0.425,22389,0.19
+2024-11,Spotify,SoundCloud,intent,Spotify,10,4.85,22389,2.166
+2024-11,Spotify,SoundCloud,preference,SoundCloud,91,22.0,2379,92.476
+2024-11,Spotify,SoundCloud,preference,Spotify,21,4.575,22389,2.043
+2024-11,Spotify,SoundCloud,switch,SoundCloud,5,4.4,2379,18.495
+2024-11,Spotify,SoundCloud,switch,Spotify,3,2.7,22389,1.206
+2024-11,Spotify,Tidal,intent,Spotify,2,1.0,22389,0.447
+2024-11,Spotify,Tidal,preference,Spotify,6,1.275,22389,0.569
+2024-11,Spotify,Tidal,switch,Spotify,1,1.0,22389,0.447
+2024-11,Spotify,YouTube,intent,Spotify,21,9.75,22389,4.355
+2024-11,Spotify,YouTube,preference,Spotify,83,18.2,22389,8.129
+2024-11,Spotify,YouTube,switch,Spotify,13,11.5,22389,5.136
+2024-11,Spotify,YouTube Music,intent,Spotify,26,12.7,22389,5.672
+2024-11,Spotify,YouTube Music,preference,Spotify,52,12.325,22389,5.505
+2024-11,Spotify,YouTube Music,switch,Spotify,7,7.0,22389,3.127
+2024-11,Spotify,iHeartRadio,preference,Spotify,2,0.5,22389,0.223
+2024-11,Spotify,iHeartRadio,switch,Spotify,1,1.0,22389,0.447
+2024-11,Tidal,SoundCloud,preference,SoundCloud,1,0.25,2379,1.051
+2024-11,Tidal,Spotify,preference,Spotify,2,0.5,22389,0.223
+2024-11,YouTube,Audiomack,preference,Audiomack,3,0.675,15123,0.446
+2024-11,YouTube,SoundCloud,preference,SoundCloud,3,0.675,2379,2.837
+2024-11,YouTube,Spotify,preference,Spotify,29,6.2,22389,2.769
+2024-11,YouTube,Spotify,switch,Spotify,8,7.1,22389,3.171
+2024-11,YouTube Music,Audiomack,preference,Audiomack,2,0.425,15123,0.281
+2024-11,YouTube Music,SoundCloud,preference,SoundCloud,1,0.175,2379,0.736
+2024-11,YouTube Music,Spotify,preference,Spotify,29,6.95,22389,3.104
+2024-11,YouTube Music,Spotify,return,Spotify,1,1.0,22389,0.447
+2024-11,YouTube Music,Spotify,switch,Spotify,6,5.7,22389,2.546
+2024-11,iHeartRadio,Spotify,preference,Spotify,1,0.25,22389,0.112
+2024-12,Amazon Music,Spotify,preference,Spotify,16,3.85,23186,1.66
+2024-12,Amazon Music,Spotify,return,Spotify,1,0.7,23186,0.302
+2024-12,Apple Music,Audiomack,preference,Audiomack,2,0.5,14905,0.335
+2024-12,Apple Music,SoundCloud,preference,SoundCloud,12,3.0,2480,12.097
+2024-12,Apple Music,Spotify,preference,Spotify,101,24.5,23186,10.567
+2024-12,Apple Music,Spotify,return,Spotify,4,3.4,23186,1.466
+2024-12,Apple Music,Spotify,switch,Spotify,12,11.4,23186,4.917
+2024-12,Audiomack,Apple Music,preference,Audiomack,2,0.425,14905,0.285
+2024-12,Audiomack,Boomplay,preference,Audiomack,1,0.175,14905,0.117
+2024-12,Audiomack,Musi,preference,Audiomack,3,0.6,14905,0.403
+2024-12,Audiomack,Spotify,intent,Audiomack,1,0.5,14905,0.335
+2024-12,Audiomack,Spotify,preference,Audiomack,7,1.525,14905,1.023
+2024-12,Audiomack,YouTube,preference,Audiomack,1,0.175,14905,0.117
+2024-12,Audiomack,YouTube Music,preference,Audiomack,1,0.25,14905,0.168
+2024-12,Boomplay,Audiomack,preference,Audiomack,12,2.85,14905,1.912
+2024-12,Boomplay,Audiomack,switch,Audiomack,2,1.7,14905,1.141
+2024-12,Boomplay,Spotify,switch,Spotify,1,1.0,23186,0.431
+2024-12,Deezer,SoundCloud,preference,SoundCloud,1,0.25,2480,1.008
+2024-12,Deezer,Spotify,preference,Spotify,2,0.5,23186,0.216
+2024-12,JioSaavn,Spotify,preference,Spotify,1,0.175,23186,0.075
+2024-12,Musi,Audiomack,switch,Audiomack,2,2.0,14905,1.342
+2024-12,Musi,Spotify,switch,Spotify,3,2.4,23186,1.035
+2024-12,Pandora,Audiomack,preference,Audiomack,2,0.5,14905,0.335
+2024-12,Pandora,SoundCloud,preference,SoundCloud,2,0.425,2480,1.714
+2024-12,Pandora,SoundCloud,switch,SoundCloud,1,1.0,2480,4.032
+2024-12,Pandora,Spotify,preference,Spotify,52,12.7,23186,5.477
+2024-12,Pandora,Spotify,switch,Spotify,11,10.1,23186,4.356
+2024-12,SoundCloud,Apple Music,preference,SoundCloud,3,0.6,2480,2.419
+2024-12,SoundCloud,Apple Music,switch,SoundCloud,1,0.7,2480,2.823
+2024-12,SoundCloud,Musi,preference,SoundCloud,1,0.175,2480,0.706
+2024-12,SoundCloud,Spotify,intent,SoundCloud,4,2.0,2480,8.065
+2024-12,SoundCloud,Spotify,preference,SoundCloud,19,4.225,2480,17.036
+2024-12,SoundCloud,Spotify,preference,Spotify,4,1.0,23186,0.431
+2024-12,SoundCloud,Spotify,switch,SoundCloud,1,1.0,2480,4.032
+2024-12,SoundCloud,Spotify,switch,Spotify,1,0.7,23186,0.302
+2024-12,SoundCloud,YouTube,preference,SoundCloud,1,0.175,2480,0.706
+2024-12,SoundCloud,YouTube Music,preference,SoundCloud,3,0.75,2480,3.024
+2024-12,Spotify,Amazon Music,intent,Spotify,3,1.5,23186,0.647
+2024-12,Spotify,Amazon Music,preference,Spotify,8,1.925,23186,0.83
+2024-12,Spotify,Amazon Music,switch,Spotify,1,1.0,23186,0.431
+2024-12,Spotify,Apple Music,intent,Spotify,57,27.3,23186,11.774
+2024-12,Spotify,Apple Music,preference,Spotify,62,14.6,23186,6.297
+2024-12,Spotify,Apple Music,switch,Spotify,8,7.1,23186,3.062
+2024-12,Spotify,Audiomack,preference,Audiomack,82,19.525,14905,13.1
+2024-12,Spotify,Audiomack,preference,Spotify,2,0.425,23186,0.183
+2024-12,Spotify,Audiomack,switch,Audiomack,5,4.1,14905,2.751
+2024-12,Spotify,Bandcamp,intent,Spotify,1,0.5,23186,0.216
+2024-12,Spotify,Bandcamp,preference,Spotify,2,0.35,23186,0.151
+2024-12,Spotify,Boomplay,preference,Spotify,3,0.6,23186,0.259
+2024-12,Spotify,Deezer,intent,Spotify,2,1.0,23186,0.431
+2024-12,Spotify,Deezer,preference,Spotify,1,0.175,23186,0.075
+2024-12,Spotify,JioSaavn,intent,Spotify,1,0.5,23186,0.216
+2024-12,Spotify,JioSaavn,preference,Spotify,3,0.6,23186,0.259
+2024-12,Spotify,JioSaavn,switch,Spotify,1,0.7,23186,0.302
+2024-12,Spotify,Musi,intent,Spotify,2,1.0,23186,0.431
+2024-12,Spotify,Musi,preference,Spotify,13,2.725,23186,1.175
+2024-12,Spotify,Musi,switch,Spotify,1,1.0,23186,0.431
+2024-12,Spotify,Pandora,intent,Spotify,11,5.35,23186,2.307
+2024-12,Spotify,Pandora,preference,Spotify,16,3.775,23186,1.628
+2024-12,Spotify,Pandora,switch,Spotify,5,4.1,23186,1.768
+2024-12,Spotify,SoundCloud,intent,Spotify,2,1.0,23186,0.431
+2024-12,Spotify,SoundCloud,preference,SoundCloud,122,29.525,2480,119.052
+2024-12,Spotify,SoundCloud,preference,Spotify,23,5.3,23186,2.286
+2024-12,Spotify,SoundCloud,switch,SoundCloud,14,12.2,2480,49.194
+2024-12,Spotify,SoundCloud,switch,Spotify,3,2.7,23186,1.164
+2024-12,Spotify,Tidal,intent,Spotify,3,1.35,23186,0.582
+2024-12,Spotify,Tidal,preference,Spotify,4,0.925,23186,0.399
+2024-12,Spotify,Tidal,switch,Spotify,2,2.0,23186,0.863
+2024-12,Spotify,YouTube,intent,Spotify,18,7.65,23186,3.299
+2024-12,Spotify,YouTube,preference,Spotify,70,14.575,23186,6.286
+2024-12,Spotify,YouTube,switch,Spotify,3,3.0,23186,1.294
+2024-12,Spotify,YouTube Music,intent,Spotify,26,12.1,23186,5.219
+2024-12,Spotify,YouTube Music,preference,Spotify,62,14.225,23186,6.135
+2024-12,Spotify,YouTube Music,switch,Spotify,13,12.1,23186,5.219
+2024-12,Spotify,iHeartRadio,preference,Spotify,1,0.25,23186,0.108
+2024-12,Spotify,iHeartRadio,switch,Spotify,1,1.0,23186,0.431
+2024-12,Tidal,Spotify,switch,Spotify,2,2.0,23186,0.863
+2024-12,YouTube,Audiomack,preference,Audiomack,3,0.6,14905,0.403
+2024-12,YouTube,SoundCloud,preference,SoundCloud,3,0.6,2480,2.419
+2024-12,YouTube,SoundCloud,switch,SoundCloud,1,1.0,2480,4.032
+2024-12,YouTube,Spotify,preference,Spotify,32,7.025,23186,3.03
+2024-12,YouTube,Spotify,switch,Spotify,6,5.4,23186,2.329
+2024-12,YouTube Music,Audiomack,preference,Audiomack,5,1.25,14905,0.839
+2024-12,YouTube Music,Audiomack,switch,Audiomack,1,0.7,14905,0.47
+2024-12,YouTube Music,SoundCloud,preference,SoundCloud,3,0.675,2480,2.722
+2024-12,YouTube Music,SoundCloud,switch,SoundCloud,1,1.0,2480,4.032
+2024-12,YouTube Music,Spotify,preference,Spotify,38,9.275,23186,4.0
+2024-12,YouTube Music,Spotify,switch,Spotify,6,5.4,23186,2.329
+2024-12,iHeartRadio,Spotify,preference,Spotify,2,0.5,23186,0.216
+2024-12,iHeartRadio,Spotify,switch,Spotify,1,1.0,23186,0.431
+2025-01,Amazon Music,SoundCloud,preference,SoundCloud,1,0.25,2418,1.034
+2025-01,Amazon Music,Spotify,preference,Spotify,14,3.5,19173,1.825
+2025-01,Amazon Music,Spotify,switch,Spotify,6,5.4,19173,2.816
+2025-01,Apple Music,Audiomack,preference,Audiomack,3,0.75,15283,0.491
+2025-01,Apple Music,SoundCloud,preference,SoundCloud,12,2.7,2418,11.166
+2025-01,Apple Music,SoundCloud,switch,SoundCloud,2,1.7,2418,7.031
+2025-01,Apple Music,Spotify,preference,Spotify,109,26.95,19173,14.056
+2025-01,Apple Music,Spotify,return,Spotify,1,1.0,19173,0.522
+2025-01,Apple Music,Spotify,switch,Spotify,16,15.1,19173,7.876
+2025-01,Audiomack,Apple Music,intent,Audiomack,1,0.5,15283,0.327
+2025-01,Audiomack,Apple Music,preference,Audiomack,2,0.425,15283,0.278
+2025-01,Audiomack,Apple Music,switch,Audiomack,1,0.7,15283,0.458
+2025-01,Audiomack,Boomplay,intent,Audiomack,1,0.5,15283,0.327
+2025-01,Audiomack,Boomplay,preference,Audiomack,2,0.5,15283,0.327
+2025-01,Audiomack,Musi,preference,Audiomack,2,0.425,15283,0.278
+2025-01,Audiomack,Pandora,switch,Audiomack,1,1.0,15283,0.654
+2025-01,Audiomack,SoundCloud,preference,Audiomack,1,0.25,15283,0.164
+2025-01,Audiomack,SoundCloud,switch,Audiomack,1,1.0,15283,0.654
+2025-01,Audiomack,Spotify,preference,Audiomack,10,2.2,15283,1.44
+2025-01,Audiomack,Spotify,preference,Spotify,1,0.25,19173,0.13
+2025-01,Audiomack,Spotify,switch,Audiomack,1,1.0,15283,0.654
+2025-01,Audiomack,YouTube,preference,Audiomack,2,0.425,15283,0.278
+2025-01,Boomplay,Audiomack,preference,Audiomack,13,3.175,15283,2.077
+2025-01,Boomplay,Spotify,preference,Spotify,1,0.25,19173,0.13
+2025-01,Deezer,Spotify,preference,Spotify,1,0.25,19173,0.13
+2025-01,JioSaavn,Spotify,return,Spotify,1,1.0,19173,0.522
+2025-01,Musi,Audiomack,switch,Audiomack,2,1.4,15283,0.916
+2025-01,Musi,SoundCloud,preference,SoundCloud,2,0.425,2418,1.758
+2025-01,Musi,Spotify,switch,Spotify,4,3.7,19173,1.93
+2025-01,Pandora,Audiomack,preference,Audiomack,1,0.25,15283,0.164
+2025-01,Pandora,SoundCloud,preference,SoundCloud,2,0.425,2418,1.758
+2025-01,Pandora,Spotify,preference,Spotify,31,7.675,19173,4.003
+2025-01,Pandora,Spotify,switch,Spotify,14,13.1,19173,6.833
+2025-01,SoundCloud,Apple Music,intent,SoundCloud,1,0.5,2418,2.068
+2025-01,SoundCloud,Apple Music,preference,SoundCloud,1,0.175,2418,0.724
+2025-01,SoundCloud,Audiomack,preference,Audiomack,1,0.25,15283,0.164
+2025-01,SoundCloud,Bandcamp,preference,SoundCloud,1,0.25,2418,1.034
+2025-01,SoundCloud,Qobuz,preference,SoundCloud,1,0.175,2418,0.724
+2025-01,SoundCloud,Spotify,intent,SoundCloud,4,1.85,2418,7.651
+2025-01,SoundCloud,Spotify,preference,SoundCloud,9,1.95,2418,8.065
+2025-01,SoundCloud,Spotify,preference,Spotify,6,1.5,19173,0.782
+2025-01,SoundCloud,Spotify,return,Spotify,1,0.7,19173,0.365
+2025-01,SoundCloud,Spotify,switch,SoundCloud,1,1.0,2418,4.136
+2025-01,SoundCloud,Spotify,switch,Spotify,1,1.0,19173,0.522
+2025-01,SoundCloud,YouTube,preference,SoundCloud,5,0.95,2418,3.929
+2025-01,SoundCloud,YouTube,switch,SoundCloud,1,0.7,2418,2.895
+2025-01,Spotify,Amazon Music,intent,Spotify,7,3.05,19173,1.591
+2025-01,Spotify,Amazon Music,preference,Spotify,4,0.775,19173,0.404
+2025-01,Spotify,Apple Music,intent,Spotify,40,19.4,19173,10.118
+2025-01,Spotify,Apple Music,preference,Spotify,48,11.025,19173,5.75
+2025-01,Spotify,Apple Music,switch,Spotify,5,4.7,19173,2.451
+2025-01,Spotify,Audiomack,preference,Audiomack,104,24.65,15283,16.129
+2025-01,Spotify,Audiomack,preference,Spotify,3,0.6,19173,0.313
+2025-01,Spotify,Audiomack,switch,Audiomack,3,2.7,15283,1.767
+2025-01,Spotify,Bandcamp,preference,Spotify,3,0.6,19173,0.313
+2025-01,Spotify,Deezer,intent,Spotify,1,0.5,19173,0.261
+2025-01,Spotify,Deezer,preference,Spotify,2,0.35,19173,0.183
+2025-01,Spotify,JioSaavn,preference,Spotify,3,0.675,19173,0.352
+2025-01,Spotify,Musi,preference,Spotify,10,2.275,19173,1.187
+2025-01,Spotify,Musi,switch,Spotify,1,0.7,19173,0.365
+2025-01,Spotify,Pandora,intent,Spotify,14,6.85,19173,3.573
+2025-01,Spotify,Pandora,preference,Spotify,16,3.7,19173,1.93
+2025-01,Spotify,Pandora,switch,Spotify,3,3.0,19173,1.565
+2025-01,Spotify,Qobuz,preference,Spotify,2,0.425,19173,0.222
+2025-01,Spotify,SoundCloud,intent,Spotify,5,2.35,19173,1.226
+2025-01,Spotify,SoundCloud,preference,SoundCloud,136,33.1,2418,136.89
+2025-01,Spotify,SoundCloud,preference,Spotify,16,3.55,19173,1.852
+2025-01,Spotify,SoundCloud,switch,SoundCloud,8,7.1,2418,29.363
+2025-01,Spotify,SoundCloud,switch,Spotify,7,6.7,19173,3.494
+2025-01,Spotify,Tidal,intent,Spotify,5,2.5,19173,1.304
+2025-01,Spotify,Tidal,preference,Spotify,5,1.175,19173,0.613
+2025-01,Spotify,YouTube,intent,Spotify,18,7.8,19173,4.068
+2025-01,Spotify,YouTube,preference,Spotify,52,11.65,19173,6.076
+2025-01,Spotify,YouTube,switch,Spotify,8,7.7,19173,4.016
+2025-01,Spotify,YouTube Music,intent,Spotify,24,10.95,19173,5.711
+2025-01,Spotify,YouTube Music,preference,Spotify,58,13.525,19173,7.054
+2025-01,Spotify,YouTube Music,switch,Spotify,13,11.8,19173,6.154
+2025-01,Spotify,iHeartRadio,intent,Spotify,1,0.5,19173,0.261
+2025-01,Spotify,iHeartRadio,switch,Spotify,1,0.7,19173,0.365
+2025-01,Tidal,SoundCloud,preference,SoundCloud,1,0.25,2418,1.034
+2025-01,Tidal,Spotify,switch,Spotify,1,0.7,19173,0.365
+2025-01,YouTube,Audiomack,preference,Audiomack,2,0.425,15283,0.278
+2025-01,YouTube,SoundCloud,preference,SoundCloud,7,1.6,2418,6.617
+2025-01,YouTube,Spotify,preference,Spotify,27,6.0,19173,3.129
+2025-01,YouTube,Spotify,switch,Spotify,6,5.1,19173,2.66
+2025-01,YouTube Music,Audiomack,preference,Audiomack,5,1.175,15283,0.769
+2025-01,YouTube Music,Audiomack,switch,Audiomack,1,0.7,15283,0.458
+2025-01,YouTube Music,SoundCloud,preference,SoundCloud,4,0.925,2418,3.825
+2025-01,YouTube Music,Spotify,preference,Spotify,32,7.85,19173,4.094
+2025-01,YouTube Music,Spotify,switch,Spotify,4,4.0,19173,2.086
+2025-02,Amazon Music,Audiomack,preference,Audiomack,1,0.25,14356,0.174
+2025-02,Amazon Music,SoundCloud,preference,SoundCloud,1,0.175,2041,0.857
+2025-02,Amazon Music,SoundCloud,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,Amazon Music,Spotify,preference,Spotify,15,3.6,22243,1.618
+2025-02,Amazon Music,Spotify,return,Spotify,1,1.0,22243,0.45
+2025-02,Amazon Music,Spotify,switch,Spotify,4,3.4,22243,1.529
+2025-02,Apple Music,Audiomack,preference,Audiomack,3,0.675,14356,0.47
+2025-02,Apple Music,SoundCloud,preference,SoundCloud,8,2.0,2041,9.799
+2025-02,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,2041,3.43
+2025-02,Apple Music,Spotify,preference,Spotify,99,24.075,22243,10.824
+2025-02,Apple Music,Spotify,return,Spotify,1,1.0,22243,0.45
+2025-02,Apple Music,Spotify,switch,Spotify,12,11.7,22243,5.26
+2025-02,Audiomack,Boomplay,intent,Audiomack,2,0.85,14356,0.592
+2025-02,Audiomack,Boomplay,preference,Audiomack,2,0.5,14356,0.348
+2025-02,Audiomack,Musi,preference,Audiomack,5,1.1,14356,0.766
+2025-02,Audiomack,SoundCloud,preference,SoundCloud,1,0.175,2041,0.857
+2025-02,Audiomack,Spotify,intent,Audiomack,1,0.5,14356,0.348
+2025-02,Audiomack,Spotify,preference,Audiomack,3,0.675,14356,0.47
+2025-02,Audiomack,Spotify,preference,Spotify,1,0.25,22243,0.112
+2025-02,Audiomack,YouTube,preference,Audiomack,3,0.6,14356,0.418
+2025-02,Boomplay,Audiomack,preference,Audiomack,14,3.2,14356,2.229
+2025-02,Boomplay,Spotify,preference,Spotify,1,0.25,22243,0.112
+2025-02,Deezer,Audiomack,preference,Audiomack,1,0.25,14356,0.174
+2025-02,JioSaavn,Spotify,switch,Spotify,1,1.0,22243,0.45
+2025-02,Musi,Audiomack,switch,Audiomack,2,1.7,14356,1.184
+2025-02,Musi,SoundCloud,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,Musi,Spotify,preference,Spotify,2,0.5,22243,0.225
+2025-02,Musi,Spotify,switch,Spotify,1,0.7,22243,0.315
+2025-02,Pandora,Audiomack,preference,Audiomack,2,0.5,14356,0.348
+2025-02,Pandora,SoundCloud,switch,SoundCloud,1,0.7,2041,3.43
+2025-02,Pandora,Spotify,preference,Spotify,22,5.2,22243,2.338
+2025-02,Pandora,Spotify,switch,Spotify,6,6.0,22243,2.697
+2025-02,SoundCloud,Amazon Music,preference,SoundCloud,1,0.25,2041,1.225
+2025-02,SoundCloud,Apple Music,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,SoundCloud,Audiomack,preference,Audiomack,1,0.25,14356,0.174
+2025-02,SoundCloud,Musi,preference,SoundCloud,1,0.25,2041,1.225
+2025-02,SoundCloud,Musi,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,SoundCloud,Spotify,intent,SoundCloud,5,2.05,2041,10.044
+2025-02,SoundCloud,Spotify,preference,SoundCloud,10,2.35,2041,11.514
+2025-02,SoundCloud,Spotify,preference,Spotify,1,0.175,22243,0.079
+2025-02,SoundCloud,Spotify,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,SoundCloud,YouTube,preference,SoundCloud,5,0.95,2041,4.655
+2025-02,SoundCloud,YouTube,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,SoundCloud,YouTube Music,preference,SoundCloud,3,0.675,2041,3.307
+2025-02,SoundCloud,YouTube Music,switch,SoundCloud,1,1.0,2041,4.9
+2025-02,Spotify,Amazon Music,intent,Spotify,4,2.0,22243,0.899
+2025-02,Spotify,Amazon Music,preference,Spotify,7,1.6,22243,0.719
+2025-02,Spotify,Amazon Music,switch,Spotify,1,0.7,22243,0.315
+2025-02,Spotify,Apple Music,intent,Spotify,35,17.2,22243,7.733
+2025-02,Spotify,Apple Music,preference,Spotify,38,9.05,22243,4.069
+2025-02,Spotify,Apple Music,switch,Spotify,7,6.4,22243,2.877
+2025-02,Spotify,Audiomack,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,Audiomack,preference,Audiomack,95,22.25,14356,15.499
+2025-02,Spotify,Audiomack,preference,Spotify,3,0.675,22243,0.303
+2025-02,Spotify,Audiomack,switch,Audiomack,2,1.7,14356,1.184
+2025-02,Spotify,Audiomack,switch,Spotify,1,1.0,22243,0.45
+2025-02,Spotify,Bandcamp,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,Bandcamp,preference,Spotify,3,0.525,22243,0.236
+2025-02,Spotify,Deezer,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,Deezer,preference,Spotify,2,0.5,22243,0.225
+2025-02,Spotify,Deezer,switch,Spotify,1,1.0,22243,0.45
+2025-02,Spotify,JioSaavn,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,JioSaavn,preference,Spotify,3,0.675,22243,0.303
+2025-02,Spotify,Musi,preference,Spotify,3,0.675,22243,0.303
+2025-02,Spotify,Musi,switch,Spotify,1,0.7,22243,0.315
+2025-02,Spotify,Pandora,intent,Spotify,8,3.85,22243,1.731
+2025-02,Spotify,Pandora,preference,Spotify,22,5.05,22243,2.27
+2025-02,Spotify,Pandora,switch,Spotify,2,1.7,22243,0.764
+2025-02,Spotify,Qobuz,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,Qobuz,preference,Spotify,1,0.25,22243,0.112
+2025-02,Spotify,SoundCloud,intent,Spotify,5,2.5,22243,1.124
+2025-02,Spotify,SoundCloud,preference,SoundCloud,116,27.875,2041,136.575
+2025-02,Spotify,SoundCloud,preference,Spotify,20,4.625,22243,2.079
+2025-02,Spotify,SoundCloud,switch,SoundCloud,7,5.5,2041,26.948
+2025-02,Spotify,Tidal,intent,Spotify,6,3.0,22243,1.349
+2025-02,Spotify,Tidal,preference,Spotify,5,1.1,22243,0.495
+2025-02,Spotify,Tidal,switch,Spotify,1,1.0,22243,0.45
+2025-02,Spotify,YouTube,intent,Spotify,20,8.5,22243,3.821
+2025-02,Spotify,YouTube,preference,Spotify,59,12.8,22243,5.755
+2025-02,Spotify,YouTube,switch,Spotify,9,7.8,22243,3.507
+2025-02,Spotify,YouTube Music,intent,Spotify,17,8.05,22243,3.619
+2025-02,Spotify,YouTube Music,preference,Spotify,58,13.15,22243,5.912
+2025-02,Spotify,YouTube Music,switch,Spotify,10,9.7,22243,4.361
+2025-02,Spotify,iHeartRadio,intent,Spotify,1,0.5,22243,0.225
+2025-02,Spotify,iHeartRadio,preference,Spotify,2,0.425,22243,0.191
+2025-02,Tidal,Spotify,preference,Spotify,2,0.425,22243,0.191
+2025-02,Tidal,Spotify,return,Spotify,1,1.0,22243,0.45
+2025-02,Tidal,Spotify,switch,Spotify,1,1.0,22243,0.45
+2025-02,YouTube,Audiomack,preference,Audiomack,3,0.675,14356,0.47
+2025-02,YouTube,SoundCloud,preference,SoundCloud,3,0.6,2041,2.94
+2025-02,YouTube,Spotify,preference,Spotify,26,5.375,22243,2.416
+2025-02,YouTube,Spotify,return,Spotify,1,1.0,22243,0.45
+2025-02,YouTube,Spotify,switch,Spotify,6,5.1,22243,2.293
+2025-02,YouTube Music,Audiomack,preference,Audiomack,3,0.675,14356,0.47
+2025-02,YouTube Music,SoundCloud,preference,SoundCloud,3,0.675,2041,3.307
+2025-02,YouTube Music,Spotify,preference,Spotify,26,6.275,22243,2.821
+2025-02,YouTube Music,Spotify,return,Spotify,4,4.0,22243,1.798
+2025-02,YouTube Music,Spotify,switch,Spotify,12,11.1,22243,4.99
+2025-03,Amazon Music,Spotify,preference,Spotify,21,5.1,27942,1.825
+2025-03,Amazon Music,Spotify,switch,Spotify,5,4.7,27942,1.682
+2025-03,Anghami,Spotify,preference,Spotify,1,0.25,27942,0.089
+2025-03,Apple Music,Audiomack,preference,Audiomack,6,1.35,14677,0.92
+2025-03,Apple Music,SoundCloud,preference,SoundCloud,11,2.6,2146,12.116
+2025-03,Apple Music,SoundCloud,switch,SoundCloud,1,1.0,2146,4.66
+2025-03,Apple Music,Spotify,preference,Spotify,104,25.1,27942,8.983
+2025-03,Apple Music,Spotify,return,Spotify,1,0.7,27942,0.251
+2025-03,Apple Music,Spotify,switch,Spotify,12,11.7,27942,4.187
+2025-03,Audiomack,Boomplay,intent,Audiomack,1,0.5,14677,0.341
+2025-03,Audiomack,Boomplay,preference,Audiomack,3,0.6,14677,0.409
+2025-03,Audiomack,Musi,preference,Audiomack,2,0.425,14677,0.29
+2025-03,Audiomack,Spotify,preference,Audiomack,4,0.85,14677,0.579
+2025-03,Audiomack,Spotify,preference,Spotify,2,0.425,27942,0.152
+2025-03,Audiomack,Spotify,switch,Audiomack,2,2.0,14677,1.363
+2025-03,Audiomack,YouTube,preference,Audiomack,1,0.175,14677,0.119
+2025-03,Audiomack,YouTube Music,preference,Audiomack,1,0.25,14677,0.17
+2025-03,Boomplay,Audiomack,preference,Audiomack,9,1.95,14677,1.329
+2025-03,Boomplay,Audiomack,switch,Audiomack,3,3.0,14677,2.044
+2025-03,Boomplay,Spotify,preference,Spotify,2,0.5,27942,0.179
+2025-03,Boomplay,Spotify,switch,Spotify,1,1.0,27942,0.358
+2025-03,Deezer,SoundCloud,preference,SoundCloud,1,0.25,2146,1.165
+2025-03,Deezer,Spotify,preference,Spotify,1,0.25,27942,0.089
+2025-03,Deezer,Spotify,switch,Spotify,1,0.7,27942,0.251
+2025-03,Musi,Audiomack,switch,Audiomack,1,1.0,14677,0.681
+2025-03,Musi,SoundCloud,switch,SoundCloud,1,1.0,2146,4.66
+2025-03,Pandora,SoundCloud,preference,SoundCloud,2,0.425,2146,1.98
+2025-03,Pandora,Spotify,preference,Spotify,32,7.775,27942,2.783
+2025-03,Pandora,Spotify,return,Spotify,1,1.0,27942,0.358
+2025-03,Pandora,Spotify,switch,Spotify,12,10.8,27942,3.865
+2025-03,SoundCloud,Apple Music,intent,SoundCloud,1,0.5,2146,2.33
+2025-03,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,2146,1.98
+2025-03,SoundCloud,Spotify,intent,SoundCloud,6,3.0,2146,13.979
+2025-03,SoundCloud,Spotify,preference,SoundCloud,12,2.55,2146,11.883
+2025-03,SoundCloud,Spotify,preference,Spotify,5,1.25,27942,0.447
+2025-03,SoundCloud,Spotify,switch,SoundCloud,2,2.0,2146,9.32
+2025-03,SoundCloud,Spotify,switch,Spotify,2,1.7,27942,0.608
+2025-03,SoundCloud,YouTube,intent,SoundCloud,1,0.5,2146,2.33
+2025-03,SoundCloud,YouTube,preference,SoundCloud,3,0.675,2146,3.145
+2025-03,SoundCloud,YouTube Music,preference,SoundCloud,2,0.425,2146,1.98
+2025-03,Spotify,Amazon Music,intent,Spotify,6,2.7,27942,0.966
+2025-03,Spotify,Amazon Music,preference,Spotify,10,2.125,27942,0.761
+2025-03,Spotify,Amazon Music,switch,Spotify,2,2.0,27942,0.716
+2025-03,Spotify,Apple Music,intent,Spotify,49,23.45,27942,8.392
+2025-03,Spotify,Apple Music,preference,Spotify,65,14.675,27942,5.252
+2025-03,Spotify,Apple Music,switch,Spotify,9,8.7,27942,3.114
+2025-03,Spotify,Audiomack,intent,Spotify,1,0.35,27942,0.125
+2025-03,Spotify,Audiomack,preference,Audiomack,89,20.9,14677,14.24
+2025-03,Spotify,Audiomack,preference,Spotify,6,1.275,27942,0.456
+2025-03,Spotify,Audiomack,switch,Audiomack,6,4.2,14677,2.862
+2025-03,Spotify,Bandcamp,preference,Spotify,2,0.5,27942,0.179
+2025-03,Spotify,Deezer,intent,Spotify,1,0.35,27942,0.125
+2025-03,Spotify,Deezer,preference,Spotify,2,0.35,27942,0.125
+2025-03,Spotify,JioSaavn,intent,Spotify,3,1.35,27942,0.483
+2025-03,Spotify,JioSaavn,preference,Spotify,3,0.675,27942,0.242
+2025-03,Spotify,Musi,intent,Spotify,2,0.85,27942,0.304
+2025-03,Spotify,Musi,preference,Spotify,5,1.175,27942,0.421
+2025-03,Spotify,Pandora,intent,Spotify,21,9.75,27942,3.489
+2025-03,Spotify,Pandora,preference,Spotify,20,4.625,27942,1.655
+2025-03,Spotify,Pandora,switch,Spotify,7,6.7,27942,2.398
+2025-03,Spotify,Qobuz,intent,Spotify,1,0.5,27942,0.179
+2025-03,Spotify,SoundCloud,intent,Spotify,3,1.5,27942,0.537
+2025-03,Spotify,SoundCloud,preference,SoundCloud,126,30.375,2146,141.542
+2025-03,Spotify,SoundCloud,preference,Spotify,26,5.6,27942,2.004
+2025-03,Spotify,SoundCloud,return,SoundCloud,1,1.0,2146,4.66
+2025-03,Spotify,SoundCloud,switch,SoundCloud,9,7.5,2146,34.949
+2025-03,Spotify,SoundCloud,switch,Spotify,2,1.7,27942,0.608
+2025-03,Spotify,Tidal,intent,Spotify,5,2.2,27942,0.787
+2025-03,Spotify,Tidal,preference,Spotify,7,1.6,27942,0.573
+2025-03,Spotify,Tidal,switch,Spotify,1,1.0,27942,0.358
+2025-03,Spotify,YouTube,intent,Spotify,26,11.05,27942,3.955
+2025-03,Spotify,YouTube,preference,Spotify,74,16.025,27942,5.735
+2025-03,Spotify,YouTube,switch,Spotify,4,3.4,27942,1.217
+2025-03,Spotify,YouTube Music,intent,Spotify,33,15.75,27942,5.637
+2025-03,Spotify,YouTube Music,preference,Spotify,73,16.75,27942,5.995
+2025-03,Spotify,YouTube Music,switch,Spotify,13,12.1,27942,4.33
+2025-03,Spotify,iHeartRadio,preference,Spotify,1,0.25,27942,0.089
+2025-03,Spotify,iHeartRadio,switch,Spotify,1,1.0,27942,0.358
+2025-03,Tidal,Spotify,preference,Spotify,1,0.25,27942,0.089
+2025-03,Tidal,Spotify,switch,Spotify,2,2.0,27942,0.716
+2025-03,YouTube,Audiomack,preference,Audiomack,1,0.175,14677,0.119
+2025-03,YouTube,SoundCloud,preference,SoundCloud,5,1.1,2146,5.126
+2025-03,YouTube,SoundCloud,switch,SoundCloud,2,1.7,2146,7.922
+2025-03,YouTube,Spotify,preference,Spotify,23,5.15,27942,1.843
+2025-03,YouTube,Spotify,return,Spotify,1,1.0,27942,0.358
+2025-03,YouTube,Spotify,switch,Spotify,8,5.9,27942,2.112
+2025-03,YouTube Music,Audiomack,preference,Audiomack,4,1.0,14677,0.681
+2025-03,YouTube Music,SoundCloud,preference,SoundCloud,3,0.6,2146,2.796
+2025-03,YouTube Music,SoundCloud,switch,SoundCloud,1,0.7,2146,3.262
+2025-03,YouTube Music,Spotify,preference,Spotify,43,10.45,27942,3.74
+2025-03,YouTube Music,Spotify,return,Spotify,2,1.7,27942,0.608
+2025-03,YouTube Music,Spotify,switch,Spotify,5,4.7,27942,1.682
+2025-03,iHeartRadio,Spotify,preference,Spotify,1,0.25,27942,0.089
+2025-04,Amazon Music,Audiomack,preference,Audiomack,1,0.175,14798,0.118
+2025-04,Amazon Music,Audiomack,switch,Audiomack,1,0.7,14798,0.473
+2025-04,Amazon Music,SoundCloud,preference,SoundCloud,1,0.25,2046,1.222
+2025-04,Amazon Music,Spotify,preference,Spotify,1,0.25,3760,0.665
+2025-04,Apple Music,Audiomack,preference,Audiomack,2,0.425,14798,0.287
+2025-04,Apple Music,SoundCloud,preference,SoundCloud,12,2.775,2046,13.563
+2025-04,Apple Music,Spotify,preference,Spotify,6,1.425,3760,3.79
+2025-04,Apple Music,Spotify,switch,Spotify,2,1.4,3760,3.723
+2025-04,Audiomack,Apple Music,intent,Audiomack,1,0.5,14798,0.338
+2025-04,Audiomack,Boomplay,preference,Audiomack,1,0.175,14798,0.118
+2025-04,Audiomack,Musi,preference,Audiomack,1,0.25,14798,0.169
+2025-04,Audiomack,Spotify,preference,Audiomack,8,1.625,14798,1.098
+2025-04,Audiomack,Spotify,switch,Audiomack,1,1.0,14798,0.676
+2025-04,Audiomack,YouTube Music,preference,Audiomack,3,0.6,14798,0.405
+2025-04,Audiomack,YouTube Music,switch,Audiomack,1,1.0,14798,0.676
+2025-04,Boomplay,Audiomack,preference,Audiomack,11,2.525,14798,1.706
+2025-04,Musi,Audiomack,preference,Audiomack,2,0.425,14798,0.287
+2025-04,Pandora,Audiomack,preference,Audiomack,1,0.25,14798,0.169
+2025-04,Pandora,SoundCloud,preference,SoundCloud,1,0.25,2046,1.222
+2025-04,Pandora,Spotify,preference,Spotify,7,1.675,3760,4.455
+2025-04,Pandora,Spotify,switch,Spotify,1,0.7,3760,1.862
+2025-04,SoundCloud,Apple Music,switch,SoundCloud,2,2.0,2046,9.775
+2025-04,SoundCloud,Audiomack,preference,Audiomack,1,0.25,14798,0.169
+2025-04,SoundCloud,Musi,preference,SoundCloud,1,0.175,2046,0.855
+2025-04,SoundCloud,Musi,switch,SoundCloud,1,0.7,2046,3.421
+2025-04,SoundCloud,Pandora,preference,SoundCloud,1,0.175,2046,0.855
+2025-04,SoundCloud,Spotify,intent,SoundCloud,2,1.0,2046,4.888
+2025-04,SoundCloud,Spotify,preference,SoundCloud,11,2.525,2046,12.341
+2025-04,SoundCloud,Spotify,switch,SoundCloud,3,3.0,2046,14.663
+2025-04,SoundCloud,YouTube,intent,SoundCloud,2,0.85,2046,4.154
+2025-04,SoundCloud,YouTube,preference,SoundCloud,1,0.175,2046,0.855
+2025-04,SoundCloud,YouTube Music,intent,SoundCloud,1,0.5,2046,2.444
+2025-04,Spotify,Apple Music,intent,Spotify,3,1.5,3760,3.989
+2025-04,Spotify,Apple Music,preference,Spotify,5,1.025,3760,2.726
+2025-04,Spotify,Audiomack,preference,Audiomack,81,19.425,14798,13.127
+2025-04,Spotify,Audiomack,preference,Spotify,1,0.25,3760,0.665
+2025-04,Spotify,Audiomack,switch,Audiomack,1,1.0,14798,0.676
+2025-04,Spotify,JioSaavn,preference,Spotify,2,0.425,3760,1.13
+2025-04,Spotify,Pandora,intent,Spotify,1,0.5,3760,1.33
+2025-04,Spotify,Pandora,preference,Spotify,1,0.25,3760,0.665
+2025-04,Spotify,Qobuz,intent,Spotify,1,0.35,3760,0.931
+2025-04,Spotify,SoundCloud,preference,SoundCloud,94,22.675,2046,110.826
+2025-04,Spotify,SoundCloud,preference,Spotify,3,0.675,3760,1.795
+2025-04,Spotify,SoundCloud,switch,SoundCloud,6,5.7,2046,27.859
+2025-04,Spotify,Tidal,preference,Spotify,1,0.175,3760,0.465
+2025-04,Spotify,YouTube,intent,Spotify,2,1.0,3760,2.66
+2025-04,Spotify,YouTube,preference,Spotify,11,2.45,3760,6.516
+2025-04,Spotify,YouTube Music,intent,Spotify,4,2.0,3760,5.319
+2025-04,Spotify,YouTube Music,preference,Spotify,10,2.275,3760,6.051
+2025-04,Spotify,YouTube Music,switch,Spotify,2,2.0,3760,5.319
+2025-04,YouTube,Audiomack,preference,Audiomack,2,0.5,14798,0.338
+2025-04,YouTube,Audiomack,switch,Audiomack,1,0.7,14798,0.473
+2025-04,YouTube,SoundCloud,preference,SoundCloud,5,1.175,2046,5.743
+2025-04,YouTube,Spotify,preference,Spotify,5,1.175,3760,3.125
+2025-04,YouTube,Spotify,switch,Spotify,1,1.0,3760,2.66
+2025-04,YouTube Music,Audiomack,preference,Audiomack,3,0.75,14798,0.507
+2025-04,YouTube Music,SoundCloud,preference,SoundCloud,4,0.925,2046,4.521
+2025-04,YouTube Music,Spotify,preference,Spotify,4,0.85,3760,2.261
+2025-04,YouTube Music,Spotify,return,Spotify,1,1.0,3760,2.66
+2025-05,Apple Music,Audiomack,preference,Audiomack,2,0.5,15980,0.313
+2025-05,Apple Music,SoundCloud,preference,SoundCloud,7,1.75,2197,7.965
+2025-05,Audiomack,Apple Music,intent,Audiomack,1,0.5,15980,0.313
+2025-05,Audiomack,Apple Music,preference,Audiomack,2,0.425,15980,0.266
+2025-05,Audiomack,Boomplay,intent,Audiomack,2,1.0,15980,0.626
+2025-05,Audiomack,Boomplay,preference,Audiomack,2,0.425,15980,0.266
+2025-05,Audiomack,Musi,preference,Audiomack,2,0.35,15980,0.219
+2025-05,Audiomack,Spotify,intent,Audiomack,1,0.5,15980,0.313
+2025-05,Audiomack,Spotify,preference,Audiomack,6,1.35,15980,0.845
+2025-05,Audiomack,YouTube,preference,Audiomack,3,0.6,15980,0.375
+2025-05,Audiomack,YouTube Music,preference,Audiomack,1,0.175,15980,0.11
+2025-05,Boomplay,Audiomack,preference,Audiomack,8,1.85,15980,1.158
+2025-05,Boomplay,Audiomack,switch,Audiomack,2,1.7,15980,1.064
+2025-05,Musi,Audiomack,switch,Audiomack,1,0.7,15980,0.438
+2025-05,Pandora,Audiomack,preference,Audiomack,2,0.5,15980,0.313
+2025-05,Pandora,SoundCloud,preference,SoundCloud,3,0.75,2197,3.414
+2025-05,SoundCloud,Amazon Music,preference,SoundCloud,1,0.175,2197,0.797
+2025-05,SoundCloud,Apple Music,intent,SoundCloud,1,0.35,2197,1.593
+2025-05,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,2197,1.934
+2025-05,SoundCloud,Audiomack,preference,Audiomack,2,0.425,15980,0.266
+2025-05,SoundCloud,Audiomack,preference,SoundCloud,1,0.25,2197,1.138
+2025-05,SoundCloud,Bandcamp,preference,SoundCloud,1,0.25,2197,1.138
+2025-05,SoundCloud,Spotify,intent,SoundCloud,2,1.0,2197,4.552
+2025-05,SoundCloud,Spotify,preference,SoundCloud,7,1.525,2197,6.941
+2025-05,SoundCloud,Spotify,switch,SoundCloud,4,3.1,2197,14.11
+2025-05,SoundCloud,YouTube,preference,SoundCloud,1,0.175,2197,0.797
+2025-05,SoundCloud,YouTube Music,intent,SoundCloud,1,0.5,2197,2.276
+2025-05,SoundCloud,YouTube Music,preference,SoundCloud,3,0.6,2197,2.731
+2025-05,SoundCloud,YouTube Music,switch,SoundCloud,1,0.7,2197,3.186
+2025-05,Spotify,Audiomack,preference,Audiomack,85,20.275,15980,12.688
+2025-05,Spotify,Audiomack,switch,Audiomack,6,5.1,15980,3.191
+2025-05,Spotify,SoundCloud,preference,SoundCloud,105,25.275,2197,115.043
+2025-05,Spotify,SoundCloud,return,SoundCloud,1,1.0,2197,4.552
+2025-05,Spotify,SoundCloud,switch,SoundCloud,2,2.0,2197,9.103
+2025-05,YouTube,Audiomack,preference,Audiomack,2,0.425,15980,0.266
+2025-05,YouTube,SoundCloud,preference,SoundCloud,7,1.6,2197,7.283
+2025-05,YouTube Music,Audiomack,preference,Audiomack,3,0.75,15980,0.469
+2025-05,YouTube Music,Audiomack,switch,Audiomack,1,0.7,15980,0.438
+2025-05,YouTube Music,SoundCloud,preference,SoundCloud,3,0.675,2197,3.072
+2025-06,Apple Music,Audiomack,preference,Audiomack,3,0.675,16037,0.421
+2025-06,Apple Music,SoundCloud,preference,SoundCloud,9,2.175,1904,11.423
+2025-06,Apple Music,SoundCloud,switch,SoundCloud,2,1.7,1904,8.929
+2025-06,Audiomack,Apple Music,intent,Audiomack,1,0.35,16037,0.218
+2025-06,Audiomack,Boomplay,preference,Audiomack,2,0.425,16037,0.265
+2025-06,Audiomack,Musi,preference,Audiomack,2,0.35,16037,0.218
+2025-06,Audiomack,SoundCloud,preference,Audiomack,2,0.425,16037,0.265
+2025-06,Audiomack,Spotify,intent,Audiomack,1,0.35,16037,0.218
+2025-06,Audiomack,Spotify,preference,Audiomack,8,1.85,16037,1.154
+2025-06,Audiomack,YouTube,intent,Audiomack,1,0.35,16037,0.218
+2025-06,Audiomack,YouTube,preference,Audiomack,2,0.35,16037,0.218
+2025-06,Audiomack,YouTube Music,preference,Audiomack,1,0.175,16037,0.109
+2025-06,Boomplay,Audiomack,preference,Audiomack,12,2.775,16037,1.73
+2025-06,JioSaavn,Audiomack,preference,Audiomack,2,0.425,16037,0.265
+2025-06,Musi,Audiomack,switch,Audiomack,1,0.7,16037,0.436
+2025-06,Musi,SoundCloud,switch,SoundCloud,1,0.7,1904,3.676
+2025-06,SoundCloud,Apple Music,preference,SoundCloud,1,0.25,1904,1.313
+2025-06,SoundCloud,Apple Music,switch,SoundCloud,1,0.7,1904,3.676
+2025-06,SoundCloud,Audiomack,preference,Audiomack,4,0.85,16037,0.53
+2025-06,SoundCloud,Bandcamp,preference,SoundCloud,1,0.175,1904,0.919
+2025-06,SoundCloud,Musi,preference,SoundCloud,1,0.175,1904,0.919
+2025-06,SoundCloud,Spotify,intent,SoundCloud,2,1.0,1904,5.252
+2025-06,SoundCloud,Spotify,preference,SoundCloud,12,2.7,1904,14.181
+2025-06,SoundCloud,Spotify,switch,SoundCloud,3,2.7,1904,14.181
+2025-06,SoundCloud,Tidal,switch,SoundCloud,1,0.7,1904,3.676
+2025-06,SoundCloud,YouTube,intent,SoundCloud,3,1.35,1904,7.09
+2025-06,SoundCloud,YouTube,preference,SoundCloud,4,0.85,1904,4.464
+2025-06,SoundCloud,YouTube,switch,SoundCloud,1,1.0,1904,5.252
+2025-06,Spotify,Audiomack,preference,Audiomack,80,18.875,16037,11.77
+2025-06,Spotify,Audiomack,return,Audiomack,1,1.0,16037,0.624
+2025-06,Spotify,Audiomack,switch,Audiomack,4,3.1,16037,1.933
+2025-06,Spotify,SoundCloud,preference,SoundCloud,96,23.475,1904,123.293
+2025-06,Spotify,SoundCloud,switch,SoundCloud,4,3.1,1904,16.282
+2025-06,Tidal,SoundCloud,return,SoundCloud,1,1.0,1904,5.252
+2025-06,YouTube,Audiomack,preference,Audiomack,4,0.925,16037,0.577
+2025-06,YouTube,SoundCloud,preference,SoundCloud,7,1.525,1904,8.009
+2025-06,YouTube Music,Audiomack,preference,Audiomack,4,1.0,16037,0.624
+2025-06,YouTube Music,SoundCloud,preference,SoundCloud,4,0.925,1904,4.858
+2025-07,Amazon Music,SoundCloud,preference,SoundCloud,1,0.25,1824,1.371
+2025-07,Apple Music,Audiomack,preference,Audiomack,1,0.25,16369,0.153
+2025-07,Apple Music,SoundCloud,preference,SoundCloud,8,1.925,1824,10.554
+2025-07,Audiomack,Apple Music,preference,Audiomack,1,0.25,16369,0.153
+2025-07,Audiomack,Boomplay,preference,Audiomack,4,0.925,16369,0.565
+2025-07,Audiomack,Musi,preference,Audiomack,2,0.35,16369,0.214
+2025-07,Audiomack,SoundCloud,preference,Audiomack,3,0.6,16369,0.367
+2025-07,Audiomack,Spotify,intent,Audiomack,2,1.0,16369,0.611
+2025-07,Audiomack,Spotify,preference,Audiomack,11,2.525,16369,1.543
+2025-07,Audiomack,YouTube,preference,Audiomack,1,0.25,16369,0.153
+2025-07,Audiomack,YouTube Music,intent,Audiomack,2,1.0,16369,0.611
+2025-07,Audiomack,YouTube Music,preference,Audiomack,2,0.425,16369,0.26
+2025-07,Boomplay,Audiomack,preference,Audiomack,11,2.45,16369,1.497
+2025-07,Musi,Audiomack,switch,Audiomack,1,0.7,16369,0.428
+2025-07,Musi,SoundCloud,preference,SoundCloud,1,0.25,1824,1.371
+2025-07,Pandora,Audiomack,preference,Audiomack,1,0.25,16369,0.153
+2025-07,Pandora,SoundCloud,preference,SoundCloud,2,0.5,1824,2.741
+2025-07,SoundCloud,Apple Music,intent,SoundCloud,3,1.5,1824,8.224
+2025-07,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,1824,2.33
+2025-07,SoundCloud,Audiomack,preference,Audiomack,1,0.25,16369,0.153
+2025-07,SoundCloud,Audiomack,switch,Audiomack,1,1.0,16369,0.611
+2025-07,SoundCloud,Spotify,intent,SoundCloud,1,0.5,1824,2.741
+2025-07,SoundCloud,Spotify,preference,SoundCloud,7,1.525,1824,8.361
+2025-07,SoundCloud,Spotify,switch,SoundCloud,2,1.7,1824,9.32
+2025-07,SoundCloud,YouTube,intent,SoundCloud,2,0.7,1824,3.838
+2025-07,SoundCloud,YouTube,preference,SoundCloud,7,1.45,1824,7.95
+2025-07,SoundCloud,YouTube Music,intent,SoundCloud,1,0.5,1824,2.741
+2025-07,SoundCloud,YouTube Music,preference,SoundCloud,1,0.25,1824,1.371
+2025-07,Spotify,Audiomack,preference,Audiomack,106,25.225,16369,15.41
+2025-07,Spotify,Audiomack,switch,Audiomack,5,4.4,16369,2.688
+2025-07,Spotify,SoundCloud,preference,SoundCloud,80,18.95,1824,103.893
+2025-07,Spotify,SoundCloud,switch,SoundCloud,3,3.0,1824,16.447
+2025-07,Tidal,SoundCloud,preference,SoundCloud,1,0.175,1824,0.959
+2025-07,YouTube,Audiomack,preference,Audiomack,1,0.175,16369,0.107
+2025-07,YouTube,SoundCloud,preference,SoundCloud,3,0.525,1824,2.878
+2025-07,YouTube Music,Audiomack,preference,Audiomack,5,1.175,16369,0.718
+2025-07,YouTube Music,SoundCloud,preference,SoundCloud,5,1.1,1824,6.031
+2025-08,Apple Music,Audiomack,preference,Audiomack,3,0.75,16348,0.459
+2025-08,Apple Music,SoundCloud,preference,SoundCloud,14,3.35,1754,19.099
+2025-08,Audiomack,Apple Music,preference,Audiomack,1,0.175,16348,0.107
+2025-08,Audiomack,Spotify,intent,Audiomack,1,0.5,16348,0.306
+2025-08,Audiomack,Spotify,preference,Audiomack,12,2.625,16348,1.606
+2025-08,Audiomack,Spotify,switch,Audiomack,1,1.0,16348,0.612
+2025-08,Audiomack,YouTube,preference,Audiomack,1,0.175,16348,0.107
+2025-08,Audiomack,YouTube Music,preference,Audiomack,1,0.175,16348,0.107
+2025-08,Bandcamp,SoundCloud,preference,SoundCloud,1,0.175,1754,0.998
+2025-08,Boomplay,Audiomack,preference,Audiomack,13,3.1,16348,1.896
+2025-08,Musi,SoundCloud,preference,SoundCloud,1,0.175,1754,0.998
+2025-08,Pandora,Audiomack,preference,Audiomack,2,0.5,16348,0.306
+2025-08,Pandora,SoundCloud,preference,SoundCloud,1,0.25,1754,1.425
+2025-08,Pandora,SoundCloud,switch,SoundCloud,1,0.7,1754,3.991
+2025-08,SoundCloud,Audiomack,preference,Audiomack,3,0.75,16348,0.459
+2025-08,SoundCloud,Audiomack,preference,SoundCloud,1,0.25,1754,1.425
+2025-08,SoundCloud,Deezer,preference,SoundCloud,1,0.175,1754,0.998
+2025-08,SoundCloud,Spotify,intent,SoundCloud,2,0.85,1754,4.846
+2025-08,SoundCloud,Spotify,preference,SoundCloud,10,2.125,1754,12.115
+2025-08,SoundCloud,Spotify,switch,SoundCloud,2,2.0,1754,11.403
+2025-08,SoundCloud,YouTube,intent,SoundCloud,1,0.5,1754,2.851
+2025-08,SoundCloud,YouTube,preference,SoundCloud,1,0.175,1754,0.998
+2025-08,Spotify,Audiomack,preference,Audiomack,105,24.6,16348,15.048
+2025-08,Spotify,Audiomack,switch,Audiomack,4,3.4,16348,2.08
+2025-08,Spotify,SoundCloud,preference,SoundCloud,91,21.7,1754,123.717
+2025-08,Spotify,SoundCloud,switch,SoundCloud,10,9.1,1754,51.881
+2025-08,YouTube,Audiomack,preference,Audiomack,1,0.175,16348,0.107
+2025-08,YouTube,SoundCloud,preference,SoundCloud,4,0.85,1754,4.846
+2025-08,YouTube,SoundCloud,switch,SoundCloud,1,0.7,1754,3.991
+2025-08,YouTube Music,Audiomack,preference,Audiomack,5,1.1,16348,0.673
+2025-08,YouTube Music,SoundCloud,preference,SoundCloud,1,0.25,1754,1.425
+2025-09,Amazon Music,SoundCloud,preference,SoundCloud,1,0.25,1647,1.518
+2025-09,Amazon Music,SoundCloud,switch,SoundCloud,2,1.4,1647,8.5
+2025-09,Apple Music,Audiomack,preference,Audiomack,1,0.25,15707,0.159
+2025-09,Apple Music,SoundCloud,preference,SoundCloud,3,0.75,1647,4.554
+2025-09,Audiomack,Apple Music,intent,Audiomack,1,0.5,15707,0.318
+2025-09,Audiomack,Boomplay,intent,Audiomack,1,0.5,15707,0.318
+2025-09,Audiomack,Musi,preference,Audiomack,1,0.175,15707,0.111
+2025-09,Audiomack,Pandora,preference,Audiomack,1,0.175,15707,0.111
+2025-09,Audiomack,SoundCloud,preference,Audiomack,3,0.675,15707,0.43
+2025-09,Audiomack,Spotify,intent,Audiomack,2,0.85,15707,0.541
+2025-09,Audiomack,Spotify,preference,Audiomack,4,0.775,15707,0.493
+2025-09,Audiomack,Spotify,switch,Audiomack,1,1.0,15707,0.637
+2025-09,Boomplay,Audiomack,preference,Audiomack,9,2.1,15707,1.337
+2025-09,Deezer,Audiomack,preference,Audiomack,1,0.175,15707,0.111
+2025-09,Musi,Audiomack,switch,Audiomack,1,0.7,15707,0.446
+2025-09,Musi,SoundCloud,switch,SoundCloud,1,1.0,1647,6.072
+2025-09,Pandora,SoundCloud,preference,SoundCloud,3,0.675,1647,4.098
+2025-09,SoundCloud,Apple Music,intent,SoundCloud,1,0.5,1647,3.036
+2025-09,SoundCloud,Audiomack,preference,Audiomack,3,0.675,15707,0.43
+2025-09,SoundCloud,Audiomack,preference,SoundCloud,1,0.175,1647,1.063
+2025-09,SoundCloud,Pandora,intent,SoundCloud,1,0.5,1647,3.036
+2025-09,SoundCloud,Spotify,intent,SoundCloud,4,1.85,1647,11.233
+2025-09,SoundCloud,Spotify,preference,SoundCloud,7,1.675,1647,10.17
+2025-09,SoundCloud,Spotify,switch,SoundCloud,3,2.7,1647,16.393
+2025-09,SoundCloud,YouTube,preference,SoundCloud,5,1.025,1647,6.223
+2025-09,SoundCloud,YouTube Music,preference,SoundCloud,1,0.25,1647,1.518
+2025-09,SoundCloud,iHeartRadio,preference,SoundCloud,1,0.175,1647,1.063
+2025-09,Spotify,Audiomack,preference,Audiomack,89,21.125,15707,13.449
+2025-09,Spotify,Audiomack,switch,Audiomack,7,6.1,15707,3.884
+2025-09,Spotify,SoundCloud,preference,SoundCloud,74,17.825,1647,108.227
+2025-09,Spotify,SoundCloud,switch,SoundCloud,4,3.7,1647,22.465
+2025-09,YouTube,Audiomack,preference,Audiomack,3,0.6,15707,0.382
+2025-09,YouTube,SoundCloud,preference,SoundCloud,4,0.775,1647,4.706
+2025-09,YouTube,SoundCloud,switch,SoundCloud,1,0.7,1647,4.25
+2025-09,YouTube Music,Audiomack,preference,Audiomack,6,1.35,15707,0.859
+2025-09,YouTube Music,SoundCloud,preference,SoundCloud,7,1.6,1647,9.715
+2025-09,YouTube Music,SoundCloud,switch,SoundCloud,1,1.0,1647,6.072
+2025-10,Apple Music,Audiomack,preference,Audiomack,2,0.5,15463,0.323
+2025-10,Apple Music,SoundCloud,preference,SoundCloud,7,1.6,1711,9.351
+2025-10,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,1711,4.091
+2025-10,Audiomack,Boomplay,preference,Audiomack,1,0.25,15463,0.162
+2025-10,Audiomack,SoundCloud,preference,Audiomack,1,0.25,15463,0.162
+2025-10,Audiomack,Spotify,preference,Audiomack,8,1.625,15463,1.051
+2025-10,Audiomack,YouTube Music,preference,Audiomack,1,0.175,15463,0.113
+2025-10,Boomplay,Audiomack,preference,Audiomack,7,1.675,15463,1.083
+2025-10,Musi,Audiomack,preference,Audiomack,1,0.25,15463,0.162
+2025-10,Musi,Audiomack,switch,Audiomack,1,0.7,15463,0.453
+2025-10,Musi,SoundCloud,switch,SoundCloud,1,0.7,1711,4.091
+2025-10,Pandora,SoundCloud,preference,SoundCloud,1,0.175,1711,1.023
+2025-10,SoundCloud,Amazon Music,preference,SoundCloud,3,0.675,1711,3.945
+2025-10,SoundCloud,Apple Music,preference,SoundCloud,1,0.25,1711,1.461
+2025-10,SoundCloud,Audiomack,preference,Audiomack,3,0.75,15463,0.485
+2025-10,SoundCloud,Bandcamp,preference,SoundCloud,1,0.25,1711,1.461
+2025-10,SoundCloud,Deezer,preference,SoundCloud,1,0.25,1711,1.461
+2025-10,SoundCloud,Musi,preference,SoundCloud,1,0.175,1711,1.023
+2025-10,SoundCloud,Qobuz,preference,SoundCloud,1,0.25,1711,1.461
+2025-10,SoundCloud,Spotify,intent,SoundCloud,2,1.0,1711,5.845
+2025-10,SoundCloud,Spotify,preference,SoundCloud,8,1.775,1711,10.374
+2025-10,SoundCloud,Spotify,switch,SoundCloud,1,0.7,1711,4.091
+2025-10,SoundCloud,Tidal,switch,SoundCloud,1,1.0,1711,5.845
+2025-10,SoundCloud,YouTube,intent,SoundCloud,1,0.35,1711,2.046
+2025-10,SoundCloud,YouTube,preference,SoundCloud,4,0.85,1711,4.968
+2025-10,SoundCloud,YouTube Music,preference,SoundCloud,4,0.85,1711,4.968
+2025-10,Spotify,Audiomack,preference,Audiomack,102,24.45,15463,15.812
+2025-10,Spotify,Audiomack,return,Audiomack,1,1.0,15463,0.647
+2025-10,Spotify,Audiomack,switch,Audiomack,2,1.7,15463,1.099
+2025-10,Spotify,SoundCloud,preference,SoundCloud,87,21.15,1711,123.612
+2025-10,Spotify,SoundCloud,switch,SoundCloud,8,7.4,1711,43.25
+2025-10,YouTube,SoundCloud,preference,SoundCloud,5,1.1,1711,6.429
+2025-10,YouTube Music,Audiomack,preference,Audiomack,5,1.25,15463,0.808
+2025-10,YouTube Music,Audiomack,switch,Audiomack,1,0.7,15463,0.453
+2025-10,YouTube Music,SoundCloud,preference,SoundCloud,3,0.75,1711,4.383
+2025-10,YouTube Music,SoundCloud,switch,SoundCloud,1,1.0,1711,5.845
+2025-11,Apple Music,Audiomack,preference,Audiomack,2,0.35,14082,0.249
+2025-11,Apple Music,SoundCloud,preference,SoundCloud,8,2.0,1639,12.203
+2025-11,Audiomack,Apple Music,preference,Audiomack,2,0.425,14082,0.302
+2025-11,Audiomack,Boomplay,preference,Audiomack,1,0.25,14082,0.178
+2025-11,Audiomack,SoundCloud,preference,Audiomack,1,0.25,14082,0.178
+2025-11,Audiomack,Spotify,preference,Audiomack,5,1.1,14082,0.781
+2025-11,Audiomack,Spotify,switch,Audiomack,1,1.0,14082,0.71
+2025-11,Audiomack,YouTube,preference,Audiomack,1,0.25,14082,0.178
+2025-11,Audiomack,YouTube Music,preference,Audiomack,3,0.6,14082,0.426
+2025-11,Boomplay,Audiomack,preference,Audiomack,12,2.85,14082,2.024
+2025-11,Deezer,Audiomack,preference,Audiomack,1,0.25,14082,0.178
+2025-11,Musi,SoundCloud,return,SoundCloud,1,1.0,1639,6.101
+2025-11,Pandora,Audiomack,preference,Audiomack,1,0.25,14082,0.178
+2025-11,Pandora,SoundCloud,preference,SoundCloud,1,0.25,1639,1.525
+2025-11,SoundCloud,Apple Music,preference,SoundCloud,2,0.35,1639,2.135
+2025-11,SoundCloud,Bandcamp,preference,SoundCloud,1,0.25,1639,1.525
+2025-11,SoundCloud,Deezer,preference,SoundCloud,1,0.25,1639,1.525
+2025-11,SoundCloud,Spotify,intent,SoundCloud,1,0.5,1639,3.051
+2025-11,SoundCloud,Spotify,preference,SoundCloud,9,1.95,1639,11.897
+2025-11,SoundCloud,Spotify,switch,SoundCloud,1,1.0,1639,6.101
+2025-11,SoundCloud,YouTube,intent,SoundCloud,1,0.5,1639,3.051
+2025-11,SoundCloud,YouTube,preference,SoundCloud,2,0.5,1639,3.051
+2025-11,Spotify,Audiomack,preference,Audiomack,77,18.275,14082,12.978
+2025-11,Spotify,Audiomack,return,Audiomack,1,1.0,14082,0.71
+2025-11,Spotify,Audiomack,switch,Audiomack,5,4.4,14082,3.125
+2025-11,Spotify,SoundCloud,preference,SoundCloud,76,18.25,1639,111.348
+2025-11,Spotify,SoundCloud,return,SoundCloud,1,1.0,1639,6.101
+2025-11,Spotify,SoundCloud,switch,SoundCloud,9,8.1,1639,49.42
+2025-11,Tidal,Audiomack,preference,Audiomack,1,0.25,14082,0.178
+2025-11,YouTube,Audiomack,preference,Audiomack,1,0.175,14082,0.124
+2025-11,YouTube,SoundCloud,preference,SoundCloud,4,0.925,1639,5.644
+2025-11,YouTube Music,Audiomack,preference,Audiomack,7,1.75,14082,1.243
+2025-11,YouTube Music,SoundCloud,preference,SoundCloud,2,0.5,1639,3.051
+2025-12,Apple Music,Audiomack,preference,Audiomack,1,0.25,15556,0.161
+2025-12,Apple Music,SoundCloud,preference,SoundCloud,12,3.0,1956,15.337
+2025-12,Audiomack,Apple Music,preference,Audiomack,1,0.25,15556,0.161
+2025-12,Audiomack,Apple Music,switch,Audiomack,1,0.7,15556,0.45
+2025-12,Audiomack,Boomplay,preference,Audiomack,4,0.925,15556,0.595
+2025-12,Audiomack,Spotify,preference,Audiomack,9,1.725,15556,1.109
+2025-12,Audiomack,Spotify,switch,Audiomack,1,1.0,15556,0.643
+2025-12,Audiomack,YouTube Music,preference,Audiomack,5,1.025,15556,0.659
+2025-12,Boomplay,Audiomack,preference,Audiomack,9,2.025,15556,1.302
+2025-12,Musi,SoundCloud,switch,SoundCloud,2,1.7,1956,8.691
+2025-12,Pandora,Audiomack,preference,Audiomack,1,0.25,15556,0.161
+2025-12,Pandora,Audiomack,switch,Audiomack,1,1.0,15556,0.643
+2025-12,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,1956,2.173
+2025-12,SoundCloud,Apple Music,switch,SoundCloud,2,1.7,1956,8.691
+2025-12,SoundCloud,Audiomack,preference,Audiomack,3,0.75,15556,0.482
+2025-12,SoundCloud,Audiomack,switch,Audiomack,1,1.0,15556,0.643
+2025-12,SoundCloud,Musi,preference,SoundCloud,1,0.175,1956,0.895
+2025-12,SoundCloud,Spotify,intent,SoundCloud,6,2.55,1956,13.037
+2025-12,SoundCloud,Spotify,preference,SoundCloud,10,2.125,1956,10.864
+2025-12,SoundCloud,Spotify,switch,SoundCloud,3,2.7,1956,13.804
+2025-12,SoundCloud,YouTube,preference,SoundCloud,1,0.175,1956,0.895
+2025-12,SoundCloud,YouTube,switch,SoundCloud,1,1.0,1956,5.112
+2025-12,Spotify,Audiomack,preference,Audiomack,97,23.35,15556,15.01
+2025-12,Spotify,Audiomack,return,Audiomack,1,1.0,15556,0.643
+2025-12,Spotify,Audiomack,switch,Audiomack,4,3.4,15556,2.186
+2025-12,Spotify,SoundCloud,preference,SoundCloud,74,17.975,1956,91.897
+2025-12,Spotify,SoundCloud,return,SoundCloud,1,1.0,1956,5.112
+2025-12,Spotify,SoundCloud,switch,SoundCloud,5,4.7,1956,24.029
+2025-12,YouTube,Audiomack,preference,Audiomack,2,0.5,15556,0.321
+2025-12,YouTube,SoundCloud,preference,SoundCloud,1,0.175,1956,0.895
+2025-12,YouTube Music,Audiomack,preference,Audiomack,3,0.675,15556,0.434
+2025-12,YouTube Music,SoundCloud,preference,SoundCloud,3,0.675,1956,3.451
+2026-01,Apple Music,Audiomack,preference,Audiomack,2,0.425,14561,0.292
+2026-01,Apple Music,SoundCloud,preference,SoundCloud,14,3.2,1721,18.594
+2026-01,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,1721,4.067
+2026-01,Audiomack,Boomplay,preference,Audiomack,2,0.5,14561,0.343
+2026-01,Audiomack,Spotify,preference,Audiomack,9,2.1,14561,1.442
+2026-01,Audiomack,Spotify,switch,Audiomack,1,1.0,14561,0.687
+2026-01,Boomplay,Audiomack,preference,Audiomack,8,1.85,14561,1.271
+2026-01,Pandora,Audiomack,preference,Audiomack,1,0.25,14561,0.172
+2026-01,Pandora,SoundCloud,preference,SoundCloud,1,0.175,1721,1.017
+2026-01,SoundCloud,Apple Music,preference,SoundCloud,6,1.35,1721,7.844
+2026-01,SoundCloud,Audiomack,preference,Audiomack,3,0.75,14561,0.515
+2026-01,SoundCloud,Spotify,preference,SoundCloud,11,2.675,1721,15.543
+2026-01,SoundCloud,Spotify,switch,SoundCloud,1,1.0,1721,5.811
+2026-01,SoundCloud,Tidal,preference,SoundCloud,1,0.25,1721,1.453
+2026-01,SoundCloud,YouTube,preference,SoundCloud,3,0.675,1721,3.922
+2026-01,SoundCloud,YouTube Music,intent,SoundCloud,1,0.5,1721,2.905
+2026-01,SoundCloud,YouTube Music,preference,SoundCloud,2,0.5,1721,2.905
+2026-01,Spotify,Audiomack,preference,Audiomack,96,22.5,14561,15.452
+2026-01,Spotify,Audiomack,switch,Audiomack,4,3.4,14561,2.335
+2026-01,Spotify,SoundCloud,preference,SoundCloud,79,19.075,1721,110.837
+2026-01,Spotify,SoundCloud,switch,SoundCloud,7,5.8,1721,33.701
+2026-01,YouTube,Audiomack,preference,Audiomack,1,0.25,14561,0.172
+2026-01,YouTube,SoundCloud,preference,SoundCloud,2,0.35,1721,2.034
+2026-01,YouTube Music,Audiomack,preference,Audiomack,7,1.6,14561,1.099
+2026-01,YouTube Music,SoundCloud,preference,SoundCloud,4,1.0,1721,5.811
+2026-02,Amazon Music,SoundCloud,preference,SoundCloud,2,0.5,1596,3.133
+2026-02,Apple Music,Audiomack,preference,Audiomack,3,0.525,13118,0.4
+2026-02,Apple Music,Audiomack,switch,Audiomack,1,1.0,13118,0.762
+2026-02,Apple Music,SoundCloud,preference,SoundCloud,12,2.775,1596,17.387
+2026-02,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,1596,4.386
+2026-02,Audiomack,Apple Music,intent,Audiomack,1,0.5,13118,0.381
+2026-02,Audiomack,Apple Music,preference,Audiomack,1,0.175,13118,0.133
+2026-02,Audiomack,Boomplay,preference,Audiomack,3,0.675,13118,0.515
+2026-02,Audiomack,Spotify,intent,Audiomack,1,0.5,13118,0.381
+2026-02,Audiomack,Spotify,preference,Audiomack,7,1.6,13118,1.22
+2026-02,Audiomack,Spotify,switch,Audiomack,1,1.0,13118,0.762
+2026-02,Audiomack,YouTube,preference,Audiomack,3,0.675,13118,0.515
+2026-02,Bandcamp,Audiomack,switch,Audiomack,1,1.0,13118,0.762
+2026-02,Bandcamp,SoundCloud,preference,SoundCloud,1,0.25,1596,1.566
+2026-02,Boomplay,Audiomack,preference,Audiomack,6,1.425,13118,1.086
+2026-02,Pandora,Audiomack,preference,Audiomack,2,0.5,13118,0.381
+2026-02,Pandora,SoundCloud,preference,SoundCloud,3,0.75,1596,4.699
+2026-02,SoundCloud,Apple Music,intent,SoundCloud,1,0.5,1596,3.133
+2026-02,SoundCloud,Apple Music,preference,SoundCloud,3,0.6,1596,3.759
+2026-02,SoundCloud,Audiomack,preference,Audiomack,4,0.925,13118,0.705
+2026-02,SoundCloud,Spotify,intent,SoundCloud,2,1.0,1596,6.266
+2026-02,SoundCloud,Spotify,preference,SoundCloud,13,2.875,1596,18.014
+2026-02,SoundCloud,Spotify,switch,SoundCloud,1,1.0,1596,6.266
+2026-02,SoundCloud,YouTube,intent,SoundCloud,2,0.85,1596,5.326
+2026-02,SoundCloud,YouTube,preference,SoundCloud,1,0.25,1596,1.566
+2026-02,SoundCloud,YouTube,switch,SoundCloud,1,0.7,1596,4.386
+2026-02,SoundCloud,YouTube Music,preference,SoundCloud,1,0.25,1596,1.566
+2026-02,Spotify,Audiomack,preference,Audiomack,97,23.35,13118,17.8
+2026-02,Spotify,Audiomack,switch,Audiomack,5,4.4,13118,3.354
+2026-02,Spotify,SoundCloud,preference,SoundCloud,75,18.0,1596,112.782
+2026-02,Spotify,SoundCloud,switch,SoundCloud,10,8.8,1596,55.138
+2026-02,YouTube,Audiomack,preference,Audiomack,2,0.5,13118,0.381
+2026-02,YouTube,SoundCloud,preference,SoundCloud,2,0.425,1596,2.663
+2026-02,YouTube Music,Audiomack,preference,Audiomack,3,0.75,13118,0.572
+2026-02,YouTube Music,Audiomack,switch,Audiomack,1,0.7,13118,0.534
+2026-02,YouTube Music,SoundCloud,preference,SoundCloud,2,0.5,1596,3.133
+2026-03,Apple Music,Audiomack,preference,Audiomack,1,0.25,14682,0.17
+2026-03,Apple Music,SoundCloud,preference,SoundCloud,11,2.675,1643,16.281
+2026-03,Audiomack,Apple Music,preference,Audiomack,1,0.175,14682,0.119
+2026-03,Audiomack,Boomplay,switch,Audiomack,1,0.7,14682,0.477
+2026-03,Audiomack,SoundCloud,preference,Audiomack,2,0.35,14682,0.238
+2026-03,Audiomack,SoundCloud,preference,SoundCloud,1,0.25,1643,1.522
+2026-03,Audiomack,Spotify,intent,Audiomack,1,0.35,14682,0.238
+2026-03,Audiomack,Spotify,preference,Audiomack,5,1.175,14682,0.8
+2026-03,Audiomack,YouTube,intent,Audiomack,1,0.5,14682,0.341
+2026-03,Audiomack,YouTube,preference,Audiomack,1,0.175,14682,0.119
+2026-03,Boomplay,Audiomack,preference,Audiomack,9,1.95,14682,1.328
+2026-03,JioSaavn,Audiomack,preference,Audiomack,1,0.175,14682,0.119
+2026-03,Pandora,Audiomack,preference,Audiomack,1,0.25,14682,0.17
+2026-03,SoundCloud,Apple Music,intent,SoundCloud,2,1.0,1643,6.086
+2026-03,SoundCloud,Apple Music,preference,SoundCloud,2,0.425,1643,2.587
+2026-03,SoundCloud,Audiomack,preference,Audiomack,2,0.425,14682,0.289
+2026-03,SoundCloud,Audiomack,switch,Audiomack,2,1.7,14682,1.158
+2026-03,SoundCloud,Spotify,intent,SoundCloud,2,1.0,1643,6.086
+2026-03,SoundCloud,Spotify,preference,SoundCloud,8,1.775,1643,10.803
+2026-03,SoundCloud,Spotify,switch,SoundCloud,2,2.0,1643,12.173
+2026-03,SoundCloud,YouTube,preference,SoundCloud,5,1.1,1643,6.695
+2026-03,SoundCloud,YouTube Music,preference,SoundCloud,2,0.425,1643,2.587
+2026-03,Spotify,Audiomack,preference,Audiomack,114,27.075,14682,18.441
+2026-03,Spotify,Audiomack,switch,Audiomack,6,5.4,14682,3.678
+2026-03,Spotify,SoundCloud,preference,SoundCloud,84,19.8,1643,120.511
+2026-03,Spotify,SoundCloud,return,SoundCloud,3,3.0,1643,18.259
+2026-03,Spotify,SoundCloud,switch,SoundCloud,8,7.1,1643,43.214
+2026-03,YouTube,Audiomack,preference,Audiomack,4,0.775,14682,0.528
+2026-03,YouTube,SoundCloud,preference,SoundCloud,3,0.6,1643,3.652
+2026-03,YouTube Music,Audiomack,preference,Audiomack,5,1.25,14682,0.851
+2026-03,YouTube Music,SoundCloud,preference,SoundCloud,3,0.75,1643,4.565
+2026-04,Amazon Music,Audiomack,preference,Audiomack,1,0.25,11815,0.212
+2026-04,Apple Music,Audiomack,preference,Audiomack,3,0.675,11815,0.571
+2026-04,Apple Music,Audiomack,switch,Audiomack,1,0.7,11815,0.592
+2026-04,Apple Music,SoundCloud,preference,SoundCloud,8,2.0,1456,13.736
+2026-04,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,1456,4.808
+2026-04,Audiomack,Apple Music,preference,Audiomack,1,0.175,11815,0.148
+2026-04,Audiomack,Musi,preference,Audiomack,1,0.175,11815,0.148
+2026-04,Audiomack,Spotify,intent,Audiomack,1,0.5,11815,0.423
+2026-04,Audiomack,Spotify,preference,Audiomack,7,1.45,11815,1.227
+2026-04,Audiomack,Spotify,switch,Audiomack,1,1.0,11815,0.846
+2026-04,Audiomack,YouTube,preference,Audiomack,2,0.35,11815,0.296
+2026-04,Audiomack,YouTube Music,preference,Audiomack,1,0.175,11815,0.148
+2026-04,Boomplay,Audiomack,preference,Audiomack,9,2.25,11815,1.904
+2026-04,Musi,Audiomack,preference,Audiomack,1,0.25,11815,0.212
+2026-04,Pandora,Audiomack,preference,Audiomack,1,0.25,11815,0.212
+2026-04,Pandora,SoundCloud,switch,SoundCloud,1,0.7,1456,4.808
+2026-04,SoundCloud,Apple Music,preference,SoundCloud,1,0.25,1456,1.717
+2026-04,SoundCloud,Audiomack,preference,Audiomack,1,0.175,11815,0.148
+2026-04,SoundCloud,Spotify,intent,SoundCloud,3,1.5,1456,10.302
+2026-04,SoundCloud,Spotify,preference,SoundCloud,8,1.7,1456,11.676
+2026-04,SoundCloud,Spotify,switch,SoundCloud,2,1.7,1456,11.676
+2026-04,SoundCloud,YouTube,preference,SoundCloud,1,0.175,1456,1.202
+2026-04,Spotify,Audiomack,preference,Audiomack,86,20.525,11815,17.372
+2026-04,Spotify,Audiomack,switch,Audiomack,2,1.4,11815,1.185
+2026-04,Spotify,SoundCloud,preference,SoundCloud,70,16.9,1456,116.071
+2026-04,Spotify,SoundCloud,switch,SoundCloud,6,5.7,1456,39.148
+2026-04,YouTube,Audiomack,preference,Audiomack,2,0.425,11815,0.36
+2026-04,YouTube,SoundCloud,preference,SoundCloud,3,0.675,1456,4.636
+2026-04,YouTube,SoundCloud,switch,SoundCloud,2,1.4,1456,9.615
+2026-04,YouTube Music,Audiomack,preference,Audiomack,3,0.75,11815,0.635
+2026-04,YouTube Music,Audiomack,switch,Audiomack,1,1.0,11815,0.846
+2026-04,YouTube Music,SoundCloud,preference,SoundCloud,4,0.925,1456,6.353
+2026-04,YouTube Music,SoundCloud,switch,SoundCloud,1,1.0,1456,6.868
+2026-05,Apple Music,Audiomack,preference,Audiomack,2,0.425,5815,0.731
+2026-05,Apple Music,SoundCloud,preference,SoundCloud,6,1.35,829,16.285
+2026-05,Apple Music,SoundCloud,switch,SoundCloud,1,0.7,829,8.444
+2026-05,Audiomack,Spotify,intent,Audiomack,1,0.35,5815,0.602
+2026-05,Audiomack,Spotify,preference,Audiomack,4,0.85,5815,1.462
+2026-05,Audiomack,YouTube Music,preference,Audiomack,1,0.175,5815,0.301
+2026-05,Boomplay,Audiomack,preference,Audiomack,3,0.675,5815,1.161
+2026-05,Pandora,Audiomack,preference,Audiomack,1,0.25,5815,0.43
+2026-05,SoundCloud,Amazon Music,preference,SoundCloud,1,0.25,829,3.016
+2026-05,SoundCloud,Apple Music,intent,SoundCloud,1,0.35,829,4.222
+2026-05,SoundCloud,Apple Music,preference,SoundCloud,1,0.175,829,2.111
+2026-05,SoundCloud,Audiomack,preference,Audiomack,1,0.25,5815,0.43
+2026-05,SoundCloud,JioSaavn,preference,SoundCloud,1,0.25,829,3.016
+2026-05,SoundCloud,Musi,preference,SoundCloud,1,0.175,829,2.111
+2026-05,SoundCloud,Spotify,intent,SoundCloud,3,1.35,829,16.285
+2026-05,SoundCloud,Spotify,preference,SoundCloud,8,1.775,829,21.411
+2026-05,SoundCloud,YouTube,intent,SoundCloud,2,1.0,829,12.063
+2026-05,SoundCloud,YouTube,preference,SoundCloud,2,0.35,829,4.222
+2026-05,SoundCloud,YouTube Music,preference,SoundCloud,2,0.5,829,6.031
+2026-05,SoundCloud,YouTube Music,switch,SoundCloud,1,0.7,829,8.444
+2026-05,Spotify,Audiomack,preference,Audiomack,45,10.725,5815,18.444
+2026-05,Spotify,Audiomack,switch,Audiomack,1,0.7,5815,1.204
+2026-05,Spotify,SoundCloud,preference,SoundCloud,48,11.1,829,133.896
+2026-05,Spotify,SoundCloud,switch,SoundCloud,4,3.7,829,44.632
+2026-05,YouTube,Audiomack,preference,Audiomack,1,0.25,5815,0.43
+2026-05,YouTube,Audiomack,switch,Audiomack,1,0.7,5815,1.204
+2026-05,YouTube,SoundCloud,preference,SoundCloud,4,0.7,829,8.444
+2026-05,YouTube Music,Audiomack,preference,Audiomack,2,0.5,5815,0.86
+2026-05,YouTube Music,SoundCloud,preference,SoundCloud,2,0.5,829,6.031

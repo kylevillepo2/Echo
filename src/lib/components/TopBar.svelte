@@ -34,6 +34,13 @@
 		>
 			<span class="idx">02</span> Themes
 		</button>
+		<button
+			class:active={studio.view === 'flows'}
+			onclick={() => studio.setView('flows')}
+			aria-pressed={studio.view === 'flows'}
+		>
+			<span class="idx">03</span> Flows
+		</button>
 	</nav>
 
 	<div class="right">

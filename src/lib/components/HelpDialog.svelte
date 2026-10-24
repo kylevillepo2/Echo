@@ -7,6 +7,7 @@
 		{ keys: ['/'], label: 'Focus search' },
 		{ keys: ['1'], label: 'Network view' },
 		{ keys: ['2'], label: 'Theme ledger' },
+		{ keys: ['3'], label: 'Switching flows' },
 		{ keys: ['I'], label: 'Toggle inspector' },
 		{ keys: ['↑', '↓'], label: 'Move through results' },
 		{ keys: ['↵'], label: 'Inspect selection' },

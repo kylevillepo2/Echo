@@ -1,0 +1,202 @@
+cluster_id,label,reason
+-1,filler,"short-review group (<4 words), 64% duplicate text"
+0,topic,"subject: working, work, crashes, crashing (mean 2.1*)"
+1,topic,"subject: premium, app, buy, pay (mean 2.56*)"
+2,topic,"subject: spotify, like, good, songs (mean 3.47*)"
+3,topic,"subject: search, songs, song, easy (mean 3.4*)"
+4,topic,"subject: spotify, song, songs, want (mean 2.22*)"
+5,filler,generic praise: love/best/great with no specific feature or problem
+6,topic,"subject: premium, worth, free, subscription (mean 3.98*)"
+7,filler,generic praise: love/best/great with no specific feature or problem
+8,topic,"subject: spotify, money, pay, artists (mean 1.98*)"
+9,topic,"subject: podcasts, spotify, podcast, music (mean 4.42*)"
+10,filler,generic praise: love/best/great with no specific feature or problem
+11,topic,"subject: works, using, problems, reliable (mean 4.06*)"
+12,topic,"subject: playlist, song, play, songs (mean 2.37*)"
+13,topic,"subject: adds, spotify, add, like (mean 3.16*)"
+14,topic,"subject: log, account, login, password (mean 1.85*)"
+15,topic,"subject: ads, premium, song, ad (mean 1.95*)"
+16,topic,"subject: free, version, users, features (mean 2.55*)"
+17,topic,"subject: spotify, music, app, free (mean 4.21*)"
+18,topic,"subject: playlists, playlist, app, make (mean 4.43*)"
+19,filler,generic praise: love/best/great with no specific feature or problem
+20,filler,generic praise: love/best/great with no specific feature or problem
+21,filler,"gibberish/slang (sigma, skibidi, slay) with no subject"
+22,filler,mostly duplicate one-liners
+23,topic,"subject: ads, ad, annoying, remove (mean 2.26*)"
+24,topic,"subject: review, reviews, asking, adds (mean 3.4*)"
+25,topic,"subject: ads, music, ad, songs (mean 3.47*)"
+26,topic,"subject: playing, autoplay, keeps, auto (mean 2.19*)"
+27,topic,"subject: ads, ad, advertisement, lot (mean 2.48*)"
+28,filler,generic praise: love/best/great with no specific feature or problem
+29,topic,"subject: app, open, update, keeps (mean 1.94*)"
+30,topic,"subject: premium, worth, good, experience (mean 3.82*)"
+31,topic,"subject: premium, music, app, free (mean 3.88*)"
+32,non_english,mixed Russian/Portuguese/Spanish + gibberish
+33,topic,"subject: shuffle, smart, turn, disable (mean 2.07*)"
+34,topic,"subject: spotify, playlist, playlists, songs (mean 3.81*)"
+35,filler,"gibberish/slang (sigma, skibidi, slay) with no subject"
+36,filler,"""worst app"" with no reason (90%+ 1-star)"
+37,filler,generic praise: love/best/great with no specific feature or problem
+38,non_english,Hindi/Hinglish
+39,topic,"subject: songs, song, want, available (mean 3.98*)"
+40,topic,"subject: premium, buy, need, users (mean 2.11*)"
+41,topic,"subject: app, listen, listening, phone (mean 4.3*)"
+42,topic,"subject: podcast, podcasts, episodes, episode (mean 2.06*)"
+43,filler,generic praise: love/best/great with no specific feature or problem
+44,topic,"subject: songs, recommendations, playlist, recommended (mean 2.46*)"
+45,filler,generic praise: love/best/great with no specific feature or problem
+46,filler,generic praise: love/best/great with no specific feature or problem
+47,topic,"subject: liked, songs, playlist, play (mean 2.3*)"
+48,filler,generic praise: love/best/great with no specific feature or problem
+49,filler,generic praise: love/best/great with no specific feature or problem
+50,topic,"subject: adds, add, song, songs (mean 2.59*)"
+51,topic,"subject: subscription, cancel, subscribe, premium (mean 2.24*)"
+52,topic,"subject: podcasts, podcast, music, great (mean 4.5*)"
+53,filler,generic praise: love/best/great with no specific feature or problem
+54,topic,"subject: ads, app, ad, song (mean 2.72*)"
+55,topic,"subject: app, music, songs, like (mean 4.24*)"
+56,topic,"subject: queue, remove, new, update (mean 2.33*)"
+57,filler,"gibberish/slang (sigma, skibidi, slay) with no subject"
+58,topic,"subject: easy, music, use, songs (mean 4.1*)"
+59,topic,"subject: stops, playing, song, app (mean 2.16*)"
+60,non_english,Spanish
+61,filler,"4 vague reviews (mad/annoyed), too small to be a topic"
+62,filler,generic praise: love/best/great with no specific feature or problem
+63,filler,generic praise: love/best/great with no specific feature or problem
+64,filler,generic praise: love/best/great with no specific feature or problem
+65,topic,"subject: minutes, uninterrupted, listening, ad (mean 2.24*)"
+66,topic,"subject: ads, worst, app, ad (mean 1.35*)"
+67,topic,"subject: skips, skip, hour, unlimited (mean 2.61*)"
+68,topic,"subject: pay, subscription, listen, money (mean 1.57*)"
+69,topic,"subject: use, easy, useful, using (mean 4.69*)"
+70,non_english,Hindi/Hinglish
+71,topic,"subject: ui, widget, interface, screen (mean 2.6*)"
+72,topic,"subject: playlist, playlists, make, list (mean 4.52*)"
+73,topic,"subject: play, songs, playlist, song (mean 1.9*)"
+74,filler,mostly duplicate one-liners
+75,topic,"subject: premium, play, song, listen (mean 1.69*)"
+76,topic,"subject: app, better, apps, update (mean 3.05*)"
+77,topic,"subject: premium, songs, song, listen (mean 3.04*)"
+78,topic,"subject: star, stars, app, rating (mean 3.33*)"
+79,filler,generic praise: love/best/great with no specific feature or problem
+80,topic,"subject: ads, ad, song, app (mean 1.78*)"
+81,topic,"subject: pay, listen, money, free (mean 2.09*)"
+82,filler,"""worst app"" with no reason (90%+ 1-star)"
+83,filler,generic praise: love/best/great with no specific feature or problem
+84,filler,generic praise: love/best/great with no specific feature or problem
+85,topic,"subject: old, music, oldies, favorite (mean 4.85*)"
+86,topic,"subject: song, different, plays, play (mean 2.23*)"
+87,topic,"subject: star, stars, rating, zero (mean 2.94*)"
+88,topic,"subject: shuffle, songs, spotify, playlist (mean 2.26*)"
+89,filler,generic praise: love/best/great with no specific feature or problem
+90,filler,"gibberish/slang (sigma, skibidi, slay) with no subject"
+91,filler,generic praise: love/best/great with no specific feature or problem
+92,topic,"subject: ads, ad, song, play (mean 1.88*)"
+93,topic,"subject: spotify, playing, fix, phone (mean 2.22*)"
+94,topic,"subject: adds, add, annoying, like (mean 3.56*)"
+95,topic,"subject: audiobooks, books, audiobook, audio (mean 3.47*)"
+96,non_english,Indonesian/Hinglish/Filipino
+97,topic,"subject: lyrics, songs, song, showing (mean 3.19*)"
+98,topic,"subject: music, selection, great, variety (mean 4.83*)"
+99,filler,generic praise: love/best/great with no specific feature or problem
+100,topic,"subject: premium, song, songs, shuffle (mean 1.88*)"
+101,topic,"subject: good, quality, music, sound (mean 4.76*)"
+102,topic,"subject: update, worse, worst, getting (mean 1.69*)"
+103,topic,"subject: payment, cancel, account, charged (mean 1.7*)"
+104,topic,"subject: podcast, podcasts, love, rogan (mean 4.56*)"
+105,topic,"subject: ads, premium, pay, getting (mean 2.24*)"
+106,topic,"subject: pay, free, paid, don (mean 2.87*)"
+107,filler,generic praise: love/best/great with no specific feature or problem
+108,filler,mostly duplicate one-liners
+109,topic,"subject: songs, app, best, music (mean 4.61*)"
+110,filler,"emoji art and fancy-font text, mostly praise"
+111,topic,"subject: music, easy, listen, want (mean 4.73*)"
+112,topic,"subject: songs, song, album, stop (mean 2.35*)"
+113,filler,"artist/creator name shout-outs, no app aspect"
+114,topic,"subject: ads, good, ad, hate (mean 3.88*)"
+115,topic,"subject: stars, spotify, star, rating (mean 4.14*)"
+116,filler,generic praise: love/best/great with no specific feature or problem
+117,topic,"subject: shuffle, fix, smart, shuffling (mean 2.51*)"
+118,topic,"subject: update, new, version, updates (mean 2.48*)"
+119,topic,"subject: ads, commercials, listen, listening (mean 2.2*)"
+120,topic,"subject: podcasts, podcast, block, episodes (mean 2.16*)"
+121,filler,generic praise: love/best/great with no specific feature or problem
+122,filler,generic praise: love/best/great with no specific feature or problem
+123,topic,"subject: premium, spotify, worth, free (mean 3.91*)"
+124,topic,"subject: volume, phone, control, sound (mean 2.29*)"
+125,topic,"subject: listen, music, listening, want (mean 4.56*)"
+126,topic,"subject: ads, way, commercials, ad (mean 1.96*)"
+127,topic,"subject: offline, download, downloaded, play (mean 2.73*)"
+128,topic,"subject: ads, song, play, songs (mean 1.78*)"
+129,filler,generic praise: love/best/great with no specific feature or problem
+130,topic,"subject: ai, wrapped, year, artists (mean 2.19*)"
+131,non_english,Hinglish/Indonesian/Tagalog (some English about regional catalogs)
+132,filler,"praise one-liners spelled ""aap"" (mostly generic)"
+133,filler,generic praise: love/best/great with no specific feature or problem
+134,topic,"subject: apple, better, music, amazon (mean 4.38*)"
+135,topic,"subject: money, hungry, greedy, pay (mean 1.7*)"
+136,filler,generic praise: love/best/great with no specific feature or problem
+137,topic,"subject: playlist, songs, playlists, add (mean 2.66*)"
+138,topic,"subject: podcasts, ads, podcast, premium (mean 1.95*)"
+139,topic,"subject: songs, song, quality, good (mean 4.53*)"
+140,topic,"subject: helps, relaxing, sleep, stress (mean 4.8*)"
+141,topic,"subject: sound, quality, audio, clear (mean 4.02*)"
+142,topic,"subject: artists, pay, artist, musicians (mean 2.17*)"
+143,topic,"subject: ads, spotify, ad, minutes (mean 2.73*)"
+144,topic,"subject: account, spotify, log, password (mean 1.93*)"
+145,topic,"subject: adds, add, way, annoying (mean 2.81*)"
+146,topic,"subject: update, new, updates, songs (mean 1.9*)"
+147,topic,"subject: premium, spotify, play, want (mean 2.1*)"
+148,filler,generic praise: love/best/great with no specific feature or problem
+149,filler,generic praise: love/best/great with no specific feature or problem
+150,topic,"subject: genre, liked, songs, filter (mean 2.29*)"
+151,topic,"subject: button, create, library, remove (mean 2.2*)"
+152,filler,generic praise: love/best/great with no specific feature or problem
+153,filler,generic praise: love/best/great with no specific feature or problem
+154,topic,"subject: playlist, playlists, save, edit (mean 2.18*)"
+155,topic,"subject: ads, app, ad, annoying (mean 3.27*)"
+156,filler,generic praise: love/best/great with no specific feature or problem
+157,topic,"subject: spotify, working, play, fix (mean 2.37*)"
+158,topic,"subject: premium, spotify, just, pay (mean 1.77*)"
+159,topic,"subject: stars, star, song, rate (mean 3.08*)"
+160,filler,generic good/bad verdicts with no reason
+161,filler,generic praise: love/best/great with no specific feature or problem
+162,topic,"subject: spotify, quality, better, apple (mean 3.69*)"
+163,topic,"subject: song, play, app, songs (mean 2.13*)"
+164,topic,"subject: wrapped, spotify, wrap, year (mean 2.55*)"
+165,topic,"subject: dj, ai, feature, new (mean 3.92*)"
+166,topic,"subject: account, money, family, address (mean 1.8*)"
+167,topic,"subject: stops, song, playing, keeps (mean 2.01*)"
+168,topic,"subject: ads, song, songs, ad (mean 1.88*)"
+169,filler,"gibberish/slang (sigma, skibidi, slay) with no subject"
+170,topic,"subject: spotify, old, hate, bring (mean 2.74*)"
+171,topic,"subject: spotify, app, worst, don (mean 2.21*)"
+172,topic,"subject: app, song, songs, download (mean 4.16*)"
+173,filler,mostly duplicate one-liners
+174,topic,"subject: songs, playlist, song, premium (mean 1.73*)"
+175,topic,"subject: ads, spotify, premium, free (mean 1.97*)"
+176,filler,generic praise: love/best/great with no specific feature or problem
+177,filler,generic praise: love/best/great with no specific feature or problem
+178,topic,"subject: playlist, songs, playlists, song (mean 2.24*)"
+179,topic,"subject: spotify, worse, phone, years (mean 2.3*)"
+180,topic,"subject: phone, slow, play, app (mean 2.22*)"
+181,filler,generic praise: love/best/great with no specific feature or problem
+182,topic,"subject: minutes, ad, ads, free (mean 1.86*)"
+183,topic,"subject: add, feature, option, play (mean 3.75*)"
+184,topic,"subject: youtube, better, music, videos (mean 3.08*)"
+185,filler,generic praise: love/best/great with no specific feature or problem
+186,topic,"subject: premium, song, app, play (mean 1.9*)"
+187,filler,generic praise: love/best/great with no specific feature or problem
+188,topic,"subject: song, play, listen, songs (mean 2.04*)"
+189,topic,"subject: song, play, choose, want (mean 1.98*)"
+190,filler,mostly duplicate one-liners
+191,topic,"subject: download, downloading, downloads, free (mean 2.59*)"
+192,topic,"subject: plan, student, family, premium (mean 2.15*)"
+193,topic,"subject: shuffle, songs, playlist, plays (mean 2.37*)"
+194,topic,"subject: hours, audiobooks, audiobook, books (mean 2.17*)"
+195,non_english,Spanish
+196,topic,"subject: lyrics, app, songs, song (mean 3.53*)"
+197,topic,"subject: music, life, world, joy (mean 4.3*)"
+198,topic,"subject: service, excellent, services, customer (mean 4.06*)"
+199,topic,"subject: expensive, price, worth, money (mean 2.77*)"

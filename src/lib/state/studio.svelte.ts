@@ -5,7 +5,7 @@ import { fmtCount, fmtRate } from '#lib/utils/format';
 
 const browser = typeof window !== 'undefined';
 
-export type View = 'network' | 'themes';
+export type View = 'network' | 'themes' | 'flows';
 export type ColourMode = 'category' | 'reception' | 'platform';
 export type MetricMode = 'reviews' | 'downloads';
 export type ReviewSort = 'recent' | 'lowest' | 'highest';

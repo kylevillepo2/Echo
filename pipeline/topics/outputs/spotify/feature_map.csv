@@ -1,0 +1,123 @@
+feature,canonical_feature,count
+ai dj,AI DJ,6
+ai,AI DJ,3
+create button,Create button,5
+wrapped,Wrapped,16
+login,account,26
+account,account,1
+date of birth,account,1
+location,account,1
+profiles,account,1
+ads,ads,224
+banners,ads,1
+app updates,app updates & install,2
+app launch,app updates & install,1
+app update,app updates & install,1
+clipboard,app updates & install,1
+installation,app updates & install,1
+artist payouts,artist payouts,1
+audiobooks,audiobooks,21
+music,catalog,24
+music catalog,catalog,20
+songs,catalog,14
+song selection,catalog,2
+audio content,catalog,1
+concerts,concerts & merch,2
+merch,concerts & merch,2
+explicit content,content filters,1
+explicit music filters,content filters,1
+customer support,customer support,3
+customer service,customer support,1
+reporting,customer support,1
+sync,devices & casting,3
+car mode,devices & casting,2
+casting,devices & casting,2
+spotify connect,devices & casting,2
+alexa devices,devices & casting,1
+android compatibility,devices & casting,1
+apple watch,devices & casting,1
+device connection,devices & casting,1
+device switching,devices & casting,1
+google assistant,devices & casting,1
+homepod,devices & casting,1
+free tier,free tier,195
+interface,interface,3
+navigation,interface,3
+ui,interface,3
+app usability,interface,2
+home screen,interface,2
+app interface,interface,1
+canvas,interface,1
+customization,interface,1
+layout,interface,1
+navigation bar,interface,1
+now playing screen,interface,1
+screen orientation,interface,1
+screenshots,interface,1
+settings,interface,1
+widget,interface,1
+liked songs,library,19
+albums,library,7
+library,library,5
+local files,library,2
+pins,library,2
+sorting,library,2
+music library,library,1
+recent listening,library,1
+lyrics,lyrics,28
+guitar chords,lyrics,1
+translations,lyrics,1
+none,none,593
+app,none,2
+other,none,1
+emails,notifications,1
+new music notifications,notifications,1
+notifications,notifications,1
+rating prompt,notifications,1
+downloads,offline & downloads,15
+offline mode,offline & downloads,11
+mobile data,offline & downloads,1
+playback,playback,67
+loop,playback,3
+music playback,playback,3
+autoplay,playback,2
+background playback,playback,2
+sleep timer,playback,2
+loop mode,playback,1
+next song button,playback,1
+play in order,playback,1
+playback controls,playback,1
+playback order,playback,1
+playhead,playback,1
+skip,playback,1
+playlists,playlists,87
+blend,playlists,1
+podcasts,podcasts,39
+video,podcasts,2
+channels,podcasts,1
+videos,podcasts,1
+queue,queue,15
+recommendations,recommendations,61
+daylist,recommendations,2
+music discovery,recommendations,2
+feed,recommendations,1
+genre selection,recommendations,1
+new releases,recommendations,1
+radio,recommendations,1
+search,search,18
+shuffle,shuffle,34
+smart shuffle,shuffle,8
+friends,social & sharing,1
+jams,social & sharing,1
+links,social & sharing,1
+sharing,social & sharing,1
+social features,social & sharing,1
+user-uploaded images,social & sharing,1
+sound quality,sound quality,30
+volume control,sound quality,3
+equalizer,sound quality,2
+dolby atmos,sound quality,1
+effects,sound quality,1
+surround sound,sound quality,1
+subscription,subscription,129
+family plan,subscription,6

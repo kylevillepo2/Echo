@@ -5,6 +5,9 @@
 	import Sidebar from '#lib/components/Sidebar.svelte';
 	import NetworkView from '#lib/components/NetworkView.svelte';
 	import ThemesView from '#lib/components/ThemesView.svelte';
+	import FlowsView from '#lib/components/FlowsView.svelte';
+	import FlowsInspector from '#lib/components/FlowsInspector.svelte';
+	import { flowsState } from '#lib/state/flows.svelte';
 	import Inspector from '#lib/components/Inspector.svelte';
 	import StatusBar from '#lib/components/StatusBar.svelte';
 	import CommandPalette from '#lib/components/CommandPalette.svelte';
@@ -38,6 +41,8 @@
 				studio.connectOpen = false;
 			} else if (studio.helpOpen) {
 				studio.helpOpen = false;
+			} else if (studio.view === 'flows') {
+				flowsState.clearSelection();
 			} else {
 				studio.clearSelection();
 			}
@@ -53,6 +58,8 @@
 			studio.setView('network');
 		} else if (event.key === '2') {
 			studio.setView('themes');
+		} else if (event.key === '3') {
+			studio.setView('flows');
 		} else if (event.key.toLowerCase() === 'i') {
 			studio.toggleInspector();
 		}
@@ -78,7 +85,10 @@
 		{/if}
 
 		<main class="main">
-			{#if studio.loading && !studio.graph}
+			{#if studio.view === 'flows'}
+				<!-- static data: works without the backend graph -->
+				<FlowsView />
+			{:else if studio.loading && !studio.graph}
 				<div class="boot">
 					<div class="boot-mark" aria-hidden="true">U</div>
 					<span class="label">Building semantic map</span>
@@ -104,7 +114,15 @@
 			{/if}
 		</main>
 
-		{#if studio.inspectorOpen && studio.graph}
+		{#if studio.view === 'flows'}
+			{#if studio.inspectorOpen}
+				<FlowsInspector />
+			{:else}
+				<button class="reopen" onclick={() => (studio.inspectorOpen = true)} aria-label="Open inspector">
+					<span class="label">Inspect</span>
+				</button>
+			{/if}
+		{:else if studio.inspectorOpen && studio.graph}
 			<Inspector />
 		{:else if studio.graph && !studio.inspectorOpen}
 			<button
