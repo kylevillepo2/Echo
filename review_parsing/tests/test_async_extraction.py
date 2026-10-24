@@ -130,6 +130,34 @@ class AsyncExtractionTests(unittest.TestCase):
         self.assertEqual(calls, 2)
         self.assertEqual(metrics.retried, 1)
 
+    def test_duplicate_review_key_keeps_valid_work_and_checkpoints_once(self):
+        class DuplicateClient(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                key = raw.body['reviews'][0]['review_key']
+                raw.body['reviews'].append({
+                    'review_key': key, 'aspects': [], 'behavioral_signals': []})
+                return raw
+
+        rows = [review(0), review(1)]
+        outcomes, metrics, _, saved, calls = self.run_mock(
+            rows, DuplicateClient(), options(batch_size=2))
+        self.assertEqual(set(saved), {row['review_key'] for row in rows})
+        self.assertEqual(calls, 1)
+        self.assertEqual(metrics.failed, 0)
+        self.assertEqual(outcomes[0][0], 'done')
+        self.assertEqual(saved['0:0']['validation_issues'][0]['issue_type'],
+                         'duplicate_review_entry')
+
+        parsed = extract.normalize_partial_json({'reviews': [
+            {'review_key': '0:0', 'aspects': [{'description': 'First'}],
+             'behavioral_signals': []},
+            {'review_key': '0:0', 'aspects': [{'description': 'Second'}],
+             'behavioral_signals': [{'related_aspect_index': 0}]},
+        ]}, {'0:0'})
+        self.assertEqual(len(parsed['0:0']['aspects']), 2)
+        self.assertEqual(parsed['0:0']['behavioral_signals'][0]['related_aspect_index'], 1)
+
     def test_transient_failure_retries_without_duplicate_checkpoint(self):
         client = FakeClient(fail_once='0:0')
         outcomes, metrics, budget, saved, calls = self.run_mock(

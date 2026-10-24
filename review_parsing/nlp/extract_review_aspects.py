@@ -303,10 +303,27 @@ def normalize_partial_json(data, expected_keys):
                 or not isinstance(item.get('behavioral_signals'), list)):
             raise ValueError('Response contains a malformed review')
         key = item.get('review_key')
-        if not isinstance(key, str) or key not in expected_keys or key in result:
-            raise ValueError(f'Response has an unexpected or duplicate review_key: {key}')
-        result[key] = {'aspects': item['aspects'],
-                       'behavioral_signals': item['behavioral_signals']}
+        if not isinstance(key, str) or key not in expected_keys:
+            raise ValueError(f'Response has an unexpected review_key: {key}')
+        if key in result:
+            # The schema cannot express uniqueness across array items. Models
+            # sometimes split one review into two entries with the same key.
+            # Keep both sets of evidence; postprocess_review validates and
+            # deduplicates aspects and behavior links for this review.
+            previous = result[key]
+            offset = len(previous['aspects'])
+            previous['aspects'].extend(item['aspects'])
+            for signal in item['behavioral_signals']:
+                signal = dict(signal)
+                related = signal.get('related_aspect_index')
+                if isinstance(related, int) and not isinstance(related, bool):
+                    signal['related_aspect_index'] = related + offset
+                previous['behavioral_signals'].append(signal)
+            previous['response_duplicate_count'] += 1
+        else:
+            result[key] = {'aspects': list(item['aspects']),
+                           'behavioral_signals': list(item['behavioral_signals']),
+                           'response_duplicate_count': 0}
     if not result:
         raise ValueError('Response did not contain any requested reviews')
     return result
@@ -1092,6 +1109,11 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
                 key = row['review_key']
                 reviewed = postprocess_review(extracted[key], row['text'][:args.max_chars],
                                               (row.get('title') or '')[:300])
+                if extracted[key]['response_duplicate_count']:
+                    reviewed['validation_issues'].append(
+                        _issue('duplicate_review_entry',
+                               f"Merged {extracted[key]['response_duplicate_count'] + 1} response entries",
+                               'recovered_local'))
                 processed[key] = reviewed
                 candidates.extend(repair_candidates(row, extracted[key], reviewed))
             input_tokens = getattr(usage, 'input_tokens', 0) or 0
