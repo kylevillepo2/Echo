@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { studio, type ColourMode } from '#lib/state/studio.svelte';
 	import GraphCanvas from './GraphCanvas.svelte';
+	import FlowWorkspace from './FlowWorkspace.svelte';
 
 	const modes: { id: ColourMode; label: string }[] = [
 		{ id: 'category', label: 'Category' },
@@ -9,62 +10,60 @@
 	];
 
 	const themeChip = $derived(studio.themeFilter ? studio.themeById(studio.themeFilter) : null);
-	const categoryChip = $derived(studio.selectedCategory);
 </script>
 
 <section class="network" aria-label="Semantic network">
-	<header class="toolbar">
-		<div class="left">
-			<span class="label">Semantic map</span>
-			<span class="stats num">
-				{studio.visibleApps.length} apps · {studio.visibleCategories.length} categories ·
-				{studio.visibleEdges.length} links
-			</span>
-		</div>
-
-		<div class="filter-row">
-			{#if themeChip}
-				<button
-					class="chip"
-					class:is-pos={themeChip.kind === 'positive'}
-					class:is-neg={themeChip.kind === 'negative'}
-					onclick={() => studio.toggleTheme(themeChip.id)}
-				>
-					{themeChip.label} <span class="x">×</span>
-				</button>
-			{/if}
-			{#if categoryChip}
-				<button class="chip" onclick={() => studio.clearCategoryFilter()}>
-					{categoryChip.name} <span class="x">×</span>
-				</button>
-			{/if}
-			{#if studio.query}
-				<button class="chip" onclick={() => (studio.query = '')}>
-					“{studio.query}” <span class="x">×</span>
-				</button>
-			{/if}
-			{#if studio.hasFilters}
-				<button class="clear" onclick={() => studio.clearFilters()}>clear all</button>
-			{/if}
-		</div>
-
-		<div class="right">
-			<span class="label-dim">Colour by</span>
-			<div class="seg" role="group" aria-label="Colour nodes by">
-				{#each modes as mode}
-					<button
-						class:active={studio.colourMode === mode.id}
-						onclick={() => (studio.colourMode = mode.id)}
-						aria-pressed={studio.colourMode === mode.id}
-					>
-						{mode.label}
-					</button>
-				{/each}
+	{#if !studio.categoryFilter}
+		<header class="toolbar">
+			<div class="left">
+				<span class="label">Semantic map</span>
+				<span class="stats num">
+					{studio.visibleApps.length} apps · {studio.visibleCategories.length} categories ·
+					{studio.visibleEdges.length} links
+				</span>
 			</div>
-		</div>
-	</header>
 
-	<GraphCanvas />
+			<div class="filter-row">
+				{#if themeChip}
+					<button
+						class="chip"
+						class:is-pos={themeChip.kind === 'positive'}
+						class:is-neg={themeChip.kind === 'negative'}
+						onclick={() => studio.toggleTheme(themeChip.id)}
+					>
+						{themeChip.label} <span class="x">×</span>
+					</button>
+				{/if}
+				{#if studio.query}
+					<button class="chip" onclick={() => (studio.query = '')}>
+						“{studio.query}” <span class="x">×</span>
+					</button>
+				{/if}
+				{#if studio.hasFilters}
+					<button class="clear" onclick={() => studio.clearFilters()}>clear all</button>
+				{/if}
+			</div>
+
+			<div class="right">
+				<span class="label-dim">Colour by</span>
+				<div class="seg" role="group" aria-label="Colour nodes by">
+					{#each modes as mode}
+						<button
+							class:active={studio.colourMode === mode.id}
+							onclick={() => (studio.colourMode = mode.id)}
+							aria-pressed={studio.colourMode === mode.id}
+						>
+							{mode.label}
+						</button>
+					{/each}
+				</div>
+			</div>
+		</header>
+	{/if}
+
+	<FlowWorkspace>
+		<GraphCanvas />
+	</FlowWorkspace>
 </section>
 
 <style>

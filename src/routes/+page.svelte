@@ -2,12 +2,10 @@
 	import { onMount } from 'svelte';
 	import { studio } from '#lib/state/studio.svelte';
 	import TopBar from '#lib/components/TopBar.svelte';
-	import Sidebar from '#lib/components/Sidebar.svelte';
 	import NetworkView from '#lib/components/NetworkView.svelte';
-	import ThemesView from '#lib/components/ThemesView.svelte';
-	import FlowsView from '#lib/components/FlowsView.svelte';
 	import FlowsInspector from '#lib/components/FlowsInspector.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
+	import { flows } from '#lib/data/flows';
 	import Inspector from '#lib/components/Inspector.svelte';
 	import StatusBar from '#lib/components/StatusBar.svelte';
 	import CommandPalette from '#lib/components/CommandPalette.svelte';
@@ -16,6 +14,22 @@
 
 	onMount(() => {
 		void studio.init();
+	});
+
+	const flowCategoryIds = $derived(
+		new Set(studio.apps.filter((app) => flows.meta.observed.includes(app.id)).map((app) => app.categoryId))
+	);
+	const hasFlowData = $derived(Boolean(studio.categoryFilter && flowCategoryIds.has(studio.categoryFilter)));
+	let previousCategory = $state<string | null>(null);
+
+	$effect(() => {
+		if (studio.categoryFilter !== previousCategory) {
+			flowsState.clearSelection();
+			flowsState.hoveredArrow = null;
+			flowsState.hoveredNode = null;
+			flowsState.stop();
+			previousCategory = studio.categoryFilter;
+		}
 	});
 
 	function onKeydown(event: KeyboardEvent) {
@@ -41,8 +55,15 @@
 				studio.connectOpen = false;
 			} else if (studio.helpOpen) {
 				studio.helpOpen = false;
-			} else if (studio.view === 'flows') {
-				flowsState.clearSelection();
+			} else if (studio.zoomingCategory) {
+				studio.clearCategoryFilter();
+			} else if (flowsState.selection?.type === 'edge') {
+				if (studio.selectedApp) flowsState.selectApp(studio.selectedApp.id);
+				else flowsState.clearSelection();
+			} else if (studio.categoryFilter) {
+				if (studio.selected) studio.clearSelection();
+				else if (flowsState.selection) flowsState.clearSelection();
+				else studio.clearCategoryFilter();
 			} else {
 				studio.clearSelection();
 			}
@@ -54,12 +75,6 @@
 		if (event.key === '/') {
 			event.preventDefault();
 			studio.openPalette();
-		} else if (event.key === '1') {
-			studio.setView('network');
-		} else if (event.key === '2') {
-			studio.setView('themes');
-		} else if (event.key === '3') {
-			studio.setView('flows');
 		} else if (event.key.toLowerCase() === 'i') {
 			studio.toggleInspector();
 		}
@@ -80,15 +95,8 @@
 	<TopBar />
 
 	<div class="workspace">
-		{#if studio.sidebarOpen}
-			<Sidebar />
-		{/if}
-
 		<main class="main">
-			{#if studio.view === 'flows'}
-				<!-- static data: works without the backend graph -->
-				<FlowsView />
-			{:else if studio.loading && !studio.graph}
+			{#if studio.loading && !studio.graph}
 				<div class="boot">
 					<div class="boot-mark" aria-hidden="true">U</div>
 					<span class="label">Building semantic map</span>
@@ -107,24 +115,26 @@
 						</button>
 					</div>
 				</div>
-			{:else if studio.view === 'network'}
-				<NetworkView />
 			{:else}
-				<ThemesView />
+				<NetworkView />
 			{/if}
 		</main>
 
-		{#if studio.view === 'flows'}
+		{#if (studio.categoryFilter && hasFlowData) || flowsState.selection?.type === 'edge'}
 			{#if studio.inspectorOpen}
-				<FlowsInspector />
+				{#if studio.selectedApp && flowsState.selection?.type !== 'edge'}
+					<Inspector />
+				{:else}
+					<FlowsInspector />
+				{/if}
 			{:else}
 				<button class="reopen" onclick={() => (studio.inspectorOpen = true)} aria-label="Open inspector">
 					<span class="label">Inspect</span>
 				</button>
 			{/if}
-		{:else if studio.inspectorOpen && studio.graph}
+		{:else if (!studio.categoryFilter || studio.selectedApp) && studio.inspectorOpen && studio.graph}
 			<Inspector />
-		{:else if studio.graph && !studio.inspectorOpen}
+		{:else if !studio.categoryFilter && studio.graph && !studio.inspectorOpen}
 			<button
 				class="reopen"
 				onclick={() => (studio.inspectorOpen = true)}
@@ -168,6 +178,8 @@
 		min-width: 0;
 		min-height: 0;
 		display: flex;
+		position: relative;
+		overflow: hidden;
 	}
 
 	.boot {

@@ -7,6 +7,7 @@
 	import Stars from './Stars.svelte';
 	import ThemeBar from './ThemeBar.svelte';
 	import ReviewCard from './ReviewCard.svelte';
+	import AppFlows from './AppFlows.svelte';
 	import { fmtCount, fmtDate, fmtDelta, fmtDeltaPct, fmtLag, fmtPct, fmtR, fmtRate } from '#lib/utils/format';
 	import { platformLabel, receptionColor } from '#lib/utils/palette';
 
@@ -163,14 +164,14 @@
 		</header>
 
 		<nav class="tabs" aria-label="Inspector sections">
+			<button class:active={studio.inspectorTab === 'flows'} onclick={() => setTab('flows')}>
+				Flows
+			</button>
 			<button class:active={studio.inspectorTab === 'overview'} onclick={() => setTab('overview')}>
 				Overview
 			</button>
 			<button class:active={studio.inspectorTab === 'reviews'} onclick={() => setTab('reviews')}>
 				Reviews <span class="tab-count">{fmtCount(app.reviewCount)}</span>
-			</button>
-			<button class:active={studio.inspectorTab === 'similar'} onclick={() => setTab('similar')}>
-				Similar <span class="tab-count">{similar.length}</span>
 			</button>
 		</nav>
 
@@ -406,7 +407,6 @@
 					<section class="block">
 						<div class="block-head">
 							<span class="label-dim">Semantically similar</span>
-							<button class="link" onclick={() => setTab('similar')}>all →</button>
 						</div>
 						{#each similar.slice(0, 3) as entry (entry.app.id)}
 							<button class="similar-mini" onclick={() => studio.select('app', entry.app.id)}>
@@ -521,36 +521,8 @@
 						{/each}
 					{/if}
 				</div>
-			{:else}
-				<div class="similar-pane">
-					<p class="pane-note">
-						Nearest neighbours in embedding space. Score is cosine similarity across review themes
-						and vocabulary.
-					</p>
-					{#each similar as entry (entry.app.id)}
-						<button class="similar-card" onclick={() => studio.select('app', entry.app.id)}>
-							<div class="similar-card-top">
-								<span class="sim-name">{entry.app.name}</span>
-								<span class="sim-score num">{scorePct(entry.score)}%</span>
-							</div>
-							<div class="similar-card-sub">
-								{entry.app.categoryName} · {fmtCount(entry.app.reviewCount)} reviews
-							</div>
-							<div class="sim-track">
-								<i style:width="{scorePct(entry.score)}%"></i>
-							</div>
-							<div class="similar-card-foot">
-								<span style:color={receptionColor(entry.app.reception)}>
-									reception {entry.app.reception}
-								</span>
-								<span>{entry.app.rating.toFixed(1)}★</span>
-								<span>{platformLabel(entry.app.platform)}</span>
-							</div>
-						</button>
-					{:else}
-						<div class="no-hits"><p>No neighbours above the similarity threshold.</p></div>
-					{/each}
-				</div>
+			{:else if studio.inspectorTab === 'flows'}
+				<AppFlows appId={app.id} appName={app.name} />
 			{/if}
 		</div>
 	{:else if category}
@@ -688,8 +660,7 @@
 				</div>
 				<h2>Unwrap a node</h2>
 				<p>
-					Click an app circle to inspect it, or click a category cluster to narrow the map
-					to that cluster.
+					Click an app circle to inspect it, or click a category cluster to open its flows.
 				</p>
 				<div class="steps">
 					<span><b>01</b> hover a node to preview</span>
@@ -1102,17 +1073,6 @@
 		font-size: 8px;
 		color: var(--faint);
 	}
-	.link {
-		font-family: var(--mono);
-		font-size: 8.5px;
-		color: var(--dim);
-		text-transform: uppercase;
-		letter-spacing: 0.06em;
-	}
-	.link:hover {
-		color: var(--lime);
-	}
-
 	.distribution {
 		display: flex;
 		flex-direction: column;
@@ -1388,33 +1348,11 @@
 		}
 	}
 
-	.similar-pane {
-		padding: 12px;
-		display: flex;
-		flex-direction: column;
-		gap: 6px;
-	}
 	.pane-note {
 		margin: 0 0 4px;
 		font-size: 10.5px;
 		line-height: 1.5;
 		color: var(--dim);
-	}
-	.similar-card {
-		text-align: left;
-		padding: 9px 10px;
-		background: var(--bg-soft);
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		transition: border-color var(--fast);
-	}
-	.similar-card:hover {
-		border-color: var(--line-strong);
-	}
-	.similar-card-top {
-		display: flex;
-		align-items: baseline;
-		gap: 8px;
 	}
 	.sim-name {
 		font-size: 12px;
@@ -1425,34 +1363,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.sim-score {
-		font-size: 10px;
-		color: var(--lime);
-	}
-	.similar-card-sub {
-		font-family: var(--mono);
-		font-size: 8.5px;
-		color: var(--dim);
-		margin-top: 2px;
-	}
-	.sim-track {
-		height: 3px;
-		background: var(--panel-3);
-		margin: 7px 0 6px;
-	}
-	.sim-track i {
-		display: block;
-		height: 100%;
-		background: var(--lime);
-	}
-	.similar-card-foot {
-		display: flex;
-		gap: 10px;
-		font-family: var(--mono);
-		font-size: 8px;
-		color: var(--dim);
-	}
-
 	.stats-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);

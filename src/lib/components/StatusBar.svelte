@@ -29,20 +29,21 @@
 		{#if studio.error}
 			<span class="error" title={studio.error}>connection error</span>
 		{/if}
-		<span class="metric-toggle" role="group" aria-label="Size nodes by">
-			<span class="metric-label">size</span>
-			<button class:active={studio.metric === 'reviews'} onclick={() => studio.setMetric('reviews')}>
-				reviews
-			</button>
-			<button
-				class:active={studio.metric === 'downloads'}
-				onclick={() => studio.setMetric('downloads')}
-			>
-				downloads
-			</button>
-		</span>
+		{#if !studio.categoryFilter}
+			<span class="metric-toggle" role="group" aria-label="Size nodes by">
+				<span class="metric-label">size</span>
+				<button class:active={studio.metric === 'reviews'} onclick={() => studio.setMetric('reviews')}>
+					reviews
+				</button>
+				<button
+					class:active={studio.metric === 'downloads'}
+					onclick={() => studio.setMetric('downloads')}
+				>
+					downloads
+				</button>
+			</span>
+		{/if}
 		<span class="hide-sm"><kbd>⌘K</kbd> search</span>
-		<span class="hide-sm"><kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> views</span>
 		<span class="hide-sm"><kbd>esc</kbd> close</span>
 		<span class="live-line" class:live={studio.isLive}>
 			{studio.isLive ? 'VECTOR STORE CONNECTED' : 'SEEDED DEMO DATA'}

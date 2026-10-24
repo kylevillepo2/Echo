@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
+	import AppFlows from './AppFlows.svelte';
 	import {
 		allMonthIds,
 		coverageMonths,
@@ -75,18 +76,6 @@
 		);
 	}
 
-	function byPartner(appId: string, dir: 'out' | 'in'): PairSummary[] {
-		const groups = new Map<string, FlowAgg[]>();
-		for (const a of aggs.values()) {
-			if (dir === 'out' ? a.s !== appId : a.t !== appId) continue;
-			const partner = dir === 'out' ? a.t : a.s;
-			groups.set(partner, [...(groups.get(partner) ?? []), a]);
-		}
-		return [...groups.entries()]
-			.map(([partner, list]) => (dir === 'out' ? combine(list, appId, partner) : combine(list, partner, appId)))
-			.sort((a, b) => b.value - a.value);
-	}
-
 	/* ----------------------------- edge ----------------------------- */
 
 	const edge = $derived(selection?.type === 'edge' ? selection : null);
@@ -111,8 +100,6 @@
 
 	const appId = $derived(selection?.type === 'app' ? selection.id : null);
 	const app = $derived(appId ? flowNode(appId) : undefined);
-	const losing = $derived(appId ? byPartner(appId, 'out') : []);
-	const winning = $derived(appId ? byPartner(appId, 'in') : []);
 	const appVolume = $derived(app?.observed ? volumeOf(app.id, months) : 0);
 
 	/* --------------------------- overview --------------------------- */
@@ -154,8 +141,13 @@
 	}
 
 	function close() {
-		if (flowsState.selection) flowsState.clearSelection();
+		if (flowsState.selection) returnToApp();
 		else studio.inspectorOpen = false;
+	}
+
+	function returnToApp() {
+		if (studio.selectedApp) flowsState.selectApp(studio.selectedApp.id);
+		else flowsState.clearSelection();
 	}
 </script>
 
@@ -163,15 +155,15 @@
 	{#if edge && forward && backward}
 		<header class="head" style:--accent={reasonColour(topReason(forward.reasons))}>
 			<div class="eyebrow">
-				<button class="crumb" onclick={() => flowsState.clearSelection()}>Flows</button>
+				<button class="crumb" onclick={returnToApp}>{studio.selectedApp?.name ?? 'Flows'}</button>
 				<span class="slash">/</span>
 				<span>{[...layers].map((l) => layerNames[l]).join(' · ') || 'no layers'}</span>
 			</div>
 			<div class="title-row">
 				<h2>
-					<button class="app-link" onclick={() => flowsState.selectApp(edge.s)}>{name(edge.s)}</button>
+					<button class="app-link" onclick={() => studio.selectFlowApp(edge.s)}>{name(edge.s)}</button>
 					<span class="arrow-glyph">→</span>
-					<button class="app-link" onclick={() => flowsState.selectApp(edge.t)}>{name(edge.t)}</button>
+					<button class="app-link" onclick={() => studio.selectFlowApp(edge.t)}>{name(edge.t)}</button>
 				</h2>
 				<button class="close" onclick={close} aria-label="Close">×</button>
 			</div>
@@ -291,7 +283,7 @@
 	{:else if app}
 		<header class="head" style:--accent={app.observed ? 'var(--lime)' : 'var(--muted)'}>
 			<div class="eyebrow">
-				<button class="crumb" onclick={() => flowsState.clearSelection()}>Flows</button>
+				<button class="crumb" onclick={returnToApp}>Flows</button>
 				<span class="slash">/</span>
 				<span>{app.observed ? 'reviewed app' : 'outside app'}</span>
 			</div>
@@ -310,44 +302,7 @@
 		</header>
 
 		<div class="body scroll">
-			{#if !app.observed}
-				<p class="note">
-					We don’t have {app.name}’s own reviews, so this only shows flows its users mention in
-					Spotify, SoundCloud and Audiomack reviews. Moves between {app.name} and other outside apps
-					are invisible.
-				</p>
-			{/if}
-
-			{#each [{ title: 'Losing users to', list: losing, dir: 'out' }, { title: 'Winning users from', list: winning, dir: 'in' }] as group (group.title)}
-				<section class="block">
-					<div class="block-head">
-						<span class="label-dim">{group.title}</span>
-						<span class="soft num">{periodLabel}</span>
-					</div>
-					{#if group.list.length}
-						{@const max = group.list[0].value || 1}
-						<div class="partners">
-							{#each group.list.slice(0, 8) as row (row.s + row.t)}
-								{@const partner = group.dir === 'out' ? row.t : row.s}
-								{@const reasons = sortedReasons(row.reasons).slice(0, 2)}
-								<button class="partner" onclick={() => flowsState.selectEdge(row.s, row.t)}>
-									<span class="p-name">{name(partner)}</span>
-									<span class="p-val num">{row.value.toFixed(1)}</span>
-									<span class="meter" style:color={reasonColour(topReason(row.reasons))}><i style:width="{(row.value / max) * 100}%"></i></span>
-									<span class="p-meta">
-										{fmtCount(row.count)} reviews
-										{#each reasons as [id, n] (id)}
-											<span class="p-reason"><i style:background={reasonColour(id)}></i>{reasonLabel(id)} {n}</span>
-										{/each}
-									</span>
-								</button>
-							{/each}
-						</div>
-					{:else}
-						<p class="muted">None in {periodLabel} for the visible edge types.</p>
-					{/if}
-				</section>
-			{/each}
+			<AppFlows appId={app.id} appName={app.name} />
 		</div>
 	{:else}
 		<header class="head" style:--accent="var(--lime)">
@@ -569,16 +524,6 @@
 		font-size: 9px;
 		color: var(--dim);
 	}
-	.note {
-		margin: 0;
-		padding: 10px 14px;
-		border-bottom: 1px solid var(--line);
-		font-size: 11.5px;
-		line-height: 1.5;
-		color: var(--text-2);
-		background: color-mix(in srgb, var(--amber) 5%, transparent);
-	}
-
 	.stats {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -745,8 +690,7 @@
 		height: 18px;
 		font-size: 8.5px;
 	}
-	.mini-chip i,
-	.p-reason i {
+	.mini-chip i {
 		width: 6px;
 		height: 6px;
 		border-radius: 50%;
@@ -796,13 +740,6 @@
 		font-size: 8.5px;
 		color: var(--dim);
 	}
-	.p-reason {
-		display: inline-flex;
-		align-items: center;
-		gap: 4px;
-		color: var(--muted);
-	}
-
 	.howto {
 		margin: 0;
 		padding-left: 16px;

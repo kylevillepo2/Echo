@@ -1,16 +1,17 @@
 import { createApi, ENV_BASE, normaliseGraph, rollupThemes, type ApiMode } from '#lib/api';
 import type { AppNode, Category, GraphPayload, Review, SearchHit, Theme } from '#lib/api/types';
 import { downloadStats, type DownloadStats } from '#lib/data/downloads';
+import { flowNode } from '#lib/data/flows';
+import { flowsState } from '#lib/state/flows.svelte';
 import { fmtCount, fmtRate } from '#lib/utils/format';
 
 const browser = typeof window !== 'undefined';
 
-export type View = 'network' | 'themes' | 'flows';
 export type ColourMode = 'category' | 'reception' | 'platform';
 export type MetricMode = 'reviews' | 'downloads';
 export type ReviewSort = 'recent' | 'lowest' | 'highest';
 export type SentimentFilter = 'all' | 'positive' | 'neutral' | 'negative';
-export type InspectorTab = 'overview' | 'reviews' | 'similar';
+export type InspectorTab = 'overview' | 'reviews' | 'flows';
 
 const LS_MODE = 'unwrap:mode';
 const LS_BASE = 'unwrap:base';
@@ -35,12 +36,12 @@ class StudioState {
 	error = $state<string | null>(null);
 	syncedAt = $state<number | null>(null);
 
-	view = $state<View>('network');
 	colourMode = $state<ColourMode>('category');
 	metric = $state<MetricMode>('reviews');
 	query = $state('');
 	themeFilter = $state<string | null>(null);
 	categoryFilter = $state<string | null>(null);
+	zoomingCategory = $state<string | null>(null);
 
 	selected = $state<{ kind: 'app'; id: string } | null>(null);
 	hoveredId = $state<string | null>(null);
@@ -55,7 +56,6 @@ class StudioState {
 	connectOpen = $state(false);
 	helpOpen = $state(false);
 	inspectorOpen = $state(true);
-	sidebarOpen = $state(true);
 	inspectorTab = $state<InspectorTab>('overview');
 
 	private api = createApi('demo', '');
@@ -181,13 +181,11 @@ class StudioState {
 		this.setMetric(this.metric === 'reviews' ? 'downloads' : 'reviews');
 	}
 
-	get visibleApps(): AppNode[] {
+	get mapApps(): AppNode[] {
 		const q = this.query.trim().toLowerCase();
 		const theme = this.themeFilter;
-		const category = this.categoryFilter;
 
 		return this.apps.filter((app) => {
-			if (category && app.categoryId !== category) return false;
 			if (theme && !appHasTheme(app, theme)) return false;
 			if (q) {
 				const hit =
@@ -198,6 +196,10 @@ class StudioState {
 			}
 			return true;
 		});
+	}
+
+	get visibleApps(): AppNode[] {
+		return this.mapApps.filter((app) => !this.categoryFilter || app.categoryId === this.categoryFilter);
 	}
 
 	get visibleCategories(): Category[] {
@@ -283,7 +285,6 @@ class StudioState {
 				this.mode = 'live';
 				this.apiBase = ENV_BASE;
 			}
-			this.sidebarOpen = window.innerWidth >= 980;
 			this.inspectorOpen = window.innerWidth >= 1180;
 		} else if (ENV_BASE) {
 			this.mode = 'live';
@@ -327,6 +328,7 @@ class StudioState {
 	}
 
 	async setMode(mode: ApiMode, baseUrl: string) {
+		this.zoomingCategory = null;
 		this.mode = mode;
 		this.apiBase = baseUrl.trim();
 		this.api = createApi(mode, this.apiBase);
@@ -352,12 +354,30 @@ class StudioState {
 	/* --------------------------- selection --------------------------- */
 
 	select(kind: 'app', id: string) {
+		flowsState.clearSelection();
 		this.selected = { kind, id };
+		if (this.categoryFilter) flowsState.selectApp(id);
 		this.inspectorOpen = true;
-		this.inspectorTab = 'overview';
+		this.inspectorTab = (flowNode(id)?.edgeCount ?? 0) > 0 ? 'flows' : 'overview';
 		this.paletteOpen = false;
-		if (browser && window.innerWidth < 980) this.sidebarOpen = false;
 		void this.loadReviews(id);
+	}
+
+	selectFlowApp(id: string) {
+		if (this.apps.some((app) => app.id === id)) {
+			this.select('app', id);
+			return;
+		}
+		// Outside apps have flow evidence, but no app-level metadata or reviews.
+		this.clearSelection();
+		flowsState.selectApp(id);
+		this.inspectorOpen = true;
+		this.paletteOpen = false;
+	}
+
+	appHasReviews(id: string): boolean {
+		return (this.apps.find((app) => app.id === id)?.reviewCount ?? 0) > 0 ||
+			(flowNode(id)?.totalVolume ?? 0) > 0;
 	}
 
 	async loadReviews(appId: string) {
@@ -382,6 +402,7 @@ class StudioState {
 	}
 
 	clearSelection() {
+		flowsState.clearSelection();
 		this.selected = null;
 		this.reviews = [];
 		this.starFilter = null;
@@ -399,29 +420,37 @@ class StudioState {
 
 	/* ---------------------------- filters ---------------------------- */
 
-	setView(view: View) {
-		this.view = view;
-	}
-
 	toggleTheme(id: string) {
 		this.themeFilter = this.themeFilter === id ? null : id;
 	}
 
 	setCategoryFilter(id: string | null) {
+		if (id && id !== this.categoryFilter) {
+			this.zoomingCategory = id;
+			return;
+		}
+		this.zoomingCategory = null;
 		this.categoryFilter = this.categoryFilter === id ? null : id;
 		if (this.categoryFilter) {
 			const app = this.selectedApp;
 			if (app && app.categoryId !== this.categoryFilter) this.clearSelection();
-			if (this.view === 'themes') this.view = 'network';
-			if (browser && window.innerWidth < 980) this.sidebarOpen = false;
 		}
 	}
 
+	finishClusterZoom(id: string) {
+		if (this.zoomingCategory !== id) return;
+		this.zoomingCategory = null;
+		this.categoryFilter = id;
+		this.clearSelection();
+	}
+
 	clearCategoryFilter() {
+		this.zoomingCategory = null;
 		this.categoryFilter = null;
 	}
 
 	clearFilters() {
+		this.zoomingCategory = null;
 		this.query = '';
 		this.themeFilter = null;
 		this.categoryFilter = null;
@@ -452,10 +481,6 @@ class StudioState {
 
 	toggleInspector() {
 		this.inspectorOpen = !this.inspectorOpen;
-	}
-
-	toggleSidebar() {
-		this.sidebarOpen = !this.sidebarOpen;
 	}
 
 	get isLive(): boolean {

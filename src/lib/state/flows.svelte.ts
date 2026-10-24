@@ -35,6 +35,7 @@ class FlowsState {
 	showIntents = $state(false);
 	showPreferences = $state(false);
 	netMode = $state(false);
+	showAllRoutes = $state(false);
 	playing = $state(false);
 
 	selection = $state<FlowSelection>(null);
@@ -65,6 +66,30 @@ class FlowsState {
 
 	get arrows(): FlowArrow[] {
 		return buildArrows(this.aggregates, this.netMode);
+	}
+
+	get availableArrows(): FlowArrow[] {
+		const max = this.scaleMax;
+		return this.arrows.filter((arrow) => arrow.value >= max * 0.004)
+			.sort((a, b) => b.value - a.value || a.key.localeCompare(b.key));
+	}
+
+	/** Keep the overview legible; inspection reveals routes hidden by the summary. */
+	get visibleArrows(): FlowArrow[] {
+		const selection = this.selection;
+		const appId = this.hoveredNode ?? (selection?.type === 'app' ? selection.id : null);
+		if (appId) {
+			const connected = this.arrows.filter((arrow) => arrow.s === appId || arrow.t === appId)
+				.sort((a, b) => b.value - a.value || a.key.localeCompare(b.key));
+			return this.showAllRoutes ? connected : connected.slice(0, 8);
+		}
+		if (selection?.type === 'edge') {
+			return this.arrows.filter((arrow) =>
+				(arrow.s === selection.s && arrow.t === selection.t) ||
+				(arrow.s === selection.t && arrow.t === selection.s)
+			);
+		}
+		return this.showAllRoutes ? this.availableArrows : this.availableArrows.slice(0, 8);
 	}
 
 	/** Max arrow value across coverage months (and the current period), so widths stay

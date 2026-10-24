@@ -5,9 +5,6 @@
 	const shortcuts = [
 		{ keys: ['⌘', 'K'], label: 'Open semantic search' },
 		{ keys: ['/'], label: 'Focus search' },
-		{ keys: ['1'], label: 'Network view' },
-		{ keys: ['2'], label: 'Theme ledger' },
-		{ keys: ['3'], label: 'Switching flows' },
 		{ keys: ['I'], label: 'Toggle inspector' },
 		{ keys: ['↑', '↓'], label: 'Move through results' },
 		{ keys: ['↵'], label: 'Inspect selection' },
@@ -58,8 +55,8 @@
 					<div>
 						<h3>Unwrap</h3>
 						<p>
-							Categories are dashed clusters, apps are circles. Click a cluster to focus only its
-							apps; click an app for reception, themes and raw reviews.
+							Categories are dashed clusters, apps are circles. Click a cluster to open its
+							switching flows; click an app for reception, themes and raw reviews.
 						</p>
 					</div>
 				</div>
@@ -70,7 +67,7 @@
 				<div class="legend-grid">
 					<div class="legend-item">
 						<span class="shape cl"></span>
-						<div><b>Category cluster</b><span>Click to focus only its apps</span></div>
+						<div><b>Category cluster</b><span>Click to open switching flows</span></div>
 					</div>
 					<div class="legend-item">
 						<span class="shape ci"></span>
@@ -93,7 +90,7 @@
 					<li><b>Scroll</b> zoom the map</li>
 					<li><b>Drag</b> pan, or move a node</li>
 					<li><b>Hover</b> preview a node or cluster</li>
-					<li><b>Click a cluster</b> narrow the map to that category</li>
+					<li><b>Click a cluster</b> open flows for that category</li>
 					<li><b>Double-click</b> release a pinned node</li>
 				</ul>
 			</div>

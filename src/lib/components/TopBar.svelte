@@ -4,12 +4,6 @@
 
 <header class="topbar">
 	<div class="left">
-		<button class="icon-btn" onclick={() => studio.toggleSidebar()} aria-label="Toggle category list">
-			<svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-				<path d="M1 3h12M1 7h12M1 11h12" stroke="currentColor" stroke-width="1.3" />
-			</svg>
-		</button>
-
 		<div class="brand">
 			<span class="mark" aria-hidden="true">U</span>
 			<div class="brand-text">
@@ -18,30 +12,6 @@
 			</div>
 		</div>
 	</div>
-
-	<nav class="views" aria-label="Workspace views">
-		<button
-			class:active={studio.view === 'network'}
-			onclick={() => studio.setView('network')}
-			aria-pressed={studio.view === 'network'}
-		>
-			<span class="idx">01</span> Network
-		</button>
-		<button
-			class:active={studio.view === 'themes'}
-			onclick={() => studio.setView('themes')}
-			aria-pressed={studio.view === 'themes'}
-		>
-			<span class="idx">02</span> Themes
-		</button>
-		<button
-			class:active={studio.view === 'flows'}
-			onclick={() => studio.setView('flows')}
-			aria-pressed={studio.view === 'flows'}
-		>
-			<span class="idx">03</span> Flows
-		</button>
-	</nav>
 
 	<div class="right">
 		<button class="source" onclick={() => (studio.connectOpen = true)} title="Data source">
@@ -145,49 +115,6 @@
 		text-transform: uppercase;
 		color: var(--dim);
 		margin-top: 3px;
-	}
-
-	.views {
-		display: flex;
-		align-items: center;
-		gap: 2px;
-		padding: 2px;
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		background: var(--bg-soft);
-		margin-left: 4px;
-	}
-	.views button {
-		display: flex;
-		align-items: center;
-		gap: 7px;
-		height: 26px;
-		padding: 0 11px;
-		border-radius: 1px;
-		font-family: var(--mono);
-		font-size: 10.5px;
-		font-weight: 500;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: var(--muted);
-		transition:
-			background var(--fast),
-			color var(--fast);
-	}
-	.views button:hover {
-		color: var(--text);
-	}
-	.views button.active {
-		background: var(--panel-3);
-		color: var(--text);
-		box-shadow: inset 0 -1px 0 var(--lime);
-	}
-	.idx {
-		font-size: 8.5px;
-		color: var(--dim);
-	}
-	.views button.active .idx {
-		color: var(--lime);
 	}
 
 	.right {
@@ -299,12 +226,6 @@
 		}
 	}
 	@media (max-width: 720px) {
-		.views button {
-			padding: 0 8px;
-		}
-		.idx {
-			display: none;
-		}
 		.source-mode {
 			display: none;
 		}

@@ -1,9 +1,14 @@
 <script lang="ts">
 	import { onMount, untrack } from 'svelte';
+	import { cubicInOut } from 'svelte/easing';
 	import { studio } from '#lib/state/studio.svelte';
+	import { flowsState } from '#lib/state/flows.svelte';
+	import { flows, legendReasons } from '#lib/data/flows';
+	import FlowOverlay from './FlowOverlay.svelte';
 	import { Simulation, boundsOf, type SimLink, type SimNode } from '#lib/utils/force';
 	import { platformColor, receptionColor } from '#lib/utils/palette';
 	import { fmtCount, fmtRate, initials } from '#lib/utils/format';
+	import { layoutNodeLabels } from '#lib/utils/labels';
 	import Stars from './Stars.svelte';
 
 	let stage: HTMLDivElement;
@@ -29,23 +34,32 @@
 	let frame = 0;
 	let needsFit = true;
 	let lastLayoutKey = '';
+	let zoomFrame = 0;
+	let zooming = $state(false);
+	let hasClusterZoom = false;
 
-	const appMap = $derived(new Map(studio.visibleApps.map((a) => [a.id, a])));
+	const appMap = $derived(new Map(studio.mapApps.map((a) => [a.id, a])));
 	const allApps = $derived(new Map(studio.apps.map((a) => [a.id, a])));
 	const categoryMap = $derived(new Map(studio.categories.map((c) => [c.id, c])));
+	const mapCategories = $derived(studio.categories.filter((c) => studio.mapApps.some((app) => app.categoryId === c.id)));
+	const hasFlowData = $derived(studio.categoryApps.some((app) => flows.meta.observed.includes(app.id)));
 
 	const appNodes = $derived.by(() => {
 		tick;
-		return nodes.filter((n) => n.kind === 'app');
+		return nodes.filter((n) => n.kind === 'app').map((node) => ({ ...node }));
 	});
 	const viewLinks = $derived.by(() => {
 		tick;
-		return links;
+		return links.map((link) => ({ ...link, source: { ...link.source }, target: { ...link.target } }));
 	});
 	const isFocused = $derived(Boolean(studio.categoryFilter));
+	const connectedFlowIds = $derived(new Set(
+		(isFocused && hasFlowData ? flowsState.visibleArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
+	));
+	const activeClusterId = $derived(studio.zoomingCategory ?? studio.categoryFilter);
 
 	const signature = $derived(
-		`${studio.graph?.meta.generatedAt ?? ''}|${studio.categoryFilter ?? 'all'}|${studio.visibleApps.map((a) => a.id).join(',')}`
+		`${studio.graph?.meta.generatedAt ?? ''}|${studio.mapApps.map((a) => a.id).join(',')}`
 	);
 
 	const focusId = $derived(hovered ?? studio.selected?.id ?? null);
@@ -76,7 +90,15 @@
 		pointer.y > height - 150 ? Math.max(8, pointer.y - 136) : pointer.y + 16
 	);
 
-	const showLabels = $derived(isFocused || scale > 1.02);
+	const showLabels = $derived(isFocused || (!activeClusterId && scale > 1.02));
+	const appLabels = $derived(isFocused
+		? layoutNodeLabels(
+			appNodes.filter((node) => node.clusterId === studio.categoryFilter && appHasContent(node.id)),
+			(node) => shortName(appMap.get(node.id)?.name ?? allApps.get(node.id)?.name ?? node.id),
+			10 / scale,
+			6 / scale
+		)
+		: null);
 
 	interface ClusterView {
 		id: string;
@@ -88,12 +110,11 @@
 		count: number;
 	}
 
-	/** Hulls wrap the settled node positions tightly. In the overview the
-	 *  sidebar is the cluster legend; the focused hull gets an inline label. */
+	/** Hulls wrap the settled node positions without changing the overview layout. */
 	const clusters = $derived.by(() => {
 		tick;
 		const out: ClusterView[] = [];
-		for (const category of studio.visibleCategories) {
+		for (const category of mapCategories) {
 			const members = nodes.filter((n) => n.clusterId === category.id);
 			if (!members.length) continue;
 			const x = members.reduce((sum, n) => sum + n.x, 0) / members.length;
@@ -129,7 +150,84 @@
 		}
 	});
 
-	onMount(() => () => cancelAnimationFrame(frame));
+	onMount(() => () => {
+		cancelAnimationFrame(frame);
+		cancelAnimationFrame(zoomFrame);
+	});
+
+	$effect(() => {
+		const id = studio.zoomingCategory;
+		if (!id) return;
+		untrack(() => zoomToCluster(id));
+		return () => {
+			cancelAnimationFrame(zoomFrame);
+			zooming = false;
+		};
+	});
+
+	$effect(() => {
+		const focused = studio.categoryFilter || studio.zoomingCategory;
+		if (!focused) untrack(() => {
+			if (!hasClusterZoom) return;
+			hasClusterZoom = false;
+			const main = stage.closest('main');
+			const toolbar = stage.closest('.network')?.querySelector<HTMLElement>(':scope > .toolbar');
+			// Fit the final overview viewport, not the still-collapsing flow timeline.
+			animateCamera(overviewTarget(
+				main?.clientWidth ?? width,
+				main ? main.clientHeight - (toolbar?.getBoundingClientRect().height ?? 42) : height
+			));
+		});
+	});
+
+	function zoomToCluster(id: string) {
+		const cluster = clusters.find((c) => c.id === id);
+		if (!cluster) {
+			studio.finishClusterZoom(id);
+			return;
+		}
+		hasClusterZoom = true;
+		const hasData = studio.appsForCategory(id).some((app) => flows.meta.observed.includes(app.id));
+		const availableHeight = Math.max(180, height - (hasData && !studio.categoryFilter ? 145 : 0));
+		const targetScale = Math.min(width, availableHeight) / (cluster.radius * (hasData ? 3.6 : 2.3));
+		animateCamera({ x: cluster.x, y: cluster.y, scale: targetScale }, () => studio.finishClusterZoom(id));
+	}
+
+	function animateCamera(target: { x: number; y: number; scale: number }, done?: () => void) {
+		cancelAnimationFrame(zoomFrame);
+		cancelAnimationFrame(frame);
+		hovered = null;
+		hoveredCluster = null;
+		dragging = null;
+		panning = null;
+		zooming = true;
+		const start = { x: camX, y: camY, scale };
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+			camX = target.x;
+			camY = target.y;
+			scale = target.scale;
+			zooming = false;
+			done?.();
+			return;
+		}
+		const started = performance.now();
+		const animate = (now: number) => {
+			const progress = Math.min(1, (now - started) / 650);
+			const eased = cubicInOut(progress);
+			camX = start.x + (target.x - start.x) * eased;
+			camY = start.y + (target.y - start.y) * eased;
+			scale = start.scale * Math.pow(target.scale / start.scale, eased);
+			if (progress < 1) zoomFrame = requestAnimationFrame(animate);
+			else {
+				camX = target.x;
+				camY = target.y;
+				scale = target.scale;
+				zooming = false;
+				done?.();
+			}
+		};
+		zoomFrame = requestAnimationFrame(animate);
+	}
 
 	function desiredHullRadius(count: number, focused: boolean): number {
 		return focused ? 100 + Math.sqrt(count) * 58 : 44 + Math.sqrt(count) * 22;
@@ -229,9 +327,10 @@
 	}
 
 	function rebuild() {
-		const apps = studio.visibleApps;
-		const categories = studio.visibleCategories;
-		const edges = studio.visibleEdges;
+		const apps = studio.mapApps;
+		const categories = mapCategories;
+		const ids = new Set(apps.map((app) => app.id));
+		const edges = (studio.graph?.edges ?? []).filter((edge) => ids.has(edge.source) && ids.has(edge.target));
 
 		const previous = new Map(nodes.map((n) => [n.id, { x: n.x, y: n.y }]));
 		const maxMetric = Math.max(...apps.map((a) => studio.metricValue(a)), 1);
@@ -327,15 +426,26 @@
 
 	function fitView() {
 		if (!nodes.length || !width || !height) return;
+		const focusedCluster = clusters.find((cluster) => cluster.id === studio.categoryFilter);
+		if (focusedCluster) {
+			animateCamera({ x: focusedCluster.x, y: focusedCluster.y, scale: Math.min(width, height) / (focusedCluster.radius * (hasFlowData ? 3.6 : 2.3)) });
+			return;
+		}
+		const target = overviewTarget(width, height);
+		scale = target.scale;
+		camX = target.x;
+		camY = target.y;
+	}
+
+	function overviewTarget(viewWidth: number, viewHeight: number) {
 		const bounds = boundsOf(nodes);
-		const padding = isFocused ? 100 : 110;
-		const hullPad = isFocused ? desiredHullRadius(nodes.length, true) : 30;
-		const spanX = Math.max(180, bounds.maxX - bounds.minX + padding, hullPad * 2 + padding);
-		const spanY = Math.max(180, bounds.maxY - bounds.minY + padding, hullPad * 2 + padding);
-		const nextScale = Math.min(width / spanX, height / spanY, isFocused ? 1.2 : 1.15);
-		scale = Math.max(0.22, nextScale);
-		camX = (bounds.minX + bounds.maxX) / 2;
-		camY = (bounds.minY + bounds.maxY) / 2;
+		const spanX = Math.max(180, bounds.maxX - bounds.minX + 110);
+		const spanY = Math.max(180, bounds.maxY - bounds.minY + 110);
+		return {
+			x: (bounds.minX + bounds.maxX) / 2,
+			y: (bounds.minY + bounds.maxY) / 2,
+			scale: Math.max(0.22, Math.min(viewWidth / spanX, viewHeight / spanY, 1.15))
+		};
 	}
 
 	function zoomAt(factor: number, sx = width / 2, sy = height / 2) {
@@ -356,7 +466,8 @@
 	function onBackgroundDown(event: PointerEvent) {
 		if (event.button !== 0) return;
 		const target = event.target as Element;
-		if (target.closest('.node') || target.closest('.cluster')) return;
+		if (target.closest('.node') || target.closest('.cluster') || target.closest('.flow-overlay')) return;
+		if (isFocused) flowsState.clearSelection();
 		panning = { sx: event.clientX, sy: event.clientY, camX, camY };
 	}
 
@@ -386,6 +497,9 @@
 			dragging.moved = true;
 			node.fx = camX + (event.clientX - rect.left - width / 2) / scale;
 			node.fy = camY + (event.clientY - rect.top - height / 2) / scale;
+			node.x = node.fx;
+			node.y = node.fy;
+			tick += 1;
 		}
 	}
 
@@ -396,17 +510,23 @@
 		dragging = null;
 		if (!finished.moved) {
 			const node = nodes.find((n) => n.id === finished.id);
-			if (node) studio.select('app', node.id);
-		} else {
+			if (node) selectApp(node.id);
+		} else if (!isFocused) {
 			simulation?.reheat(0.35);
+			startLoop();
 		}
 	}
 
 	function unpin(event: MouseEvent, node: SimNode) {
 		event.stopPropagation();
-		node.fx = null;
-		node.fy = null;
-		simulation?.reheat(0.6);
+		const original = nodes.find((candidate) => candidate.id === node.id);
+		if (!original) return;
+		original.fx = null;
+		original.fy = null;
+		if (!isFocused) {
+			simulation?.reheat(0.6);
+			startLoop();
+		}
 	}
 
 	function focusCluster(event: MouseEvent, id: string) {
@@ -416,6 +536,10 @@
 
 	function shortName(name: string): string {
 		return name.length > 16 ? `${name.slice(0, 15).trimEnd()}…` : name;
+	}
+
+	function selectApp(id: string) {
+		studio.select('app', id);
 	}
 
 	/* ---------------------------- styling --------------------------- */
@@ -429,13 +553,26 @@
 	}
 
 	function nodeOpacity(node: SimNode): number {
+		if (activeClusterId && node.clusterId !== activeClusterId) return 0;
+		if (isFocused) {
+			const selection = flowsState.selection;
+			if (selection?.type === 'edge') return node.id === selection.s || node.id === selection.t ? 1 : 0.35;
+			return 1;
+		}
 		if (!focusId) return 1;
 		if (!focusSet.has(node.id)) return 0.22;
 		return 1;
 	}
 
+	function appHasContent(id: string): boolean {
+		return studio.appHasReviews(id) || connectedFlowIds.has(id);
+	}
+
 	function edgeOpacity(link: SimLink): number {
-		const base = isFocused ? 0.34 : 0.13;
+		if (!appHasContent(link.source.id) || !appHasContent(link.target.id)) return 0;
+		if (activeClusterId && (link.source.clusterId !== activeClusterId || link.target.clusterId !== activeClusterId)) return 0;
+		if (isFocused) return hasFlowData ? 0 : 0.18;
+		const base = 0.13;
 		if (!focusId) return base;
 		const active = link.source.id === focusId || link.target.id === focusId;
 		return active ? 0.9 : 0.05;
@@ -457,7 +594,7 @@
 
 <svelte:window onpointermove={onPointerMove} onpointerup={onPointerUp} />
 
-<div class="stage" bind:this={stage} bind:clientWidth={width} bind:clientHeight={height}>
+<div class="stage" class:zooming class:focused={isFocused} bind:this={stage} bind:clientWidth={width} bind:clientHeight={height}>
 	<svg
 		class="canvas"
 		role="img"
@@ -482,11 +619,13 @@
 						<g
 							class="cluster"
 							class:focused
-							class:hovered={hoveredCluster === cluster.id}
+							class:hovered={hoveredCluster === cluster.id || studio.zoomingCategory === cluster.id}
+							class:receding={Boolean(activeClusterId && activeClusterId !== cluster.id)}
 							style:--accent={category.accent}
 							role="button"
-							tabindex="0"
-							aria-label="Focus {category.name} cluster, {cluster.count} apps"
+							tabindex={activeClusterId && activeClusterId !== cluster.id ? -1 : 0}
+							aria-hidden={Boolean(activeClusterId && activeClusterId !== cluster.id)}
+							aria-label="Open flows for {category.name}, {cluster.count} apps"
 							onpointerenter={() => (hoveredCluster = cluster.id)}
 							onpointerleave={() => (hoveredCluster = null)}
 							onclick={(event) => focusCluster(event, cluster.id)}
@@ -509,26 +648,6 @@
 								stroke-dasharray={focused ? undefined : '2 5'}
 								vector-effect="non-scaling-stroke"
 							/>
-							{#if isFocused}
-								<text
-									class="cluster-name"
-									x={cluster.x}
-									y={cluster.y - cluster.radius + 22}
-									text-anchor="middle"
-									fill={category.accent}
-								>
-									{cluster.name}
-								</text>
-								<text
-									class="cluster-meta"
-									x={cluster.x}
-									y={cluster.y - cluster.radius + 38}
-									text-anchor="middle"
-									fill="var(--muted)"
-								>
-									{cluster.count} apps · reception {cluster.reception}
-								</text>
-							{/if}
 						</g>
 					{/if}
 				{/each}
@@ -537,6 +656,7 @@
 			<g class="edges">
 				{#each viewLinks as link, index (`${link.source.id}-${link.target.id}-${index}`)}
 					<line
+						class:outside-cluster={Boolean(activeClusterId && (link.source.clusterId !== activeClusterId || link.target.clusterId !== activeClusterId))}
 						x1={link.source.x}
 						y1={link.source.y}
 						x2={link.target.x}
@@ -550,30 +670,40 @@
 				{/each}
 			</g>
 
+			{#if isFocused && hasFlowData}
+				{@const cluster = clusters.find((cluster) => cluster.id === studio.categoryFilter)}
+				{#if cluster}
+					<FlowOverlay nodes={appNodes} {cluster} {scale} />
+				{/if}
+			{/if}
+
 			<g class="app-layer">
 				{#each appNodes as node, index (node.id)}
 					{@const app = appMap.get(node.id) ?? allApps.get(node.id)}
 					{@const color = colorFor(node)}
-					{@const selected = studio.selected?.kind === 'app' && studio.selected.id === node.id}
+					{@const label = appLabels?.get(node.id)}
+					{@const selected = isFocused && flowsState.selection?.type === 'app' ? flowsState.selection.id === node.id : studio.selected?.kind === 'app' && studio.selected.id === node.id}
 					{@const circumference = 2 * Math.PI * (node.radius + 3.5)}
-					{#if app}
+					{#if app && appHasContent(node.id)}
 						<g
 							class="node app"
 							class:selected
 							class:dimmed={focusId !== null && !focusSet.has(node.id)}
+							class:outside-cluster={Boolean(activeClusterId && node.clusterId !== activeClusterId)}
 							style:opacity={nodeOpacity(node)}
 							transform="translate({node.x},{node.y})"
 							role="button"
-							tabindex="0"
+							tabindex={activeClusterId && node.clusterId !== activeClusterId ? -1 : 0}
+							aria-hidden={Boolean(activeClusterId && node.clusterId !== activeClusterId)}
 							aria-label="{app.name}, {app.categoryName}, reception {app.reception} of 100"
 							onpointerdown={(event) => startDrag(event, node)}
-							onpointerenter={() => (hovered = node.id)}
-							onpointerleave={() => (hovered = null)}
+							onpointerenter={() => { hovered = node.id; if (hasFlowData) flowsState.hoveredNode = node.id; }}
+							onpointerleave={() => { hovered = null; flowsState.hoveredNode = null; }}
 							onclick={(event) => event.stopPropagation()}
 							onkeydown={(event) => {
 								if (event.key === 'Enter' || event.key === ' ') {
 									event.preventDefault();
-									studio.select('app', node.id);
+									selectApp(node.id);
 								}
 							}}
 							ondblclick={(event) => unpin(event, node)}
@@ -619,11 +749,13 @@
 							</text>
 							<text
 								class="app-label"
-								class:soft={!showLabels && hovered !== node.id && !selected}
-								text-anchor="middle"
-								y={index % 2 === 0 ? node.radius + 13 : -(node.radius + 7)}
+								class:soft={(!showLabels && hovered !== node.id && !selected) || (label && !label.visible)}
+								text-anchor={label?.anchor ?? 'middle'}
+								x={label?.x ?? 0}
+								y={label?.y ?? (index % 2 === 0 ? node.radius + 13 : -(node.radius + 7))}
 								fill="var(--muted)"
-								font-size="8.5"
+								font-size={isFocused ? 10 / scale : 8.5}
+								style:stroke-width="{isFocused ? 3 / scale : 3.5}px"
 								font-family="var(--mono)"
 							>
 								{shortName(app.name)}
@@ -682,13 +814,26 @@
 					<span class="tt-muted">{fmtCount(hoveredCategoryDownloads.installs)} installs</span>
 				</div>
 			{/if}
-			<div class="tt-hint">
-				{studio.categoryFilter === hoveredCategory.id ? 'click to show all clusters' : 'click to focus cluster →'}
-			</div>
+			<div class="tt-hint">click to open flows →</div>
 		</div>
 	{/if}
 
-	<div class="legend">
+	<div class="legend" class:flow-legend={isFocused && hasFlowData}>
+		{#if isFocused && hasFlowData}
+			<div class="route-density" role="group" aria-label="Flow route density">
+				<button class:active={!flowsState.showAllRoutes} aria-pressed={!flowsState.showAllRoutes} onclick={() => (flowsState.showAllRoutes = false)} title="Show the eight strongest routes; hover or select an app to explore its connections">Top routes</button>
+				<button class:active={flowsState.showAllRoutes} aria-pressed={flowsState.showAllRoutes} onclick={() => (flowsState.showAllRoutes = true)}>All routes</button>
+				<span class="num">{flowsState.visibleArrows.length} shown</span>
+			</div>
+			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
+			<div class="legend-row"><span>width = weight / 10k reviews · hollow nodes = outside apps</span></div>
+			<div class="legend-hint">hover an app to reveal routes · click to pin</div>
+			<div class="flow-reasons">
+				{#each legendReasons as reason (reason.id)}
+					<span><i style:background={reason.colour}></i>{reason.label}</span>
+				{/each}
+			</div>
+		{:else}
 		<div class="legend-row">
 			<span class="shape cl"></span><span>category cluster</span>
 			<span class="shape ci"></span><span>app · size = {studio.metric === 'downloads' ? 'downloads' : 'review volume'}</span>
@@ -697,8 +842,13 @@
 			<span class="line sim"></span><span>semantic similarity</span>
 			<span class="line cross"></span><span>cross-category</span>
 		</div>
-		<div class="legend-hint">click a cluster to focus · scroll zoom · drag pan</div>
+		<div class="legend-hint">click a cluster for flows · scroll zoom · drag pan</div>
+		{/if}
 	</div>
+
+	{#if isFocused && !hasFlowData}
+		<div class="no-flows"><span class="label">No switching data for this cluster yet</span><p>The network stays visible. Flow data currently covers Entertainment.</p></div>
+	{/if}
 
 	<div class="controls">
 		<button onclick={() => zoomAt(1.3)} aria-label="Zoom in">+</button>
@@ -733,6 +883,20 @@
 	.stage:active {
 		cursor: grabbing;
 	}
+	.stage.zooming {
+		pointer-events: none;
+	}
+	.zooming .legend,
+	.zooming .controls,
+	.zooming .readout {
+		opacity: 0;
+		transition: opacity 180ms;
+	}
+	.cluster.receding {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
 
 	.canvas {
 		display: block;
@@ -761,30 +925,69 @@
 		stroke: var(--text);
 		stroke-width: 1.5;
 	}
-	.cluster-name,
-	.cluster-meta {
-		pointer-events: none;
-		font-family: var(--mono);
-		paint-order: stroke;
-		stroke: var(--bg);
-		stroke-width: 4px;
-		stroke-linejoin: round;
-	}
-	.cluster-name {
-		font-size: 12px;
-		font-weight: 600;
-		letter-spacing: 0.07em;
-		text-transform: uppercase;
-	}
-	.cluster-meta {
-		font-size: 9.5px;
-		letter-spacing: 0.03em;
-	}
-
 	.node {
 		cursor: pointer;
 		transition: opacity 180ms var(--ease);
 		outline: none;
+	}
+	.outside-cluster {
+		visibility: hidden;
+		pointer-events: none;
+	}
+	.flow-reasons {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px 10px;
+		max-width: 440px;
+	}
+	.route-density {
+		display: flex;
+		align-items: center;
+		gap: 3px;
+		margin-bottom: 4px;
+		pointer-events: auto;
+	}
+	.route-density button {
+		padding: 4px 7px;
+		border: 1px solid var(--line);
+		border-radius: 2px;
+		font: inherit;
+		color: var(--muted);
+		background: var(--panel);
+	}
+	.route-density button.active {
+		color: var(--lime);
+		border-color: var(--line-strong);
+		background: var(--panel-3);
+	}
+	.route-density > span {
+		margin-left: 6px;
+		color: var(--dim);
+	}
+	.flow-reasons span {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+	}
+	.flow-reasons i {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+	}
+	.no-flows {
+		position: absolute;
+		top: 12px;
+		left: 14px;
+		max-width: calc(100% - 28px);
+		padding: 10px 12px;
+		background: var(--panel);
+		border: 1px solid var(--line);
+		pointer-events: none;
+	}
+	.no-flows p {
+		margin: 5px 0 0;
+		font-size: 11px;
+		color: var(--muted);
 	}
 	.node .init {
 		pointer-events: none;
@@ -992,6 +1195,9 @@
 		letter-spacing: 0.06em;
 		pointer-events: none;
 	}
+	.focused .readout {
+		display: none;
+	}
 
 	.empty {
 		position: absolute;
@@ -1023,6 +1229,19 @@
 	@media (max-width: 720px) {
 		.legend {
 			display: none;
+		}
+		.legend.flow-legend {
+			display: flex;
+			max-width: calc(100% - 75px);
+			padding: 6px;
+		}
+		.flow-legend .legend-row,
+		.flow-legend .flow-reasons,
+		.flow-legend .legend-hint {
+			display: none;
+		}
+		.route-density {
+			margin-bottom: 0;
 		}
 	}
 </style>
