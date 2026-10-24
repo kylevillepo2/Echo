@@ -1,0 +1,61 @@
+row,story,group,feedback_id,reviewed_app,mentioned_app,model_relation,model_reasons,evidence
+1,rides,other,67088369,Uber,Lyft,neutral_comparison,account_security_trust,@uber and @lyft do not care about the Safety of their Drivers
+2,browsers,intent,80614317,Brave,Chrome,leaving_for,,probably will replace the Chrome in some time
+3,payments,intent,90556608,Cash App,Chime,leaving_for,account_security_trust;customer_support,I'll be deleting and sticking with Chime
+4,browsers,switch,243052912,Brave,Chrome,came_from,ads,previously I use chrome as my default browser but when I switched to brave
+5,payments,other,131617816,Chime,Cash App,not_a_switch_reference,,I linked my account from Cash App to it to make payments
+6,payments,switch,35949071,Venmo,Cash App,returned_from,bugs_performance,Going back to Cash app where I have had zero issues!
+7,rides,other,352220209,Uber,Lyft,neutral_comparison,price_fees,Lyft may be a little more
+8,rides,intent,88994588,Uber,Lyft,leaving_for,speed_availability,Seeing how good Lyft is doing next time.
+9,rides,preference,78315720,Uber,Lyft,prefers_mentioned,price_fees,lyft is cheaper even with Uber one
+10,browsers,preference,44236102,Brave,Chrome,prefers_reviewed,account_security_trust;speed_availability,Much better than chrome
+11,browsers,switch,39496326,Brave,Chrome,came_from,content_selection,"after getting cheesed off with so much junk in Chrome, ""trending"" being the latest irritation"
+12,rides,preference,70240687,Uber,Lyft,prefers_mentioned,price_fees;customer_support,Lyft is better than Uber.
+13,payments,preference,68285881,Cash App,Chime,prefers_mentioned,bugs_performance,Download chime or netspend. It's simple this app stay faulty
+14,payments,preference,159189790,Venmo,Cash App,prefers_mentioned,bugs_performance,"Use Google/Apple Pay, chime or cashapp. Better platforms than Venmo."
+15,browsers,intent,39653970,Brave,Chrome,leaving_for,bugs_performance,I'm getting to the point where I'm just going to keep using chrome since all the videos work
+16,payments,other,234095758,Venmo,Cash App,neutral_comparison,,"works like any electronic banking app: cashapp, PayPal etc."
+17,rides,switch,212505216,Uber,Lyft,left_for,customer_support,I now use Lyft and the one time I had an issue I was assured the driver would be permanently banned from driving for them.
+18,browsers,intent,143218829,Brave,Chrome,leaving_for,bugs_performance,Please don't make me go back to Chrome or Safari
+19,payments,switch,165689859,Cash App,Venmo,returned_from,bugs_performance,Switching back to cash app
+20,browsers,other,44236047,Brave,Chrome,not_a_switch_reference,,all chrome plug-ins work without issue
+21,browsers,other,36373635,Brave,Chrome,not_a_switch_reference,,Imported all my chrome bookmarks and added my favorite chrome extensions.
+22,browsers,switch,147027971,Brave,Chrome,came_from,ads,First time was when Chrome became a pop-up nightmare in 2017
+23,rides,intent,90069197,Uber,Lyft,leaving_for,price_fees,Maybe I should look  into using Lyft
+24,rides,switch,251160786,Uber,Lyft,left_for,speed_availability,Then I tried Lyft and a car picked me up within 10 min. I'm using Lyft from now on.
+25,rides,intent,131992410,Uber,Lyft,leaving_for,speed_availability;other,I'll be moving to Lyft.
+26,rides,intent,91472622,Uber,Lyft,leaving_for,speed_availability,I will be trying Lyft
+27,browsers,switch,132636624,Brave,Chrome,came_from,,transfering from any other chrome or browser to Brave
+28,browsers,preference,37718800,Brave,Chrome,prefers_reviewed,ads,sure beats the hell out of Chrome
+29,payments,switch,82726204,Venmo,Cash App,left_for,speed_availability,I've been sticking to cashapp
+30,payments,preference,75501068,Chime,Venmo,prefers_mentioned,account_security_trust;speed_availability;customer_support,Do not download this app do Cash App or Venmo
+31,payments,switch,152478389,Venmo,Chime,left_for,account_security_trust,I switched to zelle and chime
+32,payments,switch,44638006,Chime,Venmo,came_from,,all the way from venmo to cashapp
+33,browsers,switch,47506873,Brave,Chrome,came_from,,I've switched from Firefox and chrome to this
+34,payments,other,220881743,Venmo,Cash App,not_a_switch_reference,,LIKE I DID CASHAPP
+35,payments,switch,39981724,Cash App,Venmo,left_for,account_security_trust;customer_support,I switch to venmo way better
+36,browsers,intent,86146666,Brave,Chrome,leaving_for,missing_features_limits;policy_privacy,may just use Chrome itself instead of this.
+37,rides,switch,143878009,Uber,Lyft,left_for,policy_privacy,I switch to lyft no bs just the ride
+38,browsers,other,94759578,Brave,Chrome,not_a_switch_reference,,i can open it in chrome
+39,rides,preference,64113028,Uber,Lyft,prefers_reviewed,price_fees,Affordable more so ever being compared to it's biggest competitor Lyft
+40,rides,switch,164712561,Uber,Lyft,left_for,price_fees;account_security_trust,Moving on to Lyft and doordash
+41,payments,intent,75216023,Cash App,Venmo,leaving_for,account_security_trust,Headed to Venmo or chime
+42,payments,other,90558948,Venmo,Chime,not_a_switch_reference,,my chime debit card
+43,browsers,switch,190849806,Brave,Chrome,came_from,,I used to continue crome morr than 12 years. officially im shifting on Brave.
+44,payments,intent,111115697,Venmo,Cash App,leaving_for,speed_availability;missing_features_limits,I will be trying the cashapp card now
+45,payments,switch,41047222,Chime,Cash App,came_from,,"I used to have cash app and once I tried Chime, I never went back!"
+46,browsers,switch,163321087,Brave,Chrome,came_from,,Even switched my mom over to it from chrome
+47,rides,switch,163189182,Uber,Lyft,left_for,speed_availability;customer_support,Fortunately Lyft came to the rescue
+48,browsers,other,45682935,Brave,Chrome,neutral_comparison,,Excellent alternative to Chrome
+49,rides,switch,87876187,Uber,Lyft,left_for,policy_privacy,Use Lyft the Uber CEO tells Trump his company supports the MAGA reconciliation bill (that will strip millions of healthcare and food support) UNINSTALLED!
+50,rides,switch,161181097,Uber,Lyft,left_for,account_security_trust,this is why I switched to Lyft
+51,rides,other,175252971,Uber,Lyft,neutral_comparison,policy_privacy,LYFT DONATED 1 MILLION TO THE ACLU
+52,browsers,preference,115394250,Brave,Chrome,prefers_reviewed,,Better than Google Chrome!
+53,rides,preference,204777364,Uber,Lyft,prefers_reviewed,price_fees,a lot cheaper than Lyft now days
+54,payments,intent,53520940,Venmo,Cash App,leaving_for,account_security_trust;customer_support,I think I might switch to cash app
+55,browsers,switch,89375153,Brave,Chrome,came_from,bugs_performance;ads,I used to use edge firefox whale and chrome
+56,rides,other,51755461,Uber,Lyft,uses_both,speed_availability,had to get lyft
+57,payments,switch,132309521,Venmo,Cash App,left_for,account_security_trust;missing_features_limits,CANCELING VENMO & RETURNING TO CASH APP!!!
+58,rides,switch,175255036,Uber,Lyft,left_for,speed_availability,Had to instead book a Lyft
+59,payments,preference,34005656,Cash App,Venmo,prefers_mentioned,customer_support;account_security_trust,GO TO VENMO ITS BETTER
+60,browsers,preference,88594251,Brave,Chrome,prefers_mentioned,missing_features_limits,in chrome we can clear tab group but in brave tab sticks

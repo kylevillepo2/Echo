@@ -1,0 +1,2151 @@
+{
+  "version": 1,
+  "description": "App categories for the switching graph. A review of app A is a candidate when it names another app in A's category (another reviewed app or an outside competitor). Aliases are Python regexes, matched case-insensitively; wrap a part in (?-i:...) to make it case-sensitive. Every alias must sit on word boundaries (enforced in code). Longer matches win over overlapping shorter ones (e.g. 'Uber Eats' over 'Uber').",
+  "app_merges": {
+    "Hoopla Digital": "Hoopla"
+  },
+  "categories": {
+    "music": {
+      "label": "Music streaming",
+      "apps": [
+        "Spotify",
+        "Audiomack",
+        "SoundCloud"
+      ],
+      "competitors": [
+        "Apple Music",
+        "YouTube Music",
+        "YouTube",
+        "Amazon Music",
+        "Pandora",
+        "Tidal",
+        "Deezer",
+        "Boomplay",
+        "Anghami",
+        "JioSaavn",
+        "Musi",
+        "iHeartRadio",
+        "Bandcamp",
+        "Qobuz"
+      ],
+      "aliases": {
+        "_": "Defined in music_edge_extraction.py (MUSIC_APPS); labels reused from out/results/full_gpt-6-luna.jsonl"
+      },
+      "reuse": "music_edge_extraction"
+    },
+    "payments_banking": {
+      "label": "Payments & banking",
+      "apps": [
+        "Cash App",
+        "PayPal",
+        "Venmo",
+        "Chime",
+        "Dave",
+        "Capital One Mobile",
+        "Bank of America Mobile Banking",
+        "Intuit Credit Karma"
+      ],
+      "competitors": [
+        "Zelle",
+        "Apple Pay",
+        "Apple Card",
+        "Google Pay",
+        "Wise",
+        "Remitly",
+        "Western Union",
+        "MoneyGram",
+        "Revolut",
+        "SoFi",
+        "Varo",
+        "MoneyLion",
+        "Brigit",
+        "EarnIn",
+        "Klover",
+        "Cleo",
+        "Chase",
+        "Wells Fargo",
+        "Citi",
+        "Discover",
+        "Navy Federal",
+        "USAA",
+        "Ally",
+        "PNC",
+        "TD Bank",
+        "US Bank",
+        "Green Dot",
+        "Go2Bank",
+        "Netspend",
+        "Experian",
+        "Credit Sesame",
+        "NerdWallet",
+        "Klarna",
+        "Afterpay",
+        "Affirm",
+        "Robinhood"
+      ],
+      "aliases": {
+        "Cash App": [
+          "cash\\s?app"
+        ],
+        "PayPal": [
+          "pay\\s?pal"
+        ],
+        "Venmo": [
+          "venmo"
+        ],
+        "Chime": [
+          "\\bchime\\b"
+        ],
+        "Dave": [
+          "(?-i:\\bDave\\b)",
+          "dave app",
+          "dave\\.com"
+        ],
+        "Capital One Mobile": [
+          "capital\\s?one",
+          "\\bcap\\s?one\\b",
+          "\\bcap1\\b"
+        ],
+        "Bank of America Mobile Banking": [
+          "bank\\s?of\\s?america",
+          "\\bbofa\\b",
+          "\\bboa\\b"
+        ],
+        "Intuit Credit Karma": [
+          "credit\\s?karma"
+        ],
+        "Zelle": [
+          "\\bzelle\\b"
+        ],
+        "Apple Pay": [
+          "apple\\s?pay",
+          "apple\\s?cash"
+        ],
+        "Apple Card": [
+          "apple\\s?card"
+        ],
+        "Google Pay": [
+          "google\\s?pay",
+          "\\bg\\s?pay\\b",
+          "google\\s?wallet"
+        ],
+        "Wise": [
+          "transfer\\s?wise",
+          "wise app",
+          "(?-i:\\bWise\\b)"
+        ],
+        "Remitly": [
+          "remitly"
+        ],
+        "Western Union": [
+          "western\\s?union"
+        ],
+        "MoneyGram": [
+          "money\\s?gram"
+        ],
+        "Revolut": [
+          "revolut"
+        ],
+        "SoFi": [
+          "\\bsofi\\b"
+        ],
+        "Varo": [
+          "\\bvaro\\b"
+        ],
+        "MoneyLion": [
+          "money\\s?lion"
+        ],
+        "Brigit": [
+          "\\bbrigit\\b"
+        ],
+        "EarnIn": [
+          "\\bearn\\s?in\\b"
+        ],
+        "Klover": [
+          "\\bklover\\b"
+        ],
+        "Cleo": [
+          "cleo app",
+          "cleo ai"
+        ],
+        "Chase": [
+          "chase bank",
+          "chase app",
+          "(?-i:\\bChase\\b)"
+        ],
+        "Wells Fargo": [
+          "wells\\s?fargo"
+        ],
+        "Citi": [
+          "\\bciti(?:bank)?\\b"
+        ],
+        "Discover": [
+          "discover card",
+          "discover bank",
+          "(?-i:\\bDiscover\\b)"
+        ],
+        "Navy Federal": [
+          "navy\\s?federal",
+          "\\bnfcu\\b"
+        ],
+        "USAA": [
+          "\\busaa\\b"
+        ],
+        "Ally": [
+          "ally bank",
+          "(?-i:\\bAlly\\b)"
+        ],
+        "PNC": [
+          "\\bpnc\\b"
+        ],
+        "TD Bank": [
+          "\\btd bank\\b"
+        ],
+        "US Bank": [
+          "\\bu\\.?s\\.? bank\\b"
+        ],
+        "Green Dot": [
+          "green\\s?dot"
+        ],
+        "Go2Bank": [
+          "go\\s?2\\s?bank"
+        ],
+        "Netspend": [
+          "net\\s?spend"
+        ],
+        "Experian": [
+          "experian"
+        ],
+        "Credit Sesame": [
+          "credit\\s?sesame"
+        ],
+        "NerdWallet": [
+          "nerd\\s?wallet"
+        ],
+        "Klarna": [
+          "klarna"
+        ],
+        "Afterpay": [
+          "after\\s?pay"
+        ],
+        "Affirm": [
+          "affirm app",
+          "(?-i:\\bAffirm\\b)"
+        ],
+        "Robinhood": [
+          "robin\\s?hood"
+        ]
+      },
+      "notes": [
+        "Plain 'Apple' is ignored; only Apple Pay / Apple Cash / Apple Card count.",
+        "'Dave' is case-sensitive because it is also a person's name (e.g. a support agent). The LLM drops person mentions.",
+        "Skipped as too ambiguous: Current, Albert, Possible, Square, Regions, Public."
+      ]
+    },
+    "investing_crypto": {
+      "label": "Investing & crypto",
+      "apps": [
+        "Coinbase",
+        "Robinhood"
+      ],
+      "competitors": [
+        "Webull",
+        "Fidelity",
+        "Charles Schwab",
+        "E*Trade",
+        "Vanguard",
+        "Moomoo",
+        "Public",
+        "SoFi",
+        "Acorns",
+        "Stash",
+        "Cash App",
+        "Interactive Brokers",
+        "eToro",
+        "Binance",
+        "Kraken",
+        "Crypto.com",
+        "Gemini",
+        "Uphold",
+        "MetaMask",
+        "Trust Wallet",
+        "Exodus",
+        "PayPal"
+      ],
+      "aliases": {
+        "Coinbase": [
+          "coin\\s?base"
+        ],
+        "Robinhood": [
+          "robin\\s?hood"
+        ],
+        "Webull": [
+          "web\\s?bull"
+        ],
+        "Fidelity": [
+          "fidelity"
+        ],
+        "Charles Schwab": [
+          "schwab"
+        ],
+        "E*Trade": [
+          "\\be\\s?\\*?\\s?trade\\b",
+          "etrade"
+        ],
+        "Vanguard": [
+          "vanguard"
+        ],
+        "Moomoo": [
+          "moo\\s?moo"
+        ],
+        "Public": [
+          "public\\.com"
+        ],
+        "SoFi": [
+          "\\bsofi\\b"
+        ],
+        "Acorns": [
+          "\\bacorns\\b"
+        ],
+        "Stash": [
+          "stash app",
+          "(?-i:\\bStash\\b)"
+        ],
+        "Cash App": [
+          "cash\\s?app"
+        ],
+        "Interactive Brokers": [
+          "interactive\\s?brokers",
+          "\\bibkr\\b"
+        ],
+        "eToro": [
+          "\\betoro\\b"
+        ],
+        "Binance": [
+          "binance"
+        ],
+        "Kraken": [
+          "kraken"
+        ],
+        "Crypto.com": [
+          "crypto\\.com"
+        ],
+        "Gemini": [
+          "gemini"
+        ],
+        "Uphold": [
+          "(?-i:\\bUphold\\b)",
+          "uphold app"
+        ],
+        "MetaMask": [
+          "meta\\s?mask"
+        ],
+        "Trust Wallet": [
+          "trust\\s?wallet"
+        ],
+        "Exodus": [
+          "(?-i:\\bExodus\\b)"
+        ],
+        "PayPal": [
+          "pay\\s?pal"
+        ]
+      }
+    },
+    "dating": {
+      "label": "Dating",
+      "apps": [
+        "Tinder",
+        "Bumble",
+        "Hinge"
+      ],
+      "competitors": [
+        "OkCupid",
+        "Plenty of Fish",
+        "Match",
+        "eHarmony",
+        "Grindr",
+        "Feeld",
+        "Coffee Meets Bagel",
+        "Raya",
+        "Badoo",
+        "Facebook Dating",
+        "Boo",
+        "Happn",
+        "Tagged",
+        "Zoosk",
+        "Christian Mingle",
+        "Hily"
+      ],
+      "aliases": {
+        "Tinder": [
+          "tinder"
+        ],
+        "Bumble": [
+          "bumble"
+        ],
+        "Hinge": [
+          "\\bhinge\\b"
+        ],
+        "OkCupid": [
+          "ok\\s?cupid",
+          "\\bokc\\b"
+        ],
+        "Plenty of Fish": [
+          "plenty\\s?of\\s?fish",
+          "\\bpof\\b"
+        ],
+        "Match": [
+          "match\\.com",
+          "match app",
+          "match dating"
+        ],
+        "eHarmony": [
+          "e\\s?harmony"
+        ],
+        "Grindr": [
+          "grindr"
+        ],
+        "Feeld": [
+          "\\bfeeld\\b"
+        ],
+        "Coffee Meets Bagel": [
+          "coffee\\s?meets\\s?bagel",
+          "\\bcmb\\b"
+        ],
+        "Raya": [
+          "\\braya\\b"
+        ],
+        "Badoo": [
+          "badoo"
+        ],
+        "Facebook Dating": [
+          "facebook dating",
+          "fb dating"
+        ],
+        "Boo": [
+          "boo app",
+          "(?-i:\\bBoo\\b)"
+        ],
+        "Happn": [
+          "happn"
+        ],
+        "Tagged": [
+          "tagged app"
+        ],
+        "Zoosk": [
+          "zoosk"
+        ],
+        "Christian Mingle": [
+          "christian\\s?mingle"
+        ],
+        "Hily": [
+          "\\bhily\\b"
+        ]
+      },
+      "notes": [
+        "'Match' only as match.com / match app / match dating: capitalized 'Match' is usually 'a Match'.",
+        "'Her' (the app) is dropped: 'her' is a pronoun and all-caps reviews made it unusable.",
+        "'Boo' only as 'boo app' or capitalized Boo."
+      ]
+    },
+    "browsers": {
+      "label": "Browsers",
+      "apps": [
+        "Brave",
+        "Opera"
+      ],
+      "competitors": [
+        "Chrome",
+        "Firefox",
+        "Safari",
+        "Microsoft Edge",
+        "DuckDuckGo",
+        "Vivaldi",
+        "Samsung Internet",
+        "Tor Browser",
+        "Kiwi",
+        "Arc",
+        "Ecosia",
+        "Puffin",
+        "Yandex Browser",
+        "Aloha"
+      ],
+      "aliases": {
+        "Brave": [
+          "\\bbrave\\b"
+        ],
+        "Opera": [
+          "\\bopera\\b"
+        ],
+        "Chrome": [
+          "\\bchrome\\b",
+          "google chrome"
+        ],
+        "Firefox": [
+          "fire\\s?fox"
+        ],
+        "Safari": [
+          "safari"
+        ],
+        "Microsoft Edge": [
+          "microsoft edge",
+          "\\bms edge\\b",
+          "edge browser",
+          "(?-i:\\bEdge\\b)"
+        ],
+        "DuckDuckGo": [
+          "duck\\s?duck\\s?go",
+          "\\bddg\\b"
+        ],
+        "Vivaldi": [
+          "vivaldi"
+        ],
+        "Samsung Internet": [
+          "samsung\\s?(?:internet|browser)"
+        ],
+        "Tor Browser": [
+          "tor browser",
+          "(?-i:\\bTor\\b)"
+        ],
+        "Kiwi": [
+          "kiwi browser",
+          "(?-i:\\bKiwi\\b)"
+        ],
+        "Arc": [
+          "arc browser",
+          "(?-i:\\bArc\\b)"
+        ],
+        "Ecosia": [
+          "ecosia"
+        ],
+        "Puffin": [
+          "puffin"
+        ],
+        "Yandex Browser": [
+          "yandex"
+        ],
+        "Aloha": [
+          "aloha browser"
+        ]
+      },
+      "notes": [
+        "Opera GX / Opera Mini / Opera Touch count as Opera itself (alias 'opera' covers them).",
+        "'Edge', 'Arc', 'Tor', 'Kiwi' are case-sensitive or need 'browser' next to them."
+      ]
+    },
+    "rides_delivery": {
+      "label": "Rides & delivery",
+      "apps": [
+        "Uber",
+        "DoorDash",
+        "Spark Driver"
+      ],
+      "competitors": [
+        "Lyft",
+        "Uber Eats",
+        "Grubhub",
+        "Instacart",
+        "Postmates",
+        "Gopuff",
+        "Waymo",
+        "Bolt",
+        "DiDi",
+        "Careem",
+        "Wolt",
+        "Deliveroo",
+        "Just Eat",
+        "Rappi",
+        "Shipt",
+        "Amazon Flex",
+        "Roadie",
+        "inDrive"
+      ],
+      "aliases": {
+        "Uber": [
+          "\\buber\\b(?!\\s?eats?\\b)"
+        ],
+        "DoorDash": [
+          "door\\s?dash"
+        ],
+        "Spark Driver": [
+          "spark driver",
+          "spark app",
+          "(?-i:\\bSpark\\b)"
+        ],
+        "Lyft": [
+          "\\blyft\\b"
+        ],
+        "Uber Eats": [
+          "uber\\s?eats?\\b"
+        ],
+        "Grubhub": [
+          "grub\\s?hub"
+        ],
+        "Instacart": [
+          "insta\\s?cart"
+        ],
+        "Postmates": [
+          "post\\s?mates"
+        ],
+        "Gopuff": [
+          "go\\s?puff"
+        ],
+        "Waymo": [
+          "waymo"
+        ],
+        "Bolt": [
+          "bolt app",
+          "(?-i:\\bBolt\\b)"
+        ],
+        "DiDi": [
+          "\\bdidi\\b"
+        ],
+        "Careem": [
+          "careem"
+        ],
+        "Wolt": [
+          "\\bwolt\\b"
+        ],
+        "Deliveroo": [
+          "deliveroo"
+        ],
+        "Just Eat": [
+          "just\\s?eat\\b"
+        ],
+        "Rappi": [
+          "\\brappi\\b"
+        ],
+        "Shipt": [
+          "\\bshipt\\b"
+        ],
+        "Amazon Flex": [
+          "amazon\\s?flex"
+        ],
+        "Roadie": [
+          "\\broadie\\b"
+        ],
+        "inDrive": [
+          "in\\s?driver?\\b"
+        ]
+      },
+      "self_aliases": {
+        "Uber": [
+          "Uber Eats",
+          "Postmates"
+        ]
+      },
+      "notes": [
+        "'Uber Eats' is matched before plain 'Uber', so 'Uber Eats' never also counts as Uber.",
+        "In Uber's own reviews, Uber Eats and Postmates (both Uber-owned, Eats is inside the Uber app) are treated as Uber itself.",
+        "In DoorDash / Spark Driver reviews, plain 'Uber' is a candidate; the prompt tells the model to pick Uber Eats when the text is about food delivery.",
+        "Skipped as normal words: Via, Curb, Grab, Ola, Walmart (Spark is Walmart's own app)."
+      ]
+    },
+    "social": {
+      "label": "Social & community",
+      "apps": [
+        "Reddit",
+        "Discord",
+        "Pinterest",
+        "Lemon8"
+      ],
+      "competitors": [
+        "Facebook",
+        "Instagram",
+        "TikTok",
+        "X (Twitter)",
+        "Snapchat",
+        "Threads",
+        "Bluesky",
+        "Tumblr",
+        "Mastodon",
+        "Lemmy",
+        "Quora",
+        "WhatsApp",
+        "Telegram",
+        "Messenger",
+        "Slack",
+        "Microsoft Teams",
+        "Skype",
+        "TeamSpeak",
+        "Guilded",
+        "Revolt",
+        "Kik",
+        "GroupMe",
+        "We Heart It"
+      ],
+      "aliases": {
+        "Reddit": [
+          "reddit"
+        ],
+        "Discord": [
+          "discord"
+        ],
+        "Pinterest": [
+          "pinterest",
+          "pintrest",
+          "pinterst"
+        ],
+        "Lemon8": [
+          "lemon\\s?8",
+          "lemon\\s?eight"
+        ],
+        "Facebook": [
+          "facebook",
+          "\\bfb\\b"
+        ],
+        "Instagram": [
+          "instagram",
+          "\\binsta\\b",
+          "\\big\\b"
+        ],
+        "TikTok": [
+          "tik\\s?tok",
+          "tick\\s?tock"
+        ],
+        "X (Twitter)": [
+          "twitter",
+          "\\bx\\.com\\b",
+          "\\bx \\(twitter\\)",
+          "(?-i:\\b(?:on|to|like|than|from) X\\b)"
+        ],
+        "Snapchat": [
+          "snap\\s?chat"
+        ],
+        "Threads": [
+          "threads app",
+          "meta threads",
+          "instagram threads",
+          "threads\\.net"
+        ],
+        "Bluesky": [
+          "blue\\s?sky",
+          "\\bbsky\\b"
+        ],
+        "Tumblr": [
+          "tumblr"
+        ],
+        "Mastodon": [
+          "mastodon"
+        ],
+        "Lemmy": [
+          "\\blemmy\\b"
+        ],
+        "Quora": [
+          "quora"
+        ],
+        "WhatsApp": [
+          "whats\\s?app"
+        ],
+        "Telegram": [
+          "telegram"
+        ],
+        "Messenger": [
+          "facebook messenger",
+          "fb messenger",
+          "(?-i:\\bMessenger\\b)"
+        ],
+        "Slack": [
+          "(?-i:\\bSlack\\b)"
+        ],
+        "Microsoft Teams": [
+          "microsoft teams",
+          "\\bms teams\\b",
+          "(?-i:\\bTeams\\b)"
+        ],
+        "Skype": [
+          "skype"
+        ],
+        "TeamSpeak": [
+          "team\\s?speak"
+        ],
+        "Guilded": [
+          "guilded"
+        ],
+        "Revolt": [
+          "revolt chat",
+          "(?-i:\\bRevolt\\b)"
+        ],
+        "Kik": [
+          "\\bkik\\b"
+        ],
+        "GroupMe": [
+          "group\\s?me\\b"
+        ],
+        "We Heart It": [
+          "we\\s?heart\\s?it"
+        ]
+      },
+      "notes": [
+        "'Threads' only with app/meta/instagram next to it: Reddit reviews say 'threads' constantly.",
+        "'X' only as x.com, 'X (Twitter)' or after on/to/like/than/from.",
+        "'IG' and 'FB' count; 'Snap' alone does not."
+      ]
+    },
+    "jobs": {
+      "label": "Jobs",
+      "apps": [
+        "Indeed",
+        "LinkedIn"
+      ],
+      "competitors": [
+        "ZipRecruiter",
+        "Glassdoor",
+        "Monster",
+        "CareerBuilder",
+        "Handshake",
+        "Upwork",
+        "Fiverr",
+        "SimplyHired",
+        "Snagajob",
+        "Wellfound"
+      ],
+      "aliases": {
+        "Indeed": [
+          "(?-i:\\bIndeed\\b)",
+          "indeed app",
+          "indeed\\.com"
+        ],
+        "LinkedIn": [
+          "linked\\s?in"
+        ],
+        "ZipRecruiter": [
+          "zip\\s?recruiter"
+        ],
+        "Glassdoor": [
+          "glass\\s?door"
+        ],
+        "Monster": [
+          "monster\\.com",
+          "(?-i:\\bMonster\\b)"
+        ],
+        "CareerBuilder": [
+          "career\\s?builder"
+        ],
+        "Handshake": [
+          "(?-i:\\bHandshake\\b)",
+          "handshake app"
+        ],
+        "Upwork": [
+          "up\\s?work\\b"
+        ],
+        "Fiverr": [
+          "fiverr"
+        ],
+        "SimplyHired": [
+          "simply\\s?hired"
+        ],
+        "Snagajob": [
+          "snag\\s?a\\s?job"
+        ],
+        "Wellfound": [
+          "wellfound",
+          "angel\\s?list"
+        ]
+      },
+      "notes": [
+        "'Indeed' is case-sensitive: lowercase 'indeed' is an English word."
+      ]
+    },
+    "shopping": {
+      "label": "Shopping & marketplaces",
+      "apps": [
+        "Temu",
+        "eBay",
+        "Depop",
+        "Shopify"
+      ],
+      "competitors": [
+        "Amazon",
+        "AliExpress",
+        "Shein",
+        "Wish",
+        "Etsy",
+        "Walmart",
+        "Target",
+        "Poshmark",
+        "Mercari",
+        "Vinted",
+        "Facebook Marketplace",
+        "OfferUp",
+        "Craigslist",
+        "Grailed",
+        "Wix",
+        "Squarespace",
+        "WooCommerce",
+        "BigCommerce",
+        "TikTok Shop"
+      ],
+      "aliases": {
+        "Temu": [
+          "\\btemu\\b"
+        ],
+        "eBay": [
+          "\\be\\s?bay\\b"
+        ],
+        "Depop": [
+          "depop"
+        ],
+        "Shopify": [
+          "shopify"
+        ],
+        "Amazon": [
+          "\\bamazon\\b(?!\\s?(?:music|prime video|flex))"
+        ],
+        "AliExpress": [
+          "ali\\s?express"
+        ],
+        "Shein": [
+          "\\bshein\\b"
+        ],
+        "Wish": [
+          "wish\\.com",
+          "wish app"
+        ],
+        "Etsy": [
+          "\\betsy\\b"
+        ],
+        "Walmart": [
+          "wal\\s?mart"
+        ],
+        "Target": [
+          "target\\.com",
+          "(?-i:\\bTarget\\b)"
+        ],
+        "Poshmark": [
+          "posh\\s?mark"
+        ],
+        "Mercari": [
+          "mercari"
+        ],
+        "Vinted": [
+          "vinted"
+        ],
+        "Facebook Marketplace": [
+          "(?:facebook|fb)\\s?market\\s?place"
+        ],
+        "OfferUp": [
+          "offer\\s?up\\b"
+        ],
+        "Craigslist": [
+          "craigs\\s?list"
+        ],
+        "Grailed": [
+          "grailed"
+        ],
+        "Wix": [
+          "\\bwix\\b"
+        ],
+        "Squarespace": [
+          "square\\s?space"
+        ],
+        "WooCommerce": [
+          "woo\\s?commerce"
+        ],
+        "BigCommerce": [
+          "big\\s?commerce"
+        ],
+        "TikTok Shop": [
+          "tik\\s?tok\\s?shop"
+        ]
+      },
+      "notes": [
+        "Plain 'Wish' is skipped ('Wish I could...'); only wish.com / wish app.",
+        "Shopify reviews are mostly merchants, so its competitors (Wix, Squarespace...) are store builders."
+      ]
+    },
+    "ai_chat": {
+      "label": "AI chat & companions",
+      "apps": [
+        "Character.ai"
+      ],
+      "competitors": [
+        "ChatGPT",
+        "Talkie",
+        "Chai",
+        "Janitor AI",
+        "Replika",
+        "PolyBuzz",
+        "Crushon",
+        "Linky",
+        "Gemini",
+        "Claude",
+        "Nomi",
+        "Kindroid",
+        "SpicyChat",
+        "Botify",
+        "Grok",
+        "Meta AI",
+        "Chub",
+        "SillyTavern",
+        "Sakura"
+      ],
+      "aliases": {
+        "Character.ai": [
+          "character\\s?\\.?\\s?ai",
+          "\\bc\\.ai\\b",
+          "\\bcai\\b"
+        ],
+        "ChatGPT": [
+          "chat\\s?gpt",
+          "\\bgpt\\b",
+          "openai"
+        ],
+        "Talkie": [
+          "talkie"
+        ],
+        "Chai": [
+          "\\bchai\\b"
+        ],
+        "Janitor AI": [
+          "janitor\\s?ai",
+          "\\bjanitor\\b",
+          "\\bjai\\b"
+        ],
+        "Replika": [
+          "replika"
+        ],
+        "PolyBuzz": [
+          "poly\\s?buzz",
+          "poly\\.?ai",
+          "\\bpoly\\b"
+        ],
+        "Crushon": [
+          "crush\\s?on\\s?\\.?ai",
+          "\\bcrushon\\b"
+        ],
+        "Linky": [
+          "\\blinky\\b"
+        ],
+        "Gemini": [
+          "gemini"
+        ],
+        "Claude": [
+          "(?-i:\\bClaude\\b)"
+        ],
+        "Nomi": [
+          "\\bnomi\\b"
+        ],
+        "Kindroid": [
+          "kindroid"
+        ],
+        "SpicyChat": [
+          "spicy\\s?chat"
+        ],
+        "Botify": [
+          "botify"
+        ],
+        "Grok": [
+          "\\bgrok\\b"
+        ],
+        "Meta AI": [
+          "meta ai"
+        ],
+        "Chub": [
+          "chub\\s?\\.?ai",
+          "(?-i:\\bChub\\b)"
+        ],
+        "SillyTavern": [
+          "silly\\s?tavern"
+        ],
+        "Sakura": [
+          "sakura\\.fm",
+          "sakura ai"
+        ]
+      }
+    },
+    "photo_video": {
+      "label": "Photo & video editing",
+      "apps": [
+        "Remini",
+        "Picsart",
+        "CapCut",
+        "PhotoRoom"
+      ],
+      "competitors": [
+        "Lightroom",
+        "Photoshop",
+        "Snapseed",
+        "VSCO",
+        "Canva",
+        "InShot",
+        "Facetune",
+        "FaceApp",
+        "Lensa",
+        "Pixlr",
+        "Meitu",
+        "Fotor",
+        "AirBrush",
+        "KineMaster",
+        "Alight Motion",
+        "VN",
+        "Splice",
+        "Prequel",
+        "Epik",
+        "Hypic",
+        "YouCam",
+        "EnhanceFox",
+        "ChatGPT",
+        "Edits"
+      ],
+      "aliases": {
+        "Remini": [
+          "remini"
+        ],
+        "Picsart": [
+          "pics\\s?art"
+        ],
+        "CapCut": [
+          "cap\\s?cut"
+        ],
+        "PhotoRoom": [
+          "photo\\s?room"
+        ],
+        "Lightroom": [
+          "light\\s?room"
+        ],
+        "Photoshop": [
+          "photo\\s?shop",
+          "adobe express"
+        ],
+        "Snapseed": [
+          "snap\\s?seed"
+        ],
+        "VSCO": [
+          "\\bvsco\\b"
+        ],
+        "Canva": [
+          "\\bcanva\\b"
+        ],
+        "InShot": [
+          "in\\s?shot\\b"
+        ],
+        "Facetune": [
+          "face\\s?tune"
+        ],
+        "FaceApp": [
+          "face\\s?app\\b"
+        ],
+        "Lensa": [
+          "\\blensa\\b"
+        ],
+        "Pixlr": [
+          "pixlr"
+        ],
+        "Meitu": [
+          "meitu"
+        ],
+        "Fotor": [
+          "\\bfotor\\b"
+        ],
+        "AirBrush": [
+          "air\\s?brush"
+        ],
+        "KineMaster": [
+          "kine\\s?master"
+        ],
+        "Alight Motion": [
+          "alight\\s?motion"
+        ],
+        "VN": [
+          "vn (?:video|editor|app)",
+          "(?-i:\\bVN\\b)"
+        ],
+        "Splice": [
+          "splice app",
+          "(?-i:\\bSplice\\b)"
+        ],
+        "Prequel": [
+          "(?-i:\\bPrequel\\b)",
+          "prequel app"
+        ],
+        "Epik": [
+          "\\bepik\\b"
+        ],
+        "Hypic": [
+          "hypic"
+        ],
+        "YouCam": [
+          "you\\s?cam"
+        ],
+        "EnhanceFox": [
+          "enhance\\s?fox"
+        ],
+        "ChatGPT": [
+          "chat\\s?gpt"
+        ],
+        "Edits": [
+          "edits app",
+          "instagram edits",
+          "edits by instagram"
+        ]
+      },
+      "notes": [
+        "TikTok is not a competitor here: CapCut reviews mention it as where they post."
+      ]
+    },
+    "video_streaming": {
+      "label": "Video streaming & TV",
+      "apps": [
+        "Crunchyroll",
+        "Tubi",
+        "Roku"
+      ],
+      "competitors": [
+        "Netflix",
+        "Hulu",
+        "Disney+",
+        "HBO Max",
+        "Prime Video",
+        "Pluto TV",
+        "Peacock",
+        "Paramount+",
+        "YouTube",
+        "YouTube TV",
+        "Funimation",
+        "HIDIVE",
+        "Fubo",
+        "Sling",
+        "Philo",
+        "Freevee",
+        "Plex",
+        "Crackle",
+        "Kanopy",
+        "Fandango at Home",
+        "Fire TV",
+        "Apple TV",
+        "Google TV",
+        "Anime piracy sites"
+      ],
+      "aliases": {
+        "Crunchyroll": [
+          "crunchy\\s?roll"
+        ],
+        "Tubi": [
+          "\\btubi\\b"
+        ],
+        "Roku": [
+          "\\broku\\b"
+        ],
+        "Netflix": [
+          "netflix",
+          "netflx"
+        ],
+        "Hulu": [
+          "\\bhulu\\b"
+        ],
+        "Disney+": [
+          "disney\\s?(?:\\+|plus)",
+          "\\bdisney\\b"
+        ],
+        "HBO Max": [
+          "hbo\\s?max",
+          "\\bhbo\\b",
+          "(?-i:(?<!Pro )(?<!Pro)\\bMax\\b)"
+        ],
+        "Prime Video": [
+          "prime\\s?video",
+          "amazon\\s?prime",
+          "amazon video"
+        ],
+        "Pluto TV": [
+          "\\bpluto\\b"
+        ],
+        "Peacock": [
+          "peacock"
+        ],
+        "Paramount+": [
+          "paramount"
+        ],
+        "YouTube": [
+          "you\\s?tube(?!\\s?(?:tv|music|kids))",
+          "\\byt\\b"
+        ],
+        "YouTube TV": [
+          "you\\s?tube\\s?tv",
+          "\\byttv\\b"
+        ],
+        "Funimation": [
+          "funimation"
+        ],
+        "HIDIVE": [
+          "hi\\s?dive"
+        ],
+        "Fubo": [
+          "\\bfubo\\b"
+        ],
+        "Sling": [
+          "sling tv",
+          "(?-i:\\bSling\\b)"
+        ],
+        "Philo": [
+          "\\bphilo\\b"
+        ],
+        "Freevee": [
+          "freevee",
+          "imdb tv"
+        ],
+        "Plex": [
+          "\\bplex\\b"
+        ],
+        "Crackle": [
+          "(?-i:\\bCrackle\\b)"
+        ],
+        "Kanopy": [
+          "kanopy"
+        ],
+        "Fandango at Home": [
+          "\\bvudu\\b",
+          "fandango at home"
+        ],
+        "Fire TV": [
+          "fire\\s?stick",
+          "fire\\s?tv",
+          "amazon fire"
+        ],
+        "Apple TV": [
+          "apple\\s?tv"
+        ],
+        "Google TV": [
+          "google\\s?tv",
+          "chromecast"
+        ],
+        "Anime piracy sites": [
+          "9\\s?anime",
+          "hi\\s?anime",
+          "zoro\\.to",
+          "aniwatch",
+          "gogo\\s?anime"
+        ]
+      },
+      "notes": [
+        "Roku reviews name Netflix etc. as channels on the device: expect many not_a_switch_reference labels.",
+        "'Max' is case-sensitive (HBO's rebrand) and ignored after 'Pro' (iPhone Pro Max)."
+      ]
+    },
+    "books_audio": {
+      "label": "Books, audiobooks & libraries",
+      "apps": [
+        "Audible",
+        "Libby",
+        "Hoopla",
+        "Wattpad"
+      ],
+      "competitors": [
+        "Kindle",
+        "Kobo",
+        "Apple Books",
+        "Google Play Books",
+        "Scribd",
+        "Storytel",
+        "Libro.fm",
+        "Chirp",
+        "OverDrive",
+        "Kanopy",
+        "Spotify",
+        "Audiobooks.com",
+        "Inkitt",
+        "Webnovel",
+        "Dreame",
+        "Galatea",
+        "Webtoon",
+        "AO3",
+        "FanFiction.net"
+      ],
+      "aliases": {
+        "Audible": [
+          "audible"
+        ],
+        "Libby": [
+          "(?-i:\\bLibby\\b)",
+          "libby app"
+        ],
+        "Hoopla": [
+          "hoopla"
+        ],
+        "Wattpad": [
+          "watt\\s?pad"
+        ],
+        "Kindle": [
+          "kindle"
+        ],
+        "Kobo": [
+          "\\bkobo\\b"
+        ],
+        "Apple Books": [
+          "apple\\s?books",
+          "\\bibooks\\b"
+        ],
+        "Google Play Books": [
+          "google\\s?play\\s?books",
+          "play\\s?books"
+        ],
+        "Scribd": [
+          "scribd",
+          "everand"
+        ],
+        "Storytel": [
+          "storytel"
+        ],
+        "Libro.fm": [
+          "libro\\.?\\s?fm"
+        ],
+        "Chirp": [
+          "chirp books",
+          "(?-i:\\bChirp\\b)"
+        ],
+        "OverDrive": [
+          "over\\s?drive"
+        ],
+        "Kanopy": [
+          "kanopy"
+        ],
+        "Spotify": [
+          "spotify"
+        ],
+        "Audiobooks.com": [
+          "audiobooks\\.com"
+        ],
+        "Inkitt": [
+          "inkitt"
+        ],
+        "Webnovel": [
+          "web\\s?novel"
+        ],
+        "Dreame": [
+          "\\bdreame\\b"
+        ],
+        "Galatea": [
+          "galatea"
+        ],
+        "Webtoon": [
+          "web\\s?toon"
+        ],
+        "AO3": [
+          "\\bao3\\b",
+          "archive of our own"
+        ],
+        "FanFiction.net": [
+          "fanfiction\\.net",
+          "\\bffn\\b"
+        ]
+      },
+      "notes": [
+        "Spotify is a competitor here for audiobooks (it is a reviewed app in music).",
+        "OverDrive is Libby's old app from the same company; kept as its own node ('the old OverDrive app was better')."
+      ]
+    },
+    "health_fitness": {
+      "label": "Health & fitness",
+      "apps": [
+        "Flo",
+        "My Fitness Pal",
+        "Better Me"
+      ],
+      "competitors": [
+        "Clue",
+        "Stardust",
+        "Ovia",
+        "Natural Cycles",
+        "Glow",
+        "Apple Health",
+        "Lose It",
+        "Cronometer",
+        "MacroFactor",
+        "Noom",
+        "Carb Manager",
+        "Yazio",
+        "FatSecret",
+        "WW",
+        "Fitbit",
+        "Fitbod",
+        "Nike Training Club",
+        "Peloton",
+        "Strava",
+        "Samsung Health",
+        "Google Fit"
+      ],
+      "aliases": {
+        "Flo": [
+          "\\bflo\\b"
+        ],
+        "My Fitness Pal": [
+          "my\\s?fitness\\s?pal",
+          "\\bmfp\\b"
+        ],
+        "Better Me": [
+          "better\\s?me\\b"
+        ],
+        "Clue": [
+          "clue app",
+          "(?-i:\\bClue\\b)"
+        ],
+        "Stardust": [
+          "stardust"
+        ],
+        "Ovia": [
+          "\\bovia\\b"
+        ],
+        "Natural Cycles": [
+          "natural\\s?cycles"
+        ],
+        "Glow": [
+          "glow app",
+          "(?-i:\\bGlow\\b)"
+        ],
+        "Apple Health": [
+          "apple\\s?health"
+        ],
+        "Lose It": [
+          "lose\\s?it app",
+          "\\bloseit\\b",
+          "(?-i:\\bLose It\\b)"
+        ],
+        "Cronometer": [
+          "cron\\s?o\\s?meter"
+        ],
+        "MacroFactor": [
+          "macro\\s?factor"
+        ],
+        "Noom": [
+          "\\bnoom\\b"
+        ],
+        "Carb Manager": [
+          "carb\\s?manager"
+        ],
+        "Yazio": [
+          "yazio"
+        ],
+        "FatSecret": [
+          "fat\\s?secret"
+        ],
+        "WW": [
+          "weight\\s?watchers",
+          "(?-i:\\bWW\\b)"
+        ],
+        "Fitbit": [
+          "fit\\s?bit"
+        ],
+        "Fitbod": [
+          "fitbod"
+        ],
+        "Nike Training Club": [
+          "nike training",
+          "\\bntc\\b"
+        ],
+        "Peloton": [
+          "peloton"
+        ],
+        "Strava": [
+          "strava"
+        ],
+        "Samsung Health": [
+          "samsung\\s?health"
+        ],
+        "Google Fit": [
+          "google\\s?fit"
+        ]
+      },
+      "notes": [
+        "These are three different sub-markets (period tracking, calorie counting, workouts); one category so cross-mentions are kept.",
+        "'Lose It', 'Clue', 'Glow' are case-sensitive: 'I'll lose it', 'no clue'."
+      ]
+    },
+    "rewards": {
+      "label": "Rewards & cash-back",
+      "apps": [
+        "Fetch",
+        "Sweatcoin"
+      ],
+      "competitors": [
+        "Ibotta",
+        "Receipt Hog",
+        "Shopkick",
+        "Checkout 51",
+        "Rakuten",
+        "Swagbucks",
+        "Upside",
+        "WeWard",
+        "Cash Walk",
+        "Stepler",
+        "STEPN",
+        "Winwalk"
+      ],
+      "aliases": {
+        "Fetch": [
+          "fetch rewards",
+          "fetch app",
+          "(?-i:\\bFetch\\b)"
+        ],
+        "Sweatcoin": [
+          "sweat\\s?coin"
+        ],
+        "Ibotta": [
+          "ibotta"
+        ],
+        "Receipt Hog": [
+          "receipt\\s?hog"
+        ],
+        "Shopkick": [
+          "shop\\s?kick"
+        ],
+        "Checkout 51": [
+          "checkout\\s?51"
+        ],
+        "Rakuten": [
+          "rakuten"
+        ],
+        "Swagbucks": [
+          "swag\\s?bucks"
+        ],
+        "Upside": [
+          "upside app",
+          "(?-i:\\bUpside\\b)"
+        ],
+        "WeWard": [
+          "we\\s?ward"
+        ],
+        "Cash Walk": [
+          "cash\\s?walk"
+        ],
+        "Stepler": [
+          "stepler"
+        ],
+        "STEPN": [
+          "\\bstepn\\b"
+        ],
+        "Winwalk": [
+          "win\\s?walk"
+        ]
+      },
+      "notes": [
+        "'Fetch' is case-sensitive (or 'Fetch Rewards' / 'Fetch app')."
+      ]
+    },
+    "weather": {
+      "label": "Weather",
+      "apps": [
+        "Weather Channel",
+        "MyRadar"
+      ],
+      "competitors": [
+        "AccuWeather",
+        "Weather Underground",
+        "WeatherBug",
+        "Carrot Weather",
+        "RadarScope",
+        "Windy",
+        "Clime",
+        "RainViewer",
+        "Apple Weather",
+        "Google Weather",
+        "NOAA Weather Radar"
+      ],
+      "aliases": {
+        "Weather Channel": [
+          "weather\\s?channel",
+          "\\btwc\\b",
+          "weather\\.com"
+        ],
+        "MyRadar": [
+          "my\\s?radar"
+        ],
+        "AccuWeather": [
+          "accu\\s?weather"
+        ],
+        "Weather Underground": [
+          "wunderground",
+          "weather\\s?underground"
+        ],
+        "WeatherBug": [
+          "weather\\s?bug"
+        ],
+        "Carrot Weather": [
+          "carrot weather",
+          "(?-i:\\bCarrot\\b)"
+        ],
+        "RadarScope": [
+          "radar\\s?scope"
+        ],
+        "Windy": [
+          "windy\\.com",
+          "windy app",
+          "(?-i:\\bWindy\\b)"
+        ],
+        "Clime": [
+          "\\bclime\\b"
+        ],
+        "RainViewer": [
+          "rain\\s?viewer"
+        ],
+        "Apple Weather": [
+          "apple weather",
+          "(?:ios|iphone) weather"
+        ],
+        "Google Weather": [
+          "google weather"
+        ],
+        "NOAA Weather Radar": [
+          "noaa (?:weather )?(?:radar )?app"
+        ]
+      },
+      "notes": [
+        "Plain 'NOAA' / 'National Weather Service' is usually a data source, not an app: only 'NOAA ... app' counts."
+      ]
+    },
+    "video_calls": {
+      "label": "Video calls & meetings",
+      "apps": [
+        "Zoom"
+      ],
+      "competitors": [
+        "Google Meet",
+        "Microsoft Teams",
+        "Webex",
+        "Skype",
+        "FaceTime",
+        "GoToMeeting",
+        "Slack",
+        "WhatsApp",
+        "Discord"
+      ],
+      "aliases": {
+        "Zoom": [
+          "(?-i:\\bZoom\\b)",
+          "zoom app"
+        ],
+        "Google Meet": [
+          "google meet",
+          "\\bgmeet\\b",
+          "(?-i:\\bMeet\\b)"
+        ],
+        "Microsoft Teams": [
+          "microsoft teams",
+          "\\bms teams\\b",
+          "(?-i:\\bTeams\\b)"
+        ],
+        "Webex": [
+          "webex"
+        ],
+        "Skype": [
+          "skype"
+        ],
+        "FaceTime": [
+          "face\\s?time"
+        ],
+        "GoToMeeting": [
+          "go\\s?to\\s?meeting"
+        ],
+        "Slack": [
+          "(?-i:\\bSlack\\b)"
+        ],
+        "WhatsApp": [
+          "whats\\s?app"
+        ],
+        "Discord": [
+          "discord"
+        ]
+      }
+    },
+    "family_location": {
+      "label": "Family safety & location",
+      "apps": [
+        "Life360"
+      ],
+      "competitors": [
+        "Find My",
+        "Google Maps",
+        "Snap Map",
+        "Bark",
+        "Qustodio",
+        "Google Family Link",
+        "Tile",
+        "AirTag",
+        "iSharing",
+        "GeoZilla",
+        "Glympse"
+      ],
+      "aliases": {
+        "Life360": [
+          "life\\s?360"
+        ],
+        "Find My": [
+          "find my (?:iphone|friends|app)",
+          "(?-i:\\bFind My\\b)",
+          "\\bfindmy\\b"
+        ],
+        "Google Maps": [
+          "google\\s?maps"
+        ],
+        "Snap Map": [
+          "snap\\s?map"
+        ],
+        "Bark": [
+          "bark app",
+          "(?-i:\\bBark\\b)"
+        ],
+        "Qustodio": [
+          "qustodio"
+        ],
+        "Google Family Link": [
+          "family\\s?link"
+        ],
+        "Tile": [
+          "tile app",
+          "(?-i:\\bTiles?\\b)"
+        ],
+        "AirTag": [
+          "air\\s?tags?\\b"
+        ],
+        "iSharing": [
+          "isharing"
+        ],
+        "GeoZilla": [
+          "geo\\s?zilla"
+        ],
+        "Glympse": [
+          "glympse"
+        ]
+      },
+      "notes": [
+        "Plain 'find my' is skipped ('I can't find my kid'); only Find My iPhone/Friends/app or capitalized 'Find My'.",
+        "Tile is owned by Life360 but is a separate app; kept as its own node."
+      ]
+    },
+    "learning": {
+      "label": "Language learning",
+      "apps": [
+        "Duolingo"
+      ],
+      "competitors": [
+        "Babbel",
+        "Busuu",
+        "Memrise",
+        "Rosetta Stone",
+        "Pimsleur",
+        "Drops",
+        "Mondly",
+        "LingoDeer",
+        "HelloTalk",
+        "Tandem",
+        "italki",
+        "Anki",
+        "Praktika",
+        "Lingvist",
+        "Quizlet"
+      ],
+      "aliases": {
+        "Duolingo": [
+          "duo\\s?lingo"
+        ],
+        "Babbel": [
+          "babbel"
+        ],
+        "Busuu": [
+          "busuu"
+        ],
+        "Memrise": [
+          "memrise"
+        ],
+        "Rosetta Stone": [
+          "rosetta"
+        ],
+        "Pimsleur": [
+          "pimsleur"
+        ],
+        "Drops": [
+          "drops app",
+          "(?-i:\\bDrops\\b)"
+        ],
+        "Mondly": [
+          "mondly"
+        ],
+        "LingoDeer": [
+          "lingo\\s?deer"
+        ],
+        "HelloTalk": [
+          "hello\\s?talk"
+        ],
+        "Tandem": [
+          "tandem app",
+          "(?-i:\\bTandem\\b)"
+        ],
+        "italki": [
+          "\\bitalki\\b"
+        ],
+        "Anki": [
+          "\\banki\\b"
+        ],
+        "Praktika": [
+          "praktika"
+        ],
+        "Lingvist": [
+          "lingvist"
+        ],
+        "Quizlet": [
+          "quizlet"
+        ]
+      },
+      "notes": [
+        "'Speak' (the app) is skipped: it's an English verb."
+      ]
+    },
+    "lodging_travel": {
+      "label": "Lodging & travel",
+      "apps": [
+        "Airbnb"
+      ],
+      "competitors": [
+        "Vrbo",
+        "Booking.com",
+        "Expedia",
+        "Hotels.com",
+        "Agoda",
+        "Hopper",
+        "Tripadvisor",
+        "Kayak",
+        "Trivago",
+        "Priceline",
+        "Furnished Finder"
+      ],
+      "aliases": {
+        "Airbnb": [
+          "air\\s?bnb",
+          "air\\s?b\\s?&?\\s?n\\s?b"
+        ],
+        "Vrbo": [
+          "\\bvrbo\\b",
+          "home\\s?away"
+        ],
+        "Booking.com": [
+          "booking\\.com",
+          "booking dot com"
+        ],
+        "Expedia": [
+          "expedia"
+        ],
+        "Hotels.com": [
+          "hotels\\.com"
+        ],
+        "Agoda": [
+          "agoda"
+        ],
+        "Hopper": [
+          "(?-i:\\bHopper\\b)",
+          "hopper app"
+        ],
+        "Tripadvisor": [
+          "trip\\s?advisor"
+        ],
+        "Kayak": [
+          "(?-i:\\bKayak\\b)"
+        ],
+        "Trivago": [
+          "trivago"
+        ],
+        "Priceline": [
+          "priceline"
+        ],
+        "Furnished Finder": [
+          "furnished\\s?finder"
+        ]
+      },
+      "notes": [
+        "Plain 'booking' is skipped (it's the action); only booking.com. 'Hotels' in general are not an app."
+      ]
+    },
+    "tickets": {
+      "label": "Event tickets",
+      "apps": [
+        "Ticketmaster"
+      ],
+      "competitors": [
+        "StubHub",
+        "SeatGeek",
+        "Vivid Seats",
+        "AXS",
+        "Eventbrite",
+        "TickPick",
+        "Gametime",
+        "DICE",
+        "Live Nation"
+      ],
+      "aliases": {
+        "Ticketmaster": [
+          "ticket\\s?master"
+        ],
+        "StubHub": [
+          "stub\\s?hub"
+        ],
+        "SeatGeek": [
+          "seat\\s?geek"
+        ],
+        "Vivid Seats": [
+          "vivid\\s?seats?"
+        ],
+        "AXS": [
+          "\\baxs\\b"
+        ],
+        "Eventbrite": [
+          "event\\s?brite"
+        ],
+        "TickPick": [
+          "tick\\s?pick"
+        ],
+        "Gametime": [
+          "\\bgametime\\b"
+        ],
+        "DICE": [
+          "dice\\.fm",
+          "dice app",
+          "(?-i:\\bDICE\\b)"
+        ],
+        "Live Nation": [
+          "live\\s?nation"
+        ]
+      },
+      "notes": [
+        "Live Nation owns Ticketmaster; mentions are usually about the company, so most should label not_a_switch_reference."
+      ]
+    },
+    "shipping": {
+      "label": "Shipping & parcels",
+      "apps": [
+        "UPS"
+      ],
+      "competitors": [
+        "FedEx",
+        "USPS",
+        "DHL",
+        "Amazon",
+        "OnTrac",
+        "LaserShip",
+        "Pirate Ship"
+      ],
+      "aliases": {
+        "UPS": [
+          "\\bups\\b"
+        ],
+        "FedEx": [
+          "fed\\s?ex",
+          "\\bfedx\\b"
+        ],
+        "USPS": [
+          "\\busps\\b",
+          "postal service",
+          "post office"
+        ],
+        "DHL": [
+          "\\bdhl\\b"
+        ],
+        "Amazon": [
+          "\\bamazon\\b"
+        ],
+        "OnTrac": [
+          "on\\s?trac\\b"
+        ],
+        "LaserShip": [
+          "laser\\s?ship"
+        ],
+        "Pirate Ship": [
+          "pirate\\s?ship"
+        ]
+      },
+      "notes": [
+        "'Amazon' in UPS reviews is mostly 'my Amazon package': expect not_a_switch_reference; kept because Amazon delivery is a real alternative."
+      ]
+    },
+    "games": {
+      "label": "Games",
+      "apps": [
+        "Chess.com",
+        "Magic Tiles 3",
+        "Kolibri Games"
+      ],
+      "competitors": [
+        "Lichess",
+        "Chess24",
+        "ChessKid",
+        "Play Magnus",
+        "Piano Tiles",
+        "Tiles Hop",
+        "Beatstar",
+        "Dancing Line",
+        "AdVenture Capitalist",
+        "Egg Inc"
+      ],
+      "aliases": {
+        "Chess.com": [
+          "chess\\s?\\.?\\s?com"
+        ],
+        "Magic Tiles 3": [
+          "magic\\s?tiles"
+        ],
+        "Kolibri Games": [
+          "kolibri",
+          "idle miner"
+        ],
+        "Lichess": [
+          "li\\s?chess"
+        ],
+        "Chess24": [
+          "chess\\s?24"
+        ],
+        "ChessKid": [
+          "chess\\s?kid"
+        ],
+        "Play Magnus": [
+          "play\\s?magnus"
+        ],
+        "Piano Tiles": [
+          "piano\\s?tiles"
+        ],
+        "Tiles Hop": [
+          "tiles\\s?hop"
+        ],
+        "Beatstar": [
+          "beat\\s?star"
+        ],
+        "Dancing Line": [
+          "dancing\\s?line"
+        ],
+        "AdVenture Capitalist": [
+          "adventure\\s?capitalist"
+        ],
+        "Egg Inc": [
+          "egg,?\\s?inc"
+        ]
+      },
+      "notes": [
+        "Three unrelated games grouped only so every app is covered; expect very few candidates."
+      ]
+    }
+  },
+  "app_name_cleanup": "App names are stripped of surrounding whitespace ('Capital One Mobile ' in the data).",
+  "node_merges": {},
+  "node_merges_note": "Uber is split by the counterpart market after labeling: Uber (Rides) or Uber Eats.",
+  "shutdowns": {
+    "OverDrive": {
+      "replaced_by": "Libby",
+      "when": "2023",
+      "note": "OverDrive retired its consumer app in favor of Libby."
+    },
+    "Funimation": {
+      "replaced_by": "Crunchyroll",
+      "when": "2024-04",
+      "note": "Funimation shut down and moved members to Crunchyroll."
+    },
+    "Skype": {
+      "replaced_by": "Microsoft Teams",
+      "when": "2025-05",
+      "note": "Flag outgoing Skype switch reports as forced moves only for months from 2025-02 onward.",
+      "forced_from": "2025-02"
+    },
+    "Freevee": {
+      "replaced_by": "Prime Video",
+      "when": "2025",
+      "note": "Amazon folded Freevee into Prime Video."
+    }
+  },
+  "shutdowns_note": "Outgoing reports from listed shutdown apps are forced moves; Skype uses the explicit 2025-02 cutoff."
+}
