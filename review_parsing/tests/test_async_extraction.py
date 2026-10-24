@@ -130,6 +130,33 @@ class AsyncExtractionTests(unittest.TestCase):
         self.assertEqual(calls, 2)
         self.assertEqual(metrics.retried, 1)
 
+    def test_empty_review_key_preserves_valid_entries_and_retries_missing(self):
+        class EmptyKeyOnce(FakeClient):
+            def __init__(self):
+                super().__init__()
+                self.schemas = []
+                self.changed = False
+
+            async def create(self, **request):
+                self.schemas.append(request['text']['format']['schema'])
+                raw = await super().create(**request)
+                if not self.changed:
+                    raw.body['reviews'][2]['review_key'] = ''
+                    self.changed = True
+                return raw
+
+        client = EmptyKeyOnce()
+        rows = [review(i) for i in range(4)]
+        outcomes, metrics, _, saved, calls = self.run_mock(
+            rows, client, options(batch_size=4))
+        self.assertEqual(set(saved), {row['review_key'] for row in rows})
+        self.assertEqual(client.calls, [['0:0', '0:1', '0:2', '0:3'], ['0:2']])
+        self.assertEqual(calls, 2)
+        self.assertEqual(metrics.failed, 0)
+        self.assertEqual(outcomes[0][0], 'done')
+        key_schema = client.schemas[0]['properties']['reviews']['items']['properties']['review_key']
+        self.assertEqual(key_schema['enum'], ['0:0', '0:1', '0:2', '0:3'])
+
     def test_duplicate_review_key_keeps_valid_work_and_checkpoints_once(self):
         class DuplicateClient(FakeClient):
             async def create(self, **request):
