@@ -820,14 +820,10 @@
 
 	<div class="legend" class:flow-legend={isFocused && hasFlowData}>
 		{#if isFocused && hasFlowData}
-			<div class="route-density" role="group" aria-label="Flow route density">
-				<button class:active={!flowsState.showAllRoutes} aria-pressed={!flowsState.showAllRoutes} onclick={() => (flowsState.showAllRoutes = false)} title="Show the eight strongest routes; hover or select an app to explore its connections">Top routes</button>
-				<button class:active={flowsState.showAllRoutes} aria-pressed={flowsState.showAllRoutes} onclick={() => (flowsState.showAllRoutes = true)}>All routes</button>
-				<span class="num">{flowsState.visibleArrows.length} shown</span>
-			</div>
+			<span class="route-count num">{flowsState.visibleArrows.length} routes shown</span>
 			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
 			<div class="legend-row"><span>width = weight / 10k reviews · hollow nodes = outside apps</span></div>
-			<div class="legend-hint">hover an app to reveal routes · click to pin</div>
+			<div class="legend-hint">hover an app to focus its routes · click to pin</div>
 			<div class="flow-reasons">
 				{#each legendReasons as reason (reason.id)}
 					<span><i style:background={reason.colour}></i>{reason.label}</span>
@@ -940,29 +936,9 @@
 		gap: 5px 10px;
 		max-width: 440px;
 	}
-	.route-density {
-		display: flex;
-		align-items: center;
-		gap: 3px;
+	.route-count {
 		margin-bottom: 4px;
-		pointer-events: auto;
-	}
-	.route-density button {
-		padding: 4px 7px;
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		font: inherit;
 		color: var(--muted);
-		background: var(--panel);
-	}
-	.route-density button.active {
-		color: var(--lime);
-		border-color: var(--line-strong);
-		background: var(--panel-3);
-	}
-	.route-density > span {
-		margin-left: 6px;
-		color: var(--dim);
 	}
 	.flow-reasons span {
 		display: inline-flex;
@@ -1240,7 +1216,7 @@
 		.flow-legend .legend-hint {
 			display: none;
 		}
-		.route-density {
+		.route-count {
 			margin-bottom: 0;
 		}
 	}
