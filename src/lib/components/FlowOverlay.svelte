@@ -3,6 +3,7 @@
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowNodes, flowNode, reasonColour, reasonLabel, topReason } from '#lib/data/flows';
 	import type { SimNode } from '#lib/utils/force';
+	import { fmtCount } from '#lib/utils/format';
 
 	let { nodes, cluster, scale }: {
 		nodes: SimNode[];
@@ -121,7 +122,7 @@
 				style:opacity={opacity(arrow)}
 				role="button"
 				tabindex="0"
-				aria-label="{flowNode(arrow.s)?.name} to {flowNode(arrow.t)?.name}, {arrow.value.toFixed(1)} per 10k reviews"
+				aria-label="{flowNode(arrow.s)?.name} to {flowNode(arrow.t)?.name}, {arrow.count} review mentions"
 				onpointerenter={() => (flowsState.hoveredArrow = arrow.key)}
 				onpointerleave={() => (flowsState.hoveredArrow = null)}
 				onfocus={() => (flowsState.hoveredArrow = arrow.key)}
@@ -131,14 +132,14 @@
 					if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(arrow); }
 				}}
 			>
-				<title>{flowNode(arrow.s)?.name} → {flowNode(arrow.t)?.name} · {arrow.value.toFixed(1)} per 10k · {arrow.count} reviews · {reasonLabel(topReason(arrow.reasons) ?? 'other')}</title>
+				<title>{flowNode(arrow.s)?.name} → {flowNode(arrow.t)?.name} · {arrow.count} review mentions · {reasonLabel(topReason(arrow.reasons) ?? 'other')}</title>
 				<path class="hit" d={shape.path} fill="none" stroke="transparent" stroke-width={12 / scale} />
 				<path class="route" d={shape.path} fill="none" stroke={stroke} stroke-width={shape.width} stroke-linecap="round" stroke-dasharray={arrow.layer === 'intent' ? `${4 / scale} ${5 / scale}` : undefined} />
 				<polygon points={shape.head} fill={stroke} />
 				{#if flowsState.hoveredArrow === arrow.key}
 					<g class="route-caption" transform="translate({shape.mid.x},{shape.mid.y}) scale({1 / scale})">
-						<rect x="-30" y="-9" width="60" height="18" rx="3" />
-						<text text-anchor="middle" dy="3" font-size="8">{arrow.value.toFixed(1)} / 10k</text>
+						<rect x="-43" y="-9" width="86" height="18" rx="3" />
+						<text text-anchor="middle" dy="3" font-size="8">{fmtCount(arrow.count)} mentions</text>
 					</g>
 				{/if}
 			</g>

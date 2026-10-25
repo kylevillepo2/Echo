@@ -53,8 +53,8 @@
 			{#if hasData}
 				<div class="right">
 					<div class="seg" role="group" aria-label="Edge types">
-						<button class:active={flowsState.showSwitches} aria-pressed={flowsState.showSwitches} onclick={() => (flowsState.showSwitches = !flowsState.showSwitches)} title="Users who said they left one app for another, or came back">
-							<i class="sw solid"></i>Switches + returns
+						<button class="switch-toggle" class:active={flowsState.showSwitches} aria-pressed={flowsState.showSwitches} onclick={() => (flowsState.showSwitches = !flowsState.showSwitches)} title="Reviewers who reported switching from one app to another">
+							<i class="sw solid"></i>Switches
 						</button>
 						<button class:active={flowsState.showIntents} aria-pressed={flowsState.showIntents} onclick={() => (flowsState.showIntents = !flowsState.showIntents)} title="Users who said they are about to switch">
 							<i class="sw dashed"></i>Intents
@@ -64,7 +64,7 @@
 						</button>
 					</div>
 					<div class="seg" role="group" aria-label="Direction mode">
-						<button class:active={flowsState.netMode} aria-pressed={flowsState.netMode} onclick={() => (flowsState.netMode = !flowsState.netMode)} title="One arrow per pair of apps, pointing in the net direction">Net flow</button>
+						<button class:active={flowsState.netMode} aria-pressed={flowsState.netMode} onclick={() => (flowsState.netMode = !flowsState.netMode)} title="Show only the stronger direction for each pair of apps">Main direction</button>
 					</div>
 				</div>
 			{/if}
@@ -153,6 +153,8 @@
 	.seg button:last-child { border-right: 0; }
 	.seg button:hover { color: var(--text-2); background: var(--panel-2); }
 	.seg button.active { background: var(--panel-3); color: var(--lime); }
+	.seg button.switch-toggle { font-weight: 600; }
+	.seg button.switch-toggle.active { background: var(--lime); color: var(--bg); }
 	.sw { width: 12px; height: 0; border-top: 2px solid currentColor; }
 	.sw.dashed { border-top-style: dashed; }
 	.sw.faint { opacity: 0.4; }

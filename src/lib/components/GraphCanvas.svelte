@@ -822,7 +822,7 @@
 		{#if isFocused && hasFlowData}
 			<span class="route-count num">{flowsState.visibleArrows.length} routes shown</span>
 			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
-			<div class="legend-row"><span>width = weight / 10k reviews · hollow nodes = outside apps</span></div>
+			<div class="legend-row"><span>thicker arrows = stronger review signal · hollow nodes = outside apps</span></div>
 			<div class="legend-hint">hover an app to focus its routes · click to pin</div>
 			<div class="flow-reasons">
 				{#each legendReasons as reason (reason.id)}

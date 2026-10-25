@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { tick } from 'svelte';
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
 	import AppFlows from './AppFlows.svelte';
@@ -22,6 +23,8 @@
 		type FlowLayer
 	} from '#lib/data/flows';
 	import { fmtCount } from '#lib/utils/format';
+	import { filterFlowEvidence } from '#lib/utils/flow-evidence';
+	import { reportedSwitchCount } from '#lib/utils/flow-counts';
 
 	const selection = $derived(flowsState.selection);
 	const months = $derived(flowsState.periodMonths);
@@ -30,13 +33,13 @@
 	const periodLabel = $derived(flowsState.period === 'all' ? 'all months' : fmtMonth(flowsState.period));
 
 	const layerNames: Record<FlowLayer, string> = {
-		switch: 'switches + returns',
+		switch: 'switches',
 		intent: 'intents',
 		preference: 'preferences'
 	};
 	const kindNames: Record<FlowKind, [string, string]> = {
 		switch: ['switch', 'switches'],
-		return: ['return', 'returns'],
+		return: ['switch', 'switches'],
 		intent: ['intent', 'intents'],
 		preference: ['preference', 'preferences']
 	};
@@ -80,21 +83,44 @@
 
 	const edge = $derived(selection?.type === 'edge' ? selection : null);
 	const forward = $derived(edge ? pair(edge.s, edge.t) : null);
-	const backward = $derived(edge ? pair(edge.t, edge.s) : null);
+	const switchCount = $derived(reportedSwitchCount(forward?.kinds ?? {}));
 	const reasonRows = $derived(forward ? sortedReasons(forward.reasons) : []);
-	const reasonTotal = $derived(reasonRows.reduce((sum, [, n]) => sum + n, 0));
 	const series = $derived(edge ? pairSeries(edge.s, edge.t, layers) : []);
-	const reverseSeries = $derived(edge ? pairSeries(edge.t, edge.s, layers) : []);
+	let selectedReason = $state<string | null>(null);
+	let includeAllMonths = $state(false);
+	let reviewSection = $state<HTMLElement>();
+	let evidenceContext = '';
+
+	$effect(() => {
+		const next = `${edge?.s}|${edge?.t}|${flowsState.period}|${[...layers].join(',')}`;
+		if (next !== evidenceContext) {
+			evidenceContext = next;
+			selectedReason = null;
+			includeAllMonths = false;
+		}
+	});
 	const exampleKinds = $derived(
 		(['switch', 'return', 'intent', 'preference'] as FlowKind[]).filter((k) =>
 			layers.has(k === 'return' ? 'switch' : (k as FlowLayer))
 		)
 	);
-	const examples = $derived(
+	const allExamples = $derived(
 		edge
 			? exampleKinds.flatMap((kind) => examplesFor(edge.s, edge.t, kind).map((ex) => ({ ...ex, kind })))
 			: []
 	);
+	const examples = $derived(filterFlowEvidence(allExamples, selectedReason, flowsState.period, includeAllMonths));
+	const archivedExamples = $derived(filterFlowEvidence(allExamples, selectedReason, 'all'));
+
+	async function chooseReason(id: string) {
+		selectedReason = selectedReason === id ? null : id;
+		includeAllMonths = false;
+		await tick();
+		reviewSection?.scrollIntoView({
+			behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+			block: 'start'
+		});
+	}
 
 	/* ----------------------------- app ------------------------------ */
 
@@ -105,7 +131,7 @@
 	/* --------------------------- overview --------------------------- */
 
 	const topFlows = $derived(
-		[...flowsState.arrows].sort((a, b) => b.value - a.value).slice(0, 10)
+		[...flowsState.arrows].sort((a, b) => b.count - a.count).slice(0, 10)
 	);
 	const partialMonths = flows.months.filter((m) => !m.full);
 
@@ -116,12 +142,12 @@
 	const PAD = { l: 4, r: 4, t: 10, b: 14 };
 
 	const chart = $derived.by(() => {
-		const max = Math.max(...series.map((p) => p.value), ...reverseSeries.map((p) => p.value), 0.001);
+		const max = Math.max(...series.map((p) => p.count), 1);
 		const n = allMonthIds.length;
 		const x = (i: number) => PAD.l + (i / Math.max(1, n - 1)) * (CW - PAD.l - PAD.r);
 		const y = (v: number) => PAD.t + (1 - v / max) * (CH - PAD.t - PAD.b);
-		const line = (pts: { value: number }[]) =>
-			pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.value).toFixed(1)}`).join(' ');
+		const line = (pts: { count: number }[]) =>
+			pts.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.count).toFixed(1)}`).join(' ');
 		const covStart = allMonthIds.indexOf(coverageMonths[0]);
 		const covEnd = allMonthIds.indexOf(coverageMonths[coverageMonths.length - 1]);
 		return {
@@ -129,7 +155,6 @@
 			x,
 			y,
 			fwd: line(series),
-			bwd: line(reverseSeries),
 			band: { x: x(covStart) - 4, w: x(covEnd) - x(covStart) + 8 },
 			selected: flowsState.period === 'all' ? -1 : allMonthIds.indexOf(flowsState.period)
 		};
@@ -151,8 +176,48 @@
 	}
 </script>
 
+{#snippet reviewEvidence()}
+	<section class="block" id="flow-review-evidence" bind:this={reviewSection}>
+		<div class="block-head">
+			<span class="label-dim">{selectedReason ? `Reviews mentioning ${reasonLabel(selectedReason)}` : 'Review excerpts'}</span>
+			{#if selectedReason}
+				<button class="clear-filter" onclick={() => { selectedReason = null; includeAllMonths = false; }}>All issues</button>
+			{/if}
+		</div>
+		<p class="evidence-note" role="status">{examples.length} saved excerpts · {includeAllMonths || flowsState.period === 'all' ? 'all months' : periodLabel}. These are sampled review quotes, not the complete review archive.</p>
+		{#if examples.length}
+			<div class="quotes">
+				{#each examples as ex, i (i)}
+					<article class="quote">
+						<p>“{ex.q}”</p>
+						<div class="quote-meta">
+							<span class="stars">{stars(ex.stars)}</span>
+							<span>{fmtMonth(ex.m, true)}</span>
+							<span>{kindNames[ex.kind][0]}</span>
+							<span>in {name(ex.o)} reviews</span>
+						</div>
+						{#if ex.d}<div class="quote-detail">{ex.d}</div>{/if}
+						{#if ex.r.length}
+							<div class="quote-reasons">
+								{#each ex.r as reason (reason)}
+									<span class="chip mini-chip"><i style:background={reasonColour(reason)}></i>{reasonLabel(reason)}</span>
+								{/each}
+							</div>
+						{/if}
+					</article>
+				{/each}
+			</div>
+		{:else}
+			<p class="muted">No saved excerpts{selectedReason ? ` for ${reasonLabel(selectedReason)}` : ''} in {includeAllMonths ? 'all months' : periodLabel}. Issue counts come from the full extracted data; only a sample of quotes is bundled.</p>
+		{/if}
+		{#if flowsState.period !== 'all' && !includeAllMonths && archivedExamples.length > examples.length}
+			<button class="clear-filter archived" onclick={() => (includeAllMonths = true)}>Show matching excerpts from all months</button>
+		{/if}
+	</section>
+{/snippet}
+
 <aside class="inspector" aria-label="Flows inspector">
-	{#if edge && forward && backward}
+	{#if edge && forward}
 		<header class="head" style:--accent={reasonColour(topReason(forward.reasons))}>
 			<div class="eyebrow">
 				<button class="crumb" onclick={returnToApp}>{studio.selectedApp?.name ?? 'Flows'}</button>
@@ -167,49 +232,41 @@
 				</h2>
 				<button class="close" onclick={close} aria-label="Close">×</button>
 			</div>
+			{#if layers.has('switch')}
+				<div class="switch-summary" aria-label="{switchCount} reported switches">
+					<strong class="switch-total num">{fmtCount(switchCount)}</strong>
+					<div>
+						<span class="switch-label">Reported switches</span>
+						<span class="switch-period">{periodLabel} · reported in reviews</span>
+					</div>
+				</div>
+			{/if}
 			<div class="meta-row">
-				{#each Object.entries(forward.kinds) as [kind, n] (kind)}
-					<span class="chip">{n} {kindNames[kind as FlowKind][n === 1 ? 0 : 1]}</span>
+				{#each ['intent', 'preference'] as kind (kind)}
+					{@const count = forward.kinds[kind as FlowKind] ?? 0}
+					{#if count}
+						<span class="chip">{fmtCount(count)} {kindNames[kind as FlowKind][count === 1 ? 0 : 1]}</span>
+					{/if}
 				{/each}
-				<button class="swap" onclick={() => flowsState.selectEdge(edge.t, edge.s)}>reverse ⇄</button>
+				<button class="swap" onclick={() => flowsState.selectEdge(edge.t, edge.s)}>View {name(edge.t)} → {name(edge.s)}</button>
 			</div>
+			<p class="direction-note">Counts are reports in reviews, not independently tracked users.</p>
 		</header>
 
 		<div class="body scroll">
-			<section class="block stats">
-				<div class="stat">
-					<span class="label-dim">this way</span>
-					<span class="big num">{forward.value.toFixed(1)}</span>
-					<span class="unit">per 10k · {fmtCount(forward.count)} reviews</span>
-				</div>
-				<div class="stat">
-					<span class="label-dim">reverse</span>
-					<span class="big num dim">{backward.value.toFixed(1)}</span>
-					<span class="unit">per 10k · {fmtCount(backward.count)} reviews</span>
-				</div>
-				<div class="stat">
-					<span class="label-dim">net</span>
-					<span class="big num" class:pos={forward.value >= backward.value} class:neg={forward.value < backward.value}>
-						{forward.value >= backward.value ? '→' : '←'}
-						{Math.abs(forward.value - backward.value).toFixed(1)}
-					</span>
-					<span class="unit">{periodLabel}</span>
-				</div>
-			</section>
-
 			<section class="block">
 				<div class="block-head">
-					<span class="label-dim">Why · {periodLabel}</span>
-					<span class="soft num">{reasonTotal} stated reasons</span>
+					<span class="label-dim">Issues mentioned · {periodLabel}</span>
+					<span class="soft">click to read reviews</span>
 				</div>
 				{#if reasonRows.length}
 					<div class="reasons">
 						{#each reasonRows.slice(0, 8) as [id, n] (id)}
-							<div class="reason-row">
+							<button class="reason-row" class:active={selectedReason === id} aria-pressed={selectedReason === id} aria-controls="flow-review-evidence" aria-label="Show reviews about {reasonLabel(id)}" onclick={() => chooseReason(id)}>
 								<span class="reason-name">{reasonLabel(id)}</span>
 								<span class="meter" style:color={reasonColour(id)}><i style:width="{(n / reasonRows[0][1]) * 100}%"></i></span>
 								<span class="reason-n num">{n}</span>
-							</div>
+							</button>
 						{/each}
 					</div>
 				{:else}
@@ -217,14 +274,13 @@
 				{/if}
 			</section>
 
+			{@render reviewEvidence()}
+
 			<section class="block">
 				<div class="block-head">
-					<span class="label-dim">Monthly · per 10k reviews</span>
-					<span class="soft num">
-						<i class="key fwd"></i>this way <i class="key bwd"></i>reverse
-					</span>
+					<span class="label-dim">Monthly review mentions</span>
 				</div>
-				<svg class="mini" viewBox="0 0 {CW} {CH}" preserveAspectRatio="none" role="img" aria-label="Monthly flow for this pair">
+				<svg class="mini" viewBox="0 0 {CW} {CH}" preserveAspectRatio="none" role="img" aria-label="Monthly review mentions from {name(edge.s)} toward {name(edge.t)}">
 					<rect x={chart.band.x} y={PAD.t - 6} width={chart.band.w} height={CH - PAD.t - PAD.b + 6} class="band" />
 					{#each allMonthIds as m, i (m)}
 						{#if !flowMonth(m)?.full}
@@ -237,7 +293,6 @@
 					{#if chart.selected >= 0}
 						<line x1={chart.x(chart.selected)} x2={chart.x(chart.selected)} y1="0" y2={CH - PAD.b} class="sel-line" />
 					{/if}
-					<path d={chart.bwd} class="bwd" />
 					<path d={chart.fwd} class="fwd" style:stroke={reasonColour(topReason(forward.reasons))} />
 				</svg>
 				<div class="axis">
@@ -245,39 +300,7 @@
 					<span class="cov">full coverage {fmtMonth(coverageMonths[0], true)}–{fmtMonth(coverageMonths.at(-1)!, true)}</span>
 					<span>{fmtMonth(allMonthIds.at(-1)!, true)}</span>
 				</div>
-				<p class="hint">Peak {chart.max.toFixed(1)}. Outside the band some apps have no reviews, so spikes there can be noise.</p>
-			</section>
-
-			<section class="block">
-				<div class="block-head">
-					<span class="label-dim">What reviewers said</span>
-					<span class="soft num">{examples.length} quotes · all months</span>
-				</div>
-				{#if examples.length}
-					<div class="quotes">
-						{#each examples as ex, i (i)}
-							<article class="quote">
-								<p>“{ex.q}”</p>
-								<div class="quote-meta">
-									<span class="stars">{stars(ex.stars)}</span>
-									<span>{fmtMonth(ex.m, true)}</span>
-									<span>{ex.kind}</span>
-									<span>in {name(ex.o)} reviews</span>
-								</div>
-								{#if ex.d}<div class="quote-detail">{ex.d}</div>{/if}
-								{#if ex.r.length}
-									<div class="quote-reasons">
-										{#each ex.r as r (r)}
-											<span class="chip mini-chip"><i style:background={reasonColour(r)}></i>{reasonLabel(r)}</span>
-										{/each}
-									</div>
-								{/if}
-							</article>
-						{/each}
-					</div>
-				{:else}
-					<p class="muted">No example quotes for the visible edge types.</p>
-				{/if}
+				<p class="hint">Number of review mentions for {name(edge.s)} → {name(edge.t)} each month. Outside the shaded coverage band, missing reviews can distort the trend.</p>
 			</section>
 		</div>
 	{:else if app}
@@ -312,26 +335,25 @@
 				<button class="close" onclick={close} aria-label="Close">×</button>
 			</div>
 			<div class="meta-row">
-				<span class="chip">{fmtCount(flows.meta.edgeRows)} labeled edges</span>
-				<span class="chip">{flows.meta.model}</span>
+				<span class="chip">Music review snapshot</span>
+				<span class="chip">Google Play &amp; App Store</span>
 			</div>
 		</header>
 
 		<div class="body scroll">
 			<section class="block">
 				<div class="block-head">
-					<span class="label-dim">Top flows · {periodLabel}</span>
-					<span class="soft num">per 10k reviews</span>
+					<span class="label-dim">Frequently mentioned routes · {periodLabel}</span>
 				</div>
 				{#if topFlows.length}
 					<div class="partners">
 						{#each topFlows as a (a.key)}
 							<button class="partner" onclick={() => flowsState.selectEdge(a.s, a.t)}>
 								<span class="p-name">{name(a.s)} → {name(a.t)}</span>
-								<span class="p-val num">{a.value.toFixed(1)}</span>
-								<span class="meter" style:color={reasonColour(topReason(a.reasons))}><i style:width="{(a.value / (topFlows[0].value || 1)) * 100}%"></i></span>
+								<span class="p-val num" class:reported-switch-route={a.layer === 'switch'}>{fmtCount(a.count)} {a.layer === 'switch' ? 'switches' : 'mentions'}</span>
+								<span class="meter" style:color={reasonColour(topReason(a.reasons))}><i style:width="{(a.count / (topFlows[0].count || 1)) * 100}%"></i></span>
 								<span class="p-meta">
-									{fmtCount(a.count)} reviews · {a.layer === 'net' ? 'net' : layerNames[a.layer]}
+									{a.layer === 'net' ? 'dominant direction' : layerNames[a.layer]}
 									{#if topReason(a.reasons)}· {reasonLabel(topReason(a.reasons)!)}{/if}
 								</span>
 							</button>
@@ -346,7 +368,7 @@
 				<div class="block-head"><span class="label-dim">How to read it</span></div>
 				<ul class="howto">
 					<li><b>Arrow</b> source → target: users moving (or leaning) from one app to the other.</li>
-					<li><b>Width</b> edge weight per 10k reviews of the app the review was posted on, so busy apps don’t dominate.</li>
+					<li><b>Width</b> the strength of the review signal, adjusted so apps with more reviews don’t automatically dominate.</li>
 					<li><b>Colour</b> the most common stated reason.</li>
 					<li><b>Hollow apps</b> are only seen through other apps’ reviews.</li>
 					<li>Click an arrow for reasons, a monthly line and quotes. Click an app for who it loses to and wins from.</li>
@@ -358,10 +380,10 @@
 				<p class="text">
 					Full coverage {fmtMonth(coverageMonths[0])} – {fmtMonth(coverageMonths.at(-1)!)}: all three
 					reviewed apps have normal review volume. {partialMonths.length} other months are partial
-					(mostly no Spotify reviews after Apr 2025), shown greyed on the timeline.
+					because reviews are missing or unusually sparse, shown greyed on the timeline.
 				</p>
 				<p class="text dimmed">
-					Labels by {flows.meta.model}. {flows.meta.normalization}
+					Counts are mentions in reviews, not unique people or measured migrations. See “Where flow data comes from” below the map for methodology.
 				</p>
 			</section>
 		</div>
@@ -475,7 +497,7 @@
 		font-size: 8.5px;
 	}
 	.swap {
-		margin-left: auto;
+		text-align: left;
 		font-family: var(--mono);
 		font-size: 8px;
 		letter-spacing: 0.06em;
@@ -486,6 +508,60 @@
 	}
 	.swap:hover {
 		color: var(--text);
+	}
+	.switch-summary {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 14px 0 4px;
+	}
+	.switch-total {
+		font-size: 38px;
+		font-weight: 600;
+		line-height: 1;
+		color: var(--lime);
+	}
+	.switch-summary > div {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+	.switch-label {
+		font-family: var(--mono);
+		font-size: 11px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: var(--text);
+	}
+	.switch-period {
+		font-size: 10px;
+		color: var(--muted);
+	}
+	.direction-note,
+	.evidence-note {
+		margin: 8px 0 0;
+		font-size: 10.5px;
+		line-height: 1.5;
+		color: var(--muted);
+	}
+	.evidence-note {
+		margin: 0 0 10px;
+	}
+	.clear-filter {
+		font-family: var(--mono);
+		font-size: 9px;
+		color: var(--lime);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		white-space: nowrap;
+	}
+	.clear-filter:hover {
+		color: var(--text);
+	}
+	.archived {
+		margin-top: 10px;
+		white-space: normal;
+		text-align: left;
 	}
 
 	.body {
@@ -524,38 +600,6 @@
 		font-size: 9px;
 		color: var(--dim);
 	}
-	.stats {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
-	}
-	.stat {
-		display: flex;
-		flex-direction: column;
-		gap: 2px;
-		min-width: 0;
-	}
-	.big {
-		font-size: 20px;
-		font-weight: 600;
-		color: var(--text);
-		line-height: 1.15;
-	}
-	.big.dim {
-		color: var(--muted);
-	}
-	.big.pos {
-		color: var(--pos);
-	}
-	.big.neg {
-		color: var(--neg);
-	}
-	.unit {
-		font-family: var(--mono);
-		font-size: 8.5px;
-		color: var(--dim);
-	}
-
 	.reasons {
 		display: flex;
 		flex-direction: column;
@@ -563,9 +607,24 @@
 	}
 	.reason-row {
 		display: grid;
-		grid-template-columns: 128px 1fr 30px;
+		grid-template-columns: minmax(110px, 1fr) 1fr 30px;
 		align-items: center;
 		gap: 8px;
+		min-height: 32px;
+		padding: 6px;
+		border: 1px solid transparent;
+		border-radius: 3px;
+		text-align: left;
+		transition: background var(--fast), border-color var(--fast);
+	}
+	.reason-row:hover,
+	.reason-row:focus-visible,
+	.reason-row.active {
+		background: var(--panel-2);
+		border-color: var(--line-strong);
+	}
+	.reason-row.active .reason-name {
+		color: var(--lime);
 	}
 	.reason-name {
 		font-size: 11.5px;
@@ -607,24 +666,6 @@
 		fill: none;
 		stroke-width: 1.8;
 		vector-effect: non-scaling-stroke;
-	}
-	.mini .bwd {
-		fill: none;
-		stroke: var(--muted);
-		stroke-width: 1.2;
-		stroke-dasharray: 3 3;
-		vector-effect: non-scaling-stroke;
-	}
-	.key {
-		display: inline-block;
-		width: 10px;
-		height: 0;
-		border-top: 2px solid var(--text-2);
-		margin: 0 3px 0 8px;
-		vertical-align: middle;
-	}
-	.key.bwd {
-		border-top: 1px dashed var(--muted);
 	}
 	.axis {
 		display: flex;
@@ -727,6 +768,11 @@
 		grid-area: val;
 		font-size: 11px;
 		color: var(--text-2);
+	}
+	.p-val.reported-switch-route {
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--lime);
 	}
 	.partner .meter {
 		grid-area: meter;

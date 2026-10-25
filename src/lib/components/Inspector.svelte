@@ -56,13 +56,6 @@
 
 	/* --------------------------- derived ---------------------------- */
 
-	const sentimentTotal = $derived(
-		app ? app.sentiment.positive + app.sentiment.neutral + app.sentiment.negative : 1
-	);
-	const posShare = $derived(app ? app.sentiment.positive / sentimentTotal : 0);
-	const neuShare = $derived(app ? app.sentiment.neutral / sentimentTotal : 0);
-	const negShare = $derived(app ? app.sentiment.negative / sentimentTotal : 0);
-
 	const distribution = $derived(app ? [...app.distribution].sort((a, b) => b.stars - a.stars) : []);
 	const distributionTotal = $derived(
 		distribution.reduce((sum, bucket) => sum + bucket.count, 0) || 1
@@ -177,31 +170,6 @@
 
 		<div class="body scroll">
 			{#if studio.inspectorTab === 'overview'}
-				<div class="hero">
-					<ReceptionRing score={app.reception} size={102} />
-					<div class="hero-side">
-						<div class="hero-top">
-							<span class="label-dim">Reception score</span>
-							<span class="delta" class:up={app.receptionDelta >= 0} class:down={app.receptionDelta < 0}>
-								{fmtDelta(app.receptionDelta)} <span class="unit">pts</span>
-							</span>
-						</div>
-						<div class="senti-bar">
-							<i class="pos" style:width="{posShare * 100}%"></i>
-							<i class="neu" style:width="{neuShare * 100}%"></i>
-							<i class="neg" style:width="{negShare * 100}%"></i>
-						</div>
-						<div class="senti-legend">
-							<span class="pos">{fmtPct(posShare, 0)} positive</span>
-							<span class="neu">{fmtPct(neuShare, 0)} neutral</span>
-							<span class="neg">{fmtPct(negShare, 0)} negative</span>
-						</div>
-						<div class="hero-foot">
-							{fmtCount(app.reviewCount)} reviews indexed · 8-week trend
-						</div>
-					</div>
-				</div>
-
 				{#if downloads}
 					<section class="block">
 						<div class="block-head">
@@ -237,60 +205,47 @@
 					</section>
 				{/if}
 
-				{#if signals}
-					<section class="block">
-						<div class="block-head">
-							<span class="label-dim">What moves installs</span>
-							<span class="num soft">r · lag</span>
-						</div>
-						<div class="signal-list">
-							<div class="signal-row">
-								<span class="signal-dot neutral"></span>
-								<span class="signal-name">Review volume</span>
-								<span
-									class="signal-r num"
-									class:pos={signals.volume.r >= 0}
-									class:neg={signals.volume.r < 0}>{fmtR(signals.volume.r)}</span
-								>
-								<span class="signal-lag num">{fmtLag(signals.volume.lag)}</span>
-							</div>
-							<div class="signal-row">
-								<span class="signal-dot neg"></span>
-								<span class="signal-name">Negative reviews</span>
-								<span
-									class="signal-r num"
-									class:pos={signals.sentiment.r >= 0}
-									class:neg={signals.sentiment.r < 0}>{fmtR(signals.sentiment.r)}</span
-								>
-								<span class="signal-lag num">{fmtLag(signals.sentiment.lag)}</span>
-							</div>
-							{#each signals.drivers as driver (driver.id)}
-								<button
-									class="signal-row is-driver"
-									class:active={studio.themeFilter === driver.id}
-									onclick={() => studio.toggleTheme(driver.id)}
-									title="Filter the corpus by {driver.label}"
-								>
-									<span
-										class="signal-dot"
-										class:pos={driver.kind === 'positive'}
-										class:neg={driver.kind === 'negative'}
-									></span>
-									<span class="signal-name">{driver.label}</span>
-									<span
-										class="signal-r num"
-										class:pos={driver.r >= 0}
-										class:neg={driver.r < 0}>{fmtR(driver.r)}</span
-									>
-									<span class="signal-lag num">{fmtLag(driver.lag)}</span>
-								</button>
-							{/each}
-						</div>
-						<p class="signal-note">
-							Weekly Pearson r against downloads. <b>leads</b> means reviews moved first.
-						</p>
-					</section>
-				{/if}
+				<section class="block">
+					<div class="block-head">
+						<span class="label-dim">Signals · loved</span>
+						<span class="num soft">{app.themes.positive.length}</span>
+					</div>
+					{#each app.themes.positive.slice(0, 4) as theme (theme.id)}
+						<ThemeBar
+							label={theme.label}
+							share={theme.share}
+							count={theme.count}
+							kind="positive"
+							max={themeMax}
+							impact={theme.impact}
+							active={studio.themeFilter === theme.id}
+							onclick={() => studio.toggleTheme(theme.id)}
+						/>
+					{:else}
+						<p class="none">No strong positive themes detected.</p>
+					{/each}
+				</section>
+
+				<section class="block">
+					<div class="block-head">
+						<span class="label-dim">Signals · friction</span>
+						<span class="num soft">{app.themes.negative.length}</span>
+					</div>
+					{#each app.themes.negative.slice(0, 4) as theme (theme.id)}
+						<ThemeBar
+							label={theme.label}
+							share={theme.share}
+							count={theme.count}
+							kind="negative"
+							max={themeMax}
+							impact={theme.impact}
+							active={studio.themeFilter === theme.id}
+							onclick={() => studio.toggleTheme(theme.id)}
+						/>
+					{:else}
+						<p class="none">No recurring complaints detected.</p>
+					{/each}
+				</section>
 
 				<section class="block">
 					<div class="block-head">
@@ -361,48 +316,6 @@
 					</div>
 				</section>
 
-				<section class="block">
-					<div class="block-head">
-						<span class="label-dim">Signals · loved</span>
-						<span class="num soft">{app.themes.positive.length}</span>
-					</div>
-					{#each app.themes.positive.slice(0, 4) as theme (theme.id)}
-						<ThemeBar
-							label={theme.label}
-							share={theme.share}
-							count={theme.count}
-							kind="positive"
-							max={themeMax}
-							impact={theme.impact}
-							active={studio.themeFilter === theme.id}
-							onclick={() => studio.toggleTheme(theme.id)}
-						/>
-					{:else}
-						<p class="none">No strong positive themes detected.</p>
-					{/each}
-				</section>
-
-				<section class="block">
-					<div class="block-head">
-						<span class="label-dim">Signals · friction</span>
-						<span class="num soft">{app.themes.negative.length}</span>
-					</div>
-					{#each app.themes.negative.slice(0, 4) as theme (theme.id)}
-						<ThemeBar
-							label={theme.label}
-							share={theme.share}
-							count={theme.count}
-							kind="negative"
-							max={themeMax}
-							impact={theme.impact}
-							active={studio.themeFilter === theme.id}
-							onclick={() => studio.toggleTheme(theme.id)}
-						/>
-					{:else}
-						<p class="none">No recurring complaints detected.</p>
-					{/each}
-				</section>
-
 				{#if similar.length}
 					<section class="block">
 						<div class="block-head">
@@ -416,6 +329,49 @@
 								<span class="sim-pct num">{scorePct(entry.score)}%</span>
 							</button>
 						{/each}
+					</section>
+				{/if}
+
+				{#if signals}
+					<section class="block">
+						<div class="block-head">
+							<span class="label-dim">What moves installs</span>
+							<span class="num soft">r · lag</span>
+						</div>
+						<div class="signal-list">
+							<div class="signal-row">
+								<span class="signal-dot neg"></span>
+								<span class="signal-name">Negative reviews</span>
+								<span
+									class="signal-r num"
+									class:pos={signals.sentiment.r >= 0}
+									class:neg={signals.sentiment.r < 0}>{fmtR(signals.sentiment.r)}</span
+								>
+								<span class="signal-lag num">{fmtLag(signals.sentiment.lag)}</span>
+							</div>
+							{#each signals.drivers as driver (driver.id)}
+								<button
+									class="signal-row is-driver"
+									class:active={studio.themeFilter === driver.id}
+									onclick={() => studio.toggleTheme(driver.id)}
+									title="Filter apps by {driver.label}"
+								>
+									<span
+										class="signal-dot"
+										class:pos={driver.kind === 'positive'}
+										class:neg={driver.kind === 'negative'}
+									></span>
+									<span class="signal-name">{driver.label}</span>
+									<span
+										class="signal-r num"
+										class:pos={driver.r >= 0}
+										class:neg={driver.r < 0}>{fmtR(driver.r)}</span
+									>
+									<span class="signal-lag num">{fmtLag(driver.lag)}</span>
+								</button>
+							{/each}
+						</div>
+						<p class="signal-note">Weekly Pearson r against downloads. <b>leads</b> means reviews moved first. Correlation does not establish causation.</p>
 					</section>
 				{/if}
 			{:else if studio.inspectorTab === 'reviews'}
@@ -889,52 +845,6 @@
 		color: var(--dim);
 		font-weight: 400;
 	}
-	.senti-bar {
-		display: flex;
-		height: 6px;
-		gap: 1px;
-		background: var(--panel-3);
-		border-radius: 1px;
-		overflow: hidden;
-	}
-	.senti-bar i {
-		display: block;
-		height: 100%;
-	}
-	.senti-bar .pos {
-		background: var(--pos);
-	}
-	.senti-bar .neu {
-		background: var(--line-bright);
-	}
-	.senti-bar .neg {
-		background: var(--neg);
-	}
-	.senti-legend {
-		display: flex;
-		justify-content: space-between;
-		gap: 4px;
-		margin-top: 5px;
-		font-family: var(--mono);
-		font-size: 8px;
-		color: var(--dim);
-	}
-	.senti-legend .pos {
-		color: var(--pos);
-	}
-	.senti-legend .neu {
-		color: var(--muted);
-	}
-	.senti-legend .neg {
-		color: var(--neg);
-	}
-	.hero-foot {
-		margin-top: 6px;
-		font-family: var(--mono);
-		font-size: 8px;
-		color: var(--faint);
-	}
-
 	.dl-head {
 		display: flex;
 		align-items: baseline;

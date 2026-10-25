@@ -3,16 +3,19 @@
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowNode, fmtMonth, reasonColour, reasonLabel, sortedReasons, topReason } from '#lib/data/flows';
 	import { fmtCount } from '#lib/utils/format';
+	import { reportedSwitchCount } from '#lib/utils/flow-counts';
 
 	let { appId, appName }: { appId: string; appName: string } = $props();
 	const app = $derived(flowNode(appId));
 	const periodLabel = $derived(flowsState.period === 'all' ? 'all months' : fmtMonth(flowsState.period));
+	const showSwitchCounts = $derived(flowsState.showSwitches);
 
 	interface Partner {
 		s: string;
 		t: string;
 		value: number;
 		count: number;
+		switches: number;
 		reasons: Map<string, number>;
 	}
 
@@ -23,16 +26,19 @@
 			const id = direction === 'out' ? agg.t : agg.s;
 			let partner = partners.get(id);
 			if (!partner) {
-				partner = { s: agg.s, t: agg.t, value: 0, count: 0, reasons: new Map() };
+				partner = { s: agg.s, t: agg.t, value: 0, count: 0, switches: 0, reasons: new Map() };
 				partners.set(id, partner);
 			}
 			partner.value += agg.value;
 			partner.count += agg.count;
+			partner.switches += reportedSwitchCount(agg.kinds);
 			for (const [reason, count] of agg.reasons) {
 				partner.reasons.set(reason, (partner.reasons.get(reason) ?? 0) + count);
 			}
 		}
-		return [...partners.values()].sort((a, b) => b.value - a.value);
+		return [...partners.values()].sort((a, b) =>
+			(showSwitchCounts ? b.switches - a.switches : 0) || b.count - a.count || b.value - a.value
+		);
 	}
 
 	const losing = $derived(byPartner('out'));
@@ -51,7 +57,7 @@
 	</section>
 {:else}
 	<p class="note">
-		Flows · {periodLabel} · weight per 10k reviews.
+		{showSwitchCounts ? 'Reported switches' : 'Review mentions'} · {periodLabel}. Counts come from review reports, not measured users.
 		{#if studio.categoryFilter}
 			Use the map’s edge filters and timeline to change this view.
 		{:else}
@@ -63,23 +69,29 @@
 			We don’t have {appName}’s own reviews. These flows are mentioned in Spotify, SoundCloud and Audiomack reviews; moves between outside apps are not covered.
 		</p>
 	{/if}
-	{#each [{ title: 'Losing users to', list: losing, direction: 'out' }, { title: 'Winning users from', list: winning, direction: 'in' }] as group (group.title)}
+	{#each [{ title: showSwitchCounts ? 'Reported switches to other apps' : 'Mentions going to other apps', list: losing, direction: 'out' }, { title: showSwitchCounts ? 'Reported switches from other apps' : 'Mentions coming from other apps', list: winning, direction: 'in' }] as group (group.direction)}
 		<section class="block">
 			<div class="block-head">
 				<span class="label-dim">{group.title}</span>
 				<span class="soft num">{periodLabel}</span>
 			</div>
 			{#if group.list.length}
-				{@const max = group.list[0].value || 1}
+				{@const max = (showSwitchCounts ? group.list[0].switches : group.list[0].count) || 1}
 				<div class="partners">
 					{#each group.list.slice(0, 8) as row (row.s + '|' + row.t)}
 						{@const partner = group.direction === 'out' ? row.t : row.s}
+						{@const count = showSwitchCounts ? row.switches : row.count}
 						<button class="partner" onclick={() => selectEdge(row)}>
 							<span class="name">{flowNode(partner)?.name ?? partner}</span>
-							<span class="value num">{row.value.toFixed(1)}</span>
-							<span class="meter" style:color={reasonColour(topReason(row.reasons))}><i style:width="{(row.value / max) * 100}%"></i></span>
+							<span class="value" class:is-switch={showSwitchCounts}>
+								<strong class="num">{fmtCount(count)}</strong>
+								<span>{showSwitchCounts ? (count === 1 ? 'switch' : 'switches') : 'mentions'}</span>
+							</span>
+							<span class="meter" style:color={reasonColour(topReason(row.reasons))}><i style:width="{(count / max) * 100}%"></i></span>
 							<span class="meta">
-								{fmtCount(row.count)} reviews
+								{#if showSwitchCounts && row.count > row.switches}
+									<span>+ {fmtCount(row.count - row.switches)} other mentions</span>
+								{/if}
 								{#each sortedReasons(row.reasons).slice(0, 2) as [id, count] (id)}
 									<span class="reason"><i style:background={reasonColour(id)}></i>{reasonLabel(id)} {count}</span>
 								{/each}
@@ -125,7 +137,9 @@
 	}
 	.partner:hover { background: var(--panel-2); }
 	.name { grid-area: name; font-size: 12.5px; color: var(--text); }
-	.value { grid-area: value; font-size: 11px; color: var(--text-2); }
+	.value { grid-area: value; display: flex; align-items: baseline; gap: 5px; font-size: 9px; color: var(--muted); }
+	.value strong { font-size: 15px; font-weight: 600; color: var(--text-2); }
+	.value.is-switch strong { font-size: 20px; color: var(--lime); }
 	.meter { grid-area: meter; }
 	.meta { grid-area: meta; display: flex; flex-wrap: wrap; gap: 4px 9px; font-family: var(--mono); font-size: 8.5px; color: var(--dim); }
 	.reason { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); }
