@@ -1,22 +1,22 @@
 {
   "schema_version": "topic-insights-v1",
-  "generated_at": "2026-10-25T01:24:53.675491Z",
+  "generated_at": "2026-10-25T01:31:29.313542Z",
   "app_count": 1,
   "apps": [
     {
-      "app": "Remini",
-      "run_slug": "remini-english-full-20261024",
-      "total_reviews": 74977,
-      "reviews_with_topics": 5627,
-      "approved_topic_count": 14,
+      "app": "Cash App",
+      "run_slug": "cash-app-english-full-20261024",
+      "total_reviews": 62785,
+      "reviews_with_topics": 16484,
+      "approved_topic_count": 38,
       "missing_date_records": 0,
       "missing_rating_records": 0,
       "monthly_coverage": {
-        "first_month": "2024-06",
+        "first_month": "2024-07",
         "last_month": "2026-05",
-        "month_count": 24,
+        "month_count": 23,
         "partial_months": [
-          "2024-06",
+          "2024-07",
           "2026-05"
         ],
         "low_volume_months": []
@@ -31,11 +31,11 @@
       "warnings": [
         "Historical review coverage may be sampled or uneven."
       ],
-      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/remini.json",
-      "json_bytes": 156909
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/cash-app.json",
+      "json_bytes": 406502
     }
   ],
   "errors": [],
-  "total_reviews": 74977,
+  "total_reviews": 62785,
   "all_checks_passed": true
 }

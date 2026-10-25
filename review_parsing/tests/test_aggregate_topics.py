@@ -5,7 +5,10 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'nlp'))
-from aggregate_topics import aggregate_rows, atomic_json, find_refinement, select_trend
+from aggregate_topics import (aggregate_rows, atomic_json, discover_runs,
+                             find_refinement, select_trend, tagging_paths,
+                             TAGGED, TOPIC_META, TAG_REPORT,
+                             LEGACY_TAGGED, LEGACY_TOPIC_META, LEGACY_TAG_REPORT)
 
 
 TOPICS = [
@@ -34,6 +37,35 @@ def aggregate(rows, **kwargs):
 
 
 class AggregateTopicsTests(unittest.TestCase):
+    def test_discovers_legacy_cash_app_tagging(self):
+        with tempfile.TemporaryDirectory() as temp:
+            base = Path(temp)
+            root = base / 'cash-app'
+            for path in (LEGACY_TAGGED, LEGACY_TOPIC_META, LEGACY_TAG_REPORT):
+                target = root / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(b'fixture')
+            index = root / 'review-embeddings/app_index.json'
+            index.parent.mkdir()
+            index.write_text('{"Cash App": {}}')
+            self.assertEqual(discover_runs(base), [('Cash App', root)])
+            self.assertEqual(tagging_paths(root), tuple(root / p for p in
+                             (LEGACY_TAGGED, LEGACY_TOPIC_META, LEGACY_TAG_REPORT)))
+
+    def test_prefers_workflow_and_does_not_mix_incomplete_layouts(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            self.assertIsNone(tagging_paths(root))
+            for path in (TAGGED, TOPIC_META, TAG_REPORT,
+                         LEGACY_TAGGED, LEGACY_TOPIC_META, LEGACY_TAG_REPORT):
+                target = root / path
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(b'fixture')
+            self.assertEqual(tagging_paths(root), tuple(root / p for p in (TAGGED, TOPIC_META, TAG_REPORT)))
+            (root / TOPIC_META).unlink()
+            with self.assertRaisesRegex(ValueError, 'Incomplete tagging output'):
+                tagging_paths(root)
+
     def test_multilabel_dedup_denominators_missing_data_and_zero_month(self):
         rows = [
             review('r1', '2026-01-01 10:00:00', '5', [tag('topic-0001', .7), tag('topic-0001', .6), tag('topic-0002', .4)]),

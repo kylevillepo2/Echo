@@ -21,6 +21,26 @@ SCHEMA_VERSION = 'topic-insights-v1'
 TAGGED = Path('similarity-workflow-v1/description/tagging-global/tagged_reviews.parquet')
 TOPIC_META = Path('similarity-workflow-v1/description/topic-embeddings/topic_metadata.parquet')
 TAG_REPORT = Path('similarity-workflow-v1/description/tagging-global/tagging_report.json')
+LEGACY_TAGGED = Path('similarity-tagging/description-global-v1/tagged_reviews.parquet')
+LEGACY_TOPIC_META = Path('topic-embeddings/description-v1/topic_metadata.parquet')
+LEGACY_TAG_REPORT = Path('similarity-tagging/description-global-v1/tagging_report.json')
+
+
+def tagging_paths(root):
+    """Prefer workflow outputs; also accept the original separate-stage layout.
+
+    Keep each layout's tagging report and topic metadata together. Never use
+    sampled inspection CSVs as the full review corpus.
+    """
+    for layout in ((TAGGED, TOPIC_META, TAG_REPORT),
+                   (LEGACY_TAGGED, LEGACY_TOPIC_META, LEGACY_TAG_REPORT)):
+        paths = tuple(root / relative for relative in layout)
+        if paths[0].is_file():
+            missing = [str(p) for p in paths if not p.is_file()]
+            if missing:
+                raise ValueError('Incomplete tagging output; missing: ' + ', '.join(missing))
+            return paths
+    return None
 
 
 def slugify(name):
@@ -317,7 +337,7 @@ def discover_runs(runs_root):
     runs = []
     for root in sorted(runs_root.iterdir()):
         index = root / 'review-embeddings/app_index.json'
-        if index.is_file() and (root / TAGGED).is_file():
+        if index.is_file() and tagging_paths(root) is not None:
             names = list(read_json(index))
             if len(names) != 1:
                 raise ValueError(f'Expected one app per run: {root}')
@@ -326,6 +346,10 @@ def discover_runs(runs_root):
 
 
 def aggregate_app(name, root, args, generated_at):
+    paths = tagging_paths(root)
+    if paths is None:
+        raise ValueError(f'No full description-based tagging output for {name} under {root}')
+    tag_path, topic_meta_path, tag_report_path = paths
     refinement = find_refinement(root, args.refinement_root)
     taxonomy_path = refinement / 'canonical_topics.json'
     taxonomy = read_json(taxonomy_path)
@@ -333,12 +357,11 @@ def aggregate_app(name, root, args, generated_at):
                for x in taxonomy.get(group, [])}
     topics = [t for t in taxonomy['topics'] if t['relevance_status'] == 'keep'
               and not blocked.intersection(t['original_cluster_ids'])]
-    metadata = pq.read_table(root / TOPIC_META).to_pylist()
+    metadata = pq.read_table(topic_meta_path).to_pylist()
     if {t['topic_id'] for t in topics} != {t['topic_id'] for t in metadata}:
         raise ValueError(f'Approved topic IDs disagree with tagging model for {name}')
-    tag_report = read_json(root / TAG_REPORT)
+    tag_report = read_json(tag_report_path)
     threshold = tag_report['threshold_configuration']['global_threshold']
-    tag_path = root / TAGGED
     pf = pq.ParquetFile(tag_path)
     taxonomy_hash = sha256(taxonomy_path)
     required = {'review_key', 'feedback_id', 'data_source', 'feedback_date', 'stars',
