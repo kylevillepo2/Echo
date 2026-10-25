@@ -4,6 +4,7 @@
 	import { insightDateLabel, insightReviewSamples, insightTopicKey, type AppInsights, type InsightCatalogEntry, type InsightTopic } from '#lib/data/insights';
 	import { fmtFull } from '#lib/utils/format';
 	import { topicAverageLabel, topicRatingGroup, topicRatingGroups, type TopicRatingGroup } from '#lib/utils/topic-rating';
+	import { countBarWidth } from '#lib/utils/count-bars';
 	import InsightChart from './InsightChart.svelte';
 	import InsightDistribution from './InsightDistribution.svelte';
 	import InsightExamples from './InsightExamples.svelte';
@@ -33,6 +34,7 @@
 	const ratingGroups = $derived(topicRatingGroups.map((bucket) => ({
 		...bucket, topics: topics.filter((topic) => topicRatingGroup(topic) === bucket.id)
 	})));
+	const maxTopicReviews = $derived(Math.max(0, ...topics.map((topic) => topic.review_count)));
 	const selected = $derived(studio.insightTopic?.appId === data.app.id
 		? data.topics.find((topic) => topic.topic_id === studio.insightTopic?.topicId) : undefined);
 	const selectedRatingGroup = $derived(selected ? topicRatingGroups.find((bucket) => bucket.id === topicRatingGroup(selected)) : undefined);
@@ -86,9 +88,9 @@
 				<div class="topic-list">
 					{#each expandedGroups.includes(bucket.id) ? bucket.topics : bucket.topics.slice(0, 5) as topic (insightTopicKey(data.app.id, topic.topic_id))}
 						<button class="topic" class:active={selected?.topic_id === topic.topic_id} onclick={() => openTopic(topic)} aria-label="View topic: {topic.name}" aria-expanded={selected?.topic_id === topic.topic_id} aria-controls="insight-topic-detail">
-							<span class="topic-top"><span>{topic.name}</span><span class="num share">{topic.percentage_of_all_reviews.toFixed(1)}%</span></span>
-							<span class="track"><i style:width="{Math.min(100, topic.percentage_of_all_reviews)}%"></i></span>
-							<span class="topic-meta"><span>{fmtFull(topic.review_count)} reviews · {topicAverageLabel(topic)}</span><span>{trendLabel(topic)}</span></span>
+							<span class="topic-top"><span>{topic.name}</span><span class="num topic-count">{fmtFull(topic.review_count)} reviews</span></span>
+							<span class="track" title="Scaled to the largest matching topic: {fmtFull(maxTopicReviews)} reviews"><i style:width="{countBarWidth(topic.review_count, maxTopicReviews)}%"></i></span>
+							<span class="topic-meta"><span>{topicAverageLabel(topic)}</span><span>{trendLabel(topic)}</span></span>
 							<span class="parent">{topic.parent_category_name}</span>
 						</button>
 					{:else}<p class="note">No {bucket.id} topics match these filters.</p>{/each}
@@ -166,7 +168,7 @@
 	.topic:hover, .topic.active { background: var(--panel-2); border-color: var(--line-strong); }
 	.topic-top, .topic-meta { display: flex; justify-content: space-between; gap: 8px; }
 	.topic-top { font-size: 11.5px; color: var(--text-2); }
-	.share { flex: none; color: var(--topic-color, var(--cyan)); font-size: 10px; }
+	.topic-count { flex: none; color: var(--topic-color, var(--cyan)); font-size: 10px; }
 	.track { display: block; height: 3px; background: var(--panel-3); margin: 6px 0; }
 	.track i { display: block; height: 100%; background: var(--topic-color, var(--cyan)); }
 	.topic-meta { flex-wrap: wrap; font-size: 9px; color: var(--muted); }

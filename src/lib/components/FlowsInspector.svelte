@@ -88,6 +88,7 @@
 	const coverageMonths = $derived(flowsState.coverageMonths);
 	const reasonRows = $derived(forward ? sortedReasons(forward.reasons) : []);
 	const series = $derived(edge ? pairSeries(edge.s, edge.t, layers) : []);
+	const reverseSeries = $derived(edge ? pairSeries(edge.t, edge.s, layers) : []);
 	let selectedReason = $state<string | null>(null);
 	let includeAllMonths = $state(false);
 	let showAllIssues = $state(false);
@@ -158,7 +159,8 @@
 	const PAD = { l: 4, r: 4, t: 10, b: 14 };
 
 	const chart = $derived.by(() => {
-		const max = Math.max(...series.map((p) => p.count), 1);
+		// Both directions use the same count scale so the dashed comparison is honest.
+		const max = Math.max(...series.map((p) => p.count), ...reverseSeries.map((p) => p.count), 1);
 		const n = allMonthIds.length;
 		const x = (i: number) => PAD.l + (i / Math.max(1, n - 1)) * (CW - PAD.l - PAD.r);
 		const y = (v: number) => PAD.t + (1 - v / max) * (CH - PAD.t - PAD.b);
@@ -171,6 +173,7 @@
 			x,
 			y,
 			fwd: line(series),
+			reverse: line(reverseSeries),
 			band: { x: x(covStart) - 4, w: x(covEnd) - x(covStart) + 8 },
 			selected: flowsState.period === 'all' ? -1 : allMonthIds.indexOf(flowsState.period),
 			selectedEnd: flowsState.rangeEnd ? allMonthIds.indexOf(flowsState.rangeEnd) : -1
@@ -236,14 +239,16 @@
 	{#if edge && forward}
 		<section class="block route-chart">
 			<div class="block-head"><span class="label-dim">Switching over time</span></div>
-			<svg class="mini" viewBox="0 0 {CW} {CH}" preserveAspectRatio="none" role="img" aria-label="Monthly reported switches from {name(edge.s)} to {name(edge.t)}">
+			<svg class="mini" viewBox="0 0 {CW} {CH}" preserveAspectRatio="none" role="img" aria-label="Monthly reported switches: solid {name(edge.s)} to {name(edge.t)}; dashed {name(edge.t)} to {name(edge.s)}. Both directions share the same count scale.">
 				{#each allMonthIds as month, index (month)}
 					{#if !flowsState.monthInfo(month).full}<rect x={chart.x(index) - 3} y={CH - PAD.b} width="6" height="2" class="partial-tick" />{/if}
 				{/each}
 				{#if chart.selectedEnd >= 0}<rect x={chart.x(chart.selected)} y="0" width={chart.x(chart.selectedEnd) - chart.x(chart.selected)} height={CH - PAD.b} fill="var(--lime)" fill-opacity="0.12" />{:else if chart.selected >= 0}<line x1={chart.x(chart.selected)} x2={chart.x(chart.selected)} y1="0" y2={CH - PAD.b} class="sel-line" />{/if}
-				<path d={chart.fwd} class="fwd" style:stroke="var(--lime)" />
+				<path d={chart.reverse} class="reverse"><title>{name(edge.t)} → {name(edge.s)}</title></path>
+				<path d={chart.fwd} class="fwd" style:stroke="var(--lime)"><title>{name(edge.s)} → {name(edge.t)}</title></path>
 			</svg>
 			<div class="axis"><span>{fmtMonth(allMonthIds[0], true)}</span><span>{fmtMonth(allMonthIds.at(-1)!, true)}</span></div>
+			<div class="direction-key" aria-hidden="true"><span><i></i>{name(edge.s)} → {name(edge.t)}</span><span class="reverse-key"><i></i>{name(edge.t)} → {name(edge.s)}</span></div>
 		</section>
 	{/if}
 {/snippet}
@@ -672,6 +677,12 @@
 		stroke-width: 1.8;
 		vector-effect: non-scaling-stroke;
 	}
+	.mini .reverse { fill: none; stroke: var(--text-2); stroke-width: 1.3; stroke-dasharray: 4 4; stroke-opacity: 0.5; vector-effect: non-scaling-stroke; }
+	.direction-key { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-top: 8px; font-size: 9px; color: var(--muted); }
+	.direction-key span { display: inline-flex; align-items: center; gap: 5px; }
+	.direction-key i { width: 16px; border-top: 2px solid var(--lime); }
+	.direction-key .reverse-key { opacity: 0.7; }
+	.direction-key .reverse-key i { border-top: 1px dashed var(--text-2); }
 	.axis {
 		display: flex;
 		justify-content: space-between;
