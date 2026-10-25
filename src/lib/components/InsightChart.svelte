@@ -1,13 +1,17 @@
 <script lang="ts">
 	import { fmtCount } from '#lib/utils/format';
 
-	let { points, label, unit = 'reviews', mode = 'bar' }: {
+	let { points, label, unit = 'reviews', mode = 'bar', selectedMonth, onSelectMonth }: {
 		points: { month: string; value: number | null; partial: boolean; low: boolean }[];
 		label: string;
-		unit?: 'reviews' | '%';
+		unit?: 'reviews' | 'switches' | '%';
 		mode?: 'bar' | 'line';
+		selectedMonth?: string;
+		onSelectMonth?: (month: string) => void;
 	} = $props();
 	let active = $state<string | null>(null);
+	let previousSelection: string | undefined;
+	$effect(() => { if (selectedMonth !== previousSelection) { previousSelection = selectedMonth; active = null; } });
 	const W = 340;
 	const H = 135;
 	const pad = { l: 30, r: 10, t: 15, b: 24 };
@@ -26,8 +30,8 @@
 			return `${command}${point.x},${point.y}`;
 		}).join(' ');
 	});
-	const selected = $derived(points.find((point) => point.month === active));
-	const valueLabel = (value: number | null) => value === null ? 'No data' : unit === '%' ? `${value.toFixed(1)}%` : `${fmtCount(value)} reviews`;
+	const selected = $derived(points.find((point) => point.month === (active ?? selectedMonth)));
+	const valueLabel = (value: number | null) => value === null ? 'No data' : unit === '%' ? `${value.toFixed(1)}%` : `${fmtCount(value)} ${unit}`;
 	const monthLabel = (month: string) => new Date(`${month}-01T00:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
 </script>
 
@@ -39,13 +43,13 @@
 		{#if mode === 'line'}<path d={path} class="series" />{/if}
 		{#each geometry as point, index (point.month)}
 			<g
-				class="point" class:partial={point.partial || point.low}
+				class="point" class:partial={point.partial || point.low} class:current={selectedMonth === point.month}
 				role="button" tabindex="0"
 				aria-label="{monthLabel(point.month)}: {valueLabel(point.value)}{point.partial ? ', partial month' : ''}{point.low ? ', low review volume' : ''}"
 				onpointerenter={() => (active = point.month)} onpointerleave={() => (active = null)}
 				onfocus={() => (active = point.month)} onblur={() => (active = null)}
-				onclick={() => (active = point.month)}
-				onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); active = point.month; } }}
+				onclick={() => { active = point.month; onSelectMonth?.(point.month); }}
+				onkeydown={(event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); active = point.month; onSelectMonth?.(point.month); } }}
 			>
 				<title>{monthLabel(point.month)}: {valueLabel(point.value)}{point.partial ? ' — partial month' : ''}{point.low ? ' — low review volume' : ''}</title>
 				<rect x={point.x - 6} y={pad.t} width="12" height={H - pad.t - pad.b} fill="transparent" />
@@ -82,5 +86,6 @@
 	.point.partial .bar, .point.partial .dot { opacity: 0.3; }
 	.point:focus-visible .bar, .point:hover .bar { fill: var(--text); opacity: 1; }
 	.point:focus-visible .dot { fill: var(--text); }
+	.point.current .bar, .point.current .dot { fill: white; opacity: 1; }
 	.chart-note { min-height: 28px; margin: 6px 0 0; font-size: 9px; line-height: 1.5; color: var(--muted); }
 </style>

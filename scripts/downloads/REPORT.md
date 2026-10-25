@@ -1,15 +1,15 @@
 # Unwrap — download dataset
 
-Generated **2026-10-24** for **60 apps** across 12 categories.
+Generated **2026-10-24** for **59 apps** across 13 categories.
 
 > **What is real vs modelled.** Lifetime installs come from the public Google Play install bracket. The 26-week weekly series and the daily rate are **modelled** — neither store publishes download history, and a real rate needs repeated snapshots over time. Every figure is marked `confidence: "estimated"`.
 
 ## Coverage
 
-- Apps with a Play install anchor: **60/60**
-- Apps with an App Store rating count: **60/60**
+- Apps with a Play install anchor: **59/59**
+- Apps with an App Store rating count: **59/59**
 - Total lifetime installs (modelled): **17.01B**
-- Total modelled rate: **5,456,565 downloads/day**
+- Total modelled rate: **5,455,156 downloads/day**
 
 ## Sources
 
@@ -36,7 +36,7 @@ In short:
 | 1 | Temu | Shopping & Rewards | 1.09B | 995,100 | +8.3% |
 | 2 | CapCut | Photo & Video | 1.16B | 631,049 | +11.8% |
 | 3 | Picsart | Photo & Video | 1.33B | 321,020 | +5.5% |
-| 4 | Spotify | Entertainment | 1.20B | 313,320 | +5.2% |
+| 4 | Spotify | Music | 1.20B | 313,320 | +5.2% |
 | 5 | Remini | Photo & Video | 577.6M | 285,539 | +5.1% |
 | 6 | Pinterest | Social & Community | 1.06B | 262,284 | +4.9% |
 | 7 | LinkedIn | Work & Productivity | 1.39B | 258,752 | -1.5% |
@@ -57,23 +57,24 @@ In short:
 | Shopping & Rewards | 6 | 1.38B | 1,089,131 |
 | Social & Community | 5 | 1.86B | 560,701 |
 | Work & Productivity | 3 | 2.73B | 536,156 |
-| Entertainment | 7 | 1.93B | 483,458 |
+| Music | 3 | 1.45B | 373,955 |
 | Finance & Banking | 10 | 1.01B | 323,874 |
 | Games | 3 | 849.3M | 272,454 |
 | Travel & Delivery | 6 | 1.32B | 269,111 |
-| Learning & Reading | 5 | 814.0M | 184,221 |
+| Learning & Reading | 5 | 939.9M | 209,420 |
 | Utilities & Browsers | 4 | 851.8M | 174,333 |
 | Dating | 3 | 676.7M | 160,450 |
 | Health & Family | 4 | 396.0M | 91,416 |
+| TV | 3 | 354.4M | 82,895 |
 
-## All 60 apps
+## All 59 apps
 
 | App | Category | Installs | Rate/day | 4w Δ | Source | iOS ratings | Android ratings |
 |---|---|---:|---:|---:|---|---:|---:|
 | Temu | Shopping & Rewards | 1.09B | 995,100 | +8.3% | play | 2,241,545 | 13,056,046 |
 | CapCut | Photo & Video | 1.16B | 631,049 | +11.8% | play | 1,124,843 | 13,111,585 |
 | Picsart | Photo & Video | 1.33B | 321,020 | +5.5% | play | 1,196,343 | 12,116,380 |
-| Spotify | Entertainment | 1.20B | 313,320 | +5.2% | play | 42,741,753 | 36,532,990 |
+| Spotify | Music | 1.20B | 313,320 | +5.2% | play | 42,741,753 | 36,532,990 |
 | Remini | Photo & Video | 577.6M | 285,539 | +5.1% | play | 357,440 | 5,897,887 |
 | Pinterest | Social & Community | 1.06B | 262,284 | +4.9% | play | 5,805,149 | 11,682,891 |
 | LinkedIn | Work & Productivity | 1.39B | 258,752 | -1.5% | play | 645,146 | 3,522,960 |
@@ -91,20 +92,20 @@ In short:
 | Reddit | Social & Community | 128.4M | 43,110 | -0.2% | play | 3,511,323 | 4,880,202 |
 | Brave | Utilities & Browsers | 139.8M | 41,765 | +31.2% | play | 667,943 | 3,934,145 |
 | Flo | Health & Family | 136.3M | 40,115 | +3.5% | play | 2,004,734 | 5,157,572 |
-| Audiomack | Entertainment | 135.2M | 37,490 | +10.3% | play | 2,022,681 | 9,190,984 |
+| Audiomack | Music | 135.2M | 37,490 | +10.3% | play | 2,022,681 | 9,190,984 |
 | Kolibri Games | Games | 106.1M | 34,052 | +1.7% | play | 865,909 | 5,866,908 |
-| Tubi | Entertainment | 115.9M | 31,413 | -6.8% | play | 1,281,758 | 2,624,152 |
+| Tubi | TV | 115.9M | 31,413 | -6.8% | play | 1,281,758 | 2,624,152 |
 | Cash App | Finance & Banking | 136.0M | 31,234 | +8.0% | play | 8,771,856 | 4,506,898 |
 | Bumble | Dating | 112.9M | 31,186 | +8.7% | play | 1,768,550 | 1,632,021 |
 | eBay | Shopping & Rewards | 123.2M | 28,671 | +16.6% | play | 4,969,500 | 5,025,912 |
 | Airbnb | Travel & Delivery | 131.0M | 27,640 | +5.2% | play | 703,110 | 1,978,783 |
-| Crunchyroll | Entertainment | 128.5M | 26,647 | +5.5% | play | 1,519,538 | 4,437,189 |
-| Audible | Entertainment | 131.9M | 26,608 | +6.7% | play | 5,615,473 | 1,767,552 |
+| Crunchyroll | TV | 128.5M | 26,647 | +5.5% | play | 1,519,538 | 4,437,189 |
+| Audible | Learning & Reading | 131.9M | 26,608 | +6.7% | play | 5,615,473 | 1,767,552 |
 | Life360 | Health & Family | 130.7M | 24,990 | +5.8% | play | 3,136,694 | 2,480,975 |
-| Roku | Entertainment | 110.0M | 24,835 | +3.6% | play | 6,324,635 | 4,750,219 |
+| Roku | TV | 110.0M | 24,835 | +3.6% | play | 6,324,635 | 4,750,219 |
 | Chess.com | Games | 120.7M | 23,901 | +3.3% | play | 853,404 | 3,450,305 |
 | Weather Channel | Utilities & Browsers | 139.6M | 23,370 | -7.1% | play | 6,096,297 | 3,610,740 |
-| SoundCloud | Entertainment | 110.4M | 23,145 | +2.0% | play | 2,056,431 | 7,666,309 |
+| SoundCloud | Music | 110.4M | 23,145 | +2.0% | play | 2,056,431 | 7,666,309 |
 | My Fitness Pal | Health & Family | 117.4M | 22,365 | +6.7% | play | 2,383,181 | 2,919,837 |
 | Bank of America Mobile Banking | Finance & Banking | 55.0M | 21,677 | +3.6% | play | 5,025,270 | 1,202,201 |
 | Wattpad | Learning & Reading | 118.8M | 21,483 | +15.5% | play | 706,070 | 5,020,240 |
@@ -129,7 +130,6 @@ In short:
 | Spark Driver | Travel & Delivery | 5.5M | 2,532 | -6.9% | play | 313,059 | 184,742 |
 | UPS | Travel & Delivery | 12.8M | 2,425 | +5.8% | play | 1,226,737 | 330,219 |
 | Hoopla | Learning & Reading | 6.0M | 1,414 | +3.9% | play | 1,393,114 | 219,572 |
-| Hoopla Digital | Learning & Reading | 6.0M | 1,409 | +0.6% | play | 1,393,114 | 219,572 |
 
 ## Mapping notes
 
@@ -138,7 +138,6 @@ In short:
 - `Opera` — Play search returned the beta channel first; mapped to `com.opera.browser`.
 - `The Weather Channel` and `Brave` — the iTunes search endpoint rate-limited during the bulk run; filled from a direct lookup.
 - `Kolibri Games` — this is a publisher, so the data is for its game **Idle Miner Tycoon**.
-- `Hoopla` — the mock dataset has `Hoopla` and `Hoopla Digital` as separate entries; both map to the same app.
 - Play installs are global lifetime installs. App Store rating counts are US-only. Do not read the two columns as directly comparable.
 
 ## What would make the rate real
@@ -149,7 +148,7 @@ The model becomes measured data with almost no schema change: run `04-fetch-play
 
 ```sh
 cd scripts/downloads
-node 01-apps.mjs      # extract the 60 apps from mock.ts
+node 01-apps.mjs      # extract the apps from mock.ts
 node 02-match.mjs     # search both stores (rate-limited)
 node 03-mapping.mjs   # apply overrides → mapping.json
 node 04-fetch-play.mjs# fetch Play details (cached)

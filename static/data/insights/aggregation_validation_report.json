@@ -1,8 +1,287 @@
 {
   "schema_version": "topic-insights-v1",
-  "generated_at": "2026-10-25T01:24:53.675491Z",
-  "app_count": 1,
+  "generated_at": "2026-10-25T03:13:39.146051Z",
+  "app_count": 16,
   "apps": [
+    {
+      "app": "Audible",
+      "run_slug": "audible-c9072eb9",
+      "total_reviews": 31487,
+      "reviews_with_topics": 11287,
+      "approved_topic_count": 47,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/audible.json",
+      "json_bytes": 500845
+    },
+    {
+      "app": "Audiomack",
+      "run_slug": "audiomack-df3ac54d",
+      "total_reviews": 169497,
+      "reviews_with_topics": 6155,
+      "approved_topic_count": 13,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/audiomack.json",
+      "json_bytes": 145506
+    },
+    {
+      "app": "Bumble",
+      "run_slug": "bumble-english-full-20261024",
+      "total_reviews": 27669,
+      "reviews_with_topics": 14498,
+      "approved_topic_count": 53,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/bumble.json",
+      "json_bytes": 589835
+    },
+    {
+      "app": "CapCut",
+      "run_slug": "capcut-english-full-20261024",
+      "total_reviews": 31636,
+      "reviews_with_topics": 9542,
+      "approved_topic_count": 42,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-09",
+        "last_month": "2026-05",
+        "month_count": 21,
+        "partial_months": [
+          "2024-09",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/capcut.json",
+      "json_bytes": 419890
+    },
+    {
+      "app": "Cash App",
+      "run_slug": "cash-app-english-full-20261024",
+      "total_reviews": 62785,
+      "reviews_with_topics": 16484,
+      "approved_topic_count": 38,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/cash-app.json",
+      "json_bytes": 406502
+    },
+    {
+      "app": "Crunchyroll",
+      "run_slug": "crunchyroll-d1c2e660",
+      "total_reviews": 47418,
+      "reviews_with_topics": 8480,
+      "approved_topic_count": 47,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/crunchyroll.json",
+      "json_bytes": 493392
+    },
+    {
+      "app": "Hinge",
+      "run_slug": "hinge-english-full-20261024",
+      "total_reviews": 26928,
+      "reviews_with_topics": 6575,
+      "approved_topic_count": 54,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/hinge.json",
+      "json_bytes": 595260
+    },
+    {
+      "app": "PhotoRoom",
+      "run_slug": "photoroom-english-full-20261024",
+      "total_reviews": 23352,
+      "reviews_with_topics": 3504,
+      "approved_topic_count": 21,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-05",
+        "last_month": "2026-05",
+        "month_count": 25,
+        "partial_months": [
+          "2024-05",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/photoroom.json",
+      "json_bytes": 241651
+    },
+    {
+      "app": "Picsart",
+      "run_slug": "picsart-english-full-20261024",
+      "total_reviews": 41336,
+      "reviews_with_topics": 7632,
+      "approved_topic_count": 25,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/picsart.json",
+      "json_bytes": 267982
+    },
     {
       "app": "Remini",
       "run_slug": "remini-english-full-20261024",
@@ -33,9 +312,192 @@
       ],
       "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/remini.json",
       "json_bytes": 156909
+    },
+    {
+      "app": "Roku",
+      "run_slug": "roku-c520d0f2",
+      "total_reviews": 23052,
+      "reviews_with_topics": 4476,
+      "approved_topic_count": 41,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/roku.json",
+      "json_bytes": 427336
+    },
+    {
+      "app": "SoundCloud",
+      "run_slug": "soundcloud-46290a22",
+      "total_reviews": 22243,
+      "reviews_with_topics": 6931,
+      "approved_topic_count": 40,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/soundcloud.json",
+      "json_bytes": 423438
+    },
+    {
+      "app": "Spotify",
+      "run_slug": "spotify-75a25c2b",
+      "total_reviews": 101123,
+      "reviews_with_topics": 24729,
+      "approved_topic_count": 38,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-08",
+        "last_month": "2025-04",
+        "month_count": 9,
+        "partial_months": [
+          "2025-04"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/spotify.json",
+      "json_bytes": 208613
+    },
+    {
+      "app": "Tinder",
+      "run_slug": "tinder-english-full-20261024",
+      "total_reviews": 49879,
+      "reviews_with_topics": 11532,
+      "approved_topic_count": 50,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/tinder.json",
+      "json_bytes": 532184
+    },
+    {
+      "app": "Tubi",
+      "run_slug": "tubi-504e8b52",
+      "total_reviews": 25745,
+      "reviews_with_topics": 5622,
+      "approved_topic_count": 38,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-04",
+        "last_month": "2026-05",
+        "month_count": 26,
+        "partial_months": [
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/tubi.json",
+      "json_bytes": 442122
+    },
+    {
+      "app": "Venmo",
+      "run_slug": "venmo-english-full-20261024",
+      "total_reviews": 49331,
+      "reviews_with_topics": 12259,
+      "approved_topic_count": 40,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/venmo.json",
+      "json_bytes": 426404
     }
   ],
   "errors": [],
-  "total_reviews": 74977,
+  "total_reviews": 808458,
   "all_checks_passed": true
 }

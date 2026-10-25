@@ -1,0 +1,927 @@
+{
+  "accuweather": {
+    "id": "accuweather",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6e/ac/78/6eac78f7-72ea-9a10-5494-75c91e10ec62/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "AccuWeather: Weather Forecast",
+    "trackId": 300048137
+  },
+  "airbnb": {
+    "id": "airbnb",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/4e/c6/e34ec66c-5147-037c-282a-4ea295af5d36/AppIcon-0-0-1x_U007epad-0-1-0-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Airbnb",
+    "trackId": 401626263
+  },
+  "aliexpress": {
+    "id": "aliexpress",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/73/fd/b8/73fdb8d2-68d0-bc12-036d-2daf92a4165a/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "AliExpress - Shopping App",
+    "trackId": 436672029
+  },
+  "alight-motion": {
+    "id": "alight-motion",
+    "source": "https://www.google.com/s2/favicons?domain=alightmotion.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "alightmotion.com"
+  },
+  "amazon": {
+    "id": "amazon",
+    "source": "https://www.google.com/s2/favicons?domain=amazon.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "amazon.com"
+  },
+  "amazon-music": {
+    "id": "amazon-music",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9f/17/74/9f17746f-bf69-3f66-96d5-d7dd2e6fa58a/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Amazon Music: Songs & Podcasts",
+    "trackId": 510855668
+  },
+  "american-express": {
+    "id": "american-express",
+    "source": "https://www.google.com/s2/favicons?domain=americanexpress.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "americanexpress.com"
+  },
+  "ao3": {
+    "id": "ao3",
+    "source": "https://www.google.com/s2/favicons?domain=archiveofourown.org&sz=128",
+    "kind": "brand-favicon",
+    "domain": "archiveofourown.org"
+  },
+  "apple-music": {
+    "id": "apple-music",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c2/74/89/c27489c2-2c63-2e32-efee-b0f59b3184ef/musicCalistoga-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Apple Music",
+    "trackId": 1108187390
+  },
+  "audible": {
+    "id": "audible",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/61/54/19/61541922-d40d-069f-de65-d3d7ed694cd7/AppIcon-0-0-1x_U007emarketing-0-0-0-8-0-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Audible: Audiobooks & Podcasts",
+    "trackId": 379693831
+  },
+  "audiomack": {
+    "id": "audiomack",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/86/23/8a/86238aea-c7dc-c96b-8669-83037b121aaf/AppIcon-1-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Audiomack - Play Music Offline",
+    "trackId": 921765888
+  },
+  "babbel": {
+    "id": "babbel",
+    "source": "https://www.google.com/s2/favicons?domain=babbel.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "babbel.com"
+  },
+  "better-me": {
+    "id": "better-me",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/44/c4/e4/44c4e4d9-6b9a-249e-6999-510e29199da4/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "BetterMe Well-Being Coach",
+    "trackId": 1264546236
+  },
+  "bofa": {
+    "id": "bofa",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/f0/80/21f08084-f09a-e040-9e2f-3bb164b76d60/AppIcon-0-0-1x_U007epad-0-11-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Bank of America Mobile Banking",
+    "trackId": 284847138
+  },
+  "bolt": {
+    "id": "bolt",
+    "source": "https://www.google.com/s2/favicons?domain=bolt.eu&sz=128",
+    "kind": "brand-favicon",
+    "domain": "bolt.eu"
+  },
+  "brave": {
+    "id": "brave",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/83/49/85/8349855c-fb03-29a3-6dc6-40211ece1a57/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Brave Browser & Search Engine",
+    "trackId": 1052879175
+  },
+  "bumble": {
+    "id": "bumble",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8d/4b/05/8d4b05ec-0236-2fd3-28f5-3229781931f5/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Bumble Dating App: Meet & Date",
+    "trackId": 930441707
+  },
+  "busuu": {
+    "id": "busuu",
+    "source": "https://www.google.com/s2/favicons?domain=busuu.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "busuu.com"
+  },
+  "canva": {
+    "id": "canva",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/54/f2/7b/54f27b60-a3a3-62bc-8bc7-2cf1ce516731/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Canva AI Photo & Video Editor",
+    "trackId": 897446215
+  },
+  "capcut": {
+    "id": "capcut",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fb/53/9e/fb539e09-8f98-9b9e-0d13-c19c2373ff2b/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "CapCut: Photo & Video Editor",
+    "trackId": 1500855883
+  },
+  "capital-one": {
+    "id": "capital-one",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/29/54/f0/2954f0a2-d9a9-24ca-7cca-28bb9a71db3c/AppIcon-0-0-1x_U007epad-0-1-P3-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Capital One Mobile",
+    "trackId": 407558537
+  },
+  "cash-app": {
+    "id": "cash-app",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/5f/5e/2b5f5e2b-caa2-adae-038a-b3f7aa2033eb/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Cash App",
+    "trackId": 711923939
+  },
+  "chai": {
+    "id": "chai",
+    "source": "https://www.google.com/s2/favicons?domain=chai-research.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "chai-research.com"
+  },
+  "character-ai": {
+    "id": "character-ai",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/e6/a6/b2e6a6a8-cd3e-5f09-c19a-da0186b7ead7/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Character AI: Chat, Talk, Text",
+    "trackId": 1671705818
+  },
+  "charles-schwab": {
+    "id": "charles-schwab",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/73/6d/99736db2-ade5-4cdf-84a3-b2cd3762c452/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Schwab Mobile",
+    "trackId": 407358186
+  },
+  "chase": {
+    "id": "chase",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/91/d1/7b/91d17bdc-b6a8-298b-0b28-16d229749bc7/ChaseLiquidGlass-0-0-1x_U007epad-0-1-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Chase Mobile®: Bank & Invest",
+    "trackId": 298867247
+  },
+  "chess-com": {
+    "id": "chess-com",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/8d/ef/8a/8def8a3c-0f96-892f-20ba-ccb9e91a5705/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Chess.com - Play and Learn",
+    "trackId": 329218549
+  },
+  "chime": {
+    "id": "chime",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/21/32/70/213270c5-7195-fa4f-5116-9184969ecc32/AppIcon-0-0-1x_U007emarketing-0-6-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Chime® – Mobile Banking",
+    "trackId": 836215269
+  },
+  "chrome": {
+    "id": "chrome",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/65/a3/e2/65a3e28d-c86f-8b0e-1491-3df3376b527c/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Google Chrome",
+    "trackId": 535886823
+  },
+  "coffee-meets-bagel": {
+    "id": "coffee-meets-bagel",
+    "source": "https://www.google.com/s2/favicons?domain=coffeemeetsbagel.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "coffeemeetsbagel.com"
+  },
+  "coinbase": {
+    "id": "coinbase",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b4/bb/11/b4bb1146-1e34-ff68-70a1-64d133c0afae/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Coinbase: Buy Crypto & Stocks",
+    "trackId": 886427730
+  },
+  "credit-karma": {
+    "id": "credit-karma",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/38/58/94/3858948a-b7c2-e4a8-fbdc-ad81266ed7b6/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Intuit Credit Karma",
+    "trackId": 519817714
+  },
+  "cronometer": {
+    "id": "cronometer",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2c/d6/09/2cd60907-0e29-bc66-a77e-055ae140b77b/CRONOMETER-GOLDAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Cronometer: Calorie Counter",
+    "trackId": 1145935738
+  },
+  "crunchyroll": {
+    "id": "crunchyroll",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5a/28/e3/5a28e3e9-2af0-c1ac-fc9c-aadb235bd1a9/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Crunchyroll",
+    "trackId": 329913454
+  },
+  "current": {
+    "id": "current",
+    "source": "https://www.google.com/s2/favicons?domain=current.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "current.com"
+  },
+  "dave": {
+    "id": "dave",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2f/28/01/2f280129-662b-b047-6f8e-d0f68d837055/AppIcon-3d-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Dave: Credit, Cash & Money App",
+    "trackId": 1193801909
+  },
+  "depop": {
+    "id": "depop",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b2/97/0c/b2970ce9-291e-e0b5-c45f-b53c92bca016/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Depop - Buy & Sell Clothes",
+    "trackId": 518684914
+  },
+  "discord": {
+    "id": "discord",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f9/3f/31/f93f310e-890e-e076-7184-a4fa123e4f90/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Discord - Talk, Play, Hang Out",
+    "trackId": 985746746
+  },
+  "discover": {
+    "id": "discover",
+    "source": "https://www.google.com/s2/favicons?domain=discover.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "discover.com"
+  },
+  "doordash": {
+    "id": "doordash",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e5/ee/76/e5ee76b4-1ff0-4982-4802-797a3aefc280/AppIcon-0-0-1x_U007ephone-0-1-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "DoorDash: Food, Grocery, More",
+    "trackId": 719972451
+  },
+  "duckduckgo": {
+    "id": "duckduckgo",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/3d/66/89/3d668923-f372-4cad-7b98-6008da9425cd/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "DuckDuckGo, optional Duck.ai",
+    "trackId": 663592361
+  },
+  "duolingo": {
+    "id": "duolingo",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4f/4c/0f/4f4c0f9e-fddc-960e-5ea1-10d2b099c16f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Duolingo: Learn Languages",
+    "trackId": 570060128
+  },
+  "ebay": {
+    "id": "ebay",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/14/06/c4/1406c40a-0be9-6a72-1ccf-e43dd7210c88/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "eBay online shopping & selling",
+    "trackId": 282614216
+  },
+  "eharmony": {
+    "id": "eharmony",
+    "source": "https://www.google.com/s2/favicons?domain=eharmony.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "eharmony.com"
+  },
+  "facebook": {
+    "id": "facebook",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/a6/7a/5da67a2d-6bdd-b95b-86d7-a201d6979b35/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Facebook",
+    "trackId": 284882215
+  },
+  "facebook-dating": {
+    "id": "facebook-dating",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5d/a6/7a/5da67a2d-6bdd-b95b-86d7-a201d6979b35/Icon-Production-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Facebook",
+    "trackId": 284882215
+  },
+  "feeld": {
+    "id": "feeld",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ad/ca/6e/adca6eac-494b-af1f-a887-78fccc9a2b6b/AppIcon-0-0-1x_U007ephone-0-12-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Feeld: Open & Curious Dating",
+    "trackId": 887914690
+  },
+  "fetch": {
+    "id": "fetch",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9e/ca/09/9eca09aa-c7c3-4cda-ce5c-e52e059d23d5/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Fetch: Earn Rewards Every Day",
+    "trackId": 1182474649
+  },
+  "fidelity": {
+    "id": "fidelity",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c2/d2/7a/c2d27a9d-429f-545f-c5e9-edcf21bca5e4/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Fidelity Investments",
+    "trackId": 348177453
+  },
+  "fire-tv": {
+    "id": "fire-tv",
+    "source": "https://www.google.com/s2/favicons?domain=amazon.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "amazon.com"
+  },
+  "firefox": {
+    "id": "firefox",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/67/fd/1a/67fd1a41-bf25-2bdb-94df-f567d1f511e3/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Firefox Fast & Private Browser",
+    "trackId": 989804926
+  },
+  "fitbit": {
+    "id": "fitbit",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/55/bf/ff/55bfff7d-ad0b-dbaf-7615-6df12f11bc92/google_health_ios-0-0-1x_U007ephone-0-0-0-1-0-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Google Health (Fitbit)",
+    "trackId": 462638897
+  },
+  "flo": {
+    "id": "flo",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/de/7b/6ade7b4c-5971-411c-edf3-dfdbcdd646ab/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Flo Cycle & Period Tracker",
+    "trackId": 1038369065
+  },
+  "google-maps": {
+    "id": "google-maps",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f8/76/ce/f876ce27-b7c2-e674-5c9d-8d0fcb041673/maps_2025-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Google Maps",
+    "trackId": 585027354
+  },
+  "google-meet": {
+    "id": "google-meet",
+    "source": "https://www.google.com/s2/favicons?domain=meet.google.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "meet.google.com"
+  },
+  "grubhub": {
+    "id": "grubhub",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/26/2b/42/262b42e1-4c7a-9dbe-73eb-acbd063a00b8/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Grubhub: Food Delivery",
+    "trackId": 302920553
+  },
+  "hinge": {
+    "id": "hinge",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cd/b1/0f/cdb10fdf-5c2d-9faa-a592-8947b3534384/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Hinge Dating App: Match & Date",
+    "trackId": 595287172
+  },
+  "hoopla": {
+    "id": "hoopla",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d1/5a/f4/d15af4ef-d7bb-8b89-0638-f2f6da252d8f/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Hoopla: Your Library Anywhere",
+    "trackId": 580643740
+  },
+  "hulu": {
+    "id": "hulu",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d8/fa/27/d8fa27eb-7f32-fe16-8853-992a057248ce/HuluAppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Hulu: Stream TV shows & movies",
+    "trackId": 376510438
+  },
+  "indeed": {
+    "id": "indeed",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/83/42/8d/83428dcc-91aa-cd9d-f3a9-4cc9e4e0c57e/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Indeed Job Search",
+    "trackId": 309735670
+  },
+  "indrive": {
+    "id": "indrive",
+    "source": "https://www.google.com/s2/favicons?domain=indrive.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "indrive.com"
+  },
+  "inshot": {
+    "id": "inshot",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ff/70/5c/ff705cd6-c092-6b27-73f0-1db6f9382bcd/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "InShot - Video Editor",
+    "trackId": 997362197
+  },
+  "janitor-ai": {
+    "id": "janitor-ai",
+    "source": "https://www.google.com/s2/favicons?domain=janitorai.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "janitorai.com"
+  },
+  "kindle": {
+    "id": "kindle",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/58/40/e1/5840e157-a998-d207-e2b0-5298295ba1cf/AppIcon-0-0-1x_U007emarketing-0-7-0-sRGB-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Amazon Kindle: Reading App",
+    "trackId": 302584613
+  },
+  "kinemaster": {
+    "id": "kinemaster",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2b/56/06/2b5606f8-3995-ed0e-0320-1f157b232154/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "KineMaster (OLD)",
+    "trackId": 1223932558
+  },
+  "kolibri-games": {
+    "id": "kolibri-games",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ab/b7/ce/abb7ce8c-9a07-6558-77e1-a41f5856f78a/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Idle Miner Tycoon clicker game",
+    "trackId": 1116645064
+  },
+  "lemon8": {
+    "id": "lemon8",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/19/8c/4a/198c4add-9a8c-3210-c92e-9519fe66a8ba/AppIconOriginal-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Lemon8 - Lifestyle Community",
+    "trackId": 1498607143
+  },
+  "libby": {
+    "id": "libby",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b2/69/cb/b269cba8-eac6-c6f4-21f3-811b863e341c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Libby, the library app",
+    "trackId": 1076402606
+  },
+  "lichess": {
+    "id": "lichess",
+    "source": "https://www.google.com/s2/favicons?domain=lichess.org&sz=128",
+    "kind": "brand-favicon",
+    "domain": "lichess.org"
+  },
+  "life360": {
+    "id": "life360",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e9/fa/9f/e9fa9f6e-fecb-042b-d41a-61c9cd36cee7/AppIcon-0-0-1x_U007ephone-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Life360: Family Safety & GPS",
+    "trackId": 384830320
+  },
+  "linkedin": {
+    "id": "linkedin",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5d/1f/72/5d1f7261-47b9-65c7-a585-ddf4f0ecd0ba/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "LinkedIn: Community & Network",
+    "trackId": 288429040
+  },
+  "lose-it": {
+    "id": "lose-it",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ee/16/9f/ee169fb1-32fa-cdb1-68aa-cc3408a1ba11/AppIcon-0-0-1x_U007epad-0-0-0-8-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Lose It! – Calorie Counter",
+    "trackId": 297368629
+  },
+  "lyft": {
+    "id": "lyft",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/d1/09/c9/d109c904-bcd5-3d5c-f856-f9198bd6706a/PassengerRelease-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Lyft",
+    "trackId": 529379082
+  },
+  "magic-tiles-3": {
+    "id": "magic-tiles-3",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/5a/ff/24/5aff2443-13ae-423c-caa8-10d4ec4b08a5/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Magic Tiles 3™: Piano Game",
+    "trackId": 1443446174
+  },
+  "mercari": {
+    "id": "mercari",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/bb/72/bdbb72c2-46ea-326e-2517-b5853ae29adf/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Mercari: Buying & Selling App",
+    "trackId": 896130944
+  },
+  "microsoft-teams": {
+    "id": "microsoft-teams",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d4/a3/14/d4a314ce-5709-5f15-4b50-2f385257f4ae/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Microsoft Teams",
+    "trackId": 1113153706
+  },
+  "monster": {
+    "id": "monster",
+    "source": "https://www.google.com/s2/favicons?domain=monster.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "monster.com"
+  },
+  "monzo": {
+    "id": "monzo",
+    "source": "https://www.google.com/s2/favicons?domain=monzo.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "monzo.com"
+  },
+  "musi": {
+    "id": "musi",
+    "source": "https://www.google.com/s2/favicons?domain=feelthemusi.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "feelthemusi.com"
+  },
+  "my-fitness-pal": {
+    "id": "my-fitness-pal",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/9e/5d/72/9e5d7260-93c5-50e4-b1d5-0005a874a060/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "MyFitnessPal: Calorie Counter",
+    "trackId": 341232718
+  },
+  "myradar": {
+    "id": "myradar",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a0/7f/ec/a07feca3-9e05-d6b3-f710-0da7806d8514/MyRadarIOS-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "MyRadar Accurate Weather Radar",
+    "trackId": 322439990
+  },
+  "netflix": {
+    "id": "netflix",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/17/ac/4e/17ac4efb-a0a4-e618-c58b-79a2fa4b544d/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Netflix",
+    "trackId": 363590051
+  },
+  "netspend": {
+    "id": "netspend",
+    "source": "https://www.google.com/s2/favicons?domain=netspend.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "netspend.com"
+  },
+  "okcupid": {
+    "id": "okcupid",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/6d/c0/7d/6dc07d12-69b8-6cc7-47ab-d8358547aca1/AppIcon-0-0-1x_U007ephone-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "OkCupid Dating: Date Singles",
+    "trackId": 338701294
+  },
+  "opera": {
+    "id": "opera",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e8/40/47/e84047c3-6196-ece8-23b9-72a7483946ef/AppIcon-0-0-1x_U007emarketing-0-11-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Opera Browser with VPN",
+    "trackId": 1411869974
+  },
+  "pandora": {
+    "id": "pandora",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/70/fb/c8/70fbc856-46a7-d722-aafb-bea61a483315/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Pandora: Personalized Music",
+    "trackId": 284035177
+  },
+  "paypal": {
+    "id": "paypal",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f3/b9/4e/f3b94e60-19c3-8653-17ae-47774471cf0f/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "PayPal - Pay, Send, Save",
+    "trackId": 283646709
+  },
+  "photoroom": {
+    "id": "photoroom",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/c6/84/60/c6846012-a4b0-8234-983c-4b3cbcabbbce/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Photoroom: AI Photo Editor",
+    "trackId": 1455009060
+  },
+  "photoshop": {
+    "id": "photoshop",
+    "source": "https://www.google.com/s2/favicons?domain=adobe.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "adobe.com"
+  },
+  "picsart": {
+    "id": "picsart",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/29/70/0f/29700f73-1932-2d9a-d03d-971142f9ea57/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Picsart AI Photo Editor, Video",
+    "trackId": 587366035
+  },
+  "pinterest": {
+    "id": "pinterest",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0b/54/24/0b542422-8aac-f541-0b59-1b6846610877/AppIcon-0-0-1x_U007epad-0-1-0-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Pinterest",
+    "trackId": 429047995
+  },
+  "plenty-of-fish": {
+    "id": "plenty-of-fish",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/03/b4/0303b492-f464-75de-8c94-ec94e7a0749c/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Plenty of Fish : Dating App",
+    "trackId": 389638243
+  },
+  "pluto-tv": {
+    "id": "pluto-tv",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bb/dc/1a/bbdc1a12-7097-38ed-3f6e-55e003c6497a/PTVAppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Pluto TV: Watch Free Movies/TV",
+    "trackId": 751712884
+  },
+  "polybuzz": {
+    "id": "polybuzz",
+    "source": "https://www.google.com/s2/favicons?domain=polybuzz.ai&sz=128",
+    "kind": "brand-favicon",
+    "domain": "polybuzz.ai"
+  },
+  "poshmark": {
+    "id": "poshmark",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/3b/26/54/3b26545d-9a48-43f8-a07a-2f2baecb75c7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Poshmark: Shop & Sell Fashion",
+    "trackId": 470412147
+  },
+  "reddit": {
+    "id": "reddit",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/0e/07/9e/0e079ea4-79d8-e741-80ec-8f2cf141f36b/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Reddit",
+    "trackId": 1064216828
+  },
+  "remini": {
+    "id": "remini",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/ed/e2/f0/ede2f024-41df-ae69-71a3-93ca72d0ad5a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Remini - AI Photo Enhancer",
+    "trackId": 1470373330
+  },
+  "revolut": {
+    "id": "revolut",
+    "source": "https://www.google.com/s2/favicons?domain=revolut.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "revolut.com"
+  },
+  "robinhood": {
+    "id": "robinhood",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b1/fe/ec/b1feec0d-5084-6136-6207-771a47e5e577/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Robinhood: Trading & Investing",
+    "trackId": 938003185
+  },
+  "roku": {
+    "id": "roku",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5e/51/bf/5e51bf6c-fbad-df69-79b7-e8acea78a85a/Roku-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Roku Remote (Official)",
+    "trackId": 482066631
+  },
+  "rosetta-stone": {
+    "id": "rosetta-stone",
+    "source": "https://www.google.com/s2/favicons?domain=rosettastone.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "rosettastone.com"
+  },
+  "safari": {
+    "id": "safari",
+    "source": "https://www.google.com/s2/favicons?domain=apple.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "apple.com"
+  },
+  "shein": {
+    "id": "shein",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ff/a3/94/ffa39401-bd14-da4f-b392-e74dc2f12836/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "SHEIN - Shopping Online",
+    "trackId": 878577184
+  },
+  "shopify": {
+    "id": "shopify",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/e4/9f/37/e49f37e4-0199-8651-063a-28ea7fd0c807/AppIcon-com.jadedpixel.shopify-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Shopify: Sell. Run a business.",
+    "trackId": 371294472
+  },
+  "skype": {
+    "id": "skype",
+    "source": "https://www.google.com/s2/favicons?domain=skype.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "skype.com"
+  },
+  "snagajob": {
+    "id": "snagajob",
+    "source": "https://www.google.com/s2/favicons?domain=snagajob.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "snagajob.com"
+  },
+  "snapseed": {
+    "id": "snapseed",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/a8/71/84/a8718496-48fc-ccee-0bbe-e5cc1671611d/ProdAppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Snapseed: Photo Editor, Camera",
+    "trackId": 439438619
+  },
+  "sofi": {
+    "id": "sofi",
+    "source": "https://www.google.com/s2/favicons?domain=sofi.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "sofi.com"
+  },
+  "soundcloud": {
+    "id": "soundcloud",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/17/dc/16/17dc16ff-e8a9-0107-c4b8-1c4dc2c9dbb0/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "SoundCloud: Discover New Music",
+    "trackId": 336353151
+  },
+  "spark-driver": {
+    "id": "spark-driver",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/49/ed/16/49ed1666-f322-5ec9-6ac3-50f0e65ef460/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Spark Driver",
+    "trackId": 1483998235
+  },
+  "spotify": {
+    "id": "spotify",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/f2/6a/8bf26ab9-3ced-cb5c-a2b3-19f65e7f5cc6/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Spotify: Music and Podcasts",
+    "trackId": 324684580
+  },
+  "stardust": {
+    "id": "stardust",
+    "source": "https://www.google.com/s2/favicons?domain=stardust.app&sz=128",
+    "kind": "brand-favicon",
+    "domain": "stardust.app"
+  },
+  "sweatcoin": {
+    "id": "sweatcoin",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/26/29/fa/2629fadd-3867-8302-3db7-058346bc6901/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Sweatcoin Walking Step Counter",
+    "trackId": 971023427
+  },
+  "talkie": {
+    "id": "talkie",
+    "source": "https://www.google.com/s2/favicons?domain=talkie-ai.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "talkie-ai.com"
+  },
+  "td-bank": {
+    "id": "td-bank",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/18/5c/2b/185c2baf-68f0-a173-3645-bbaed6ef05da/AppIcon-0-0-1x_U007emarketing-0-11-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "TD Bank (US)",
+    "trackId": 382107453
+  },
+  "temu": {
+    "id": "temu",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/7c/4a/577c4a80-1f4b-acfc-da17-06af4ada18c2/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Temu: Shop Like a Billionaire",
+    "trackId": 1641486558
+  },
+  "ticketmaster": {
+    "id": "ticketmaster",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/ad/af/99adafd0-e850-b2a0-5181-12d4910bbf7d/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Ticketmaster－Buy, Sell Tickets",
+    "trackId": 500003565
+  },
+  "tiktok": {
+    "id": "tiktok",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/99/33/74/99337468-d03a-5efc-d436-67c0f4d918e1/TikTok_AppIcon26-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "TikTok - Videos, Shop & LIVE",
+    "trackId": 835599320
+  },
+  "tinder": {
+    "id": "tinder",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/63/7a/12/637a12f0-cd9e-4ecd-b053-415d481aa1b9/AppIcon-BrandFlame-0-0-1x_U007ephone-0-1-0-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Tinder Dating App: Date & Chat",
+    "trackId": 547702041
+  },
+  "tubi": {
+    "id": "tubi",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/10/da/6610da68-7e2f-c83f-1024-c9a647b78927/AppIcon-0-0-1x_U007epad-0-1-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Tubi: Movies & Live TV",
+    "trackId": 886445756
+  },
+  "uber": {
+    "id": "uber",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e1/28/46/e12846e9-d8b5-a073-7e36-e9d5335f8f6d/AppIcon-0-0-1x_U007emarketing-0-8-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Uber - Rides, Eats, Hotels",
+    "trackId": 368677368
+  },
+  "uber-eats": {
+    "id": "uber-eats",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f1/ed/be/f1edbe86-428b-73d1-8641-4d6751bfc564/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Uber Eats: Food & Groceries",
+    "trackId": 1058959277
+  },
+  "ups": {
+    "id": "ups",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a4/b7/de/a4b7de38-7fb1-492a-eb1c-e2ba4f30568b/AppIcon-0-0-1x_U007emarketing-0-5-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "UPS",
+    "trackId": 336377331
+  },
+  "us-bank": {
+    "id": "us-bank",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/28/36/dc/2836dc93-5500-96b8-a18c-8fc5334f0f10/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "U.S. Bank Mobile Banking",
+    "trackId": 458734623
+  },
+  "venmo": {
+    "id": "venmo",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/46/35/2e/46352e5a-8738-5102-6519-3a36de81d776/AppIcon-0-0-1x_U007emarketing-0-8-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Venmo",
+    "trackId": 351727428
+  },
+  "vinted": {
+    "id": "vinted",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d3/cd/83/d3cd83d1-4d21-6390-1c53-4e1557fdf70d/VintedAppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Vinted: Pre-loved marketplace",
+    "trackId": 632064380
+  },
+  "vn": {
+    "id": "vn",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/82/03/49/820349fe-ae7d-79bb-225a-27e867a6a46c/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "VN: Photo & Video Editor",
+    "trackId": 1343581380
+  },
+  "vrbo": {
+    "id": "vrbo",
+    "source": "https://www.google.com/s2/favicons?domain=vrbo.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "vrbo.com"
+  },
+  "wattpad": {
+    "id": "wattpad",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/2c/51/a4/2c51a40f-b590-91cf-4372-4eacc3e1c957/WattpadAppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Wattpad - Read & Write Stories",
+    "trackId": 306310789
+  },
+  "weather-channel": {
+    "id": "weather-channel",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/b5/da/f4/b5daf403-c815-baaf-b02d-b1de082f836b/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "The Weather Channel - Radar",
+    "trackId": 295646461
+  },
+  "wells-fargo": {
+    "id": "wells-fargo",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/d0/69/a2/d069a244-25f9-25e9-75f1-0d90015d3848/AppIcon-0-0-1x_U007epad-0-0-0-11-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Wells Fargo Mobile®",
+    "trackId": 311548709
+  },
+  "ww": {
+    "id": "ww",
+    "source": "https://www.google.com/s2/favicons?domain=weightwatchers.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "weightwatchers.com"
+  },
+  "youtube": {
+    "id": "youtube",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/11/1f/1e/111f1e29-ab13-355b-4ed2-b1b97abc2200/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "YouTube",
+    "trackId": 544007664
+  },
+  "youtube-music": {
+    "id": "youtube-music",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/70/a5/45/70a54567-d6d2-8f53-67bd-fcb175327044/logo_youtube_music_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "YouTube Music",
+    "trackId": 1017492454
+  },
+  "zelle": {
+    "id": "zelle",
+    "source": "https://www.google.com/s2/favicons?domain=zellepay.com&sz=128",
+    "kind": "brand-favicon",
+    "domain": "zellepay.com"
+  },
+  "ziprecruiter": {
+    "id": "ziprecruiter",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a4/43/5a/a4435abe-e802-995d-8c0c-eac70624ec16/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "ZipRecruiter Job Search",
+    "trackId": 541933937
+  },
+  "zoom": {
+    "id": "zoom",
+    "source": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/98/69/60/9869606e-7bd2-1fa4-4398-7b079ba8ae57/AppIcon-0-0-1x_U007epad-0-1-0-0-85-220.png/100x100bb.jpg",
+    "kind": "app-store",
+    "name": "Zoom Workplace",
+    "trackId": 546505307
+  }
+}

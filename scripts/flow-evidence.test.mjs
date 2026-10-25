@@ -27,3 +27,10 @@ test('missing evidence never falls back to unrelated reviews', () => {
 	assert.deepEqual(filterFlowEvidence(examples, 'ads', '2025-03'), []);
 	assert.equal(examples.length, 3);
 });
+
+test('scrubbed ranges filter issue evidence across all selected months', () => {
+	assert.deepEqual(filterFlowEvidence(examples, 'ads', ['2025-01', '2025-02']), [examples[0], examples[2]]);
+	assert.deepEqual(filterFlowEvidence(examples, null, ['2025-02', '2025-03']), [examples[2]]);
+	assert.deepEqual(filterFlowEvidence(examples, 'ads', ['2025-03']), []);
+	assert.deepEqual(filterFlowEvidence(examples, 'ads', ['2025-03'], true), [examples[0], examples[2]]);
+});

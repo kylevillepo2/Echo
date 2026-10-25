@@ -1,245 +1,26 @@
 <script lang="ts">
 	import { studio } from '#lib/state/studio.svelte';
+	import { asset } from '$app/paths';
 </script>
 
-<header class="topbar">
-	<div class="left">
-		<div class="brand">
-			<span class="mark" aria-hidden="true">U</span>
-			<div class="brand-text">
-				<span class="wordmark">UNWRAP</span>
-				<span class="tagline">review intelligence</span>
-			</div>
-		</div>
-	</div>
-
-	<div class="right">
-		<button class="source" onclick={() => (studio.connectOpen = true)} title="Data source">
-			<span class="dot" class:live={studio.isLive}></span>
-			<span class="source-mode">{studio.isLive ? 'Live' : 'Demo'}</span>
-			<span class="source-corpus">{studio.meta?.label ?? 'Connecting…'}</span>
-		</button>
-
-		<button class="search" onclick={() => studio.openPalette()}>
-			<svg width="12" height="12" viewBox="0 0 14 14" fill="none" aria-hidden="true">
-				<circle cx="6" cy="6" r="4.4" stroke="currentColor" stroke-width="1.2" />
-				<path d="M9.4 9.4 12.5 12.5" stroke="currentColor" stroke-width="1.2" />
-			</svg>
-			<span class="search-label">Search reviews</span>
-			<kbd>⌘K</kbd>
-		</button>
-
-		<button class="icon-btn help" onclick={() => (studio.helpOpen = true)} aria-label="Help and shortcuts">
-			?
-		</button>
-	</div>
+<header class="topbar" aria-label="App navigation">
+	<button class="brand" onclick={() => { studio.clearSelection(); studio.clearCategoryFilter(); }} aria-label="Return to app landscape">
+		<img class="mark" src="{asset('echo.svg')}?v=raised" width="32" height="32" alt="" />
+		<span class="wordmark">echo</span>
+	</button>
+	<button class="search" onclick={() => studio.openPalette()} aria-label="Search apps">
+		<svg width="17" height="17" viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.4" /><path d="m13 13 4 4" stroke="currentColor" stroke-width="1.4" /></svg>
+		<span>Find an app</span><kbd>⌘K</kbd>
+	</button>
 </header>
 
 <style>
-	.topbar {
-		height: var(--header-h);
-		flex: none;
-		display: flex;
-		align-items: center;
-		gap: 14px;
-		padding: 0 12px 0 10px;
-		border-bottom: 1px solid var(--line);
-		background: var(--bg);
-		position: relative;
-		z-index: 30;
-	}
-
-	.left {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		min-width: 0;
-	}
-
-	.icon-btn {
-		display: grid;
-		place-items: center;
-		width: 28px;
-		height: 28px;
-		border: 1px solid transparent;
-		border-radius: 2px;
-		color: var(--muted);
-		font-family: var(--mono);
-		font-size: 12px;
-		transition:
-			color var(--fast),
-			border-color var(--fast),
-			background var(--fast);
-	}
-	.icon-btn:hover {
-		color: var(--text);
-		border-color: var(--line-strong);
-		background: var(--panel-2);
-	}
-
-	.brand {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-	}
-
-	.mark {
-		display: grid;
-		place-items: center;
-		width: 26px;
-		height: 26px;
-		background: var(--lime);
-		color: #08080a;
-		font-family: var(--mono);
-		font-weight: 700;
-		font-size: 14px;
-		border-radius: 2px;
-		letter-spacing: -0.04em;
-	}
-
-	.brand-text {
-		display: flex;
-		flex-direction: column;
-		line-height: 1;
-	}
-	.wordmark {
-		font-family: var(--mono);
-		font-weight: 700;
-		font-size: 13px;
-		letter-spacing: 0.14em;
-	}
-	.tagline {
-		font-family: var(--mono);
-		font-size: 8px;
-		letter-spacing: 0.16em;
-		text-transform: uppercase;
-		color: var(--dim);
-		margin-top: 3px;
-	}
-
-	.right {
-		margin-left: auto;
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		min-width: 0;
-	}
-
-	.source {
-		display: flex;
-		align-items: center;
-		gap: 7px;
-		height: 28px;
-		padding: 0 9px;
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		background: var(--bg-soft);
-		color: var(--muted);
-		min-width: 0;
-		transition: border-color var(--fast);
-	}
-	.source:hover {
-		border-color: var(--line-strong);
-	}
-	.dot {
-		width: 5px;
-		height: 5px;
-		border-radius: 50%;
-		background: var(--amber);
-		flex: none;
-	}
-	.dot.live {
-		background: var(--pos);
-		box-shadow: 0 0 0 3px color-mix(in srgb, var(--pos) 16%, transparent);
-	}
-	.source-mode {
-		font-family: var(--mono);
-		font-size: 9px;
-		letter-spacing: 0.12em;
-		text-transform: uppercase;
-		color: var(--text-2);
-	}
-	.source-corpus {
-		font-family: var(--mono);
-		font-size: 9px;
-		color: var(--dim);
-		max-width: 190px;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-		padding-left: 7px;
-		border-left: 1px solid var(--line);
-	}
-
-	.search {
-		display: flex;
-		align-items: center;
-		gap: 7px;
-		height: 28px;
-		width: 208px;
-		padding: 0 8px;
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		background: var(--bg-soft);
-		color: var(--dim);
-		text-align: left;
-		transition: border-color var(--fast);
-	}
-	.search:hover {
-		border-color: var(--line-bright);
-	}
-	.search-label {
-		font-family: var(--mono);
-		font-size: 10px;
-		color: var(--dim);
-		flex: 1;
-	}
-	.search kbd {
-		font-family: var(--mono);
-		font-size: 8.5px;
-		color: var(--muted);
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		padding: 1px 4px;
-		background: var(--panel);
-	}
-	.help {
-		border-color: var(--line);
-	}
-
-	@media (max-width: 1280px) {
-		.source-corpus {
-			display: none;
-		}
-	}
-	@media (max-width: 1024px) {
-		.tagline {
-			display: none;
-		}
-		.search {
-			width: 34px;
-			justify-content: center;
-		}
-		.search-label,
-		.search kbd {
-			display: none;
-		}
-	}
-	@media (max-width: 720px) {
-		.source-mode {
-			display: none;
-		}
-		.source {
-			width: 26px;
-			justify-content: center;
-			padding: 0;
-		}
-		.mark {
-			width: 24px;
-			height: 24px;
-		}
-		.wordmark {
-			font-size: 11px;
-		}
-	}
+	.topbar { height: var(--header-h); flex: none; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid var(--line); background: var(--bg); position: relative; z-index: 30; }
+	.brand { display: flex; align-items: center; gap: 9px; }
+	.mark { display: block; width: 32px; height: 32px; border-radius: 8px; background: var(--lime); }
+	.wordmark { color: white; font: 700 23px var(--sans); letter-spacing: -0.05em; }
+	.search { display: flex; align-items: center; gap: 10px; color: var(--muted); padding: 8px 11px; border: 1px solid var(--line); border-radius: 9px; min-width: 200px; text-align: left; font-size: 12px; }
+	.search:hover { border-color: var(--line-bright); color: var(--text); }
+	kbd { margin-left: auto; font: 10px var(--mono); color: var(--dim); }
+	@media(max-width:600px) { .topbar { padding: 0 14px; } .search { min-width: 0; } .search kbd { display: none; } }
 </style>

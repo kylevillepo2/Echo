@@ -5,9 +5,7 @@
 	import NetworkView from '#lib/components/NetworkView.svelte';
 	import FlowsInspector from '#lib/components/FlowsInspector.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
-	import { flows } from '#lib/data/flows';
 	import Inspector from '#lib/components/Inspector.svelte';
-	import StatusBar from '#lib/components/StatusBar.svelte';
 	import CommandPalette from '#lib/components/CommandPalette.svelte';
 	import ConnectDialog from '#lib/components/ConnectDialog.svelte';
 	import HelpDialog from '#lib/components/HelpDialog.svelte';
@@ -16,10 +14,6 @@
 		void studio.init();
 	});
 
-	const flowCategoryIds = $derived(
-		new Set(studio.apps.filter((app) => flows.meta.observed.includes(app.id)).map((app) => app.categoryId))
-	);
-	const hasFlowData = $derived(Boolean(studio.categoryFilter && flowCategoryIds.has(studio.categoryFilter)));
 	let previousCategory = $state<string | null>(null);
 
 	// Flow overlay, timeline and widths follow the focused cluster's apps (all apps when unfocused).
@@ -30,7 +24,8 @@
 
 	$effect(() => {
 		if (studio.categoryFilter !== previousCategory) {
-			flowsState.clearSelection();
+			if (studio.selectedApp && studio.selectedApp.categoryId === studio.categoryFilter) flowsState.selectApp(studio.selectedApp.id);
+			else flowsState.clearSelection();
 			flowsState.hoveredArrow = null;
 			flowsState.hoveredNode = null;
 			flowsState.stop();
@@ -83,6 +78,8 @@
 			studio.openPalette();
 		} else if (event.key.toLowerCase() === 'i') {
 			studio.toggleInspector();
+		} else if (event.key === '?') {
+			studio.helpOpen = true;
 		}
 	}
 </script>
@@ -90,10 +87,10 @@
 <svelte:window onkeydown={onKeydown} />
 
 <svelte:head>
-	<title>UNWRAP — app review intelligence</title>
+	<title>echo — app review intelligence</title>
 	<meta
 		name="description"
-		content="A semantic map of app categories, apps and the people who use them. Reception scores, theme signals and review-level search."
+		content="Explore the app landscape and understand what customers are saying and where they switch."
 	/>
 </svelte:head>
 
@@ -105,7 +102,7 @@
 			{#if studio.loading && !studio.graph}
 				<div class="boot">
 					<div class="boot-mark" aria-hidden="true">U</div>
-					<span class="label">Building semantic map</span>
+					<span class="label">Loading the app landscape</span>
 					<div class="boot-bar"><i></i></div>
 					<p>Embedding reviews · clustering themes · projecting neighbours</p>
 				</div>
@@ -126,32 +123,15 @@
 			{/if}
 		</main>
 
-		{#if (studio.categoryFilter && hasFlowData) || flowsState.selection?.type === 'edge'}
-			{#if studio.inspectorOpen}
-				{#if studio.selectedApp && flowsState.selection?.type !== 'edge'}
-					<Inspector />
-				{:else}
-					<FlowsInspector />
-				{/if}
+		{#if studio.inspectorOpen && (studio.categoryFilter || studio.selectedApp || flowsState.selection)}
+			{#if flowsState.selection?.type === 'edge' || !studio.selectedApp}
+				<FlowsInspector />
 			{:else}
-				<button class="reopen" onclick={() => (studio.inspectorOpen = true)} aria-label="Open inspector">
-					<span class="label">Inspect</span>
-				</button>
+				<Inspector />
 			{/if}
-		{:else if (!studio.categoryFilter || studio.selectedApp) && studio.inspectorOpen && studio.graph}
-			<Inspector />
-		{:else if !studio.categoryFilter && studio.graph && !studio.inspectorOpen}
-			<button
-				class="reopen"
-				onclick={() => (studio.inspectorOpen = true)}
-				aria-label="Open inspector"
-			>
-				<span class="label">Inspect</span>
-			</button>
 		{/if}
 	</div>
 
-	<StatusBar />
 </div>
 
 {#if studio.paletteOpen}
@@ -274,22 +254,4 @@
 		gap: 8px;
 	}
 
-	.reopen {
-		position: absolute;
-		right: 0;
-		top: 50%;
-		transform: translateY(-50%);
-		z-index: 20;
-		padding: 12px 6px;
-		background: var(--panel);
-		border: 1px solid var(--line);
-		border-right: 0;
-		border-radius: 3px 0 0 3px;
-		writing-mode: vertical-rl;
-		color: var(--muted);
-	}
-	.reopen:hover {
-		color: var(--text);
-		border-color: var(--line-strong);
-	}
 </style>

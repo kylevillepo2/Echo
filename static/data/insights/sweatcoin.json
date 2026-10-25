@@ -1,0 +1,4488 @@
+{
+  "schema_version": "topic-insights-v1",
+  "generated_at": "2026-10-25T02:07:48.582599Z",
+  "app": {
+    "id": "sweatcoin",
+    "name": "Sweatcoin",
+    "source_app_id": "sweatcoin-9307bdee",
+    "pipeline_run_slug": "sweatcoin-7a3a9071"
+  },
+  "tagging": {
+    "method": "semantic_similarity",
+    "topic_representation": "description",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "taxonomy_version": "290ec37dc1349f796978ec733557bd1465f52fdd95960e042b49bad77cd7e1b2",
+    "global_cosine_threshold": 0.4,
+    "topic_ids_are_app_scoped": true
+  },
+  "summary": {
+    "total_reviews": 23547,
+    "reviews_with_topics": 2095,
+    "tagging_coverage_percent": 8.8971,
+    "average_stars": 3.96,
+    "rated_review_count": 23547,
+    "missing_rating_count": 0,
+    "star_distribution": [
+      {
+        "stars": 1,
+        "count": 3688
+      },
+      {
+        "stars": 2,
+        "count": 985
+      },
+      {
+        "stars": 3,
+        "count": 1782
+      },
+      {
+        "stars": 4,
+        "count": 3217
+      },
+      {
+        "stars": 5,
+        "count": 13875
+      }
+    ],
+    "earliest_review_date": "2024-04-05",
+    "latest_review_date": "2026-05-17",
+    "missing_date_count": 0
+  },
+  "monthly_reviews": [
+    {
+      "month": "2024-04",
+      "review_count": 52,
+      "partial_month": true,
+      "partial_reasons": [
+        "first_observed_review_after_month_start"
+      ],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-05",
+      "review_count": 78,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-06",
+      "review_count": 74,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-07",
+      "review_count": 64,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-08",
+      "review_count": 283,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-09",
+      "review_count": 814,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-10",
+      "review_count": 448,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-11",
+      "review_count": 299,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2024-12",
+      "review_count": 349,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-01",
+      "review_count": 560,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-02",
+      "review_count": 311,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-03",
+      "review_count": 405,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-04",
+      "review_count": 553,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-05",
+      "review_count": 552,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-06",
+      "review_count": 660,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-07",
+      "review_count": 733,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-08",
+      "review_count": 1281,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-09",
+      "review_count": 323,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-10",
+      "review_count": 886,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-11",
+      "review_count": 380,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2025-12",
+      "review_count": 198,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2026-01",
+      "review_count": 215,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2026-02",
+      "review_count": 5239,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2026-03",
+      "review_count": 4152,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2026-04",
+      "review_count": 2841,
+      "partial_month": false,
+      "partial_reasons": [],
+      "insufficient_review_volume": false
+    },
+    {
+      "month": "2026-05",
+      "review_count": 1797,
+      "partial_month": true,
+      "partial_reasons": [
+        "last_observed_review_before_month_end"
+      ],
+      "insufficient_review_volume": false
+    }
+  ],
+  "topics": [
+    {
+      "topic_id": "topic-0001",
+      "name": "Motivation to walk",
+      "definition": "Praise for encouraging walking, exercise, and progress toward daily activity goals.",
+      "parent_category_id": "activity-motivation-80fc0a",
+      "parent_category_name": "Activity motivation",
+      "rank_by_review_count": 1,
+      "review_count": 1102,
+      "percentage_of_all_reviews": 4.68,
+      "average_stars": 4.2722,
+      "rated_review_count": 1102,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 84
+        },
+        {
+          "stars": 2,
+          "count": 34
+        },
+        {
+          "stars": 3,
+          "count": 77
+        },
+        {
+          "stars": 4,
+          "count": 210
+        },
+        {
+          "stars": 5,
+          "count": 697
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4805,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 3,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 3.8462,
+          "average_stars": 2.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": 1.9231,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 4,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 5.4054,
+          "average_stars": 2.75,
+          "rated_review_count": 4,
+          "change_percentage_points": 1.5592,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -5.4054,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 7,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 2.4735,
+          "average_stars": 3.4286,
+          "rated_review_count": 7,
+          "change_percentage_points": 2.4735,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 10,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 1.2285,
+          "average_stars": 4.3,
+          "rated_review_count": 10,
+          "change_percentage_points": -1.245,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 19,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 4.2411,
+          "average_stars": 3.6316,
+          "rated_review_count": 19,
+          "change_percentage_points": 3.0126,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 13,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 4.3478,
+          "average_stars": 3.5385,
+          "rated_review_count": 13,
+          "change_percentage_points": 0.1067,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 15,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 4.298,
+          "average_stars": 3.1333,
+          "rated_review_count": 15,
+          "change_percentage_points": -0.0498,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 15,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 2.6786,
+          "average_stars": 3.6667,
+          "rated_review_count": 15,
+          "change_percentage_points": -1.6194,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 11,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 3.537,
+          "average_stars": 1.4545,
+          "rated_review_count": 11,
+          "change_percentage_points": 0.8584,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 15,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 3.7037,
+          "average_stars": 2.6667,
+          "rated_review_count": 15,
+          "change_percentage_points": 0.1667,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 26,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 4.7016,
+          "average_stars": 3.7692,
+          "rated_review_count": 26,
+          "change_percentage_points": 0.9979,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 27,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 4.8913,
+          "average_stars": 4.2593,
+          "rated_review_count": 27,
+          "change_percentage_points": 0.1897,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 47,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 7.1212,
+          "average_stars": 4.3191,
+          "rated_review_count": 47,
+          "change_percentage_points": 2.2299,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 35,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 4.7749,
+          "average_stars": 4.4,
+          "rated_review_count": 35,
+          "change_percentage_points": -2.3463,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 80,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 6.2451,
+          "average_stars": 4.225,
+          "rated_review_count": 80,
+          "change_percentage_points": 1.4702,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 21,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 6.5015,
+          "average_stars": 3.8095,
+          "rated_review_count": 21,
+          "change_percentage_points": 0.2564,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 55,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 6.2077,
+          "average_stars": 4.3455,
+          "rated_review_count": 55,
+          "change_percentage_points": -0.2938,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 26,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 6.8421,
+          "average_stars": 3.5769,
+          "rated_review_count": 26,
+          "change_percentage_points": 0.6344,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 8,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 4.0404,
+          "average_stars": 3.25,
+          "rated_review_count": 8,
+          "change_percentage_points": -2.8017,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 11,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 5.1163,
+          "average_stars": 3.8182,
+          "rated_review_count": 11,
+          "change_percentage_points": 1.0759,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 232,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 4.4283,
+          "average_stars": 4.6422,
+          "rated_review_count": 232,
+          "change_percentage_points": -0.688,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 181,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 4.3593,
+          "average_stars": 4.3757,
+          "rated_review_count": 181,
+          "change_percentage_points": -0.069,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 139,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 4.8926,
+          "average_stars": 4.6547,
+          "rated_review_count": 139,
+          "change_percentage_points": 0.5333,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 101,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 5.6205,
+          "average_stars": 4.3861,
+          "rated_review_count": 101,
+          "change_percentage_points": 0.7279,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": 0.5333,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:172587917",
+          "feedback_id": "172587917",
+          "data_source": "gplay",
+          "snippet": "“Nice concept, walking becomes fun with rewards. Works smoothly and motivates fitness.”",
+          "cosine_similarity": 0.7324
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:247616007",
+          "feedback_id": "247616007",
+          "data_source": "gplay",
+          "snippet": "This is really great for motivation. You set your goal and you get eager to complete it. You would then start to enjoy walking just to reach that goal. Great challenge that forces one to exercise.😂",
+          "cosine_similarity": 0.7152
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:237296678",
+          "feedback_id": "237296678",
+          "data_source": "appstore",
+          "snippet": "Motivated to walk",
+          "cosine_similarity": 0.7151
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0017",
+      "name": "Low earnings relative to walking effort",
+      "definition": "Step-based earnings are too small or require excessive walking to produce meaningful financial returns.",
+      "parent_category_id": "rewards-and-earnings-333aa2",
+      "parent_category_name": "Rewards and earnings",
+      "rank_by_review_count": 2,
+      "review_count": 494,
+      "percentage_of_all_reviews": 2.0979,
+      "average_stars": 3.7429,
+      "rated_review_count": 494,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 92
+        },
+        {
+          "stars": 2,
+          "count": 29
+        },
+        {
+          "stars": 3,
+          "count": 34
+        },
+        {
+          "stars": 4,
+          "count": 98
+        },
+        {
+          "stars": 5,
+          "count": 241
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4543,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 3,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 3.8462,
+          "average_stars": 3.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 1.9231,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 3,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 4.0541,
+          "average_stars": 2.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.2079,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 3,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 4.6875,
+          "average_stars": 2.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.6334,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 6,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 2.1201,
+          "average_stars": 2.3333,
+          "rated_review_count": 6,
+          "change_percentage_points": -2.5674,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 6,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.7371,
+          "average_stars": 3.3333,
+          "rated_review_count": 6,
+          "change_percentage_points": -1.383,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 12,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 2.6786,
+          "average_stars": 3.0,
+          "rated_review_count": 12,
+          "change_percentage_points": 1.9415,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 4,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 1.3378,
+          "average_stars": 2.0,
+          "rated_review_count": 4,
+          "change_percentage_points": -1.3408,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 12,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 3.4384,
+          "average_stars": 2.0,
+          "rated_review_count": 12,
+          "change_percentage_points": 2.1006,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 13,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 2.3214,
+          "average_stars": 3.3846,
+          "rated_review_count": 13,
+          "change_percentage_points": -1.117,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 9,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 2.8939,
+          "average_stars": 1.3333,
+          "rated_review_count": 9,
+          "change_percentage_points": 0.5725,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 6,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 1.4815,
+          "average_stars": 1.3333,
+          "rated_review_count": 6,
+          "change_percentage_points": -1.4124,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 17,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 3.0741,
+          "average_stars": 3.2353,
+          "rated_review_count": 17,
+          "change_percentage_points": 1.5926,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 17,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 3.0797,
+          "average_stars": 3.4118,
+          "rated_review_count": 17,
+          "change_percentage_points": 0.0056,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 17,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 2.5758,
+          "average_stars": 3.5882,
+          "rated_review_count": 17,
+          "change_percentage_points": -0.5039,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 21,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 2.8649,
+          "average_stars": 3.8095,
+          "rated_review_count": 21,
+          "change_percentage_points": 0.2891,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 38,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 2.9664,
+          "average_stars": 3.2895,
+          "rated_review_count": 38,
+          "change_percentage_points": 0.1015,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 18,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 5.5728,
+          "average_stars": 3.2778,
+          "rated_review_count": 18,
+          "change_percentage_points": 2.6064,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 20,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 2.2573,
+          "average_stars": 3.85,
+          "rated_review_count": 20,
+          "change_percentage_points": -3.3155,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 5,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 1.3158,
+          "average_stars": 3.0,
+          "rated_review_count": 5,
+          "change_percentage_points": -0.9415,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 5,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 2.5253,
+          "average_stars": 3.0,
+          "rated_review_count": 5,
+          "change_percentage_points": 1.2095,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 5,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 2.3256,
+          "average_stars": 2.6,
+          "rated_review_count": 5,
+          "change_percentage_points": -0.1997,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 83,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 1.5843,
+          "average_stars": 4.5181,
+          "rated_review_count": 83,
+          "change_percentage_points": -0.7413,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 73,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 1.7582,
+          "average_stars": 4.2055,
+          "rated_review_count": 73,
+          "change_percentage_points": 0.1739,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 59,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 2.0767,
+          "average_stars": 4.3898,
+          "rated_review_count": 59,
+          "change_percentage_points": 0.3185,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 38,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 2.1146,
+          "average_stars": 4.1579,
+          "rated_review_count": 38,
+          "change_percentage_points": 0.0379,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": 0.3185,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:87919510",
+          "feedback_id": "87919510",
+          "data_source": "gplay",
+          "snippet": "although earnings are low, its nice to get paid for the simplest task yet, just walking! crazy but encouraging to keep my steps in.",
+          "cosine_similarity": 0.6452
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:177965145",
+          "feedback_id": "177965145",
+          "data_source": "gplay",
+          "snippet": "Its amazing to know you can earn while walking.. aside the earnings you get to stay fit and healthy",
+          "cosine_similarity": 0.6364
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:237296531",
+          "feedback_id": "237296531",
+          "data_source": "appstore",
+          "snippet": "To be earning while walking is motivating and contributing to good health 🙂",
+          "cosine_similarity": 0.6171
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0026",
+      "name": "Steps fail to record or register consistently",
+      "definition": "Steps are not recorded during activity, or step recording is inconsistent.",
+      "parent_category_id": "activity-tracking-e93092",
+      "parent_category_name": "Activity tracking",
+      "rank_by_review_count": 3,
+      "review_count": 410,
+      "percentage_of_all_reviews": 1.7412,
+      "average_stars": 2.0098,
+      "rated_review_count": 410,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 206
+        },
+        {
+          "stars": 2,
+          "count": 92
+        },
+        {
+          "stars": 3,
+          "count": 47
+        },
+        {
+          "stars": 4,
+          "count": 32
+        },
+        {
+          "stars": 5,
+          "count": 33
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4786,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 2,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 2.5641,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 2,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 2.7027,
+          "average_stars": 2.5,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.1386,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 1,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 1.5625,
+          "average_stars": 2.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -1.1402,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 8,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 2.8269,
+          "average_stars": 1.75,
+          "rated_review_count": 8,
+          "change_percentage_points": 1.2644,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 12,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 1.4742,
+          "average_stars": 1.9167,
+          "rated_review_count": 12,
+          "change_percentage_points": -1.3527,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 11,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 2.4554,
+          "average_stars": 1.7273,
+          "rated_review_count": 11,
+          "change_percentage_points": 0.9812,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 12,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 4.0134,
+          "average_stars": 1.5,
+          "rated_review_count": 12,
+          "change_percentage_points": 1.558,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 33,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 9.4556,
+          "average_stars": 2.303,
+          "rated_review_count": 33,
+          "change_percentage_points": 5.4422,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 72,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 12.8571,
+          "average_stars": 1.7917,
+          "rated_review_count": 72,
+          "change_percentage_points": 3.4015,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 26,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 8.3601,
+          "average_stars": 1.6923,
+          "rated_review_count": 26,
+          "change_percentage_points": -4.497,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 32,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 7.9012,
+          "average_stars": 1.6875,
+          "rated_review_count": 32,
+          "change_percentage_points": -0.4589,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 28,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 5.0633,
+          "average_stars": 1.6786,
+          "rated_review_count": 28,
+          "change_percentage_points": -2.8379,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 18,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 3.2609,
+          "average_stars": 2.3889,
+          "rated_review_count": 18,
+          "change_percentage_points": -1.8024,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 15,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 2.2727,
+          "average_stars": 1.6,
+          "rated_review_count": 15,
+          "change_percentage_points": -0.9882,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 6,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.8186,
+          "average_stars": 1.1667,
+          "rated_review_count": 6,
+          "change_percentage_points": -1.4541,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 18,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 1.4052,
+          "average_stars": 3.0556,
+          "rated_review_count": 18,
+          "change_percentage_points": 0.5866,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 9,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 2.7864,
+          "average_stars": 1.4444,
+          "rated_review_count": 9,
+          "change_percentage_points": 1.3812,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 15,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 1.693,
+          "average_stars": 1.8667,
+          "rated_review_count": 15,
+          "change_percentage_points": -1.0934,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 21,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 5.5263,
+          "average_stars": 1.8571,
+          "rated_review_count": 21,
+          "change_percentage_points": 3.8333,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 7,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 3.5354,
+          "average_stars": 1.8571,
+          "rated_review_count": 7,
+          "change_percentage_points": -1.9909,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 8,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 3.7209,
+          "average_stars": 2.125,
+          "rated_review_count": 8,
+          "change_percentage_points": 0.1855,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 16,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.3054,
+          "average_stars": 3.25,
+          "rated_review_count": 16,
+          "change_percentage_points": -3.4155,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 18,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.4335,
+          "average_stars": 2.5556,
+          "rated_review_count": 18,
+          "change_percentage_points": 0.1281,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 13,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.4576,
+          "average_stars": 3.3846,
+          "rated_review_count": 13,
+          "change_percentage_points": 0.0241,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 6,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.3339,
+          "average_stars": 1.1667,
+          "rated_review_count": 6,
+          "change_percentage_points": -0.1237,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": 0.0241,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:60144464",
+          "feedback_id": "60144464",
+          "data_source": "gplay",
+          "snippet": "It was great for the longest time, but recently the step counter stopped working. Literally, it's recording 0 steps",
+          "cosine_similarity": 0.6836
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:245853347",
+          "feedback_id": "245853347",
+          "data_source": "appstore",
+          "snippet": "I am so disappointed in this app, because I can record over 15000 steps, but today it records no steps! I have deleted the app & reinstalled it several times, but it shows no steps for the day. There is no purpose if the",
+          "cosine_similarity": 0.6806
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:140013799",
+          "feedback_id": "140013799",
+          "data_source": "gplay",
+          "snippet": "the app is not recording and counting my steps when I walk. I Sent feedback please fix the issue",
+          "cosine_similarity": 0.6796
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0034",
+      "name": "Excessive ad frequency",
+      "definition": "Too many ads repeatedly interrupt app use or limit access to features.",
+      "parent_category_id": "advertising-2c6f8a",
+      "parent_category_name": "Advertising",
+      "rank_by_review_count": 4,
+      "review_count": 199,
+      "percentage_of_all_reviews": 0.8451,
+      "average_stars": 2.0402,
+      "rated_review_count": 199,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 105
+        },
+        {
+          "stars": 2,
+          "count": 29
+        },
+        {
+          "stars": 3,
+          "count": 30
+        },
+        {
+          "stars": 4,
+          "count": 22
+        },
+        {
+          "stars": 5,
+          "count": 13
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4617,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 0,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 2,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 2.5641,
+          "average_stars": 2.5,
+          "rated_review_count": 2,
+          "change_percentage_points": 2.5641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 1,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 1.3514,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -1.2127,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 1,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 1.5625,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.2111,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 0,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -1.5625,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 8,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.9828,
+          "average_stars": 1.5,
+          "rated_review_count": 8,
+          "change_percentage_points": 0.9828,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 14,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 3.125,
+          "average_stars": 2.0714,
+          "rated_review_count": 14,
+          "change_percentage_points": 2.1422,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 12,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 4.0134,
+          "average_stars": 1.3333,
+          "rated_review_count": 12,
+          "change_percentage_points": 0.8884,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 10,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 2.8653,
+          "average_stars": 1.6,
+          "rated_review_count": 10,
+          "change_percentage_points": -1.1481,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 9,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 1.6071,
+          "average_stars": 1.5556,
+          "rated_review_count": 9,
+          "change_percentage_points": -1.2582,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 8,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 2.5723,
+          "average_stars": 1.375,
+          "rated_review_count": 8,
+          "change_percentage_points": 0.9652,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 10,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 2.4691,
+          "average_stars": 1.4,
+          "rated_review_count": 10,
+          "change_percentage_points": -0.1032,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 6,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 1.085,
+          "average_stars": 1.8333,
+          "rated_review_count": 6,
+          "change_percentage_points": -1.3841,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 8,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 1.4493,
+          "average_stars": 2.0,
+          "rated_review_count": 8,
+          "change_percentage_points": 0.3643,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 9,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 1.3636,
+          "average_stars": 1.8889,
+          "rated_review_count": 9,
+          "change_percentage_points": -0.0857,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 9,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 1.2278,
+          "average_stars": 2.6667,
+          "rated_review_count": 9,
+          "change_percentage_points": -0.1358,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 18,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 1.4052,
+          "average_stars": 2.6667,
+          "rated_review_count": 18,
+          "change_percentage_points": 0.1774,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 7,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 2.1672,
+          "average_stars": 1.4286,
+          "rated_review_count": 7,
+          "change_percentage_points": 0.762,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 6,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.6772,
+          "average_stars": 2.3333,
+          "rated_review_count": 6,
+          "change_percentage_points": -1.49,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 3,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.7895,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.1123,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 7,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 3.5354,
+          "average_stars": 2.0,
+          "rated_review_count": 7,
+          "change_percentage_points": 2.7459,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 6,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 2.7907,
+          "average_stars": 2.1667,
+          "rated_review_count": 6,
+          "change_percentage_points": -0.7447,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 15,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.2863,
+          "average_stars": 2.6667,
+          "rated_review_count": 15,
+          "change_percentage_points": -2.5044,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 6,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.1445,
+          "average_stars": 3.0,
+          "rated_review_count": 6,
+          "change_percentage_points": -0.1418,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 14,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.4928,
+          "average_stars": 2.2143,
+          "rated_review_count": 14,
+          "change_percentage_points": 0.3483,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 10,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.5565,
+          "average_stars": 2.8,
+          "rated_review_count": 10,
+          "change_percentage_points": 0.0637,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": 0.3483,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:154457914",
+          "feedback_id": "154457914",
+          "data_source": "appstore",
+          "snippet": "The ads are just too long and too annoying. Other than that, great app",
+          "cosine_similarity": 0.5964
+        },
+        {
+          "review_key": "32:92370106",
+          "feedback_id": "92370106",
+          "data_source": "gplay",
+          "snippet": "Got 4 Ads even before I could finish setting up the app.. that annoyed me so much that I uninstalled it after 5 minutes",
+          "cosine_similarity": 0.5795
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:243544572",
+          "feedback_id": "243544572",
+          "data_source": "gplay",
+          "snippet": "The latest version of this App struggles to load advertisements. \"Retry the Ad\" keeps popping up multiple times untill you lose patience with it and closes the App.",
+          "cosine_similarity": 0.5779
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0000",
+      "name": "Battery drain",
+      "definition": "Excessive battery consumption, including background drain and drain after updates.",
+      "parent_category_id": "performance-476ee0",
+      "parent_category_name": "Performance",
+      "rank_by_review_count": 5,
+      "review_count": 64,
+      "percentage_of_all_reviews": 0.2718,
+      "average_stars": 1.625,
+      "rated_review_count": 64,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 44
+        },
+        {
+          "stars": 2,
+          "count": 6
+        },
+        {
+          "stars": 3,
+          "count": 10
+        },
+        {
+          "stars": 4,
+          "count": 2
+        },
+        {
+          "stars": 5,
+          "count": 2
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4974,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 0,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 0,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 0,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 0,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 1,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.1229,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.1229,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 45,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 10.0446,
+          "average_stars": 1.5556,
+          "rated_review_count": 45,
+          "change_percentage_points": 9.9217,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 3,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 1.0033,
+          "average_stars": 1.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": -9.0413,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 1,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.2865,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.7168,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 0,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2865,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 1,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.3215,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3215,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 3,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.7407,
+          "average_stars": 1.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.4192,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 3,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.5425,
+          "average_stars": 3.0,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.1982,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 0,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.5425,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 1,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.1515,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.1515,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 0,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.1515,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 0,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 1,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.3096,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3096,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 0,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3096,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 0,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 0,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 1,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.4651,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.4651,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 2,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0382,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.4269,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 1,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0241,
+          "average_stars": 4.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.0141,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 1,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0352,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0111,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 0,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.0352,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": 0.0111,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:188211045",
+          "feedback_id": "188211045",
+          "data_source": "gplay",
+          "snippet": "draining battery heavily used more then half of my battery while running in background just doesn't make sense",
+          "cosine_similarity": 0.6444
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:41080029",
+          "feedback_id": "41080029",
+          "data_source": "gplay",
+          "snippet": "I don't know why but all of a sudden the app is draining my battery like crazy, it was nice earning sweatcoins in the background but I might have to Uninstall it at this point because I'm losing about 1% battery every 1-",
+          "cosine_similarity": 0.5845
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:41080022",
+          "feedback_id": "41080022",
+          "data_source": "gplay",
+          "snippet": "Background Battery Drainer 74% of my battery gone while this did something in the background. I assume it is mining coins for them. Definitely would not recommend installing this app.",
+          "cosine_similarity": 0.5836
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0008",
+      "name": "Daily boost failures",
+      "definition": "Daily or 2x boosts fail to activate, function, or reset.",
+      "parent_category_id": "reward-features-2a1716",
+      "parent_category_name": "Reward features",
+      "rank_by_review_count": 6,
+      "review_count": 62,
+      "percentage_of_all_reviews": 0.2633,
+      "average_stars": 1.9194,
+      "rated_review_count": 62,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 28
+        },
+        {
+          "stars": 2,
+          "count": 17
+        },
+        {
+          "stars": 3,
+          "count": 11
+        },
+        {
+          "stars": 4,
+          "count": 6
+        },
+        {
+          "stars": 5,
+          "count": 0
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4609,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 0,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 2,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 2.5641,
+          "average_stars": 2.5,
+          "rated_review_count": 2,
+          "change_percentage_points": 2.5641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 1,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 1.3514,
+          "average_stars": 2.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -1.2127,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 1,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 1.5625,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.2111,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 1,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.3534,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -1.2091,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 2,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.2457,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.1077,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 4,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.8929,
+          "average_stars": 2.5,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.6472,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 2,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.6689,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.224,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 3,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.8596,
+          "average_stars": 2.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.1907,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 7,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 1.25,
+          "average_stars": 2.4286,
+          "rated_review_count": 7,
+          "change_percentage_points": 0.3904,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 2,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.6431,
+          "average_stars": 3.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.6069,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 4,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.9877,
+          "average_stars": 1.5,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.3446,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 4,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.7233,
+          "average_stars": 1.25,
+          "rated_review_count": 4,
+          "change_percentage_points": -0.2644,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 2,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.3623,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.361,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 1,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.1515,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.2108,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 2,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.2729,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.1214,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 3,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.2342,
+          "average_stars": 1.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.0387,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 2,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.6192,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.385,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 0,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.6192,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 6,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 1.5789,
+          "average_stars": 2.6667,
+          "rated_review_count": 6,
+          "change_percentage_points": 1.5789,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 1,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.5051,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -1.0738,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 2,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.9302,
+          "average_stars": 1.5,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.4251,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 3,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0573,
+          "average_stars": 2.0,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.8729,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 3,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0723,
+          "average_stars": 1.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.015,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 0,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.0723,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 4,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.2226,
+          "average_stars": 1.5,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.2226,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": -0.0723,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:53353944",
+          "feedback_id": "53353944",
+          "data_source": "gplay",
+          "snippet": "Daily boost does not seem to be daily. It should explain why it is not coming daily",
+          "cosine_similarity": 0.5985
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:243938170",
+          "feedback_id": "243938170",
+          "data_source": "appstore",
+          "snippet": "Started the first daily boost today 5/8/26 and it went through the twenty minutes, showed that I had 2,500+ steps and it competent restarted, showing that I never started the first routine. Please fix these issues right ",
+          "cosine_similarity": 0.5802
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:246413885",
+          "feedback_id": "246413885",
+          "data_source": "appstore",
+          "snippet": "Started the first daily boost today 5/12/26 and it went through the twenty minutes, showed that I had 2,500+ steps and it competent restarted, showing that I never started the first routine. Please fix these issues right",
+          "cosine_similarity": 0.5793
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0004",
+      "name": "Signup and login difficulties",
+      "definition": "Failures or restrictions when registering, signing in, or completing account verification.",
+      "parent_category_id": "account-access-ae26a0",
+      "parent_category_name": "Account access",
+      "rank_by_review_count": 7,
+      "review_count": 50,
+      "percentage_of_all_reviews": 0.2123,
+      "average_stars": 1.72,
+      "rated_review_count": 50,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 32
+        },
+        {
+          "stars": 2,
+          "count": 9
+        },
+        {
+          "stars": 3,
+          "count": 4
+        },
+        {
+          "stars": 4,
+          "count": 1
+        },
+        {
+          "stars": 5,
+          "count": 4
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4383,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 2,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 3.8462,
+          "average_stars": 1.5,
+          "rated_review_count": 2,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 2,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 2.5641,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -1.2821,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 0,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -2.5641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 1,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 1.5625,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 1.5625,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 2,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.7067,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.8558,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 1,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.1229,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.5838,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 4,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.8929,
+          "average_stars": 1.25,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.77,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 2,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.6689,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.224,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 4,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 1.1461,
+          "average_stars": 1.25,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.4772,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 5,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.8929,
+          "average_stars": 1.8,
+          "rated_review_count": 5,
+          "change_percentage_points": -0.2532,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 1,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.3215,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.5714,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 3,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.7407,
+          "average_stars": 2.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.4192,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 5,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.9042,
+          "average_stars": 2.2,
+          "rated_review_count": 5,
+          "change_percentage_points": 0.1635,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 0,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.9042,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 0,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 4,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.5457,
+          "average_stars": 1.75,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.5457,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 3,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.2342,
+          "average_stars": 2.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.3115,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 1,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.3096,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0754,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 0,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3096,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 4,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 1.0526,
+          "average_stars": 2.25,
+          "rated_review_count": 4,
+          "change_percentage_points": 1.0526,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 1,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.5051,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.5475,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 1,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.4651,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.04,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 0,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.4651,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 2,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0482,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.0482,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 2,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0704,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.0222,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 0,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.0704,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": 0.0222,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "28:46522007",
+          "feedback_id": "46522007",
+          "data_source": "gplay",
+          "snippet": "I can't signup in this app so i don't know what i can say i am trying to signup but it is still processing on signup option",
+          "cosine_similarity": 0.5329
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:104806104",
+          "feedback_id": "104806104",
+          "data_source": "appstore",
+          "snippet": "If this app can’t allow google accounts some people just may not be able to sign up",
+          "cosine_similarity": 0.5178
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:94892904",
+          "feedback_id": "94892904",
+          "data_source": "appstore",
+          "snippet": "How to sign up",
+          "cosine_similarity": 0.4845
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0006",
+      "name": "Easy-to-use interface",
+      "definition": "Praise for a straightforward, friendly interface and easy navigation.",
+      "parent_category_id": "usability-2820a2",
+      "parent_category_name": "Usability",
+      "rank_by_review_count": 8,
+      "review_count": 49,
+      "percentage_of_all_reviews": 0.2081,
+      "average_stars": 4.4286,
+      "rated_review_count": 49,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 1
+        },
+        {
+          "stars": 2,
+          "count": 2
+        },
+        {
+          "stars": 3,
+          "count": 4
+        },
+        {
+          "stars": 4,
+          "count": 10
+        },
+        {
+          "stars": 5,
+          "count": 32
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4449,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 0,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 0,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 0,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 0,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 0,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 1,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.2232,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.2232,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 0,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2232,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 0,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 0,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 1,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.3215,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3215,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 0,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3215,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 1,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.1808,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.1808,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 3,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.5435,
+          "average_stars": 2.3333,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.3627,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 4,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.6061,
+          "average_stars": 4.0,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.0626,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 1,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.1364,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.4697,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 5,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.3903,
+          "average_stars": 4.6,
+          "rated_review_count": 5,
+          "change_percentage_points": 0.2539,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 0,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3903,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 5,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.5643,
+          "average_stars": 5.0,
+          "rated_review_count": 5,
+          "change_percentage_points": 0.5643,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 0,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.5643,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 0,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 0,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 10,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.1909,
+          "average_stars": 4.1,
+          "rated_review_count": 10,
+          "change_percentage_points": 0.1909,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 11,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.2649,
+          "average_stars": 4.7273,
+          "rated_review_count": 11,
+          "change_percentage_points": 0.074,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 3,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.1056,
+          "average_stars": 5.0,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.1593,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 4,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.2226,
+          "average_stars": 4.5,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.117,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": -0.1593,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:84964938",
+          "feedback_id": "84964938",
+          "data_source": "gplay",
+          "snippet": "It's not so bad . but i would prefer a able to understand easily interface",
+          "cosine_similarity": 0.5631
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:216259161",
+          "feedback_id": "216259161",
+          "data_source": "gplay",
+          "snippet": "easy to navigate",
+          "cosine_similarity": 0.555
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:89002994",
+          "feedback_id": "89002994",
+          "data_source": "gplay",
+          "snippet": "Nice interface",
+          "cosine_similarity": 0.5531
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0005",
+      "name": "Account deletion failures",
+      "definition": "Errors and obstacles preventing users from deleting their accounts.",
+      "parent_category_id": "account-management-f705a2",
+      "parent_category_name": "Account management",
+      "rank_by_review_count": 9,
+      "review_count": 38,
+      "percentage_of_all_reviews": 0.1614,
+      "average_stars": 1.1579,
+      "rated_review_count": 38,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 33
+        },
+        {
+          "stars": 2,
+          "count": 4
+        },
+        {
+          "stars": 3,
+          "count": 1
+        },
+        {
+          "stars": 4,
+          "count": 0
+        },
+        {
+          "stars": 5,
+          "count": 0
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4762,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 0,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -1.9231,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 1,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 1.3514,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 1.3514,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -1.3514,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 1,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.3534,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3534,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 1,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.1229,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.2305,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 3,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.6696,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.5467,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 2,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.6689,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0007,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 3,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.8596,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.1907,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 4,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.7143,
+          "average_stars": 1.0,
+          "rated_review_count": 4,
+          "change_percentage_points": -0.1453,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 1,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.3215,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.3928,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 2,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.4938,
+          "average_stars": 1.5,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.1723,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 4,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.7233,
+          "average_stars": 1.5,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.2295,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 1,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.1812,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.5421,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 1,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.1515,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.0297,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 1,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.1364,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.0151,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 1,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.0781,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.0583,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 1,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.3096,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.2315,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 2,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.2257,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0839,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 0,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2257,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 2,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 1.0101,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 1.0101,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 2,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.9302,
+          "average_stars": 1.5,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0799,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 0,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.9302,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 1,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0241,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0241,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 3,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.1056,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.0815,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 0,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.1056,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": 0.0815,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:75446384",
+          "feedback_id": "75446384",
+          "data_source": "gplay",
+          "snippet": "I'm having trouble with deleting my account even after following all those procedures,please fix that issue.",
+          "cosine_similarity": 0.6099
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:42254413",
+          "feedback_id": "42254413",
+          "data_source": "gplay",
+          "snippet": "I am trying to delete my account for the week now now tried thousands of time every time is says there is an error and not allowing me to delete the ACCOUNT. IT SOME KIND IF A SCAM ?????",
+          "cosine_similarity": 0.6023
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:155881474",
+          "feedback_id": "155881474",
+          "data_source": "gplay",
+          "snippet": "you login in this app,account does not delete , when you try to delete account many problems comes",
+          "cosine_similarity": 0.5757
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0027",
+      "name": "Poor Premium subscription value",
+      "definition": "Premium is perceived as expensive, unprofitable, or an unwanted requirement.",
+      "parent_category_id": "subscriptions-9bbb0d",
+      "parent_category_name": "Subscriptions",
+      "rank_by_review_count": 10,
+      "review_count": 36,
+      "percentage_of_all_reviews": 0.1529,
+      "average_stars": 1.5833,
+      "rated_review_count": 36,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 27
+        },
+        {
+          "stars": 2,
+          "count": 3
+        },
+        {
+          "stars": 3,
+          "count": 3
+        },
+        {
+          "stars": 4,
+          "count": 0
+        },
+        {
+          "stars": 5,
+          "count": 3
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4555,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 2,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 2.5641,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 0,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -2.5641,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 0,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 0,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 3,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.6696,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.6696,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 0,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.6696,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 2,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.5731,
+          "average_stars": 2.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.5731,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 4,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.7143,
+          "average_stars": 1.25,
+          "rated_review_count": 4,
+          "change_percentage_points": 0.1412,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 2,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.6431,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0712,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 1,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.2469,
+          "average_stars": 2.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.3962,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 3,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.5425,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.2956,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 2,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.3623,
+          "average_stars": 2.5,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.1802,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 2,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.303,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0593,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 3,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.4093,
+          "average_stars": 1.6667,
+          "rated_review_count": 3,
+          "change_percentage_points": 0.1063,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 3,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.2342,
+          "average_stars": 1.0,
+          "rated_review_count": 3,
+          "change_percentage_points": -0.1751,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 0,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2342,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 2,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.2257,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.2257,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 1,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.2632,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0375,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 0,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2632,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 1,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.4651,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.4651,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 2,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0382,
+          "average_stars": 5.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.4269,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 0,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.0382,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 1,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0352,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0352,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 1,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0556,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.0204,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": 0.0352,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:75912656",
+          "feedback_id": "75912656",
+          "data_source": "gplay",
+          "snippet": "I regret to express my profound dissatisfaction with this company's services. Their business practices have raised serious concerns regarding their credibility. Despite purchasing a premium subscription, my access was te",
+          "cosine_similarity": 0.5467
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:57018185",
+          "feedback_id": "57018185",
+          "data_source": "gplay",
+          "snippet": "I didn't subscribe to premium but then this sweatcoin app charged me, without any notice that they deducted .",
+          "cosine_similarity": 0.5421
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:60503031",
+          "feedback_id": "60503031",
+          "data_source": "gplay",
+          "snippet": "Don't pay for premium if you want \"an ad free\" experience as advertised. The ads don't stop, even a bit. I don't mind paying for premium services in order to have no ads. But don't use it as a selling point and not follo",
+          "cosine_similarity": 0.5118
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0021",
+      "name": "Increasing redemption thresholds",
+      "definition": "Required coin or point amounts rise, including when users approach a redemption target.",
+      "parent_category_id": "reward-redemption-281c6d",
+      "parent_category_name": "Reward redemption",
+      "rank_by_review_count": 11,
+      "review_count": 35,
+      "percentage_of_all_reviews": 0.1486,
+      "average_stars": 2.0857,
+      "rated_review_count": 35,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 23
+        },
+        {
+          "stars": 2,
+          "count": 1
+        },
+        {
+          "stars": 3,
+          "count": 3
+        },
+        {
+          "stars": 4,
+          "count": 1
+        },
+        {
+          "stars": 5,
+          "count": 7
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4242,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 1,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 1.9231,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 0,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -1.9231,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 1,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 1.3514,
+          "average_stars": 5.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 1.3514,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -1.3514,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 1,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.3534,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3534,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 0,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3534,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 0,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 1,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.3344,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.3344,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 0,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.3344,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 0,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 0,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 0,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 1,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.1808,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.1808,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 2,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.3623,
+          "average_stars": 3.0,
+          "rated_review_count": 2,
+          "change_percentage_points": 0.1815,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 1,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.1515,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.2108,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 0,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.1515,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 11,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.8587,
+          "average_stars": 1.3636,
+          "rated_review_count": 11,
+          "change_percentage_points": 0.8587,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 1,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.3096,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.5491,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 2,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.2257,
+          "average_stars": 1.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0839,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 0,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2257,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 0,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 0,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 6,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.1145,
+          "average_stars": 2.0,
+          "rated_review_count": 6,
+          "change_percentage_points": 0.1145,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 4,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0963,
+          "average_stars": 3.0,
+          "rated_review_count": 4,
+          "change_percentage_points": -0.0182,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 2,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0704,
+          "average_stars": 5.0,
+          "rated_review_count": 2,
+          "change_percentage_points": -0.0259,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 1,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0556,
+          "average_stars": 3.0,
+          "rated_review_count": 1,
+          "change_percentage_points": -0.0148,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "stable",
+        "change_percentage_points": -0.0259,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:105709200",
+          "feedback_id": "105709200",
+          "data_source": "appstore",
+          "snippet": "They keep increasing the amount to redeem anything",
+          "cosine_similarity": 0.4659
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:appstore:237296632",
+          "feedback_id": "237296632",
+          "data_source": "appstore",
+          "snippet": "W POINT AND REWARDS",
+          "cosine_similarity": 0.4613
+        },
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:181720395",
+          "feedback_id": "181720395",
+          "data_source": "gplay",
+          "snippet": "as soon as I get to the number of coins I need to reach the award, the prices increase from 1500 coins to 5000 coins",
+          "cosine_similarity": 0.4553
+        }
+      ]
+    },
+    {
+      "topic_id": "topic-0002",
+      "name": "Unresponsive customer support",
+      "definition": "Difficulty obtaining accessible, timely, and helpful support or issue resolution.",
+      "parent_category_id": "customer-support-985a70",
+      "parent_category_name": "Customer support",
+      "rank_by_review_count": 12,
+      "review_count": 1,
+      "percentage_of_all_reviews": 0.0042,
+      "average_stars": 1.0,
+      "rated_review_count": 1,
+      "missing_rating_count": 0,
+      "star_distribution": [
+        {
+          "stars": 1,
+          "count": 1
+        },
+        {
+          "stars": 2,
+          "count": 0
+        },
+        {
+          "stars": 3,
+          "count": 0
+        },
+        {
+          "stars": 4,
+          "count": 0
+        },
+        {
+          "stars": 5,
+          "count": 0
+        }
+      ],
+      "mean_accepted_cosine_similarity": 0.4351,
+      "missing_date_count": 0,
+      "monthly": [
+        {
+          "month": "2024-04",
+          "review_count": 0,
+          "total_app_reviews": 52,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": null,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-05",
+          "review_count": 0,
+          "total_app_reviews": 78,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-06",
+          "review_count": 0,
+          "total_app_reviews": 74,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-07",
+          "review_count": 0,
+          "total_app_reviews": 64,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-08",
+          "review_count": 0,
+          "total_app_reviews": 283,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-09",
+          "review_count": 0,
+          "total_app_reviews": 814,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-10",
+          "review_count": 0,
+          "total_app_reviews": 448,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-11",
+          "review_count": 0,
+          "total_app_reviews": 299,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2024-12",
+          "review_count": 0,
+          "total_app_reviews": 349,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-01",
+          "review_count": 0,
+          "total_app_reviews": 560,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-02",
+          "review_count": 0,
+          "total_app_reviews": 311,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-03",
+          "review_count": 0,
+          "total_app_reviews": 405,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-04",
+          "review_count": 0,
+          "total_app_reviews": 553,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-05",
+          "review_count": 0,
+          "total_app_reviews": 552,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-06",
+          "review_count": 0,
+          "total_app_reviews": 660,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-07",
+          "review_count": 0,
+          "total_app_reviews": 733,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-08",
+          "review_count": 0,
+          "total_app_reviews": 1281,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-09",
+          "review_count": 0,
+          "total_app_reviews": 323,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-10",
+          "review_count": 0,
+          "total_app_reviews": 886,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-11",
+          "review_count": 1,
+          "total_app_reviews": 380,
+          "percentage_of_monthly_reviews": 0.2632,
+          "average_stars": 1.0,
+          "rated_review_count": 1,
+          "change_percentage_points": 0.2632,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2025-12",
+          "review_count": 0,
+          "total_app_reviews": 198,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": -0.2632,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-01",
+          "review_count": 0,
+          "total_app_reviews": 215,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-02",
+          "review_count": 0,
+          "total_app_reviews": 5239,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-03",
+          "review_count": 0,
+          "total_app_reviews": 4152,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-04",
+          "review_count": 0,
+          "total_app_reviews": 2841,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": false,
+          "insufficient_review_volume": false
+        },
+        {
+          "month": "2026-05",
+          "review_count": 0,
+          "total_app_reviews": 1797,
+          "percentage_of_monthly_reviews": 0.0,
+          "average_stars": null,
+          "rated_review_count": 0,
+          "change_percentage_points": 0.0,
+          "partial_month": true,
+          "insufficient_review_volume": false
+        }
+      ],
+      "trend": {
+        "label": "insufficient_data",
+        "change_percentage_points": 0.0,
+        "latest_complete_month": "2026-04",
+        "previous_complete_month": "2026-03"
+      },
+      "representative_reviews": [
+        {
+          "review_key": "sweatcoin-9307bdee:gplay:139092410",
+          "feedback_id": "139092410",
+          "data_source": "gplay",
+          "snippet": "very annoying and bad customer service ,they can't even attend and resolve issues over a month Keep mailing them but all in for nothing so disheartened",
+          "cosine_similarity": 0.4351
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "denominator": "all reviews in this app tagging file, including untagged reviews",
+    "review_unit": "distinct review_key; not unique users",
+    "similarity_interpretation": "cosine similarity, not probability or sentiment",
+    "validation_limitation": "Topic matches and earlier reference labels are machine-generated, not human verified.",
+    "trend_rule": {
+      "minimum_monthly_reviews": 30,
+      "minimum_topic_mentions_across_two_months": 5,
+      "minimum_change_percentage_points": 2.0
+    },
+    "coverage_limitation": "The source corpus may be sampled or uneven across history; monthly shares describe only this export.",
+    "taxonomy_scope": "App-specific canonical topics; no shared finance taxonomy."
+  }
+}

@@ -48,6 +48,14 @@ test('legacy map IDs resolve to the canonical export identity', () => {
 	assert.equal(findInsightEntry({ id: 'no-export-for-this-test-app', name: 'No export for this test app' }, catalog), undefined);
 });
 
+test('every discovered export resolves to a current app without combining separate inputs', () => {
+	const apps = JSON.parse(readFileSync(new URL('./downloads/mapping.json', import.meta.url), 'utf8'));
+	const resolved = new Set(apps.map((app) => findInsightEntry(app, catalog)?.id));
+	for (const entry of catalog) assert(resolved.has(entry.id), `Unmapped export: ${entry.id}`);
+	assert.equal(findInsightEntry(apps.find((app) => app.id === 'hoopla'), catalog)?.id, 'hoopla');
+	assert(!catalog.some((entry) => entry.id === 'hoopla-digital'));
+});
+
 test('app-scoped topic IDs cannot collide across apps', () => {
 	assert.notEqual(insightTopicKey('chime', 'topic-0001'), insightTopicKey('paypal', 'topic-0001'));
 });

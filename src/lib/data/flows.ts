@@ -10,7 +10,7 @@
  * weight_per_10k is normalized by that app's review volume.
  */
 
-import raw from './flows.json';
+import raw from './flows.json' with { type: 'json' };
 
 export type FlowKind = 'switch' | 'return' | 'intent' | 'preference';
 /** Visual layers: switches and returns are drawn together. */
@@ -274,11 +274,12 @@ export function pairSeries(s: string, t: string, layers: Set<FlowLayer>): { mont
 }
 
 /** Raw switch + intent counts per month, for the timeline histogram (optionally for a cluster). */
-export function monthlyActivityFor(scope: Set<string> | null): Record<string, number> {
+export function monthlyActivityFor(scope: Set<string> | null, pair?: { s: string; t: string }): Record<string, number> {
 	const out: Record<string, number> = {};
 	for (const row of flowEdges) {
-		if (row.k === 'preference') continue;
+		if (row.k !== 'switch' && row.k !== 'return') continue;
 		if (scope && !scope.has(row.s) && !scope.has(row.t)) continue;
+		if (pair && (row.s !== pair.s || row.t !== pair.t)) continue;
 		out[row.m] = (out[row.m] ?? 0) + row.n;
 	}
 	return out;
@@ -345,7 +346,47 @@ export function rankCompetitors(scope: Set<string> | null): CompetitorRank[] {
 }
 
 export function annotationsFor(scope: Set<string> | null): FlowAnnotation[] {
-	return flowAnnotations.filter((a) => !scope || !a.apps || a.apps.some((id) => scope.has(id)));
+	return flowAnnotations.filter((a) => !scope || a.apps?.some((id) => scope.has(id)));
+}
+
+/** Review volume of the distinct observing apps for a route, not a count of users. */
+export function pairReviewObservers(s: string, t: string): Set<string> {
+	const observers = new Set<string>();
+	for (const row of flowEdges) {
+		if ((row.s === s && row.t === t) || (row.s === t && row.t === s)) observers.add(row.o);
+	}
+	if (flowNode(s)?.observed) observers.add(s);
+	if (flowNode(t)?.observed) observers.add(t);
+	return observers;
+}
+
+export function reviewObserversFor(ids: Set<string>): Set<string> {
+	const observers = new Set([...ids].filter((id) => flowNode(id)?.observed));
+	for (const row of flowEdges) if (ids.has(row.s) || ids.has(row.t)) observers.add(row.o);
+	return observers;
+}
+
+export function pairReviewVolume(s: string, t: string, months: string[]): number {
+	return [...pairReviewObservers(s, t)].reduce((sum, id) => sum + volumeOf(id, months), 0);
+}
+
+/** Homepage connections use actual reported switches, never invented similarity edges. */
+export function overviewConnections(ids: Set<string>): { s: string; t: string; count: number }[] {
+	const pairs = new Map<string, { s: string; t: string; count: number }>();
+	for (const row of flowEdges) {
+		if ((row.k !== 'switch' && row.k !== 'return') || !ids.has(row.s) || !ids.has(row.t) || row.s === row.t) continue;
+		const [s, t] = row.s < row.t ? [row.s, row.t] : [row.t, row.s];
+		const key = `${s}|${t}`;
+		const pair = pairs.get(key) ?? { s, t, count: 0 };
+		pair.count += row.n;
+		pairs.set(key, pair);
+	}
+	const ranked = [...pairs.values()].sort((a, b) => b.count - a.count || a.s.localeCompare(b.s));
+	const chosen = new Map<string, typeof ranked[number]>();
+	for (const id of ids) {
+		for (const pair of ranked.filter((pair) => pair.s === id || pair.t === id).slice(0, 3)) chosen.set(`${pair.s}|${pair.t}`, pair);
+	}
+	return [...chosen.values()];
 }
 
 export function examplesFor(s: string, t: string, kind: FlowKind): FlowExample[] {

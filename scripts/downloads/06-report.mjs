@@ -74,7 +74,7 @@ for (const c of Object.values(data.categories).sort((a, b) => b.ratePerDay - a.r
 	lines.push(`| ${catName[c.id] ?? c.id} | ${c.apps} | ${fmt(c.installs)} | ${fmtInt(c.ratePerDay)} |`);
 }
 lines.push('');
-lines.push('## All 60 apps');
+lines.push(`## All ${rows.length} apps`);
 lines.push('');
 lines.push('| App | Category | Installs | Rate/day | 4w Δ | Source | iOS ratings | Android ratings |');
 lines.push('|---|---|---:|---:|---:|---|---:|---:|');
@@ -91,7 +91,6 @@ lines.push('- `MyRadar` — the App Store result was the paid Pro app; mapped to
 lines.push('- `Opera` — Play search returned the beta channel first; mapped to `com.opera.browser`.');
 lines.push('- `The Weather Channel` and `Brave` — the iTunes search endpoint rate-limited during the bulk run; filled from a direct lookup.');
 lines.push('- `Kolibri Games` — this is a publisher, so the data is for its game **Idle Miner Tycoon**.');
-lines.push('- `Hoopla` — the mock dataset has `Hoopla` and `Hoopla Digital` as separate entries; both map to the same app.');
 lines.push('- Play installs are global lifetime installs. App Store rating counts are US-only. Do not read the two columns as directly comparable.');
 lines.push('');
 lines.push('## What would make the rate real');
@@ -102,7 +101,7 @@ lines.push('## Rerun');
 lines.push('');
 lines.push('```sh');
 lines.push('cd scripts/downloads');
-lines.push('node 01-apps.mjs      # extract the 60 apps from mock.ts');
+lines.push('node 01-apps.mjs      # extract the apps from mock.ts');
 lines.push('node 02-match.mjs     # search both stores (rate-limited)');
 lines.push('node 03-mapping.mjs   # apply overrides → mapping.json');
 lines.push('node 04-fetch-play.mjs# fetch Play details (cached)');

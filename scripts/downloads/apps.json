@@ -182,19 +182,6 @@
     "notes": ""
   },
   {
-    "id": "hoopla-digital",
-    "name": "Hoopla Digital",
-    "categoryId": "learning",
-    "categoryName": "Learning & Reading",
-    "platform": "both",
-    "subcategory": "Library media",
-    "volume": 22648,
-    "rating": 4.4,
-    "iosTrackId": "",
-    "androidPackage": "",
-    "notes": ""
-  },
-  {
     "id": "hoopla",
     "name": "Hoopla",
     "categoryId": "learning",

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="tile" x1="8" y1="0" x2="54" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#e2ff91"/>
+      <stop offset=".4" stop-color="#c8ff3c"/>
+      <stop offset="1" stop-color="#96d719"/>
+    </linearGradient>
+    <linearGradient id="bevel" x1="20" y1="0" x2="44" y2="64" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f2ffce" stop-opacity=".85"/>
+      <stop offset=".45" stop-color="#d8ff80" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#527c0d" stop-opacity=".6"/>
+    </linearGradient>
+    <linearGradient id="wave-face" x1="18" y1="10" x2="44" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38451a"/>
+      <stop offset=".5" stop-color="#141a0b"/>
+      <stop offset="1" stop-color="#080a05"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-25%" width="200%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <path id="waves" d="M18 24a12 12 0 0 1 0 16M27 17a22 22 0 0 1 0 30M36 10a32 32 0 0 1 0 44"/>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="url(#tile)"/>
+  <rect x=".75" y=".75" width="62.5" height="62.5" rx="14.25" stroke="url(#bevel)" stroke-width="1.5"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <use href="#waves" transform="translate(1.5 3)" stroke="#304700" stroke-opacity=".35" stroke-width="5" filter="url(#shadow)"/>
+    <use href="#waves" transform="translate(.8 1.6)" stroke="#42591b" stroke-width="4.5"/>
+    <use href="#waves" transform="translate(-.45 -.6)" stroke="#efffc9" stroke-opacity=".65" stroke-width="4.5"/>
+    <use href="#waves" stroke="url(#wave-face)" stroke-width="4"/>
+  </g>
+</svg>

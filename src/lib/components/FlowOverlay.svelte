@@ -4,6 +4,7 @@
 	import { flowNode, reasonColour, reasonLabel, topReason } from '#lib/data/flows';
 	import type { SimNode } from '#lib/utils/force';
 	import { fmtCount } from '#lib/utils/format';
+	import AppLogo from './AppLogo.svelte';
 
 	let { nodes, cluster, scale }: {
 		nodes: SimNode[];
@@ -42,7 +43,7 @@
 		.sort((a, b) => a.value - b.value));
 	const connectedIds = $derived(new Set(arrows.flatMap((arrow) => [arrow.s, arrow.t])));
 	// Only ranked competitors that the current view shows (top 6, all, or the selection's own).
-	const visibleOutside = $derived(ranked.map((entry) => entry.node).filter((node) => flowsState.visibleOutsideIds.has(node.id)));
+	const visibleOutside = $derived(ranked.map((entry) => entry.node).filter((node) => flowsState.visibleOutsideIds.has(node.id) && connectedIds.has(node.id)));
 	const hasFocus = $derived(Boolean(flowsState.hoveredArrow || flowsState.hoveredNode || flowsState.selection));
 	const scaleMax = $derived(flowsState.scaleMax);
 
@@ -96,7 +97,7 @@
 	function active(arrow: FlowArrow) {
 		if (flowsState.hoveredArrow) return flowsState.hoveredArrow === arrow.key;
 		const selection = flowsState.selection;
-		const appId = flowsState.hoveredNode ?? (selection?.type === 'app' ? selection.id : null);
+		const appId = selection?.type === 'app' ? selection.id : flowsState.hoveredNode;
 		if (appId) return arrow.s === appId || arrow.t === appId;
 		if (selection?.type === 'edge') return (arrow.s === selection.s && arrow.t === selection.t) ||
 			(flowsState.netMode && arrow.s === selection.t && arrow.t === selection.s);
@@ -109,6 +110,12 @@
 	}
 
 	function colour(arrow: FlowArrow) {
+		const selection = flowsState.selection;
+		const appId = selection?.type === 'app' ? selection.id : studio.selectedApp?.id ?? (selection?.type === 'edge' ? selection.s : undefined);
+		if (appId) return arrow.t === appId ? 'var(--pos)' : 'var(--neg)';
+		const scope = flowsState.scope;
+		if (scope?.has(arrow.t) && !scope.has(arrow.s)) return 'var(--pos)';
+		if (scope?.has(arrow.s) && !scope.has(arrow.t)) return 'var(--neg)';
 		return reasonColour(topReason(arrow.reasons));
 	}
 
@@ -159,9 +166,9 @@
 	</g>
 	{#each visibleOutside as node (node.id)}
 		{@const position = positions.get(node.id)!}
+		{@const radius = Math.max(position.radius, 12 / scale)}
 		<g
 			class="outside-node"
-			class:quiet={!connectedIds.has(node.id)}
 			class:selected={flowsState.selection?.type === 'app' && flowsState.selection.id === node.id}
 			transform="translate({position.x},{position.y})"
 			role="button"
@@ -174,8 +181,9 @@
 				if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectApp(node.id); }
 			}}
 		>
-			<circle r={position.radius} fill="var(--bg)" stroke="var(--muted)" stroke-width="1" stroke-dasharray={node.observed ? undefined : '3 2'} vector-effect="non-scaling-stroke" />
-			<text class:quiet={!connectedIds.has(node.id)} y={position.radius + 11 / scale} text-anchor="middle" font-size={9 / scale}>{node.name}</text>
+			<rect class="outside-outline" x={-radius - 2 / scale} y={-radius - 2 / scale} width={radius * 2 + 4 / scale} height={radius * 2 + 4 / scale} rx={radius * 0.48} fill="var(--panel)" stroke="var(--line-bright)" stroke-width="1" vector-effect="non-scaling-stroke" />
+			<g transform="translate({-radius},{-radius})"><AppLogo appId={node.id} name={node.name} size={radius * 2} /></g>
+			<text y={radius + 11 / scale} text-anchor="middle" font-size={9 / scale}>{node.name}</text>
 		</g>
 	{/each}
 </g>
@@ -186,13 +194,9 @@
 	.flow-arrow:focus-visible .route { stroke: var(--text); }
 	.route, polygon { pointer-events: none; }
 	.route, polygon { transition: stroke 180ms, fill 180ms; }
-	.outside-node.quiet { opacity: 0.35; }
-	.outside-node.quiet:hover, .outside-node:focus-visible { opacity: 1; }
-	text.quiet { opacity: 0; }
-	.outside-node:hover text, .outside-node:focus-visible text { opacity: 1; }
 	.route-caption { pointer-events: none; }
 	.route-caption rect { fill: var(--panel); stroke: var(--line-strong); stroke-width: 1; }
-	.outside-node:hover circle, .outside-node:focus-visible circle, .outside-node.selected circle { stroke: var(--lime); }
+	.outside-node:hover .outside-outline, .outside-node:focus-visible .outside-outline, .outside-node.selected .outside-outline { stroke: white; stroke-width: 2px; filter: drop-shadow(0 0 5px #ffffff50); }
 	text { fill: var(--text-2); font-family: var(--mono); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; stroke-linejoin: round; pointer-events: none; }
 	@keyframes reveal { from { opacity: 0; } to { opacity: 1; } }
 	@media (prefers-reduced-motion: reduce) { .flow-overlay { animation: none; } }

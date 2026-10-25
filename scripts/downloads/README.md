@@ -102,7 +102,6 @@ The intended UI wiring is:
 - `MyRadar` initially matched the paid Pro app; corrected to the free listing.
 - `Opera` initially matched the beta channel; corrected to the stable package.
 - `Kolibri Games` is a publisher; its data is for **Idle Miner Tycoon**.
-- `Hoopla` and `Hoopla Digital` are duplicates in the mock data; both point to the same app.
 - Play installs are **global** lifetime installs. App Store rating counts are **US-only**. Don't compare the two columns directly.
 - Scraping Play is against its terms; fine for a hackathon demo, not for production. For production, use App Store Connect / Play Console reports for owned apps, or a paid provider for third-party estimates.
 

@@ -156,17 +156,6 @@
       "iosAverage": null,
       "released": "Jan 17, 2017"
     },
-    "hoopla-digital": {
-      "playAppId": "com.hoopladigital.android",
-      "playInstalls": "5,000,000+",
-      "playMinInstalls": 5000000,
-      "playMaxInstalls": 6727814,
-      "playRatings": 219572,
-      "iosTrackId": 580643740,
-      "iosRatings": 1393114,
-      "iosAverage": null,
-      "released": "May 25, 2013"
-    },
     "hoopla": {
       "playAppId": "com.hoopladigital.android",
       "playInstalls": "5,000,000+",

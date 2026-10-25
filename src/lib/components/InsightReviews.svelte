@@ -25,8 +25,7 @@
 </script>
 
 <section class="review-controls" aria-label="Exported review samples">
-	<span class="label">Representative review excerpts</span>
-	<p>{fmtFull(samples.length)} distinct saved excerpts from {fmtFull(data.summary.total_reviews)} reviews. These files do not include per-review dates, star ratings or full review text.</p>
+	<h3>What customers are saying</h3>
 	<input class="input" type="search" aria-label="Search saved review excerpts" placeholder="Search saved excerpts…" bind:value={query} />
 	<div class="filters">
 		<select aria-label="Filter review topic" value={topicKey} onchange={(event) => selectTopic(event.currentTarget.value)}>
@@ -40,13 +39,16 @@
 	</div>
 	<div class="count" role="status">{filtered.length} of {samples.length} saved excerpts{topicKey !== 'all' ? ' · topic filter active' : ''}</div>
 	{#if topicKey !== 'all'}<button class="clear" onclick={() => (studio.insightTopic = null)}>Clear topic filter</button>{/if}
+	<details><summary>About these comments</summary><p>{fmtFull(samples.length)} representative excerpts from {fmtFull(data.summary.total_reviews)} reviews. Individual dates, ratings and full text are not included in this export.</p></details>
 </section>
 
 <div class="review-list"><InsightExamples samples={filtered} onTopic={selectTopic} /></div>
 
 <style>
 	.review-controls { padding: 12px 14px; border-bottom: 1px solid var(--line); }
-	.label { color: var(--cyan); }
+	h3 { color: white; font-size: 14px; font-weight: 700; margin: 0 0 12px; }
+	details { margin-top: 10px; font-size: 9px; color: var(--muted); }
+	summary { cursor: pointer; }
 	p { color: var(--muted); font-size: 10.5px; line-height: 1.6; }
 	.input { width: 100%; height: 30px; font-size: 11px; }
 	.filters { display: flex; gap: 6px; margin-top: 7px; }

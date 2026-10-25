@@ -3,13 +3,13 @@
 	import { cubicInOut } from 'svelte/easing';
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
-	import { flows, legendReasons } from '#lib/data/flows';
+	import { flows, overviewConnections } from '#lib/data/flows';
 	import FlowOverlay from './FlowOverlay.svelte';
+	import AppLogo from './AppLogo.svelte';
 	import { Simulation, boundsOf, type SimLink, type SimNode } from '#lib/utils/force';
 	import { platformColor, receptionColor } from '#lib/utils/palette';
-	import { fmtCount, fmtRate, initials } from '#lib/utils/format';
+	import { fmtCount } from '#lib/utils/format';
 	import { layoutNodeLabels } from '#lib/utils/labels';
-	import Stars from './Stars.svelte';
 
 	let stage: HTMLDivElement;
 	let width = $state(0);
@@ -54,8 +54,11 @@
 		return links.map((link) => ({ ...link, source: { ...link.source }, target: { ...link.target } }));
 	});
 	const isFocused = $derived(Boolean(studio.categoryFilter));
+	const homeConnections = $derived(overviewConnections(new Set(studio.mapApps.map((app) => app.id))));
+	const homeMax = $derived(Math.max(...homeConnections.map((pair) => pair.count), 1));
+	const nodePositions = $derived(new Map(appNodes.map((node) => [node.id, node])));
 	const connectedFlowIds = $derived(new Set(
-		(isFocused && hasFlowData ? flowsState.visibleArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
+		(isFocused && hasFlowData ? flowsState.drawnArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
 	));
 	const activeClusterId = $derived(studio.zoomingCategory ?? studio.categoryFilter);
 
@@ -68,21 +71,16 @@
 		const set = new Set<string>();
 		if (!focusId) return set;
 		set.add(focusId);
-		for (const link of links) {
-			if (link.source.id === focusId) set.add(link.target.id);
-			if (link.target.id === focusId) set.add(link.source.id);
+		for (const link of isFocused ? flowsState.drawnArrows : homeConnections) {
+			if (link.s === focusId) set.add(link.t);
+			if (link.t === focusId) set.add(link.s);
 		}
 		return set;
 	});
 
 	const hoveredApp = $derived(hovered ? appMap.get(hovered) ?? allApps.get(hovered) : undefined);
-	const hoveredRating = $derived(hoveredApp ? studio.ratingFor(hoveredApp) : null);
-	const hoveredDownloads = $derived(hoveredApp ? studio.downloadsFor(hoveredApp.id) : undefined);
 	const hoveredCategory = $derived(
 		hoveredCluster ? categoryMap.get(hoveredCluster) : undefined
-	);
-	const hoveredCategoryDownloads = $derived(
-		hoveredCategory ? studio.categoryDownloads(hoveredCategory.id) : undefined
 	);
 
 	const tipX = $derived(
@@ -95,7 +93,7 @@
 	const showLabels = $derived(isFocused || (!activeClusterId && scale > 1.02));
 	const appLabels = $derived(isFocused
 		? layoutNodeLabels(
-			appNodes.filter((node) => node.clusterId === studio.categoryFilter && appHasContent(node.id)),
+			appNodes.filter((node) => nodeVisible(node)),
 			(node) => shortName(appMap.get(node.id)?.name ?? allApps.get(node.id)?.name ?? node.id),
 			10 / scale,
 			6 / scale
@@ -541,7 +539,8 @@
 	}
 
 	function selectApp(id: string) {
-		studio.select('app', id);
+		if (studio.categoryFilter) studio.select('app', id);
+		else studio.openCompany(id);
 	}
 
 	/* ---------------------------- styling --------------------------- */
@@ -555,15 +554,22 @@
 	}
 
 	function nodeOpacity(node: SimNode): number {
-		if (activeClusterId && node.clusterId !== activeClusterId) return 0;
-		if (isFocused) {
-			const selection = flowsState.selection;
-			if (selection?.type === 'edge') return node.id === selection.s || node.id === selection.t ? 1 : 0.35;
-			return 1;
-		}
+		if (!nodeVisible(node)) return 0;
+		if (isFocused) return 1;
 		if (!focusId) return 1;
 		if (!focusSet.has(node.id)) return 0.22;
 		return 1;
+	}
+
+	function nodeVisible(node: SimNode): boolean {
+		if (activeClusterId && node.clusterId !== activeClusterId) return false;
+		if (!appHasContent(node.id)) return false;
+		if (isFocused) {
+			const selection = flowsState.selection;
+			if (selection?.type === 'app') return node.id === selection.id || connectedFlowIds.has(node.id);
+			if (selection?.type === 'edge') return node.id === selection.s || node.id === selection.t;
+		}
+		return true;
 	}
 
 	function appHasContent(id: string): boolean {
@@ -655,6 +661,17 @@
 				{/each}
 			</g>
 
+			{#if !isFocused}
+				<g class="home-connections" aria-label="Connections from reported switches">
+					{#each homeConnections as pair (pair.s + '|' + pair.t)}
+						{@const source = nodePositions.get(pair.s)}
+						{@const target = nodePositions.get(pair.t)}
+						{#if source && target}
+							<line x1={source.x} y1={source.y} x2={target.x} y2={target.y} stroke="var(--text-2)" stroke-width={0.7 + Math.sqrt(pair.count / homeMax) * 1.8} stroke-opacity={focusId ? pair.s === focusId || pair.t === focusId ? 0.85 : 0.06 : 0.25 + Math.sqrt(pair.count / homeMax) * 0.35} vector-effect="non-scaling-stroke"><title>{appMap.get(pair.s)?.name} ↔ {appMap.get(pair.t)?.name}: {pair.count} reported switches</title></line>
+						{/if}
+					{/each}
+				</g>
+			{:else}
 			<g class="edges">
 				{#each viewLinks as link, index (`${link.source.id}-${link.target.id}-${index}`)}
 					<line
@@ -671,6 +688,7 @@
 					/>
 				{/each}
 			</g>
+			{/if}
 
 			{#if isFocused && hasFlowData}
 				{@const cluster = clusters.find((cluster) => cluster.id === studio.categoryFilter)}
@@ -685,19 +703,20 @@
 					{@const color = colorFor(node)}
 					{@const label = appLabels?.get(node.id)}
 					{@const selected = isFocused && flowsState.selection?.type === 'app' ? flowsState.selection.id === node.id : studio.selected?.kind === 'app' && studio.selected.id === node.id}
-					{@const circumference = 2 * Math.PI * (node.radius + 3.5)}
+					{@const logoRadius = Math.max(node.radius, (isFocused ? 12 : 10) / scale)}
 					{#if app && appHasContent(node.id)}
 						<g
 							class="node app"
 							class:selected
+							class:hovered={hovered === node.id}
 							class:dimmed={focusId !== null && !focusSet.has(node.id)}
-							class:outside-cluster={Boolean(activeClusterId && node.clusterId !== activeClusterId)}
+							class:outside-cluster={!nodeVisible(node)}
 							style:opacity={nodeOpacity(node)}
 							transform="translate({node.x},{node.y})"
 							role="button"
-							tabindex={activeClusterId && node.clusterId !== activeClusterId ? -1 : 0}
-							aria-hidden={Boolean(activeClusterId && node.clusterId !== activeClusterId)}
-								aria-label="{app.name}, {app.categoryName}, {app.insightsId ? 'exported review analytics' : `reception ${app.reception} of 100` }"
+							tabindex={nodeVisible(node) ? 0 : -1}
+							aria-hidden={!nodeVisible(node)}
+							aria-label="{app.name}, {app.categoryName}, {fmtCount(app.reviewCount)} reviews"
 							onpointerdown={(event) => startDrag(event, node)}
 							onpointerenter={() => { hovered = node.id; if (hasFlowData) flowsState.hoveredNode = node.id; }}
 							onpointerleave={() => { hovered = null; flowsState.hoveredNode = null; }}
@@ -710,47 +729,10 @@
 							}}
 							ondblclick={(event) => unpin(event, node)}
 						>
-							{#if !app.insightsId}
-								<circle
-									r={node.radius + 3.5}
-									fill="none"
-									stroke={receptionColor(app.reception)}
-									stroke-width="1.5"
-									stroke-opacity="0.65"
-									stroke-dasharray="{((app.reception / 100) * circumference).toFixed(1)} {circumference.toFixed(1)}"
-									transform="rotate(-90)"
-									vector-effect="non-scaling-stroke"
-								/>
-							{/if}
-							{#if selected}
-								<circle
-									r={node.radius + 8}
-									fill="none"
-									stroke="var(--text)"
-									stroke-width="1"
-									stroke-dasharray="3 3"
-									class="selection-ring"
-								/>
-							{/if}
-							<circle
-								r={node.radius}
-								fill={color}
-								fill-opacity="0.2"
-								stroke={color}
-								stroke-width={selected ? 2 : 1.1}
-								vector-effect="non-scaling-stroke"
-							/>
-							<text
-								class="init"
-								text-anchor="middle"
-								dy="3"
-								fill={color}
-								font-size={node.radius > 14 ? 9.5 : 8}
-								font-family="var(--mono)"
-								letter-spacing="0.3"
-							>
-								{initials(app.name).slice(0, node.radius < 10 ? 1 : 2)}
-							</text>
+							<g class="logo-body">
+								<rect class="node-outline" x={-logoRadius - 2 / scale} y={-logoRadius - 2 / scale} width={logoRadius * 2 + 4 / scale} height={logoRadius * 2 + 4 / scale} rx={logoRadius * 0.48} fill="var(--panel)" stroke={selected || hovered === node.id ? 'white' : color} stroke-width={selected || hovered === node.id ? 2 : 1} vector-effect="non-scaling-stroke" />
+								<g transform="translate({-logoRadius},{-logoRadius})"><AppLogo appId={app.id} name={app.name} size={logoRadius * 2} /></g>
+							</g>
 							<text
 								class="app-label"
 								class:soft={(!showLabels && hovered !== node.id && !selected) || (label && !label.visible)}
@@ -774,81 +756,29 @@
 	{#if hoveredApp}
 		<div class="tooltip" style:left="{tipX}px" style:top="{tipY}px">
 			<div class="tt-head">
-				<span class="tt-dot" style:background={colorFor({ id: hoveredApp.id, kind: 'app' } as SimNode)}></span>
+				<AppLogo appId={hoveredApp.id} name={hoveredApp.name} size={25} />
 				<span class="tt-name">{hoveredApp.name}</span>
-				{#if hoveredApp.insightsId}
-					<span class="tt-score" style:color="var(--cyan)">Export</span>
-				{:else}
-					<span class="tt-score num" style:color={receptionColor(hoveredApp.reception)}>{hoveredApp.reception}</span>
-				{/if}
 			</div>
-			<div class="tt-sub">{hoveredApp.categoryName} · {hoveredApp.insightsId ? 'exported review analytics' : hoveredApp.subcategory}</div>
+			<div class="tt-sub">{hoveredApp.categoryName}</div>
 			<div class="tt-row">
-				{#if hoveredRating !== null}<Stars rating={hoveredRating} size={9} /><span class="num">{hoveredRating.toFixed(2)}</span>{/if}
 				<span class="tt-muted">{fmtCount(hoveredApp.reviewCount)} reviews</span>
 			</div>
-			{#if hoveredDownloads && !hoveredApp.insightsId}
-				<div class="tt-row">
-					<span class="num">{fmtRate(hoveredDownloads.ratePerDay)}</span>
-					<span class="tt-muted">{fmtCount(hoveredDownloads.installs)} installs</span>
-				</div>
-			{/if}
-			{#if !hoveredApp.insightsId}
-			<div class="tt-senti">
-				<span class="pos">{Math.round((hoveredApp.sentiment.positive / hoveredApp.reviewCount) * 100)}% pos</span>
-				<span class="neg">{Math.round((hoveredApp.sentiment.negative / hoveredApp.reviewCount) * 100)}% neg</span>
-			</div>
-			{/if}
-			<div class="tt-hint">click to inspect →</div>
+			<div class="tt-hint">click to explore company →</div>
 		</div>
 	{:else if hoveredCategory}
 		<div class="tooltip" style:left="{tipX}px" style:top="{tipY}px">
 			<div class="tt-head">
 				<span class="tt-dot" style:background={hoveredCategory.accent}></span>
 				<span class="tt-name">{hoveredCategory.name}</span>
-				<span class="tt-score num" style:color={receptionColor(hoveredCategory.reception)}>
-					{hoveredCategory.reception}
-				</span>
 			</div>
 			<div class="tt-sub">{hoveredCategory.blurb}</div>
 			<div class="tt-row">
 				<span class="num">{hoveredCategory.appIds.length} apps</span>
 				<span class="tt-muted">{fmtCount(hoveredCategory.reviewCount)} reviews</span>
 			</div>
-			{#if hoveredCategoryDownloads}
-				<div class="tt-row">
-					<span class="num">{fmtRate(hoveredCategoryDownloads.ratePerDay)}</span>
-					<span class="tt-muted">{fmtCount(hoveredCategoryDownloads.installs)} installs</span>
-				</div>
-			{/if}
 			<div class="tt-hint">click to open flows →</div>
 		</div>
 	{/if}
-
-	<div class="legend" class:flow-legend={isFocused && hasFlowData}>
-		{#if isFocused && hasFlowData}
-			<span class="route-count num">{flowsState.visibleArrows.length} routes shown</span>
-			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
-			<div class="legend-row"><span>thicker arrows = stronger review signal · hollow nodes = outside apps</span></div>
-			<div class="legend-hint">hover an app to focus its routes · click to pin</div>
-			<div class="flow-reasons">
-				{#each legendReasons as reason (reason.id)}
-					<span><i style:background={reason.colour}></i>{reason.label}</span>
-				{/each}
-			</div>
-		{:else}
-		<div class="legend-row">
-			<span class="shape cl"></span><span>category cluster</span>
-			<span class="shape ci"></span><span>app · size = {studio.metric === 'downloads' ? 'downloads' : 'review volume'}</span>
-		</div>
-		<div class="legend-row">
-			<span class="line sim"></span><span>semantic similarity</span>
-			<span class="line cross"></span><span>cross-category</span>
-		</div>
-		<div class="legend-hint">click a cluster for flows · scroll zoom · drag pan</div>
-		{#if isFocused && hasExportedInsights}<div class="legend-hint">Map links come from the graph source, not the topic exports.</div>{/if}
-		{/if}
-	</div>
 
 	{#if isFocused && !hasFlowData}
 		<div class="no-flows">
@@ -864,10 +794,6 @@
 		<button onclick={() => zoomAt(1.3)} aria-label="Zoom in">+</button>
 		<button onclick={() => zoomAt(0.77)} aria-label="Zoom out">−</button>
 		<button onclick={fitView} aria-label="Fit graph" class="fit">FIT</button>
-	</div>
-
-	<div class="readout num">
-		{Math.round(scale * 100)}% · {appNodes.length}A / {clusters.length}C
 	</div>
 
 	{#if nodes.length === 0}
@@ -896,12 +822,11 @@
 	.stage.zooming {
 		pointer-events: none;
 	}
-	.zooming .legend,
-	.zooming .controls,
-	.zooming .readout {
+	.zooming .controls {
 		opacity: 0;
 		transition: opacity 180ms;
 	}
+	.zooming :global(.flow-overlay) { opacity: 0; pointer-events: none; }
 	.cluster.receding {
 		opacity: 0;
 		visibility: hidden;
@@ -944,26 +869,6 @@
 		visibility: hidden;
 		pointer-events: none;
 	}
-	.flow-reasons {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 5px 10px;
-		max-width: 440px;
-	}
-	.route-count {
-		margin-bottom: 4px;
-		color: var(--muted);
-	}
-	.flow-reasons span {
-		display: inline-flex;
-		align-items: center;
-		gap: 4px;
-	}
-	.flow-reasons i {
-		width: 6px;
-		height: 6px;
-		border-radius: 50%;
-	}
 	.no-flows {
 		position: absolute;
 		top: 12px;
@@ -979,11 +884,9 @@
 		font-size: 11px;
 		color: var(--muted);
 	}
-	.node .init {
-		pointer-events: none;
-		font-weight: 600;
-		opacity: 0.9;
-	}
+	.logo-body { transition: transform 180ms var(--ease); }
+	.node.hovered .logo-body, .node.selected .logo-body { transform: scale(1.06); }
+	.node.hovered .node-outline, .node.selected .node-outline, .node:focus-visible .node-outline { stroke: white; stroke-width: 2px; filter: drop-shadow(0 0 6px #ffffff55); }
 	.app-label {
 		pointer-events: none;
 		paint-order: stroke;
@@ -993,19 +896,6 @@
 	}
 	.app-label.soft {
 		opacity: 0;
-	}
-	.node .selection-ring {
-		animation: spin 18s linear infinite;
-		transform-origin: center;
-	}
-	.node:focus-visible circle {
-		stroke: var(--lime);
-	}
-
-	@keyframes spin {
-		to {
-			stroke-dashoffset: -48;
-		}
 	}
 
 	.tooltip {
@@ -1039,10 +929,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.tt-score {
-		font-size: 13px;
-		font-weight: 600;
-	}
 	.tt-sub {
 		margin-top: 2px;
 		font-family: var(--mono);
@@ -1063,19 +949,6 @@
 		font-size: 9px;
 		color: var(--dim);
 	}
-	.tt-senti {
-		display: flex;
-		gap: 10px;
-		margin-top: 4px;
-		font-family: var(--mono);
-		font-size: 9px;
-	}
-	.tt-senti .pos {
-		color: var(--pos);
-	}
-	.tt-senti .neg {
-		color: var(--neg);
-	}
 	.tt-hint {
 		margin-top: 8px;
 		padding-top: 7px;
@@ -1087,63 +960,6 @@
 		text-transform: uppercase;
 	}
 
-	.legend {
-		position: absolute;
-		left: 14px;
-		bottom: 14px;
-		padding: 8px 10px;
-		background: color-mix(in srgb, var(--bg) 78%, transparent);
-		border: 1px solid var(--line);
-		border-radius: 2px;
-		backdrop-filter: blur(6px);
-		font-family: var(--mono);
-		font-size: 8.5px;
-		color: var(--muted);
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
-		pointer-events: none;
-	}
-	.legend-row {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-	}
-	.legend-row span:nth-child(2) {
-		margin-right: 8px;
-	}
-	.shape.cl {
-		width: 8px;
-		height: 8px;
-		border-radius: 50%;
-		border: 1px dashed var(--muted);
-		background: color-mix(in srgb, var(--cyan) 12%, transparent);
-	}
-	.shape.ci {
-		width: 7px;
-		height: 7px;
-		border-radius: 50%;
-		border: 1px solid var(--lime);
-		background: color-mix(in srgb, var(--lime) 20%, transparent);
-	}
-	.line {
-		width: 12px;
-		height: 0;
-		border-top: 1px solid var(--muted);
-	}
-	.line.sim {
-		border-top-style: dashed;
-		border-color: var(--lime);
-	}
-	.line.cross {
-		border-color: var(--faint);
-		border-top-style: dotted;
-	}
-	.legend-hint {
-		color: var(--faint);
-		font-size: 8px;
-		margin-top: 1px;
-	}
 
 	.controls {
 		position: absolute;
@@ -1176,18 +992,6 @@
 		letter-spacing: 0.1em;
 	}
 
-	.readout {
-		position: absolute;
-		right: 14px;
-		top: 12px;
-		font-size: 8.5px;
-		color: var(--faint);
-		letter-spacing: 0.06em;
-		pointer-events: none;
-	}
-	.focused .readout {
-		display: none;
-	}
 
 	.empty {
 		position: absolute;
@@ -1216,22 +1020,4 @@
 		margin-top: 8px;
 	}
 
-	@media (max-width: 720px) {
-		.legend {
-			display: none;
-		}
-		.legend.flow-legend {
-			display: flex;
-			max-width: calc(100% - 75px);
-			padding: 6px;
-		}
-		.flow-legend .legend-row,
-		.flow-legend .flow-reasons,
-		.flow-legend .legend-hint {
-			display: none;
-		}
-		.route-count {
-			margin-bottom: 0;
-		}
-	}
 </style>

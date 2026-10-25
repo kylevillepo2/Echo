@@ -59,7 +59,6 @@ for (const app of apps) {
 	const ios = pick(row.ios, IOS_TITLE[app.id]);
 	const notes = [];
 	if (app.id === 'kolibri-games') notes.push('publisher; app = Idle Miner Tycoon');
-	if (app.id === 'hoopla') notes.push('duplicate of hoopla-digital');
 	if (!ios) notes.push('iOS match missing');
 	if (!play) notes.push('Play match missing');
 

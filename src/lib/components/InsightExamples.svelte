@@ -8,7 +8,6 @@
 		<article class="insight-review">
 			<header>
 				<span>{sample.data_source === 'gplay' ? 'Google Play' : sample.data_source === 'appstore' ? 'App Store' : sample.data_source}</span>
-				<span>Representative excerpt</span>
 			</header>
 			<p>“{sample.snippet}”</p>
 			<footer>

@@ -9,6 +9,7 @@
 	import ReviewCard from './ReviewCard.svelte';
 	import AppFlows from './AppFlows.svelte';
 	import AppInsightsPanel from './AppInsightsPanel.svelte';
+	import AppLogo from './AppLogo.svelte';
 	import { fmtCount, fmtDate, fmtDelta, fmtDeltaPct, fmtLag, fmtPct, fmtR, fmtRate } from '#lib/utils/format';
 	import { platformLabel, receptionColor } from '#lib/utils/palette';
 
@@ -138,7 +139,7 @@
 	}
 </script>
 
-<aside class="inspector" aria-label="Inspector">
+<aside class="inspector" aria-label="Company details">
 	{#if app}
 		<header class="head" style:--accent={app.accent ?? 'var(--lime)'}>
 			<div class="eyebrow">
@@ -149,20 +150,21 @@
 				<span>app</span>
 			</div>
 			<div class="title-row">
+				<AppLogo appId={app.id} name={app.name} size={36} />
 				<h2>{app.name}</h2>
-				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close inspector">×</button>
+				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close company details">×</button>
 			</div>
 			<div class="meta-row">
 				{#if !insightEntry}
 					<span class="chip">{platformLabel(app.platform)}</span>
 					<span class="chip">{app.subcategory}</span>
 				{/if}
+				{#if !insightEntry && studio.mode === 'demo' && studio.inspectorTab !== 'flows'}<span class="chip">Sample analytics</span>{/if}
 				{#if rating !== null}<span class="rating"><Stars {rating} size={10} showValue /></span>{/if}
-				{#if insightEntry}<span class="chip analytics-badge">Review export</span>{/if}
 			</div>
 		</header>
 
-		<nav class="tabs" aria-label="Inspector sections">
+		<nav class="tabs" aria-label="Company sections">
 			<button class:active={studio.inspectorTab === 'flows'} onclick={() => setTab('flows')}>
 				Flows
 			</button>
@@ -503,7 +505,7 @@
 			</div>
 			<div class="title-row">
 				<h2>{category.name}</h2>
-				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close inspector">×</button>
+				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close company details">×</button>
 			</div>
 			<div class="meta-row">
 				<span class="chip">{category.appIds.length} apps</span>
@@ -621,7 +623,7 @@
 		<div class="empty">
 			<div class="empty-top">
 				<span class="label">Inspector</span>
-				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close inspector">×</button>
+				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close company details">×</button>
 			</div>
 
 			<div class="empty-body">
@@ -633,7 +635,7 @@
 						<path d="M19 26h14" stroke="var(--line-bright)" stroke-width="1" stroke-dasharray="3 3" />
 					</svg>
 				</div>
-				<h2>Unwrap a node</h2>
+				<h2>Explore a company</h2>
 				<p>
 					Click an app circle to inspect it, or click a category cluster to open its flows.
 				</p>
@@ -788,9 +790,6 @@
 	}
 	.rating {
 		margin-left: 2px;
-	}
-	.analytics-badge {
-		color: var(--cyan);
 	}
 	.analytics-warning {
 		padding: 12px 14px;
@@ -1473,7 +1472,7 @@
 	@media (max-width: 1180px) {
 		.inspector {
 			position: absolute;
-			top: var(--header-h);
+			top: 0;
 			bottom: var(--status-h);
 			right: 0;
 			z-index: 26;

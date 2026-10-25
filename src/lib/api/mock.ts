@@ -607,15 +607,6 @@ const CATEGORY_SPECS: CategorySpec[] = [
 				hurts: ['login', 'bugs', 'search-quality']
 			},
 			{
-				id: 'hoopla-digital',
-				name: 'Hoopla Digital',
-				volume: 22_648,
-				rating: 4.4,
-				subcategory: 'Library media',
-				loves: ['free', 'content', 'design'],
-				hurts: ['login', 'content-quality', 'bugs']
-			},
-			{
 				id: 'hoopla',
 				name: 'Hoopla',
 				volume: 20_445,

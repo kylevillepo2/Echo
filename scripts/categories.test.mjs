@@ -17,9 +17,17 @@ test('Music, TV and audiobooks are categorized consistently', () => {
 		assert.equal(mapping.find((app) => app.id === id)?.categoryId, category);
 		assert.equal(apps.find((app) => app.id === id)?.categoryId, category);
 	}
-	assert.equal(Object.keys(downloads.apps).length, 60);
+	assert.equal(Object.keys(downloads.apps).length, 59);
 	assert.equal(Object.keys(downloads.categories).length, 13);
 	assert(!downloads.categories.entertainment);
+});
+
+test('only the retained Hoopla entry exists in app and download inputs', () => {
+	for (const list of [apps, mapping, Object.values(downloads.apps)]) {
+		assert(list.some((app) => app.id === 'hoopla'));
+		assert(!list.some((app) => app.id === 'hoopla-digital'));
+	}
+	assert.equal(downloads.meta.appCount, Object.keys(downloads.apps).length);
 });
 
 test('category totals reconcile with their apps after the split', () => {

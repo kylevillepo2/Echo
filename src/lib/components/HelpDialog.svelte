@@ -23,7 +23,7 @@
 		<header>
 			<div>
 				<span class="label">Field guide</span>
-				<h2>How UNWRAP works</h2>
+				<h2>How echo works</h2>
 			</div>
 			<button class="close" onclick={() => (studio.helpOpen = false)} aria-label="Close">×</button>
 		</header>
@@ -53,7 +53,7 @@
 				<div class="step">
 					<span class="step-num num">03</span>
 					<div>
-						<h3>Unwrap</h3>
+						<h3>Explore</h3>
 						<p>
 							Categories are dashed clusters, apps are circles. Click a cluster to open its
 							switching flows; click an app for reception, themes and raw reviews.
@@ -154,7 +154,7 @@
 		</div>
 
 		<footer>
-			<span class="foot">UNWRAP · hackathon build</span>
+			<span class="foot">echo · app review intelligence</span>
 			<button class="btn is-sm" onclick={() => (studio.helpOpen = false)}>Close</button>
 		</footer>
 	</div>

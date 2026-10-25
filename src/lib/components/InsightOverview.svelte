@@ -55,16 +55,19 @@
 </script>
 
 <section class="export-note" aria-label="Insights export coverage">
-	<span class="label">Imported review analytics</span>
+	<span class="label">Customer insights</span>
 	{#if entry.checksPassed === false}<p class="validation-warning" role="alert">Some export aggregation checks did not pass. Treat these counts as provisional.</p>{/if}
 	<p><b class="num">{fmtFull(data.summary.total_reviews)}</b> reviews · {data.topics.length} app-specific topics</p>
 	<p>{insightDateLabel(data.summary.earliest_review_date)} – {insightDateLabel(data.summary.latest_review_date)}</p>
-	<p>{fmtFull(data.summary.reviews_with_topics)} reviews matched topics ({data.summary.tagging_coverage_percent.toFixed(1)}%). Shares use <b>all app reviews</b>, including untagged reviews. Topics can overlap.</p>
+</section>
+
+<section class="block overview-chart">
+	<div class="block-head"><span class="label-dim">Reviews over time</span></div>
+	<InsightChart points={data.monthly_reviews.map((month) => ({ month: month.month, value: month.review_count, partial: month.partial_month, low: month.insufficient_review_volume }))} label="Monthly exported reviews for {data.app.name}" />
 </section>
 
 <section class="block topics-block" aria-label="Exported review topics">
-	<div class="block-head"><span class="label-dim">Signals · review topics</span><span class="num soft">{topics.length} topics</span></div>
-	<p class="note">Grouped by matching reviews’ average rating: positive 4★+, negative below 3★, mixed 3–under 4★. This is rating-based, not text sentiment; small samples can skew averages. Select a topic for its trend and reviews.</p>
+	<div class="block-head"><span class="label-dim">What customers are saying</span><span class="num soft">{topics.length} topics</span></div>
 	<input class="input" type="search" aria-label="Search review topics" placeholder="Search topics…" bind:value={query} />
 	<div class="filters">
 		<select aria-label="Filter topic category" bind:value={group}>
@@ -76,7 +79,7 @@
 		</select>
 	</div>
 	{#if topics.length}
-		{#each ratingGroups.filter((bucket) => bucket.topics.length || bucket.id === 'positive' || bucket.id === 'negative') as bucket (bucket.id)}
+		{#each ratingGroups.filter((bucket) => bucket.topics.length) as bucket (bucket.id)}
 			<section class="rating-group" aria-label={bucket.label} style:--topic-color={bucket.color}>
 				<div class="rating-group-head"><h4>{bucket.label}</h4><span class="soft num">{bucket.topics.length} topics</span></div>
 				<p class="rating-range">{bucket.range}</p>
@@ -91,7 +94,7 @@
 					{:else}<p class="note">No {bucket.id} topics match these filters.</p>{/each}
 				</div>
 				{#if bucket.topics.length > 5}
-					<button class="link expand" onclick={() => (expandedGroups = expandedGroups.includes(bucket.id) ? expandedGroups.filter((id) => id !== bucket.id) : [...expandedGroups, bucket.id])}>{expandedGroups.includes(bucket.id) ? 'Show fewer topics' : `Show all ${bucket.topics.length} ${bucket.id} topics`}</button>
+					<button class="link expand" aria-label="{expandedGroups.includes(bucket.id) ? 'View fewer' : 'View more'} {bucket.id} topics" onclick={() => (expandedGroups = expandedGroups.includes(bucket.id) ? expandedGroups.filter((id) => id !== bucket.id) : [...expandedGroups, bucket.id])}>{expandedGroups.includes(bucket.id) ? 'View less' : 'View more'}</button>
 				{/if}
 			</section>
 		{/each}
@@ -114,15 +117,10 @@
 		<InsightChart points={selected.monthly.map((month) => ({ month: month.month, value: month.percentage_of_monthly_reviews, partial: month.partial_month, low: month.insufficient_review_volume }))} label="Monthly review share for {selected.name}" unit="%" mode="line" />
 		<h4>Ratings in matching reviews</h4>
 		<InsightDistribution buckets={selected.star_distribution} ratedCount={selected.rated_review_count} missingCount={selected.missing_rating_count} />
-		<div class="block-head excerpt-head"><h4>Representative review excerpts</h4><button class="link" onclick={() => (studio.inspectorTab = 'reviews')}>View in Reviews →</button></div>
+		<div class="block-head excerpt-head"><h4>What customers are saying</h4><button class="link" onclick={() => (studio.inspectorTab = 'reviews')}>Read more →</button></div>
 		<InsightExamples samples={topicSamples} />
 	</section>
 {/if}
-
-<section class="block">
-	<div class="block-head"><span class="label-dim">Monthly review volume</span><span class="soft">Exported counts</span></div>
-	<InsightChart points={data.monthly_reviews.map((month) => ({ month: month.month, value: month.review_count, partial: month.partial_month, low: month.insufficient_review_volume }))} label="Monthly exported reviews for {data.app.name}" />
-</section>
 
 <section class="block">
 	<div class="block-head"><span class="label-dim">Star distribution</span><span class="soft">Exported ratings</span></div>
@@ -133,6 +131,7 @@
 	<details>
 		<summary>Source, coverage and limitations</summary>
 		<p>Generated {insightDateLabel(data.generated_at)} (UTC) · schema {data.schema_version}.</p>
+		<p>{fmtFull(data.summary.reviews_with_topics)} reviews matched topics ({data.summary.tagging_coverage_percent.toFixed(1)}%). Shares use all app reviews, including untagged reviews. Topics can overlap. Rating groups are positive at 4★+, negative below 3★, and mixed in between; they are not text sentiment labels.</p>
 		<p>{data.metadata.validation_limitation} {data.metadata.coverage_limitation}</p>
 		<p>{data.metadata.taxonomy_scope} Topic IDs are scoped to this app, not shared with other apps.</p>
 		<p>Semantic topic matching with {data.tagging.embedding_model}; cosine threshold {data.tagging.global_cosine_threshold}. Similarity is not a probability, confidence score or sentiment measurement.</p>
@@ -160,7 +159,7 @@
 	.topic-list { display: flex; flex-direction: column; gap: 4px; }
 	.rating-group { margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--line); }
 	.rating-group-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-	.rating-group-head h4 { margin: 0; color: var(--topic-color); }
+	.rating-group-head h4 { margin: 0; color: white; font-size: 13px; font-weight: 700; }
 	.rating-range { margin: 3px 0 5px; color: var(--muted); font: 9px var(--mono); }
 	.rating-classification { margin: 5px 0; font: 9px var(--mono); }
 	.topic { padding: 8px 6px; border: 1px solid transparent; border-radius: 3px; text-align: left; }

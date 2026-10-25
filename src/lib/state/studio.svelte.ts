@@ -47,6 +47,7 @@ class StudioState {
 	zoomingCategory = $state<string | null>(null);
 
 	selected = $state<{ kind: 'app'; id: string } | null>(null);
+	pendingCompanyId = $state<string | null>(null);
 	hoveredId = $state<string | null>(null);
 
 	reviews = $state.raw<Review[]>([]);
@@ -362,8 +363,6 @@ class StudioState {
 		if (browser) {
 			const savedMode = localStorage.getItem(LS_MODE) as ApiMode | null;
 			const savedBase = localStorage.getItem(LS_BASE) ?? '';
-			const savedMetric = localStorage.getItem(LS_METRIC) as MetricMode | null;
-			if (savedMetric === 'reviews' || savedMetric === 'downloads') this.metric = savedMetric;
 			if (savedMode === 'live' && savedBase) {
 				this.mode = 'live';
 				this.apiBase = savedBase;
@@ -450,6 +449,23 @@ class StudioState {
 		void this.loadReviews(id);
 	}
 
+	/** App-only search and homepage clicks enter the company's industry before opening details. */
+	openCompany(id: string) {
+		const app = this.apps.find((app) => app.id === id);
+		if (!app) return;
+		this.paletteOpen = false;
+		this.query = '';
+		this.themeFilter = null;
+		if (this.categoryFilter === app.categoryId && !this.zoomingCategory) {
+			this.select('app', id);
+			return;
+		}
+		this.clearSelection();
+		this.inspectorOpen = false;
+		this.pendingCompanyId = id;
+		this.zoomingCategory = app.categoryId;
+	}
+
 	selectFlowApp(id: string) {
 		if (this.apps.some((app) => app.id === id)) {
 			this.select('app', id);
@@ -500,6 +516,7 @@ class StudioState {
 	clearSelection() {
 		flowsState.clearSelection();
 		this.selected = null;
+		this.pendingCompanyId = null;
 		this.insightTopic = null;
 		this.reviews = [];
 		this.starFilter = null;
@@ -508,11 +525,7 @@ class StudioState {
 	}
 
 	closeInspector() {
-		if (browser && window.innerWidth < 1180) {
-			this.inspectorOpen = false;
-		} else {
-			this.clearSelection();
-		}
+		this.inspectorOpen = false;
 	}
 
 	/* ---------------------------- filters ---------------------------- */
@@ -522,35 +535,37 @@ class StudioState {
 	}
 
 	setCategoryFilter(id: string | null) {
-		if (id && id !== this.categoryFilter) {
-			this.zoomingCategory = id;
+		if (!id || id === this.categoryFilter) {
+			this.clearCategoryFilter();
 			return;
 		}
-		this.zoomingCategory = null;
-		this.categoryFilter = this.categoryFilter === id ? null : id;
-		if (this.categoryFilter) {
-			const app = this.selectedApp;
-			if (app && app.categoryId !== this.categoryFilter) this.clearSelection();
-		}
+		this.clearSelection();
+		this.inspectorOpen = false;
+		this.zoomingCategory = id;
 	}
 
 	finishClusterZoom(id: string) {
 		if (this.zoomingCategory !== id) return;
+		const companyId = this.pendingCompanyId;
 		this.zoomingCategory = null;
 		this.categoryFilter = id;
+		flowsState.setScope(this.appsForCategory(id).map((app) => app.id));
 		this.clearSelection();
+		if (companyId) this.select('app', companyId);
+		else this.inspectorOpen = true;
 	}
 
 	clearCategoryFilter() {
+		this.clearSelection();
+		this.inspectorOpen = false;
 		this.zoomingCategory = null;
 		this.categoryFilter = null;
 	}
 
 	clearFilters() {
-		this.zoomingCategory = null;
 		this.query = '';
 		this.themeFilter = null;
-		this.categoryFilter = null;
+		this.clearCategoryFilter();
 	}
 
 	/* ----------------------------- search ---------------------------- */

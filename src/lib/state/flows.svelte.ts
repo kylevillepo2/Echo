@@ -6,6 +6,10 @@ import {
 	monthInfoFor,
 	monthlyActivityFor,
 	rankCompetitors,
+	flowNode,
+	pairReviewObservers,
+	reviewObserversFor,
+	fmtMonth,
 	type CompetitorRank,
 	type FlowAgg,
 	type FlowAnnotation,
@@ -13,6 +17,7 @@ import {
 	type FlowMonth
 } from '#lib/data/flows';
 import { hotSingleton } from '#lib/utils/hot-state';
+import { timelineMonths } from '#lib/utils/timeline';
 
 export type FlowSelection =
 	| { type: 'edge'; s: string; t: string }
@@ -35,15 +40,16 @@ export interface FlowArrow {
 
 const PLAY_MS = 1300;
 /** Outside competitors shown around a focused cluster before "Show all". */
-export const TOP_COMPETITORS = 6;
+export const TOP_COMPETITORS = 4;
 
 class FlowsState {
 	/** selected month id, or 'all' for every month with data */
 	period = $state<string>('all');
+	rangeEnd = $state<string | null>(null);
 	showSwitches = $state(true);
 	showIntents = $state(false);
 	showPreferences = $state(false);
-	netMode = $state(false);
+	netMode = $state(true);
 	playing = $state(false);
 
 	selection = $state<FlowSelection>(null);
@@ -64,12 +70,20 @@ class FlowsState {
 		return set;
 	});
 
-	/** Full-coverage months for the current scope: every reviewed app in it has normal volume. */
-	coverageMonths = $derived(coverageFor(this.scope));
-	annotations = $derived<FlowAnnotation[]>(annotationsFor(this.scope));
-	activity = $derived<Record<string, number>>(monthlyActivityFor(this.scope));
+	/** The timeline follows the selected company/route, otherwise the selected industry. */
+	timelineScope = $derived(this.selection?.type === 'app'
+		? flowNode(this.selection.id)?.observed ? new Set([this.selection.id]) : reviewObserversFor(new Set([this.selection.id]))
+		: this.selection?.type === 'edge' ? pairReviewObservers(this.selection.s, this.selection.t) : this.scope);
+	coverageMonths = $derived(coverageFor(this.timelineScope));
+	annotations = $derived<FlowAnnotation[]>(annotationsFor(this.timelineScope));
+	activity = $derived<Record<string, number>>(monthlyActivityFor(
+		this.selection?.type === 'app' ? new Set([this.selection.id]) : this.scope,
+		this.selection?.type === 'edge' ? this.selection : undefined
+	));
 
-	periodMonths = $derived(this.period === 'all' ? allMonthIds : [this.period]);
+	periodMonths = $derived(timelineMonths(allMonthIds, this.period, this.rangeEnd));
+	periodLabel = $derived(this.period === 'all' ? 'all months' : this.rangeEnd
+		? `${fmtMonth(this.period, true)} – ${fmtMonth(this.rangeEnd, true)}` : fmtMonth(this.period));
 
 	aggregates = $derived<Map<string, FlowAgg>>(aggregate(this.periodMonths, this.layers, this.scope));
 
@@ -81,9 +95,9 @@ class FlowsState {
 		let max = 0;
 		const periods = this.period === 'all'
 			? [allMonthIds]
-			: [...this.coverageMonths.map((m) => [m]), [this.period]];
+			: [...this.coverageMonths.map((m) => [m]), this.periodMonths];
 		for (const months of periods) {
-			for (const arrow of buildArrows(aggregate(months, this.layers, this.scope), this.netMode)) {
+			for (const arrow of buildArrows(aggregate(months, this.layers, this.scope), this.selection?.type === 'edge' ? false : this.netMode)) {
 				if (arrow.value > max) max = arrow.value;
 			}
 		}
@@ -109,9 +123,10 @@ class FlowsState {
 		if (selection?.type === 'app') {
 			if (isOutside(selection.id)) return new Set([selection.id]);
 			const ids = new Set<string>();
-			for (const arrow of this.arrows) {
+			for (const arrow of [...this.arrows].sort((a, b) => b.count - a.count)) {
 				if (arrow.s === selection.id && isOutside(arrow.t)) ids.add(arrow.t);
 				if (arrow.t === selection.id && isOutside(arrow.s)) ids.add(arrow.s);
+				if (!this.showAllCompetitors && ids.size >= 5) break;
 			}
 			return ids;
 		}
@@ -130,11 +145,11 @@ class FlowsState {
 	});
 
 	monthInfo(month: string): FlowMonth {
-		return monthInfoFor(this.scope, month);
+		return monthInfoFor(this.timelineScope, month);
 	}
 
 	get isPartial(): boolean {
-		return this.period !== 'all' && !this.monthInfo(this.period).full;
+		return this.period !== 'all' && this.periodMonths.some((month) => !this.monthInfo(month).full);
 	}
 
 	setScope(ids: string[] | null) {
@@ -147,6 +162,11 @@ class FlowsState {
 		// A new cluster starts clean: all months, top competitors, nothing selected or hovered.
 		this.stop();
 		this.period = 'all';
+		this.rangeEnd = null;
+		this.netMode = true;
+		this.showSwitches = true;
+		this.showIntents = false;
+		this.showPreferences = false;
 		this.showAllCompetitors = false;
 		this.selection = null;
 		this.hoveredArrow = null;
@@ -156,22 +176,31 @@ class FlowsState {
 	/** Show all routes, scoped to the app or pair being inspected when focused. */
 	get visibleArrows(): FlowArrow[] {
 		const selection = this.selection;
-		const appId = this.hoveredNode ?? (selection?.type === 'app' ? selection.id : null);
+		const appId = selection?.type === 'app' ? selection.id : this.hoveredNode;
 		if (appId) {
 			return this.arrows.filter((arrow) => arrow.s === appId || arrow.t === appId)
 				.sort((a, b) => b.value - a.value || a.key.localeCompare(b.key));
 		}
 		if (selection?.type === 'edge') {
-			return this.arrows.filter((arrow) =>
-				(arrow.s === selection.s && arrow.t === selection.t) ||
-				(arrow.s === selection.t && arrow.t === selection.s)
-			);
+			// A route drill-down must match its ordered reports and issue evidence, even when
+			// the opposite route is the stronger company-level signal.
+			return buildArrows(this.aggregates, false).filter((arrow) => arrow.s === selection.s && arrow.t === selection.t);
 		}
 		return this.availableArrows;
 	}
 
 	setPeriod(period: string) {
+		if (period !== 'all' && !allMonthIds.includes(period)) return;
 		this.period = period;
+		this.rangeEnd = null;
+	}
+
+	setRange(start: string, end: string) {
+		const months = timelineMonths(allMonthIds, start, end);
+		if (!months.length || start === 'all') return;
+		this.stop();
+		this.period = months[0];
+		this.rangeEnd = months.length > 1 ? months.at(-1)! : null;
 	}
 
 	selectEdge(s: string, t: string) {
@@ -179,6 +208,7 @@ class FlowsState {
 	}
 
 	selectApp(id: string) {
+		this.netMode = true;
 		this.selection = { type: 'app', id };
 	}
 
@@ -190,7 +220,7 @@ class FlowsState {
 		const coverageMonths = this.coverageMonths;
 		const idx = coverageMonths.indexOf(this.period);
 		const next = idx === -1 ? (delta > 0 ? 0 : coverageMonths.length - 1) : idx + delta;
-		if (next >= 0 && next < coverageMonths.length) this.period = coverageMonths[next];
+		if (next >= 0 && next < coverageMonths.length) this.setPeriod(coverageMonths[next]);
 	}
 
 	togglePlay() {
@@ -202,7 +232,8 @@ class FlowsState {
 		const coverageMonths = this.coverageMonths;
 		if (!coverageMonths.length) return;
 		const idx = coverageMonths.indexOf(this.period);
-		if (idx === -1 || idx === coverageMonths.length - 1) this.period = coverageMonths[0];
+		this.rangeEnd = null;
+		if (idx === -1 || idx === coverageMonths.length - 1) this.setPeriod(coverageMonths[0]);
 		this.playing = true;
 		clearInterval(this.timer);
 		this.timer = setInterval(() => {
@@ -211,7 +242,7 @@ class FlowsState {
 				this.stop();
 				return;
 			}
-			this.period = coverageMonths[i + 1];
+			this.setPeriod(coverageMonths[i + 1]);
 		}, PLAY_MS);
 	}
 

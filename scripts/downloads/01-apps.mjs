@@ -1,4 +1,4 @@
-/* Extract the 60 demo apps from src/lib/api/mock.ts into apps.json + apps.csv */
+/* Extract demo apps from src/lib/api/mock.ts into apps.json + apps.csv */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';

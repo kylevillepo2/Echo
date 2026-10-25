@@ -294,27 +294,6 @@
     "notes": ""
   },
   {
-    "id": "hoopla-digital",
-    "name": "Hoopla Digital",
-    "categoryId": "learning",
-    "platform": "both",
-    "volume": 22648,
-    "play": {
-      "appId": "com.hoopladigital.android",
-      "title": "Hoopla: Your Library, Anywhere",
-      "developer": "Midwest Tape LLC"
-    },
-    "ios": {
-      "trackId": 580643740,
-      "bundleId": "com.hoopladigital.hoopla",
-      "title": "Hoopla: Your Library Anywhere",
-      "developer": "Midwest Tape LLC",
-      "ratings": 1393114,
-      "released": "2013-01-24T15:25:31Z"
-    },
-    "notes": ""
-  },
-  {
     "id": "hoopla",
     "name": "Hoopla",
     "categoryId": "learning",
@@ -333,7 +312,7 @@
       "ratings": 1393114,
       "released": "2013-01-24T15:25:31Z"
     },
-    "notes": "duplicate of hoopla-digital"
+    "notes": ""
   },
   {
     "id": "wattpad",
