@@ -12,6 +12,7 @@ import {
 	type FlowLayer,
 	type FlowMonth
 } from '#lib/data/flows';
+import { hotSingleton } from '#lib/utils/hot-state';
 
 export type FlowSelection =
 	| { type: 'edge'; s: string; t: string }
@@ -278,4 +279,12 @@ function buildArrows(aggs: Map<string, FlowAgg>, net: boolean): FlowArrow[] {
 	return out;
 }
 
-export const flowsState = new FlowsState();
+export const flowsState = hotSingleton(
+	typeof window !== 'undefined' ? import.meta.hot : undefined,
+	'flowsState',
+	() => new FlowsState(),
+	() => {
+		flowsState.stop();
+		window.location.reload();
+	}
+);

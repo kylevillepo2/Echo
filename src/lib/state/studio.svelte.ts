@@ -6,6 +6,7 @@ import { flowsState } from '#lib/state/flows.svelte';
 import { fetchAppInsights, fetchInsightCatalog } from '#lib/api/insights';
 import { findInsightEntry, type AppInsights, type InsightCatalogEntry } from '#lib/data/insights';
 import { fmtCount, fmtRate } from '#lib/utils/format';
+import { hotSingleton } from '#lib/utils/hot-state';
 
 const browser = typeof window !== 'undefined';
 
@@ -592,4 +593,9 @@ class StudioState {
 	}
 }
 
-export const studio = new StudioState();
+export const studio = hotSingleton(
+	browser ? import.meta.hot : undefined,
+	'studio',
+	() => new StudioState(),
+	() => window.location.reload()
+);
