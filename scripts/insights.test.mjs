@@ -1,17 +1,30 @@
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import test from 'node:test';
 import { findInsightEntry, insightDateLabel, insightReviewSamples, insightTopicKey, parseAppInsights, parseInsightCatalog } from '../src/lib/data/insights.ts';
+import { buildInsightCatalog } from './insights-catalog.ts';
 
 const read = (name) => JSON.parse(readFileSync(new URL(`../static/data/insights/${name}`, import.meta.url), 'utf8'));
 const report = read('aggregation_validation_report.json');
-const catalog = parseInsightCatalog(report);
+const generated = buildInsightCatalog();
+const catalog = parseInsightCatalog(generated);
 
-test('catalog discovers every supplied app and strips machine-local paths', () => {
-	assert.equal(catalog.length, report.app_count);
+test('catalog discovers all app files even when the latest report covers only one run', () => {
+	const files = readdirSync(new URL('../static/data/insights/', import.meta.url)).filter((name) => /^[a-z0-9]+(?:-[a-z0-9]+)*\.json$/.test(name) && name !== 'catalog.json');
+	assert.equal(catalog.length, files.length);
+	assert.deepEqual(new Set(catalog.map((entry) => entry.filename)), new Set(files));
 	assert(catalog.every((entry) => !entry.filename.includes('/') && !entry.filename.includes('\\')));
-	assert(catalog.every((entry) => entry.checksPassed));
-	assert.equal(catalog.reduce((sum, app) => sum + app.reviewCount, 0), report.total_reviews);
+	assert.equal(catalog.reduce((sum, app) => sum + app.reviewCount, 0), generated.total_reviews);
+});
+
+test('a partial report does not falsely mark other exports as failed or verified', () => {
+	const reported = parseInsightCatalog(report);
+	for (const entry of catalog) {
+		const match = reported.find((item) => item.id === entry.id);
+		const data = read(entry.filename);
+		const current = match && report.generated_at === data.generated_at && match.reviewCount === entry.reviewCount && match.topicCount === entry.topicCount;
+		assert.equal(entry.checksPassed, current ? match.checksPassed : null);
+	}
 });
 
 for (const entry of catalog) {
@@ -32,7 +45,7 @@ test('legacy map IDs resolve to the canonical export identity', () => {
 		assert.equal(findInsightEntry({ id, name: '' }, catalog)?.id, expected);
 	}
 	assert.equal(findInsightEntry({ id: 'different-backend-id', name: 'Capital One Mobile' }, catalog)?.id, 'capital-one-mobile');
-	assert.equal(findInsightEntry({ id: 'venmo', name: 'Venmo' }, catalog), undefined);
+	assert.equal(findInsightEntry({ id: 'no-export-for-this-test-app', name: 'No export for this test app' }, catalog), undefined);
 });
 
 test('app-scoped topic IDs cannot collide across apps', () => {

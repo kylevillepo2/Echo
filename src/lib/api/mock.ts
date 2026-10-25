@@ -1,7 +1,7 @@
 /* ============================================================
    Deterministic demo dataset.
 
-   Mirrors the real corpus: 60 apps across 12 category clusters,
+   Mirrors the real corpus: 60 apps across 13 category clusters,
    5.5M reviews in the index and a sampled review stream for the
    inspector/search.
 
@@ -507,9 +507,9 @@ const CATEGORY_SPECS: CategorySpec[] = [
 		]
 	},
 	{
-		id: 'entertainment',
-		name: 'Entertainment',
-		blurb: 'Music, podcasts and streaming',
+		id: 'music',
+		name: 'Music',
+		blurb: 'Music streaming, discovery and podcasts',
 		apps: [
 			{
 				id: 'spotify',
@@ -530,15 +530,6 @@ const CATEGORY_SPECS: CategorySpec[] = [
 				hurts: ['ads', 'subscription', 'bugs']
 			},
 			{
-				id: 'audible',
-				name: 'Audible',
-				volume: 46_977,
-				rating: 4.5,
-				subcategory: 'Audiobooks',
-				loves: ['content', 'value', 'features'],
-				hurts: ['subscription', 'pricing', 'bugs']
-			},
-			{
 				id: 'audiomack',
 				name: 'Audiomack',
 				volume: 299_802,
@@ -546,7 +537,14 @@ const CATEGORY_SPECS: CategorySpec[] = [
 				subcategory: 'Music streaming',
 				loves: ['content', 'free', 'design'],
 				hurts: ['ads', 'bugs', 'content-quality']
-			},
+			}
+		]
+	},
+	{
+		id: 'tv',
+		name: 'TV',
+		blurb: 'TV, films, anime and video streaming',
+		apps: [
 			{
 				id: 'crunchyroll',
 				name: 'Crunchyroll',
@@ -581,6 +579,15 @@ const CATEGORY_SPECS: CategorySpec[] = [
 		name: 'Learning & Reading',
 		blurb: 'Books, study and language learning',
 		apps: [
+			{
+				id: 'audible',
+				name: 'Audible',
+				volume: 46_977,
+				rating: 4.5,
+				subcategory: 'Audiobooks',
+				loves: ['content', 'value', 'features'],
+				hurts: ['subscription', 'pricing', 'bugs']
+			},
 			{
 				id: 'duolingo',
 				name: 'Duolingo',

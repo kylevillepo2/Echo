@@ -132,7 +132,8 @@
 			<div class="note">
 				<span class="label">About this dataset</span>
 				<p>
-					The demo corpus is seeded from a 60-app app-store export across 12 category clusters, with
+					The demo corpus is seeded from an app-store export across {studio.meta?.appCount ?? 60} apps
+					and {studio.meta?.categoryCount ?? 13} category clusters, with
 					{fmtCount(studio.meta?.reviewCount ?? 0)} indexed reviews and
 					{fmtCount(studio.meta?.sampled ?? 0)} sampled reviews. Ratings, platform splits, trends and themes
 					are plausible demo metadata generated locally so the map is stable. Reception is a composite

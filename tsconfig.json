@@ -5,7 +5,7 @@
 			"#lib/*": ["./src/lib/*"]
 		},
 		"rootDirs": [".", "./.svelte-kit/types"],
-		"types": ["$app/types"],
+		"types": ["$app/types", "node"],
 		"lib": ["ESNext", "DOM", "DOM.Iterable"],
 		"verbatimModuleSyntax": true,
 		"isolatedModules": true,

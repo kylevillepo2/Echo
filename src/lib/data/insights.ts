@@ -104,7 +104,8 @@ export interface InsightCatalogEntry {
 	filename: string;
 	reviewCount: number;
 	topicCount: number;
-	checksPassed: boolean;
+	/** null means the latest aggregation report does not cover this export. */
+	checksPassed: boolean | null;
 	warnings: string[];
 }
 
@@ -172,16 +173,34 @@ function distribution(value: unknown, expected: number): void {
 	if (total !== expected) throw new Error('Star counts do not reconcile with rated reviews');
 }
 
-/** The report is the catalog. Never use its machine-local absolute output paths as URLs. */
+/** Read the generated complete index, or a legacy (possibly partial) aggregation report. */
 export function parseInsightCatalog(value: unknown): InsightCatalogEntry[] {
 	const report = record(value, 'insights catalog');
-	if (report.schema_version !== 'topic-insights-v1') throw new Error('Unsupported insights catalog schema');
+	const generated = report.schema_version === 'topic-insights-catalog-v1';
+	if (!generated && report.schema_version !== 'topic-insights-v1') throw new Error('Unsupported insights catalog schema');
 	const seen = new Set<string>();
 	const rows = array(report.apps, 'insights catalog apps');
 	count(report.app_count, 'catalog app count');
 	if (rows.length !== report.app_count) throw new Error('Catalog app count does not reconcile');
 	const entries = rows.map((value) => {
 		const app = record(value, 'catalog app');
+		if (generated) {
+			text(app.id, 'app ID');
+			text(app.name, 'app name');
+			text(app.filename, 'export filename');
+			if (!/^[a-z0-9]+(?:-[a-z0-9]+)*\.json$/.test(app.filename) || app.id !== app.filename.slice(0, -5)) throw new Error('Unsafe insights filename or app identity');
+			if (seen.has(app.id)) throw new Error('Duplicate insights app');
+			seen.add(app.id);
+			count(app.reviewCount, 'app review count');
+			count(app.topicCount, 'topic count');
+			if (app.checksPassed !== true && app.checksPassed !== false && app.checksPassed !== null) throw new Error('Invalid aggregation check status');
+			return {
+				id: app.id, name: app.name, filename: app.filename,
+				reviewCount: app.reviewCount, topicCount: app.topicCount,
+				checksPassed: app.checksPassed,
+				warnings: array(app.warnings, 'catalog warnings').filter((warning): warning is string => typeof warning === 'string')
+			};
+		}
 		text(app.app, 'app name');
 		text(app.output, 'export filename');
 		const filename = app.output.split(/[\\/]/).at(-1)!;

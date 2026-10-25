@@ -12,7 +12,8 @@ export const CATEGORY_ACCENTS = [
 	'#e0e0e6',
 	'#b0ff8a',
 	'#ff6ad5',
-	'#7ad8c8'
+	'#7ad8c8',
+	'#f2ce77'
 ];
 
 export function accentFor(index: number): string {

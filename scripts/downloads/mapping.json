@@ -107,7 +107,7 @@
   {
     "id": "spotify",
     "name": "Spotify",
-    "categoryId": "entertainment",
+    "categoryId": "music",
     "platform": "both",
     "volume": 185745,
     "play": {
@@ -128,7 +128,7 @@
   {
     "id": "soundcloud",
     "name": "SoundCloud",
-    "categoryId": "entertainment",
+    "categoryId": "music",
     "platform": "both",
     "volume": 43422,
     "play": {
@@ -149,7 +149,7 @@
   {
     "id": "audible",
     "name": "Audible",
-    "categoryId": "entertainment",
+    "categoryId": "learning",
     "platform": "both",
     "volume": 46977,
     "play": {
@@ -170,7 +170,7 @@
   {
     "id": "audiomack",
     "name": "Audiomack",
-    "categoryId": "entertainment",
+    "categoryId": "music",
     "platform": "both",
     "volume": 299802,
     "play": {
@@ -191,7 +191,7 @@
   {
     "id": "crunchyroll",
     "name": "Crunchyroll",
-    "categoryId": "entertainment",
+    "categoryId": "tv",
     "platform": "both",
     "volume": 92207,
     "play": {
@@ -212,7 +212,7 @@
   {
     "id": "tubi",
     "name": "Tubi",
-    "categoryId": "entertainment",
+    "categoryId": "tv",
     "platform": "both",
     "volume": 50913,
     "play": {
@@ -233,7 +233,7 @@
   {
     "id": "roku",
     "name": "Roku",
-    "categoryId": "entertainment",
+    "categoryId": "tv",
     "platform": "both",
     "volume": 44434,
     "play": {

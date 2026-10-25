@@ -15,7 +15,8 @@ const now = Date.now();
    and how iOS rating counts map to installs when Play is unavailable. */
 const CATEGORY = {
 	social: { growth: 1.3, iosPerRating: 70 },
-	entertainment: { growth: 1.2, iosPerRating: 60 },
+	music: { growth: 1.2, iosPerRating: 60 },
+	tv: { growth: 1.2, iosPerRating: 60 },
 	learning: { growth: 1.15, iosPerRating: 70 },
 	shopping: { growth: 1.4, iosPerRating: 60 },
 	finance: { growth: 1.1, iosPerRating: 80 },

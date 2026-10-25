@@ -763,7 +763,7 @@
     "spotify": {
       "id": "spotify",
       "name": "Spotify",
-      "categoryId": "entertainment",
+      "categoryId": "music",
       "platform": "both",
       "installs": 1200650000,
       "installsLow": 1000000000,
@@ -907,7 +907,7 @@
     "soundcloud": {
       "id": "soundcloud",
       "name": "SoundCloud",
-      "categoryId": "entertainment",
+      "categoryId": "music",
       "platform": "both",
       "installs": 110405000,
       "installsLow": 100000000,
@@ -1051,7 +1051,7 @@
     "audible": {
       "id": "audible",
       "name": "Audible",
-      "categoryId": "entertainment",
+      "categoryId": "learning",
       "platform": "both",
       "installs": 131932000,
       "installsLow": 100000000,
@@ -1200,7 +1200,7 @@
     "audiomack": {
       "id": "audiomack",
       "name": "Audiomack",
-      "categoryId": "entertainment",
+      "categoryId": "music",
       "platform": "both",
       "installs": 135196000,
       "installsLow": 100000000,
@@ -1349,7 +1349,7 @@
     "crunchyroll": {
       "id": "crunchyroll",
       "name": "Crunchyroll",
-      "categoryId": "entertainment",
+      "categoryId": "tv",
       "platform": "both",
       "installs": 128505000,
       "installsLow": 100000000,
@@ -1487,7 +1487,7 @@
     "tubi": {
       "id": "tubi",
       "name": "Tubi",
-      "categoryId": "entertainment",
+      "categoryId": "tv",
       "platform": "both",
       "installs": 115941000,
       "installsLow": 100000000,
@@ -1636,7 +1636,7 @@
     "roku": {
       "id": "roku",
       "name": "Roku",
-      "categoryId": "entertainment",
+      "categoryId": "tv",
       "platform": "both",
       "installs": 110000000,
       "installsLow": 100000000,
@@ -8778,17 +8778,23 @@
       "installs": 1855820000,
       "ratePerDay": 560701
     },
-    "entertainment": {
-      "id": "entertainment",
-      "apps": 7,
-      "installs": 1932629000,
-      "ratePerDay": 483458
+    "music": {
+      "id": "music",
+      "apps": 3,
+      "installs": 1446251000,
+      "ratePerDay": 373955
+    },
+    "tv": {
+      "id": "tv",
+      "apps": 3,
+      "installs": 354446000,
+      "ratePerDay": 82895
     },
     "learning": {
       "id": "learning",
-      "apps": 5,
-      "installs": 813958000,
-      "ratePerDay": 184221
+      "apps": 6,
+      "installs": 945890000,
+      "ratePerDay": 210829
     },
     "shopping": {
       "id": "shopping",

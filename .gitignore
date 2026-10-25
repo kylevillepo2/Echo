@@ -30,3 +30,6 @@ __pycache__/
 *.npy
 *.joblib
 *.parquet
+
+# Generated from the app JSON exports when Vite starts/builds
+/static/data/insights/catalog.json

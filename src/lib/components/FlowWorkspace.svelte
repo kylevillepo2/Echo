@@ -59,12 +59,6 @@
 						<button class="switch-toggle" class:active={flowsState.showSwitches} aria-pressed={flowsState.showSwitches} onclick={() => (flowsState.showSwitches = !flowsState.showSwitches)} title="Reviewers who reported switching from one app to another">
 							<i class="sw solid"></i>Switches
 						</button>
-						<button class:active={flowsState.showIntents} aria-pressed={flowsState.showIntents} onclick={() => (flowsState.showIntents = !flowsState.showIntents)} title="Users who said they are about to switch">
-							<i class="sw dashed"></i>Intents
-						</button>
-						<button class:active={flowsState.showPreferences} aria-pressed={flowsState.showPreferences} onclick={() => (flowsState.showPreferences = !flowsState.showPreferences)} title="Comparisons that favour one app, with no stated move">
-							<i class="sw faint"></i>Preferences
-						</button>
 					</div>
 					<div class="seg" role="group" aria-label="Direction mode">
 						<button class:active={flowsState.netMode} aria-pressed={flowsState.netMode} onclick={() => (flowsState.netMode = !flowsState.netMode)} title="Show only the stronger direction for each pair of apps">Main direction</button>
@@ -86,7 +80,7 @@
 		{#if active && hasData && arrowCount === 0}
 			<div class="empty-note" role="status">
 				<span class="label">{flowsState.layers.size === 0 ? 'No edge types selected' : `No flows in ${periodLabel}`}</span>
-				<p>Try another month or turn on switches, intents or preferences.</p>
+				<p>Try another month or turn on Switches.</p>
 			</div>
 		{/if}
 	</div>
@@ -159,8 +153,6 @@
 	.seg button.switch-toggle { font-weight: 600; }
 	.seg button.switch-toggle.active { background: var(--lime); color: var(--bg); }
 	.sw { width: 12px; height: 0; border-top: 2px solid currentColor; }
-	.sw.dashed { border-top-style: dashed; }
-	.sw.faint { opacity: 0.4; }
 	.callout, .empty-note { position: absolute; left: 14px; top: 12px; max-width: 330px; padding: 9px 11px; background: color-mix(in srgb, var(--panel) 90%, transparent); border: 1px solid var(--line-strong); border-left: 2px solid var(--lime); border-radius: 2px; backdrop-filter: blur(6px); pointer-events: none; }
 	.callout .label { color: var(--lime); }
 	.partial-note { left: auto; right: 14px; border-left-color: var(--amber); }

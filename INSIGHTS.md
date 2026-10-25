@@ -1,14 +1,16 @@
 # Topic insight exports
 
-The app reads `static/data/insights/aggregation_validation_report.json` as its catalog, then fetches each listed app JSON **on demand**. The multi-megabyte exports are not imported into the main JavaScript bundle. App responses are cached for the session, with loading, error and retry states.
+Vite discovers every `topic-insights-v1` app JSON in `static/data/insights/` and generates a lightweight, ignored `catalog.json` before dev/build. The browser fetches each app JSON **on demand**. The multi-megabyte exports are not imported into the main JavaScript bundle. App responses are cached for the session, with loading, error and retry states.
 
-To add coverage, publish the new `topic-insights-v1` app file and update the aggregation report. The app must already exist in the graph; topic files do not define graph categories or relationships. The report's `output` field is used only for its validated JSON basename, never as a machine-local path or arbitrary URL. Most apps match by ID or normalized name. Legacy map IDs (`bofa`, `capital-one`, `credit-karma`) resolve to their canonical export IDs in `src/lib/data/insights.ts`.
+To add coverage, drop a new app file in that directory. Vite watches additions, removals and changes during development and regenerates the catalog. The app must already exist in the graph; topic files do not define graph categories or relationships. Most apps match by ID or normalized name. Legacy map IDs (`bofa`, `capital-one`, `credit-karma`) resolve to their canonical export IDs in `src/lib/data/insights.ts`.
+
+The aggregation report may cover only the latest pipeline run. It supplies optional validation status, not the discovery list. Report results are used only when the app identity, export timestamp and counts match; other files have an unknown report status, not a failed or verified status. All app files are independently schema/count-checked. The report and input app files are never rewritten by the catalog generator.
 
 ## Current integration
 
-- All supplied finance apps use exported review totals, star distributions, topic counts/shares, monthly coverage and representative snippets.
+- All supplied apps use exported review totals, star distributions, topic counts/shares, monthly coverage and representative snippets.
 - Their Overview and Reviews panels do not substitute demo themes, synthetic reviews, rating trends or install correlations for missing export fields.
-- App-specific topic IDs are namespaced by app. Topics are not merged into a shared sentiment taxonomy.
+- App-specific topic IDs are namespaced by app. In Overview, positive topics have an average rating of at least 4★, negative topics below 3★, and mixed topics 3–under 4★. Topics without rated reviews are separate. This is an explicit rating-based grouping, not sentiment inferred from topic names or cosine similarity. Topic identities remain app-scoped.
 - Representative reviews are deduplicated by `review_key`, retaining all topic tags. Individual dates, star ratings, full review text and sentiment are not invented.
 - Topic share denominators include untagged reviews. Topics can overlap, so topic counts/shares must not be summed as distinct app reviews.
 - Partial and insufficient-volume months are marked. Trend labels come from the export's complete-month comparison, not the last partial month.

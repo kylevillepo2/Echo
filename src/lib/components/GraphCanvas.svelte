@@ -855,7 +855,7 @@
 			{#if hasExportedInsights}
 				<span class="label">Topic analytics available</span><p>Select an app for imported topics and review excerpts. Switching flows aren’t included in these exports.</p>
 			{:else}
-				<span class="label">No switching data for this cluster yet</span><p>The network stays visible. Flow data currently covers Entertainment.</p>
+				<span class="label">No switching data for this cluster yet</span><p>The network stays visible. No switching reports are available for the apps in this cluster.</p>
 			{/if}
 		</div>
 	{/if}
