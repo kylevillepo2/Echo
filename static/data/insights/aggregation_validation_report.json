@@ -1,14 +1,14 @@
 {
   "schema_version": "topic-insights-v1",
-  "generated_at": "2026-10-25T01:22:36.926965Z",
+  "generated_at": "2026-10-25T01:24:53.675491Z",
   "app_count": 1,
   "apps": [
     {
-      "app": "Bumble",
-      "run_slug": "bumble-english-full-20261024",
-      "total_reviews": 27669,
-      "reviews_with_topics": 14498,
-      "approved_topic_count": 53,
+      "app": "Remini",
+      "run_slug": "remini-english-full-20261024",
+      "total_reviews": 74977,
+      "reviews_with_topics": 5627,
+      "approved_topic_count": 14,
       "missing_date_records": 0,
       "missing_rating_records": 0,
       "monthly_coverage": {
@@ -31,11 +31,11 @@
       "warnings": [
         "Historical review coverage may be sampled or uneven."
       ],
-      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/bumble.json",
-      "json_bytes": 589835
+      "output": "/Users/test/Documents/ChatGPT/Unwrapathon/static/data/insights/remini.json",
+      "json_bytes": 156909
     }
   ],
   "errors": [],
-  "total_reviews": 27669,
+  "total_reviews": 74977,
   "all_checks_passed": true
 }
