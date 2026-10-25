@@ -4,10 +4,7 @@
 	import AppFlows from './AppFlows.svelte';
 	import {
 		allMonthIds,
-		coverageMonths,
 		examplesFor,
-		flowAnnotations,
-		flowMonth,
 		flowNode,
 		flows,
 		fmtMonth,
@@ -28,6 +25,9 @@
 	const layers = $derived(flowsState.layers);
 	const aggs = $derived(flowsState.aggregates);
 	const periodLabel = $derived(flowsState.period === 'all' ? 'all months' : fmtMonth(flowsState.period));
+	// Coverage follows the focused cluster (or every app when nothing is focused).
+	const coverageMonths = $derived(flowsState.coverageMonths);
+	const clusterName = $derived(studio.selectedCategory?.name);
 
 	const layerNames: Record<FlowLayer, string> = {
 		switch: 'switches + returns',
@@ -107,7 +107,7 @@
 	const topFlows = $derived(
 		[...flowsState.arrows].sort((a, b) => b.value - a.value).slice(0, 10)
 	);
-	const partialMonths = flows.months.filter((m) => !m.full);
+	const partialMonths = $derived(flows.months.filter((m) => !flowsState.monthInfo(m.month).full));
 
 	/* --------------------------- mini chart ------------------------- */
 
@@ -227,10 +227,10 @@
 				<svg class="mini" viewBox="0 0 {CW} {CH}" preserveAspectRatio="none" role="img" aria-label="Monthly flow for this pair">
 					<rect x={chart.band.x} y={PAD.t - 6} width={chart.band.w} height={CH - PAD.t - PAD.b + 6} class="band" />
 					{#each allMonthIds as m, i (m)}
-						{#if !flowMonth(m)?.full}
+						{#if !flowsState.monthInfo(m).full}
 							<rect x={chart.x(i) - 3} y={CH - PAD.b} width="6" height="2" class="partial-tick" />
 						{/if}
-						{#if flowAnnotations.some((a) => a.month === m)}
+						{#if flowsState.annotations.some((a) => a.month === m)}
 							<line x1={chart.x(i)} x2={chart.x(i)} y1={PAD.t - 6} y2={CH - PAD.b} class="ann-line" />
 						{/if}
 					{/each}
@@ -308,7 +308,7 @@
 		<header class="head" style:--accent="var(--lime)">
 			<div class="eyebrow"><span>Flows</span><span class="slash">/</span><span>overview</span></div>
 			<div class="title-row">
-				<h2>Music app switching</h2>
+				<h2>{clusterName ? `${clusterName} switching` : 'App switching'}</h2>
 				<button class="close" onclick={close} aria-label="Close">×</button>
 			</div>
 			<div class="meta-row">
@@ -356,12 +356,12 @@
 			<section class="block">
 				<div class="block-head"><span class="label-dim">Coverage</span></div>
 				<p class="text">
-					Full coverage {fmtMonth(coverageMonths[0])} – {fmtMonth(coverageMonths.at(-1)!)}: all three
-					reviewed apps have normal review volume. {partialMonths.length} other months are partial
-					(mostly no Spotify reviews after Apr 2025), shown greyed on the timeline.
+					Full coverage {fmtMonth(coverageMonths[0])} – {fmtMonth(coverageMonths.at(-1)!)}: every
+					reviewed app {clusterName ? `in ${clusterName}` : ''} has normal review volume.
+					{partialMonths.length} other months are partial, shown greyed on the timeline.
 				</p>
 				<p class="text dimmed">
-					Labels by {flows.meta.model}. {flows.meta.normalization}
+					Labels by {flows.meta.model}. {flows.meta.filters ? `${flows.meta.filters[0].toUpperCase()}${flows.meta.filters.slice(1)}. ` : ''}{flows.meta.normalization}
 				</p>
 			</section>
 		</div>

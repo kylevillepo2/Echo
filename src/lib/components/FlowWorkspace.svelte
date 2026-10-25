@@ -3,25 +3,38 @@
 	import { slide } from 'svelte/transition';
 	import { studio } from '#lib/state/studio.svelte';
 	import { flowsState } from '#lib/state/flows.svelte';
-	import {
-		allMonthIds, coverageMonths, flowAnnotations, flowMonth, flowMonths,
-		flowNodes, fmtMonth, monthlyActivity
-	} from '#lib/data/flows';
+	import { allMonthIds, flowMonths, flowNodes, fmtMonth } from '#lib/data/flows';
 
 	let { children }: { children: Snippet } = $props();
 	let reducedMotion = $state(false);
 	const active = $derived(Boolean(studio.categoryFilter));
 	const hasData = $derived(studio.categoryApps.some((app) => flowNodes.some((node) => node.observed && node.id === app.id)));
 	const arrowCount = $derived(flowsState.availableArrows.length);
-	const visibleCount = $derived(flowsState.visibleArrows.length);
+	const visibleCount = $derived(flowsState.drawnArrows.length); // drawn routes; arrowCount = full cluster
+	// Coverage, partial months, activity and annotations all follow the focused cluster.
+	const coverageMonths = $derived(flowsState.coverageMonths);
 	const coverageIndex = $derived(coverageMonths.indexOf(flowsState.period));
-	const monthInfo = $derived(flowsState.period === 'all' ? undefined : flowMonth(flowsState.period));
-	const annotation = $derived(flowAnnotations.find((item) => item.month === flowsState.period));
+	const monthInfo = $derived(flowsState.period === 'all' ? undefined : flowsState.monthInfo(flowsState.period));
+	const annotation = $derived(flowsState.annotations.find((item) => item.month === flowsState.period));
+	const scopedApps = $derived(flowNodes.filter((node) => node.observed && flowsState.scope?.has(node.id)));
 	const periodLabel = $derived(flowsState.period === 'all'
 		? `All months · ${fmtMonth(allMonthIds[0], true)}–${fmtMonth(allMonthIds.at(-1)!, true)}`
 		: fmtMonth(flowsState.period));
-	const maxActivity = Math.max(...Object.values(monthlyActivity), 1);
-	const partialCount = flowMonths.filter((month) => !month.full).length;
+	const maxActivity = $derived(Math.max(...Object.values(flowsState.activity), 1));
+	const partialMonths = $derived(flowMonths.filter((month) => !flowsState.monthInfo(month.month).full));
+	const partialNote = $derived.by(() => {
+		// Name the apps that cause partial months, e.g. "Spotify ends Apr ’25".
+		const notes: string[] = [];
+		for (const node of scopedApps) {
+			const low = new Set(node.lowMonths ?? []);
+			const months = allMonthIds.filter((month) => !low.has(month));
+			if (!low.size || !months.length) continue;
+			const starts = months[0] !== allMonthIds[0] ? `starts ${fmtMonth(months[0], true)}` : '';
+			const ends = months.at(-1) !== allMonthIds.at(-1) ? `ends ${fmtMonth(months.at(-1)!, true)}` : '';
+			notes.push(`${node.name} ${[starts, ends].filter(Boolean).join(', ') || 'has gaps'}`);
+		}
+		return notes.slice(0, 3).join('; ');
+	});
 
 	onMount(() => {
 		const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -45,7 +58,7 @@
 				<button class="back" onclick={() => studio.clearCategoryFilter()} aria-label="Back to cluster map">←</button>
 				<span class="label">{studio.selectedCategory?.name ?? 'Cluster'} flows</span>
 				{#if hasData}
-					<span class="stats num">{flowNodes.length} flow apps · {visibleCount}/{arrowCount} routes · {periodLabel}</span>
+					<span class="stats num">{scopedApps.length} reviewed apps · {visibleCount}/{arrowCount} routes · {periodLabel}</span>
 				{:else}
 					<span class="stats num">{studio.categoryApps.length} apps · reception {studio.selectedCategory?.reception ?? '—'}</span>
 				{/if}
@@ -105,9 +118,10 @@
 			</div>
 			<div class="strip" role="group" aria-label="Months">
 				{#each flowMonths as month (month.month)}
-					{@const ann = flowAnnotations.find((item) => item.month === month.month)}
-					{@const activity = monthlyActivity[month.month] ?? 0}
-					<button class="cell" class:partial={!month.full} class:selected={flowsState.period === month.month} onclick={() => pickMonth(month.month)} title="{fmtMonth(month.month)}{month.full ? '' : ` — partial: ${month.note}`} · {activity} switch/intent mentions">
+					{@const ann = flowsState.annotations.find((item) => item.month === month.month)}
+					{@const activity = flowsState.activity[month.month] ?? 0}
+					{@const info = flowsState.monthInfo(month.month)}
+					<button class="cell" class:partial={!info.full} class:selected={flowsState.period === month.month} onclick={() => pickMonth(month.month)} title="{fmtMonth(month.month)}{info.full ? '' : ` — partial: ${info.note}`} · {activity} switch/intent mentions">
 						{#if ann}<span class="ann">{ann.label}</span>{/if}
 						<span class="bar" style:height="{4 + (activity / maxActivity) * 26}px"></span>
 						<span class="mlabel">{month.month.endsWith('-01') || month.month === flowMonths[0].month ? fmtMonth(month.month, true) : fmtMonth(month.month).slice(0, 1)}</span>
@@ -116,7 +130,9 @@
 			</div>
 			<div class="strip-note">
 				<span><i class="key full"></i>full coverage {fmtMonth(coverageMonths[0], true)}–{fmtMonth(coverageMonths.at(-1)!, true)} (slider + play)</span>
-				<span><i class="key partial"></i>{partialCount} partial months: Spotify reviews only run Aug ’24–Apr ’25; Audiomack starts Sep ’24</span>
+				{#if partialMonths.length}
+					<span><i class="key partial"></i>{partialMonths.length} partial months{partialNote ? `: ${partialNote}` : ''}</span>
+				{/if}
 				<span class="dimtext">bars = switch + intent mentions per month (raw count)</span>
 			</div>
 		</footer>

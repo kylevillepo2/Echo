@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { flowsState } from '#lib/state/flows.svelte';
 	import { studio } from '#lib/state/studio.svelte';
-	import { flowNode, fmtMonth, reasonColour, reasonLabel, sortedReasons, topReason } from '#lib/data/flows';
+	import { flowNode, flows, fmtMonth, reasonColour, reasonLabel, sortedReasons, topReason } from '#lib/data/flows';
 	import { fmtCount } from '#lib/utils/format';
 
 	let { appId, appName }: { appId: string; appName: string } = $props();
@@ -35,6 +35,15 @@
 		return [...partners.values()].sort((a, b) => b.value - a.value);
 	}
 
+	const seenIn = $derived((app?.seenIn ?? []).map((id) => flowNode(id)?.name ?? id));
+	const health = $derived(app?.observed ? app.health : undefined);
+	const HEALTH_COLOURS: Record<string, string> = {
+		'Positive switching balance': 'var(--pos)', Mixed: 'var(--cyan)',
+		'Negative switching balance': 'var(--amber)', 'Strongly negative': 'var(--neg)', 'Too few reports': 'var(--dim)'
+	};
+	const years = $derived(Object.entries(app?.healthByPeriod ?? {}).sort(([a], [b]) => a.localeCompare(b)));
+	const signed = (x: number | null) => (x === null ? '—' : `${x > 0 ? '+' : ''}${x.toFixed(2)}`);
+
 	const losing = $derived(byPartner('out'));
 	const winning = $derived(byPartner('in'));
 
@@ -60,8 +69,31 @@
 	</p>
 	{#if !app.observed}
 		<p class="note">
-			We don’t have {appName}’s own reviews. These flows are mentioned in Spotify, SoundCloud and Audiomack reviews; moves between outside apps are not covered.
+			We don’t have {appName}’s own reviews. These flows come from reviews of
+			{seenIn.length ? seenIn.join(', ') : 'other apps'}; moves between outside apps are not covered.
 		</p>
+	{:else if health}
+		<section class="block">
+			<div class="block-head">
+				<span class="label-dim">Switching health · all months</span>
+				<span class="bucket" style:color={HEALTH_COLOURS[health.bucket ?? ''] ?? 'var(--muted)'}>{health.bucket}</span>
+			</div>
+			<div class="health-row num">
+				<span><b>{signed(health.score)}</b> score</span>
+				<span>{health.reportsIn ?? 0} in</span>
+				<span>{health.reportsOut ?? 0} out</span>
+				{#each years as [year, h] (year)}
+					<span title={h.bucket ?? ''}>{year}: {signed(h.score)}</span>
+				{/each}
+				{#if app.rating?.avg}
+					<span>★ {app.rating.avg.toFixed(2)}{#if app.rating.trend !== null} ({app.rating.trend > 0 ? '+' : ''}{app.rating.trend.toFixed(2)}){/if}</span>
+				{/if}
+			</div>
+			<p class="fine">
+				{flows.meta.healthDefinition || 'Balance of switches reported in reviews.'}
+				Score = (in − out) / (in + out); customers only, forced moves excluded; fewer than 20 reports = too few.
+			</p>
+		</section>
 	{/if}
 	{#each [{ title: 'Losing users to', list: losing, direction: 'out' }, { title: 'Winning users from', list: winning, direction: 'in' }] as group (group.title)}
 		<section class="block">
@@ -130,4 +162,8 @@
 	.meta { grid-area: meta; display: flex; flex-wrap: wrap; gap: 4px 9px; font-family: var(--mono); font-size: 8.5px; color: var(--dim); }
 	.reason { display: inline-flex; align-items: center; gap: 4px; color: var(--muted); }
 	.reason i { width: 6px; height: 6px; border-radius: 50%; }
+	.bucket { font-family: var(--mono); font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; }
+	.health-row { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: 11px; color: var(--muted); }
+	.health-row b { color: var(--text); font-weight: 600; font-size: 13px; }
+	.fine { margin: 7px 0 0; font-size: 10px; line-height: 1.45; color: var(--dim); }
 </style>

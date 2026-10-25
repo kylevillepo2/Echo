@@ -2,7 +2,7 @@
 	import { onMount, untrack } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import { studio } from '#lib/state/studio.svelte';
-	import { flowsState } from '#lib/state/flows.svelte';
+	import { flowsState, TOP_COMPETITORS } from '#lib/state/flows.svelte';
 	import { flows, legendReasons } from '#lib/data/flows';
 	import FlowOverlay from './FlowOverlay.svelte';
 	import { Simulation, boundsOf, type SimLink, type SimNode } from '#lib/utils/force';
@@ -54,8 +54,10 @@
 	});
 	const isFocused = $derived(Boolean(studio.categoryFilter));
 	const connectedFlowIds = $derived(new Set(
-		(isFocused && hasFlowData ? flowsState.visibleArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
+		(isFocused && hasFlowData ? flowsState.drawnArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
 	));
+	const focusedMemberIds = $derived(new Set(isFocused ? studio.categoryApps.map((app) => app.id) : []));
+	const competitorCount = $derived(flowsState.competitorRanking.length);
 	const activeClusterId = $derived(studio.zoomingCategory ?? studio.categoryFilter);
 
 	const signature = $derived(
@@ -565,7 +567,8 @@
 	}
 
 	function appHasContent(id: string): boolean {
-		return studio.appHasReviews(id) || connectedFlowIds.has(id);
+		// Members of the focused cluster always stay on the map.
+		return focusedMemberIds.has(id) || studio.appHasReviews(id) || connectedFlowIds.has(id);
 	}
 
 	function edgeOpacity(link: SimLink): number {
@@ -820,7 +823,22 @@
 
 	<div class="legend" class:flow-legend={isFocused && hasFlowData}>
 		{#if isFocused && hasFlowData}
-			<span class="route-count num">{flowsState.visibleArrows.length} routes shown</span>
+			<div class="competitors">
+				<span class="num">
+					{flowsState.showAllCompetitors || competitorCount <= TOP_COMPETITORS
+						? `All ${competitorCount} outside competitors`
+						: `Top ${TOP_COMPETITORS} of ${competitorCount} outside competitors`}
+					· {flowsState.drawnArrows.length} routes shown
+				</span>
+				{#if competitorCount > TOP_COMPETITORS}
+					<button
+						onclick={() => (flowsState.showAllCompetitors = !flowsState.showAllCompetitors)}
+						aria-pressed={flowsState.showAllCompetitors}
+					>
+						{flowsState.showAllCompetitors ? `Show top ${TOP_COMPETITORS}` : `Show all competitors (${competitorCount})`}
+					</button>
+				{/if}
+			</div>
 			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
 			<div class="legend-row"><span>width = weight / 10k reviews · hollow nodes = outside apps</span></div>
 			<div class="legend-hint">hover an app to focus its routes · click to pin</div>
@@ -843,7 +861,7 @@
 	</div>
 
 	{#if isFocused && !hasFlowData}
-		<div class="no-flows"><span class="label">No switching data for this cluster yet</span><p>The network stays visible. Flow data currently covers Entertainment.</p></div>
+		<div class="no-flows"><span class="label">No switching data for this cluster yet</span><p>The network stays visible. None of this cluster’s apps have switching data.</p></div>
 	{/if}
 
 	<div class="controls">
@@ -936,9 +954,25 @@
 		gap: 5px 10px;
 		max-width: 440px;
 	}
-	.route-count {
+	.competitors {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 4px 8px;
 		margin-bottom: 4px;
 		color: var(--muted);
+		pointer-events: auto;
+	}
+	.competitors button {
+		padding: 3px 7px;
+		border: 1px solid var(--line-strong);
+		border-radius: 2px;
+		font: inherit;
+		color: var(--lime);
+		background: var(--panel);
+	}
+	.competitors button:hover {
+		background: var(--panel-3);
 	}
 	.flow-reasons span {
 		display: inline-flex;
@@ -1216,7 +1250,7 @@
 		.flow-legend .legend-hint {
 			display: none;
 		}
-		.route-count {
+		.competitors {
 			margin-bottom: 0;
 		}
 	}

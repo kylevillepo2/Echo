@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { flowsState, type FlowArrow } from '#lib/state/flows.svelte';
 	import { studio } from '#lib/state/studio.svelte';
-	import { flowNodes, flowNode, reasonColour, reasonLabel, topReason } from '#lib/data/flows';
+	import { flowNode, reasonColour, reasonLabel, topReason } from '#lib/data/flows';
 	import type { SimNode } from '#lib/utils/force';
 
 	let { nodes, cluster, scale }: {
@@ -11,25 +11,37 @@
 	} = $props();
 
 	const members = $derived(nodes.filter((node) => node.clusterId === cluster.id));
-	const outside = $derived(flowNodes.filter((node) => !members.some((member) => member.id === node.id)));
+	const memberIds = $derived(new Set(members.map((node) => node.id)));
+	// Every outside app linked to the cluster, strongest first. Positions are assigned to all of them
+	// up front, so showing more apps or selecting one never moves an app that is already drawn.
+	const ranked = $derived(flowsState.competitorRanking
+		.filter((rank) => !memberIds.has(rank.id))
+		.map((rank) => ({ rank, node: flowNode(rank.id) }))
+		.filter((entry): entry is { rank: typeof entry.rank; node: NonNullable<typeof entry.node> } => Boolean(entry.node)));
+	const GOLDEN_ANGLE = Math.PI * (3 - Math.sqrt(5));
 	const positions = $derived.by(() => {
 		const map = new Map(members.map((node) => [node.id, { x: node.x, y: node.y, radius: node.radius + 5 }]));
-		outside.forEach((node, index) => {
-			const angle = -Math.PI / 2 + (index / outside.length) * Math.PI * 2;
-			map.set(node.id, {
-				x: cluster.x + Math.cos(angle) * cluster.radius * 1.5,
-				y: cluster.y + Math.sin(angle) * cluster.radius * 1.5,
-				radius: 5 + Math.sqrt(node.edgeCount / Math.max(...outside.map((n) => n.edgeCount), 1)) * 5
+		const maxSwitches = Math.max(...ranked.map((entry) => entry.rank.switches), 1);
+		ranked.forEach(({ rank }, index) => {
+			// Golden-angle spiral by rank: the top 6 spread around the cluster; weaker apps fill the gaps
+			// on wider rings.
+			const angle = -Math.PI / 2 + index * GOLDEN_ANGLE;
+			const ring = index < 6 ? 1.45 : index < 18 ? 1.72 : 1.98;
+			map.set(rank.id, {
+				x: cluster.x + Math.cos(angle) * cluster.radius * ring,
+				y: cluster.y + Math.sin(angle) * cluster.radius * ring,
+				radius: 5 + Math.sqrt(rank.switches / maxSwitches) * 5
 			});
 		});
 		return map;
 	});
-	const arrows = $derived(flowsState.visibleArrows
-		.filter((arrow) => positions.has(arrow.s) && positions.has(arrow.t))
+	// Draw a route only when it touches the cluster and both ends are visible.
+	const arrows = $derived(flowsState.drawnArrows
+		.filter((arrow) => (memberIds.has(arrow.s) || memberIds.has(arrow.t)) && positions.has(arrow.s) && positions.has(arrow.t))
 		.sort((a, b) => a.value - b.value));
 	const connectedIds = $derived(new Set(arrows.flatMap((arrow) => [arrow.s, arrow.t])));
-	// Filter rendering, not ring positions, so the remaining apps never jump around.
-	const visibleOutside = $derived(outside.filter((node) => connectedIds.has(node.id) || studio.appHasReviews(node.id)));
+	// Only ranked competitors that the current view shows (top 6, all, or the selection's own).
+	const visibleOutside = $derived(ranked.map((entry) => entry.node).filter((node) => flowsState.visibleOutsideIds.has(node.id)));
 	const hasFocus = $derived(Boolean(flowsState.hoveredArrow || flowsState.hoveredNode || flowsState.selection));
 	const scaleMax = $derived(flowsState.scaleMax);
 
@@ -153,7 +165,7 @@
 			transform="translate({position.x},{position.y})"
 			role="button"
 			tabindex="0"
-			aria-label="{node.name}, outside app"
+			aria-label="{node.name}, {node.observed ? 'reviewed app in another cluster' : 'outside app, only seen in other apps’ reviews'}"
 			onpointerenter={() => (flowsState.hoveredNode = node.id)}
 			onpointerleave={() => (flowsState.hoveredNode = null)}
 			onclick={(event) => { event.stopPropagation(); selectApp(node.id); }}
@@ -161,7 +173,7 @@
 				if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); selectApp(node.id); }
 			}}
 		>
-			<circle r={position.radius} fill="var(--bg)" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 2" vector-effect="non-scaling-stroke" />
+			<circle r={position.radius} fill="var(--bg)" stroke="var(--muted)" stroke-width="1" stroke-dasharray={node.observed ? undefined : '3 2'} vector-effect="non-scaling-stroke" />
 			<text class:quiet={!connectedIds.has(node.id)} y={position.radius + 11 / scale} text-anchor="middle" font-size={9 / scale}>{node.name}</text>
 		</g>
 	{/each}

@@ -22,6 +22,12 @@
 	const hasFlowData = $derived(Boolean(studio.categoryFilter && flowCategoryIds.has(studio.categoryFilter)));
 	let previousCategory = $state<string | null>(null);
 
+	// Flow overlay, timeline and widths follow the focused cluster's apps (all apps when unfocused).
+	$effect(() => {
+		const id = studio.categoryFilter;
+		flowsState.setScope(id ? studio.appsForCategory(id).map((app) => app.id) : null);
+	});
+
 	$effect(() => {
 		if (studio.categoryFilter !== previousCategory) {
 			flowsState.clearSelection();
