@@ -1,0 +1,291 @@
+{
+  "schema_version": "topic-insights-v1",
+  "generated_at": "2026-10-25T00:57:52.287916Z",
+  "app_count": 9,
+  "apps": [
+    {
+      "app": "Bank of America Mobile Banking",
+      "run_slug": "bank-of-america-mobile-banking-7f2b349c",
+      "total_reviews": 28254,
+      "reviews_with_topics": 9360,
+      "approved_topic_count": 44,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/bank-of-america-mobile-banking.json",
+      "json_bytes": 484425
+    },
+    {
+      "app": "Capital One Mobile",
+      "run_slug": "capital-one-mobile-4814d684",
+      "total_reviews": 38799,
+      "reviews_with_topics": 13532,
+      "approved_topic_count": 39,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/capital-one-mobile.json",
+      "json_bytes": 418702
+    },
+    {
+      "app": "Cash App",
+      "run_slug": "cash-app-a42f75c9",
+      "total_reviews": 62785,
+      "reviews_with_topics": 16656,
+      "approved_topic_count": 38,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/cash-app.json",
+      "json_bytes": 406409
+    },
+    {
+      "app": "Chime",
+      "run_slug": "chime-11d56afd",
+      "total_reviews": 43813,
+      "reviews_with_topics": 8742,
+      "approved_topic_count": 38,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-07",
+        "last_month": "2026-05",
+        "month_count": 23,
+        "partial_months": [
+          "2024-07",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/chime.json",
+      "json_bytes": 400250
+    },
+    {
+      "app": "Coinbase",
+      "run_slug": "coinbase-ede0273e",
+      "total_reviews": 24651,
+      "reviews_with_topics": 14621,
+      "approved_topic_count": 54,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-05",
+        "last_month": "2026-05",
+        "month_count": 25,
+        "partial_months": [
+          "2024-05",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/coinbase.json",
+      "json_bytes": 616691
+    },
+    {
+      "app": "Dave",
+      "run_slug": "dave-bfcdf3e6",
+      "total_reviews": 16146,
+      "reviews_with_topics": 7212,
+      "approved_topic_count": 51,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/dave.json",
+      "json_bytes": 562056
+    },
+    {
+      "app": "Intuit Credit Karma",
+      "run_slug": "intuit-credit-karma-381015c4",
+      "total_reviews": 13212,
+      "reviews_with_topics": 2779,
+      "approved_topic_count": 45,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-06",
+        "last_month": "2026-05",
+        "month_count": 24,
+        "partial_months": [
+          "2024-06",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/intuit-credit-karma.json",
+      "json_bytes": 489730
+    },
+    {
+      "app": "PayPal",
+      "run_slug": "paypal-0b4e4886",
+      "total_reviews": 50739,
+      "reviews_with_topics": 7671,
+      "approved_topic_count": 34,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-05",
+        "last_month": "2026-05",
+        "month_count": 25,
+        "partial_months": [
+          "2024-05",
+          "2026-05"
+        ],
+        "low_volume_months": []
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/paypal.json",
+      "json_bytes": 387860
+    },
+    {
+      "app": "Robinhood",
+      "run_slug": "robinhood-2d57cba7",
+      "total_reviews": 17223,
+      "reviews_with_topics": 8551,
+      "approved_topic_count": 67,
+      "missing_date_records": 0,
+      "missing_rating_records": 0,
+      "monthly_coverage": {
+        "first_month": "2024-05",
+        "last_month": "2026-05",
+        "month_count": 25,
+        "partial_months": [
+          "2024-05",
+          "2026-05"
+        ],
+        "low_volume_months": [
+          "2024-05"
+        ]
+      },
+      "checks": {
+        "app_review_reconciliation": true,
+        "topic_review_reconciliation": true,
+        "topic_reconciliation_failures": [],
+        "tagged_count_reconciliation": true,
+        "rating_reconciliation": true
+      },
+      "warnings": [
+        "Historical review coverage may be sampled or uneven."
+      ],
+      "output": "/Users/derekkirschbaum/unwrapathon/github-worktree/static/data/insights/robinhood.json",
+      "json_bytes": 761653
+    }
+  ],
+  "errors": [],
+  "total_reviews": 295622,
+  "all_checks_passed": true
+}

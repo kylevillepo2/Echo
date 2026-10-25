@@ -308,3 +308,57 @@ global thresholds 0.45 (description) and 0.55 (prototype). On 280 evaluable test
 reviews, provisional micro-F1 was 0.1714 and 0.1611 respectively. Only one topic
 met per-topic calibration support requirements. This is a working baseline for
 comparison with a supervised approach, not a validated classifier for prevalence.
+
+## Step 10: aggregate topic insights for the frontend
+
+The offline aggregator reads each app's full `tagged_reviews.parquet` and its own
+canonical taxonomy, then writes one JSON file per app to
+`../static/data/insights/`. It makes no API calls. From this repository's
+`review_parsing/` directory, using an environment with `requirements.txt` installed:
+
+```bash
+# One app: first use this to inspect PayPal's totals and monthly coverage.
+python nlp/aggregate_topics.py --app PayPal --runs-root /path/to/pipeline-runs
+
+# All nine completed finance apps, with a combined validation report.
+python nlp/aggregate_topics.py --all --runs-root /path/to/pipeline-runs
+```
+
+If `pipeline-runs/` is in the current directory, omit `--runs-root`. Use
+`--refinement-root` for a single app whose taxonomy cannot be discovered from
+the app run or a neighboring `refined-topics/` folder. Rerun after tagging or taxonomy updates;
+the exporter validates the taxonomy hash and replaces only the matching app JSON
+and `aggregation_validation_report.json`. It never changes source Parquet files.
+
+Each `{app-slug}.json` follows [`topic_insights.schema.json`](topic_insights.schema.json).
+Its `summary` contains total reviews, reviews with at least one topic, coverage,
+star statistics, date bounds, and missing-value counts. `monthly_reviews` contains
+every calendar month between the first and last observed dates. Each topic has an
+app-scoped stable ID, name, definition, distinct review count, rank, share of **all**
+app reviews, star statistics, mean **cosine similarity** of accepted assignments,
+up to three original review references/snippets, and a month-by-month series.
+One review may count for multiple topics, but duplicate `(review_key, topic_id)`
+assignments count once. Topic IDs are not shared across apps; no global finance
+taxonomy exists.
+
+All percentage fields use a `0–100` scale. Overall topic share divides by all
+reviews in that app's tagging file, including untagged reviews. Monthly topic share
+divides by all app reviews dated in that month. It is `null` if the month has no
+dated reviews. Month-over-month change and the trend's numeric change are in
+**percentage points**, not percentage growth. A trend compares the last two
+complete months: it is `increasing` or `decreasing` at a change of at least 2
+points, `stable` below that, or `insufficient_data` when either month has fewer
+than 30 reviews or the topic has fewer than 5 combined mentions. These defaults
+can be changed with `--min-monthly-reviews`, `--min-topic-count`, and
+`--min-change-pp`.
+
+The first and last observed months are marked partial when the observed dates do
+not reach their calendar boundaries; the current month is always partial. Months
+with fewer than 30 reviews are flagged separately. Missing dates contribute to
+overall/topic totals but no monthly bucket, and the validation report checks this
+reconciliation. Missing ratings are excluded from rating averages and shown in
+counts. The original corpus may be sampled or uneven over time, so these shares
+describe this corpus, not app users or verified complaint prevalence. Similarity
+scores are not probabilities or sentiment labels. The JSON is a standalone
+frontend data artifact; the current `UnwrapApi` / `API.md` graph contract does not
+yet consume it.

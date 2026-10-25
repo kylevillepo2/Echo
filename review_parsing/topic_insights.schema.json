@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://unwrapathon.local/topic-insights-v1.schema.json",
+  "title": "Unwrapathon app topic insights export",
+  "type": "object",
+  "required": ["schema_version", "generated_at", "app", "tagging", "summary", "monthly_reviews", "topics", "metadata"],
+  "properties": {
+    "schema_version": { "const": "topic-insights-v1" },
+    "generated_at": { "type": "string", "format": "date-time" },
+    "app": {
+      "type": "object",
+      "required": ["id", "name", "source_app_id", "pipeline_run_slug"],
+      "properties": {
+        "id": { "type": "string" }, "name": { "type": "string" },
+        "source_app_id": { "type": "string" }, "pipeline_run_slug": { "type": "string" }
+      }
+    },
+    "tagging": {
+      "type": "object",
+      "required": ["method", "topic_representation", "embedding_model", "taxonomy_version", "global_cosine_threshold", "topic_ids_are_app_scoped"],
+      "properties": {
+        "method": { "const": "semantic_similarity" },
+        "topic_representation": { "const": "description" },
+        "embedding_model": { "type": "string" },
+        "taxonomy_version": { "type": "string" },
+        "global_cosine_threshold": { "type": "number" },
+        "topic_ids_are_app_scoped": { "const": true }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "required": ["total_reviews", "reviews_with_topics", "tagging_coverage_percent", "average_stars", "rated_review_count", "missing_rating_count", "star_distribution", "earliest_review_date", "latest_review_date", "missing_date_count"],
+      "properties": {
+        "total_reviews": { "type": "integer", "minimum": 0 },
+        "reviews_with_topics": { "type": "integer", "minimum": 0 },
+        "tagging_coverage_percent": { "$ref": "#/$defs/nullablePercent" },
+        "average_stars": { "type": ["number", "null"] },
+        "rated_review_count": { "type": "integer" },
+        "missing_rating_count": { "type": "integer" },
+        "star_distribution": { "$ref": "#/$defs/starDistribution" },
+        "earliest_review_date": { "type": ["string", "null"], "format": "date" },
+        "latest_review_date": { "type": ["string", "null"], "format": "date" },
+        "missing_date_count": { "type": "integer" }
+      }
+    },
+    "monthly_reviews": { "type": "array", "items": { "$ref": "#/$defs/monthTotal" } },
+    "topics": { "type": "array", "items": { "$ref": "#/$defs/topic" } },
+    "metadata": { "type": "object" }
+  },
+  "$defs": {
+    "nullablePercent": { "type": ["number", "null"], "minimum": 0, "maximum": 100 },
+    "starDistribution": {
+      "type": "array", "minItems": 5, "maxItems": 5,
+      "items": { "type": "object", "required": ["stars", "count"],
+        "properties": { "stars": { "type": "integer", "minimum": 1, "maximum": 5 }, "count": { "type": "integer", "minimum": 0 } } }
+    },
+    "monthTotal": {
+      "type": "object",
+      "required": ["month", "review_count", "partial_month", "partial_reasons", "insufficient_review_volume"],
+      "properties": {
+        "month": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+        "review_count": { "type": "integer", "minimum": 0 },
+        "partial_month": { "type": "boolean" },
+        "partial_reasons": { "type": "array", "items": { "type": "string" } },
+        "insufficient_review_volume": { "type": "boolean" }
+      }
+    },
+    "topicMonth": {
+      "type": "object",
+      "required": ["month", "review_count", "total_app_reviews", "percentage_of_monthly_reviews", "average_stars", "rated_review_count", "change_percentage_points", "partial_month", "insufficient_review_volume"],
+      "properties": {
+        "month": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}$" },
+        "review_count": { "type": "integer", "minimum": 0 },
+        "total_app_reviews": { "type": "integer", "minimum": 0 },
+        "percentage_of_monthly_reviews": { "$ref": "#/$defs/nullablePercent" },
+        "average_stars": { "type": ["number", "null"] },
+        "rated_review_count": { "type": "integer", "minimum": 0 },
+        "change_percentage_points": { "type": ["number", "null"] },
+        "partial_month": { "type": "boolean" },
+        "insufficient_review_volume": { "type": "boolean" }
+      }
+    },
+    "topic": {
+      "type": "object",
+      "required": ["topic_id", "name", "definition", "rank_by_review_count", "review_count", "percentage_of_all_reviews", "average_stars", "rated_review_count", "missing_rating_count", "star_distribution", "mean_accepted_cosine_similarity", "missing_date_count", "monthly", "trend", "representative_reviews"],
+      "properties": {
+        "topic_id": { "type": "string" }, "name": { "type": "string" },
+        "definition": { "type": "string" }, "parent_category_id": { "type": ["string", "null"] },
+        "parent_category_name": { "type": ["string", "null"] },
+        "rank_by_review_count": { "type": "integer", "minimum": 1 },
+        "review_count": { "type": "integer", "minimum": 0 },
+        "percentage_of_all_reviews": { "$ref": "#/$defs/nullablePercent" },
+        "average_stars": { "type": ["number", "null"] },
+        "rated_review_count": { "type": "integer", "minimum": 0 },
+        "missing_rating_count": { "type": "integer", "minimum": 0 },
+        "star_distribution": { "$ref": "#/$defs/starDistribution" },
+        "mean_accepted_cosine_similarity": { "type": ["number", "null"], "minimum": -1, "maximum": 1 },
+        "missing_date_count": { "type": "integer", "minimum": 0 },
+        "monthly": { "type": "array", "items": { "$ref": "#/$defs/topicMonth" } },
+        "trend": {
+          "type": "object",
+          "required": ["label", "change_percentage_points", "latest_complete_month", "previous_complete_month"],
+          "properties": {
+            "label": { "enum": ["increasing", "decreasing", "stable", "insufficient_data"] },
+            "change_percentage_points": { "type": ["number", "null"] },
+            "latest_complete_month": { "type": ["string", "null"] },
+            "previous_complete_month": { "type": ["string", "null"] }
+          }
+        },
+        "representative_reviews": {
+          "type": "array",
+          "items": { "type": "object", "required": ["review_key", "feedback_id", "data_source", "snippet", "cosine_similarity"],
+            "properties": {
+              "review_key": { "type": "string" },
+              "feedback_id": { "type": ["string", "null"] },
+              "data_source": { "type": ["string", "null"] },
+              "snippet": { "type": "string" },
+              "cosine_similarity": { "type": "number", "minimum": -1, "maximum": 1 }
+            }
+          }
+        }
+      }
+    }
+  }
+}
