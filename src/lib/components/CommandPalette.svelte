@@ -12,7 +12,7 @@
 		id: string;
 		name: string;
 		sub: string;
-		reception: number;
+		reception: number | null;
 		accent: string;
 	};
 
@@ -54,7 +54,7 @@
 						? studio.metricLabelFor(app)
 						: `${fmtCount(app.reviewCount)} reviews`
 				}`,
-				reception: app.reception,
+				reception: app.insightsId ? null : app.reception,
 				accent: app.accent ?? '#c8ff3c'
 			}));
 
@@ -249,9 +249,9 @@
 								<span class="dot" style:background={row.accent}></span>
 								<span class="entity-name">{row.name}</span>
 								<span class="entity-sub">{row.sub}</span>
-								<span class="entity-score num" style:color={receptionColor(row.reception)}>
+								{#if row.reception !== null}<span class="entity-score num" style:color={receptionColor(row.reception)}>
 									{row.reception}
-								</span>
+								</span>{:else}<span class="entity-score" style:color="var(--cyan)">Export</span>{/if}
 							</button>
 						{/each}
 					</div>
@@ -316,9 +316,9 @@
 								<span class="entity-kind">{row.kind === 'app' ? 'APP' : 'CO'}</span>
 								<span class="entity-name">{row.name}</span>
 								<span class="entity-sub">{row.sub}</span>
-								<span class="entity-score num" style:color={receptionColor(row.reception)}>
+								{#if row.reception !== null}<span class="entity-score num" style:color={receptionColor(row.reception)}>
 									{row.reception}
-								</span>
+								</span>{:else}<span class="entity-score" style:color="var(--cyan)">Export</span>{/if}
 							</button>
 						{/each}
 					</div>

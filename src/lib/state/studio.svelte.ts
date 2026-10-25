@@ -3,6 +3,8 @@ import type { AppNode, Category, GraphPayload, Review, SearchHit, Theme } from '
 import { downloadStats, type DownloadStats } from '#lib/data/downloads';
 import { flowNode } from '#lib/data/flows';
 import { flowsState } from '#lib/state/flows.svelte';
+import { fetchAppInsights, fetchInsightCatalog } from '#lib/api/insights';
+import { findInsightEntry, type AppInsights, type InsightCatalogEntry } from '#lib/data/insights';
 import { fmtCount, fmtRate } from '#lib/utils/format';
 
 const browser = typeof window !== 'undefined';
@@ -57,28 +59,59 @@ class StudioState {
 	helpOpen = $state(false);
 	inspectorOpen = $state(true);
 	inspectorTab = $state<InspectorTab>('overview');
+	insightCatalog = $state.raw<InsightCatalogEntry[]>([]);
+	insightCatalogError = $state<string | null>(null);
+	insightData = $state.raw<Record<string, AppInsights>>({});
+	insightStatus = $state<Record<string, 'loading' | 'ready' | 'error'>>({});
+	insightErrors = $state<Record<string, string>>({});
+	insightTopic = $state<{ appId: string; topicId: string } | null>(null);
 
 	private api = createApi('demo', '');
 	private reviewCache = new Map<string, Review[]>();
 	private requestId = 0;
 	private initialised = false;
+	private insightCatalogPromise: Promise<void> | undefined;
+	private insightRequests = new Map<string, Promise<void>>();
 
 	/* ---------------------------- derived ---------------------------- */
 
 	get categories(): Category[] {
-		return this.graph?.categories ?? [];
+		const apps = this.apps;
+		return (this.graph?.categories ?? []).map((category) => ({
+			...category,
+			reviewCount: apps.filter((app) => app.categoryId === category.id).reduce((sum, app) => sum + app.reviewCount, 0)
+		}));
 	}
 
 	get apps(): AppNode[] {
-		return this.graph?.apps ?? [];
+		return (this.graph?.apps ?? []).map((app) => {
+			const entry = findInsightEntry(app, this.insightCatalog);
+			if (!entry) return app;
+			const data = this.insightData[entry.id];
+			return {
+				...app,
+				insightsId: entry.id,
+				reviewCount: entry.reviewCount,
+				rating: data?.summary.average_stars ?? app.rating,
+				distribution: data?.summary.star_distribution ?? [],
+				// These exports do not provide sentiment, shared themes, install correlations or rating time series.
+				themes: { positive: [], negative: [] },
+				signals: undefined,
+				trend: [],
+				similar: [],
+				sources: {}
+			};
+		});
 	}
 
 	get meta() {
-		return this.graph?.meta ?? null;
+		if (!this.graph) return null;
+		return { ...this.graph.meta, reviewCount: this.apps.reduce((sum, app) => sum + app.reviewCount, 0) };
 	}
 
 	get themes(): Theme[] {
 		if (!this.graph) return [];
+		if (this.insightCatalog.length) return rollupThemes(this.apps.filter((app) => !app.insightsId));
 		return this.graph.themes?.length ? this.graph.themes : rollupThemes(this.graph.apps);
 	}
 
@@ -94,6 +127,58 @@ class StudioState {
 		return this.selected?.kind === 'app'
 			? this.apps.find((a) => a.id === this.selected!.id)
 			: undefined;
+	}
+
+	get selectedInsightEntry(): InsightCatalogEntry | undefined {
+		const app = this.selectedApp;
+		return app ? findInsightEntry(app, this.insightCatalog) : undefined;
+	}
+
+	get selectedInsights(): AppInsights | undefined {
+		const entry = this.selectedInsightEntry;
+		return entry ? this.insightData[entry.id] : undefined;
+	}
+
+	ratingFor(app: AppNode): number | null {
+		return app.insightsId ? this.insightData[app.insightsId]?.summary.average_stars ?? null : app.rating;
+	}
+
+	async loadInsightCatalog(retry = false): Promise<void> {
+		if (retry) this.insightCatalogPromise = undefined;
+		if (!this.insightCatalogPromise) {
+			this.insightCatalogPromise = (async () => {
+				try {
+					this.insightCatalog = await fetchInsightCatalog();
+					this.insightCatalogError = null;
+				} catch (error) {
+					this.insightCatalogError = error instanceof Error ? error.message : String(error);
+				}
+			})();
+		}
+		await this.insightCatalogPromise;
+		if (retry && this.selectedInsightEntry) await this.loadInsights(this.selectedInsightEntry);
+	}
+
+	async loadInsights(entry: InsightCatalogEntry, retry = false): Promise<void> {
+		if (this.insightData[entry.id] && !retry) return;
+		const pending = this.insightRequests.get(entry.id);
+		if (pending) return pending;
+		this.insightStatus[entry.id] = 'loading';
+		delete this.insightErrors[entry.id];
+		const request = (async () => {
+			try {
+				const data = await fetchAppInsights(entry);
+				this.insightData = { ...this.insightData, [entry.id]: data };
+				this.insightStatus[entry.id] = 'ready';
+			} catch (error) {
+				this.insightErrors[entry.id] = error instanceof Error ? error.message : String(error);
+				this.insightStatus[entry.id] = 'error';
+			} finally {
+				this.insightRequests.delete(entry.id);
+			}
+		})();
+		this.insightRequests.set(entry.id, request);
+		return request;
 	}
 
 	get selectedCategory(): Category | undefined {
@@ -301,7 +386,7 @@ class StudioState {
 		this.error = null;
 
 		try {
-			const payload = await this.api.getGraph();
+			const [payload] = await Promise.all([this.api.getGraph(), this.loadInsightCatalog()]);
 			if (request !== this.requestId) return;
 			this.graph = normaliseGraph(payload);
 			this.syncedAt = Date.now();
@@ -356,6 +441,7 @@ class StudioState {
 	select(kind: 'app', id: string) {
 		flowsState.clearSelection();
 		this.selected = { kind, id };
+		this.insightTopic = null;
 		if (this.categoryFilter) flowsState.selectApp(id);
 		this.inspectorOpen = true;
 		this.inspectorTab = (flowNode(id)?.edgeCount ?? 0) > 0 ? 'flows' : 'overview';
@@ -381,6 +467,15 @@ class StudioState {
 	}
 
 	async loadReviews(appId: string) {
+		const app = this.apps.find((app) => app.id === appId);
+		const entry = app ? findInsightEntry(app, this.insightCatalog) : undefined;
+		if (entry) {
+			// Representative snippets have no per-review stars/dates; never replace them with synthetic reviews.
+			this.reviews = [];
+			this.reviewsLoading = false;
+			await this.loadInsights(entry);
+			return;
+		}
 		const cached = this.reviewCache.get(appId);
 		if (cached) {
 			this.reviews = cached;
@@ -404,6 +499,7 @@ class StudioState {
 	clearSelection() {
 		flowsState.clearSelection();
 		this.selected = null;
+		this.insightTopic = null;
 		this.reviews = [];
 		this.starFilter = null;
 		this.sentimentFilter = 'all';
@@ -464,7 +560,11 @@ class StudioState {
 	): Promise<SearchHit[]> {
 		if (!query.trim()) return [];
 		try {
-			return await this.api.searchReviews(query, options);
+			const hits = await this.api.searchReviews(query, options);
+			// Demo search cannot manufacture evidence for apps backed by real exports.
+			return this.mode === 'demo'
+				? hits.filter((hit) => !this.apps.find((app) => app.id === hit.appId)?.insightsId)
+				: hits;
 		} catch (error) {
 			this.error = error instanceof Error ? error.message : String(error);
 			return [];

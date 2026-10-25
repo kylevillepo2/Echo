@@ -8,10 +8,13 @@
 	import ThemeBar from './ThemeBar.svelte';
 	import ReviewCard from './ReviewCard.svelte';
 	import AppFlows from './AppFlows.svelte';
+	import AppInsightsPanel from './AppInsightsPanel.svelte';
 	import { fmtCount, fmtDate, fmtDelta, fmtDeltaPct, fmtLag, fmtPct, fmtR, fmtRate } from '#lib/utils/format';
 	import { platformLabel, receptionColor } from '#lib/utils/palette';
 
 	const app = $derived(studio.selectedApp);
+	const insightEntry = $derived(studio.selectedInsightEntry);
+	const rating = $derived(app ? studio.ratingFor(app) : null);
 	const category = $derived(studio.selectedCategory);
 	const downloads = $derived(app ? studio.downloadsFor(app.id) : undefined);
 	const signals = $derived(app?.signals);
@@ -117,7 +120,7 @@
 		}));
 	});
 
-	const ranked = $derived([...studio.visibleApps].sort((a, b) => b.reception - a.reception));
+	const ranked = $derived(studio.visibleApps.filter((app) => !app.insightsId).sort((a, b) => b.reception - a.reception));
 	const best = $derived(ranked.slice(0, 3));
 	const worst = $derived(ranked.slice(-3).reverse());
 
@@ -150,9 +153,12 @@
 				<button class="close" onclick={() => studio.closeInspector()} aria-label="Close inspector">×</button>
 			</div>
 			<div class="meta-row">
-				<span class="chip">{platformLabel(app.platform)}</span>
-				<span class="chip">{app.subcategory}</span>
-				<span class="rating"><Stars rating={app.rating} size={10} showValue /></span>
+				{#if !insightEntry}
+					<span class="chip">{platformLabel(app.platform)}</span>
+					<span class="chip">{app.subcategory}</span>
+				{/if}
+				{#if rating !== null}<span class="rating"><Stars {rating} size={10} showValue /></span>{/if}
+				{#if insightEntry}<span class="chip analytics-badge">Review export</span>{/if}
 			</div>
 		</header>
 
@@ -169,7 +175,15 @@
 		</nav>
 
 		<div class="body scroll">
-			{#if studio.inspectorTab === 'overview'}
+			{#if studio.insightCatalogError}
+				<div class="analytics-warning" role="alert">
+					<p>Exported analytics catalog unavailable. This view may contain demo analytics.</p>
+					<button class="btn is-sm" onclick={() => studio.loadInsightCatalog(true)}>Retry analytics catalog</button>
+				</div>
+			{/if}
+			{#if insightEntry && studio.inspectorTab !== 'flows'}
+				<AppInsightsPanel view={studio.inspectorTab === 'reviews' ? 'reviews' : 'overview'} />
+			{:else if studio.inspectorTab === 'overview'}
 				{#if downloads}
 					<section class="block">
 						<div class="block-head">
@@ -540,19 +554,24 @@
 				</div>
 				<div class="cluster-apps">
 					{#each studio.categoryApps as owned (owned.id)}
+						{@const rating = studio.ratingFor(owned)}
 						<button class="cluster-app" onclick={() => studio.select('app', owned.id)}>
 							<span class="cluster-app-dot" style:background={owned.accent}></span>
 							<span class="cluster-app-name">{owned.name}</span>
-							<span class="cluster-app-rating num">{owned.rating.toFixed(1)}★</span>
-							<span class="cluster-app-meter">
-								<i
-									style:width="{owned.reception}%"
-									style:background={receptionColor(owned.reception)}
-								></i>
-							</span>
-							<span class="cluster-app-score num" style:color={receptionColor(owned.reception)}>
-								{owned.reception}
-							</span>
+							<span class="cluster-app-rating num">{rating === null ? '—' : `${rating.toFixed(1)}★`}</span>
+							{#if !owned.insightsId}
+								<span class="cluster-app-meter">
+									<i
+										style:width="{owned.reception}%"
+										style:background={receptionColor(owned.reception)}
+									></i>
+								</span>
+								<span class="cluster-app-score num" style:color={receptionColor(owned.reception)}>
+									{owned.reception}
+								</span>
+							{:else}
+								<span class="cluster-app-score" style:color="var(--cyan)">Export</span>
+							{/if}
 						</button>
 					{/each}
 				</div>
@@ -769,6 +788,19 @@
 	}
 	.rating {
 		margin-left: 2px;
+	}
+	.analytics-badge {
+		color: var(--cyan);
+	}
+	.analytics-warning {
+		padding: 12px 14px;
+		background: var(--panel-2);
+		border-bottom: 1px solid var(--line);
+	}
+	.analytics-warning p {
+		margin: 0 0 8px;
+		font-size: 11px;
+		color: var(--amber);
 	}
 
 	.tabs {

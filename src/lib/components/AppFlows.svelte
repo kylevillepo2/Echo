@@ -62,7 +62,7 @@
 {#if !app}
 	<section class="block empty" role="status">
 		<span class="label-dim">No flow data</span>
-		<p>Switching data isn’t available for {appName} yet. Its overview, reviews and similar apps are still available.</p>
+		<p>Switching data isn’t available for {appName} yet. Its overview and reviews are still available.</p>
 	</section>
 {:else}
 	<p class="note">

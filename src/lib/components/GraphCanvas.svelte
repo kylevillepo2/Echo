@@ -2,7 +2,7 @@
 	import { onMount, untrack } from 'svelte';
 	import { cubicInOut } from 'svelte/easing';
 	import { studio } from '#lib/state/studio.svelte';
-	import { flowsState, TOP_COMPETITORS } from '#lib/state/flows.svelte';
+	import { flowsState } from '#lib/state/flows.svelte';
 	import { flows, legendReasons } from '#lib/data/flows';
 	import FlowOverlay from './FlowOverlay.svelte';
 	import { Simulation, boundsOf, type SimLink, type SimNode } from '#lib/utils/force';
@@ -43,6 +43,7 @@
 	const categoryMap = $derived(new Map(studio.categories.map((c) => [c.id, c])));
 	const mapCategories = $derived(studio.categories.filter((c) => studio.mapApps.some((app) => app.categoryId === c.id)));
 	const hasFlowData = $derived(studio.categoryApps.some((app) => flows.meta.observed.includes(app.id)));
+	const hasExportedInsights = $derived(studio.categoryApps.some((app) => Boolean(app.insightsId)));
 
 	const appNodes = $derived.by(() => {
 		tick;
@@ -54,14 +55,12 @@
 	});
 	const isFocused = $derived(Boolean(studio.categoryFilter));
 	const connectedFlowIds = $derived(new Set(
-		(isFocused && hasFlowData ? flowsState.drawnArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
+		(isFocused && hasFlowData ? flowsState.visibleArrows : []).flatMap((arrow) => [arrow.s, arrow.t])
 	));
-	const focusedMemberIds = $derived(new Set(isFocused ? studio.categoryApps.map((app) => app.id) : []));
-	const competitorCount = $derived(flowsState.competitorRanking.length);
 	const activeClusterId = $derived(studio.zoomingCategory ?? studio.categoryFilter);
 
 	const signature = $derived(
-		`${studio.graph?.meta.generatedAt ?? ''}|${studio.mapApps.map((a) => a.id).join(',')}`
+		`${studio.graph?.meta.generatedAt ?? ''}|${studio.metric}|${studio.mapApps.map((app) => `${app.id}:${studio.metricValue(app)}`).join(',')}`
 	);
 
 	const focusId = $derived(hovered ?? studio.selected?.id ?? null);
@@ -77,6 +76,7 @@
 	});
 
 	const hoveredApp = $derived(hovered ? appMap.get(hovered) ?? allApps.get(hovered) : undefined);
+	const hoveredRating = $derived(hoveredApp ? studio.ratingFor(hoveredApp) : null);
 	const hoveredDownloads = $derived(hoveredApp ? studio.downloadsFor(hoveredApp.id) : undefined);
 	const hoveredCategory = $derived(
 		hoveredCluster ? categoryMap.get(hoveredCluster) : undefined
@@ -549,7 +549,7 @@
 	function colorFor(node: SimNode): string {
 		const app = appMap.get(node.id) ?? allApps.get(node.id);
 		if (!app) return '#8b8b97';
-		if (studio.colourMode === 'reception') return receptionColor(app.reception);
+		if (studio.colourMode === 'reception') return app.insightsId ? 'var(--muted)' : receptionColor(app.reception);
 		if (studio.colourMode === 'platform') return platformColor(app.platform);
 		return categoryMap.get(app.categoryId)?.accent ?? app.accent ?? '#8b8b97';
 	}
@@ -567,8 +567,7 @@
 	}
 
 	function appHasContent(id: string): boolean {
-		// Members of the focused cluster always stay on the map.
-		return focusedMemberIds.has(id) || studio.appHasReviews(id) || connectedFlowIds.has(id);
+		return studio.appHasReviews(id) || connectedFlowIds.has(id);
 	}
 
 	function edgeOpacity(link: SimLink): number {
@@ -698,7 +697,7 @@
 							role="button"
 							tabindex={activeClusterId && node.clusterId !== activeClusterId ? -1 : 0}
 							aria-hidden={Boolean(activeClusterId && node.clusterId !== activeClusterId)}
-							aria-label="{app.name}, {app.categoryName}, reception {app.reception} of 100"
+								aria-label="{app.name}, {app.categoryName}, {app.insightsId ? 'exported review analytics' : `reception ${app.reception} of 100` }"
 							onpointerdown={(event) => startDrag(event, node)}
 							onpointerenter={() => { hovered = node.id; if (hasFlowData) flowsState.hoveredNode = node.id; }}
 							onpointerleave={() => { hovered = null; flowsState.hoveredNode = null; }}
@@ -711,16 +710,18 @@
 							}}
 							ondblclick={(event) => unpin(event, node)}
 						>
-							<circle
-								r={node.radius + 3.5}
-								fill="none"
-								stroke={receptionColor(app.reception)}
-								stroke-width="1.5"
-								stroke-opacity="0.65"
-								stroke-dasharray="{((app.reception / 100) * circumference).toFixed(1)} {circumference.toFixed(1)}"
-								transform="rotate(-90)"
-								vector-effect="non-scaling-stroke"
-							/>
+							{#if !app.insightsId}
+								<circle
+									r={node.radius + 3.5}
+									fill="none"
+									stroke={receptionColor(app.reception)}
+									stroke-width="1.5"
+									stroke-opacity="0.65"
+									stroke-dasharray="{((app.reception / 100) * circumference).toFixed(1)} {circumference.toFixed(1)}"
+									transform="rotate(-90)"
+									vector-effect="non-scaling-stroke"
+								/>
+							{/if}
 							{#if selected}
 								<circle
 									r={node.radius + 8}
@@ -775,26 +776,29 @@
 			<div class="tt-head">
 				<span class="tt-dot" style:background={colorFor({ id: hoveredApp.id, kind: 'app' } as SimNode)}></span>
 				<span class="tt-name">{hoveredApp.name}</span>
-				<span class="tt-score num" style:color={receptionColor(hoveredApp.reception)}>
-					{hoveredApp.reception}
-				</span>
+				{#if hoveredApp.insightsId}
+					<span class="tt-score" style:color="var(--cyan)">Export</span>
+				{:else}
+					<span class="tt-score num" style:color={receptionColor(hoveredApp.reception)}>{hoveredApp.reception}</span>
+				{/if}
 			</div>
-			<div class="tt-sub">{hoveredApp.categoryName} · {hoveredApp.subcategory}</div>
+			<div class="tt-sub">{hoveredApp.categoryName} · {hoveredApp.insightsId ? 'exported review analytics' : hoveredApp.subcategory}</div>
 			<div class="tt-row">
-				<Stars rating={hoveredApp.rating} size={9} />
-				<span class="num">{hoveredApp.rating.toFixed(2)}</span>
+				{#if hoveredRating !== null}<Stars rating={hoveredRating} size={9} /><span class="num">{hoveredRating.toFixed(2)}</span>{/if}
 				<span class="tt-muted">{fmtCount(hoveredApp.reviewCount)} reviews</span>
 			</div>
-			{#if hoveredDownloads}
+			{#if hoveredDownloads && !hoveredApp.insightsId}
 				<div class="tt-row">
 					<span class="num">{fmtRate(hoveredDownloads.ratePerDay)}</span>
 					<span class="tt-muted">{fmtCount(hoveredDownloads.installs)} installs</span>
 				</div>
 			{/if}
+			{#if !hoveredApp.insightsId}
 			<div class="tt-senti">
 				<span class="pos">{Math.round((hoveredApp.sentiment.positive / hoveredApp.reviewCount) * 100)}% pos</span>
 				<span class="neg">{Math.round((hoveredApp.sentiment.negative / hoveredApp.reviewCount) * 100)}% neg</span>
 			</div>
+			{/if}
 			<div class="tt-hint">click to inspect →</div>
 		</div>
 	{:else if hoveredCategory}
@@ -823,22 +827,7 @@
 
 	<div class="legend" class:flow-legend={isFocused && hasFlowData}>
 		{#if isFocused && hasFlowData}
-			<div class="competitors">
-				<span class="num">
-					{flowsState.showAllCompetitors || competitorCount <= TOP_COMPETITORS
-						? `All ${competitorCount} outside competitors`
-						: `Top ${TOP_COMPETITORS} of ${competitorCount} outside competitors`}
-					· {flowsState.drawnArrows.length} routes shown
-				</span>
-				{#if competitorCount > TOP_COMPETITORS}
-					<button
-						onclick={() => (flowsState.showAllCompetitors = !flowsState.showAllCompetitors)}
-						aria-pressed={flowsState.showAllCompetitors}
-					>
-						{flowsState.showAllCompetitors ? `Show top ${TOP_COMPETITORS}` : `Show all competitors (${competitorCount})`}
-					</button>
-				{/if}
-			</div>
+			<span class="route-count num">{flowsState.visibleArrows.length} routes shown</span>
 			<div class="legend-row"><span class="line sim"></span><span>switch → · dashed = intent · faint = preference</span></div>
 			<div class="legend-row"><span>thicker arrows = stronger review signal · hollow nodes = outside apps</span></div>
 			<div class="legend-hint">hover an app to focus its routes · click to pin</div>
@@ -857,11 +846,18 @@
 			<span class="line cross"></span><span>cross-category</span>
 		</div>
 		<div class="legend-hint">click a cluster for flows · scroll zoom · drag pan</div>
+		{#if isFocused && hasExportedInsights}<div class="legend-hint">Map links come from the graph source, not the topic exports.</div>{/if}
 		{/if}
 	</div>
 
 	{#if isFocused && !hasFlowData}
-		<div class="no-flows"><span class="label">No switching data for this cluster yet</span><p>The network stays visible. None of this cluster’s apps have switching data.</p></div>
+		<div class="no-flows">
+			{#if hasExportedInsights}
+				<span class="label">Topic analytics available</span><p>Select an app for imported topics and review excerpts. Switching flows aren’t included in these exports.</p>
+			{:else}
+				<span class="label">No switching data for this cluster yet</span><p>The network stays visible. Flow data currently covers Entertainment.</p>
+			{/if}
+		</div>
 	{/if}
 
 	<div class="controls">
@@ -954,25 +950,9 @@
 		gap: 5px 10px;
 		max-width: 440px;
 	}
-	.competitors {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		gap: 4px 8px;
+	.route-count {
 		margin-bottom: 4px;
 		color: var(--muted);
-		pointer-events: auto;
-	}
-	.competitors button {
-		padding: 3px 7px;
-		border: 1px solid var(--line-strong);
-		border-radius: 2px;
-		font: inherit;
-		color: var(--lime);
-		background: var(--panel);
-	}
-	.competitors button:hover {
-		background: var(--panel-3);
 	}
 	.flow-reasons span {
 		display: inline-flex;
@@ -1250,7 +1230,7 @@
 		.flow-legend .legend-hint {
 			display: none;
 		}
-		.competitors {
+		.route-count {
 			margin-bottom: 0;
 		}
 	}

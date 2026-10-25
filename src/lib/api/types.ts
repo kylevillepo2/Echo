@@ -101,6 +101,8 @@ export interface SimilarApp {
 
 export interface AppNode {
 	id: string;
+	/** Canonical ID of an available topic-insights-v1 export, independent of demo IDs. */
+	insightsId?: string;
 	name: string;
 	/** category cluster this app belongs to */
 	categoryId: string;

@@ -140,7 +140,13 @@
 					not raw keyword counts.
 				</p>
 				<p>
-					When you connect a live API, all numbers and copy come from your backend. The UI reads
+					Where topic-insights-v1 exports are available, Overview and Reviews use the exported counts,
+					topics, monthly shares and representative snippets instead of demo analytics. The exports do
+					not include switch flows, install impacts, or individual review dates and ratings. Topic matches
+					are machine-generated, not human verified; topics are app-specific and may overlap.
+				</p>
+				<p>
+					Other app data can come from a live API or the seeded demo. The UI reads
 					<code>meta.embeddingDim</code> and <code>meta.embeddingModel</code> for the status bar.
 				</p>
 			</div>

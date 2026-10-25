@@ -13,7 +13,8 @@
 		<span class="sep"></span>
 		<span><b class="num">{meta?.categoryCount ?? '—'}</b> categories</span>
 		<span><b class="num">{meta?.appCount ?? '—'}</b> apps</span>
-		<span><b class="num">{fmtCount(meta?.reviewCount ?? 0)}</b> reviews indexed</span>
+		<span><b class="num">{fmtCount(meta?.reviewCount ?? 0)}</b> reviews{studio.insightCatalog.length ? '' : ' indexed'}</span>
+		{#if studio.insightCatalog.length}<span class="exported"><b class="num">{studio.insightCatalog.length}</b> app exports</span>{/if}
 		<span class="hide-sm"><b class="num">{fmtCount(studio.visibleRatePerDay)}</b> downloads/day</span>
 		<span class="sep hide-sm"></span>
 		<span class="hide-sm">
@@ -80,6 +81,7 @@
 		font-weight: 500;
 		color: var(--muted);
 	}
+	.exported { color: var(--cyan); }
 	.mode {
 		display: inline-flex;
 		align-items: center;
