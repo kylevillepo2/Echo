@@ -83,6 +83,148 @@ class FakeClient:
 
 
 class AsyncExtractionTests(unittest.TestCase):
+    def test_request_schema_only_allows_current_batch_ids(self):
+        captured = []
+
+        class SchemaClient(FakeClient):
+            async def create(self, **request):
+                captured.append(request['text']['format']['schema'])
+                return await super().create(**request)
+
+        rows = [review(i) for i in range(4)]
+        _, _, _, saved, _ = self.run_mock(rows, SchemaClient(), options(batch_size=2))
+        self.assertEqual(len(saved), 4)
+        enums = [s['properties']['reviews']['items']['properties']['review_key']['enum']
+                 for s in captured]
+        self.assertEqual(enums, [['0:0', '0:1'], ['0:2', '0:3']])
+        self.assertNotIn('enum', extract.SCHEMA['properties']['reviews']['items']['properties']['review_key'])
+        repair = extract.schema_for_keys(['0:2'], repair=True)
+        self.assertEqual(repair['properties']['repairs']['items']['properties']['review_key']['enum'], ['0:2'])
+        self.assertNotIn('enum', extract.REPAIR_SCHEMA['properties']['repairs']['items']['properties']['review_key'])
+
+    def test_invalid_ids_split_to_singletons_and_all_usage_is_checkpointed(self):
+        class WrongBatchKey(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                if len(json.loads(request['input'])) > 1:
+                    raw.body['reviews'][0]['review_key'] = '4:100000000'
+                return raw
+
+        client = WrongBatchKey()
+        rows = [review(i) for i in range(4)]
+        outcomes, metrics, budget, saved, calls = self.run_mock(
+            rows, client, options(batch_size=4, retries=3))
+        self.assertEqual(set(saved), {r['review_key'] for r in rows})
+        self.assertNotIn('4:100000000', saved)
+        self.assertEqual(outcomes[0][0], 'done')
+        self.assertEqual(metrics.batch_splits, 3)
+        self.assertEqual(metrics.validation_failures, 3)
+        self.assertEqual(calls, budget.used)
+        self.assertEqual(calls, 7)  # 4 -> 2+2 -> individual reviews; no repeated bad full batch.
+        self.assertEqual(metrics.input_tokens, 700)
+
+    def test_bad_singleton_stays_pending_without_stopping_other_reviews(self):
+        class OneBadReview(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                if '0:0' in [r['review_key'] for r in json.loads(request['input'])]:
+                    raw.body['reviews'][0]['review_key'] = 'invented'
+                return raw
+
+        rows = [review(i) for i in range(4)]
+        client = OneBadReview()
+        outcomes, metrics, budget, saved, calls = self.run_mock(
+            rows, client, options(batch_size=2, concurrency=1, retries=0))
+        self.assertEqual(set(saved), {'0:1', '0:2', '0:3'})
+        errors = [o for o in outcomes if o[0] == 'error']
+        self.assertEqual(errors[0][1], ['0:0'])
+        self.assertEqual(calls, len(client.calls))
+        self.assertEqual(calls, budget.used)
+
+    def test_recovery_respects_request_budget_and_does_not_fake_empty_labels(self):
+        class WrongKey(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                raw.body['reviews'][0]['review_key'] = 'wrong'
+                return raw
+
+        client = WrongKey()
+        outcomes, metrics, budget, saved, calls = self.run_mock(
+            [review(0), review(1)], client, options(batch_size=2, max_requests=1))
+        self.assertEqual(saved, {})
+        self.assertEqual(len(client.calls), 1)
+        self.assertEqual(calls, 1)
+        self.assertEqual(outcomes[0][0], 'request_limit')
+        self.assertEqual(set(outcomes[0][1]), {'0:0', '0:1'})
+
+    def test_failed_response_tokens_are_present_in_reloaded_log(self):
+        class InvalidUntilSingle(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                if len(raw.body['reviews']) > 1:
+                    raw.body['reviews'] = []
+                return raw
+
+        with tempfile.TemporaryDirectory() as td:
+            log = Path(td) / 'log.jsonl'
+            saved = {}
+            metrics = extract.ThroughputMetrics(2, 0)
+            with contextlib.redirect_stdout(io.StringIO()):
+                asyncio.run(extract.run_batches_async(InvalidUntilSingle(), [review(0), review(1)],
+                            options(batch_size=2), log, saved, metrics))
+            loaded, calls, tokens_in, tokens_out = extract.load_log(log)
+            self.assertEqual(set(loaded), {'0:0', '0:1'})
+            self.assertEqual((calls, tokens_in, tokens_out), (3, 300, 120))
+
+    def test_malformed_json_recovers_by_splitting(self):
+        class BadJSON(FakeRaw):
+            async def parse(self):
+                response = await super().parse()
+                response.output_text = 'not json'
+                return response
+
+        class MalformedBatch(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                return BadJSON(raw.body) if len(raw.body['reviews']) > 1 else raw
+
+        outcomes, _, _, saved, calls = self.run_mock([review(0), review(1)], MalformedBatch(), options(batch_size=2))
+        self.assertEqual(len(saved), 2)
+        self.assertEqual(calls, 3)
+        self.assertEqual(outcomes[0][0], 'done')
+
+    def test_singleton_validation_retries_are_bounded(self):
+        class AlwaysWrong(FakeClient):
+            async def create(self, **request):
+                raw = await super().create(**request)
+                raw.body['reviews'][0]['review_key'] = 'wrong'
+                return raw
+
+        client = AlwaysWrong()
+        outcomes, metrics, _, saved, calls = self.run_mock([review(0)], client, options(retries=1))
+        self.assertEqual(saved, {})
+        self.assertEqual(len(client.calls), 2)
+        self.assertEqual(calls, 2)
+        self.assertEqual(metrics.batch_splits, 0)
+        self.assertEqual(outcomes[0][0], 'error')
+
+    def test_legacy_checkpoint_and_new_usage_records_can_be_resumed_together(self):
+        with tempfile.TemporaryDirectory() as td:
+            log = Path(td) / 'log.jsonl'
+            old = {'extraction_schema_version': '2', 'records': [{
+                'review_key': '0:0', 'aspects': [], 'behavioral_signals': [], 'validation_issues': []}],
+                'request_count': 1, 'input_tokens': 11, 'output_tokens': 7}
+            log.write_text(json.dumps(old) + '\n')
+            saved, _, _, _ = extract.load_log(log)
+            client = FakeClient()
+            metrics = extract.ThroughputMetrics(2, 1)
+            with contextlib.redirect_stdout(io.StringIO()):
+                asyncio.run(extract.run_batches_async(client, [review(1)], options(), log, saved, metrics))
+            saved, calls, tokens_in, tokens_out = extract.load_log(log)
+            self.assertEqual(set(saved), {'0:0', '0:1'})
+            self.assertEqual(client.calls, [['0:1']])
+            self.assertEqual((calls, tokens_in, tokens_out), (2, 111, 47))
+
     def run_mock(self, rows, client, args):
         with tempfile.TemporaryDirectory() as td:
             log = Path(td) / 'extraction_log.jsonl'

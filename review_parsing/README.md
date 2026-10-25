@@ -46,6 +46,38 @@ The current Step 8 CLI defaults to `--strategy global`: it sends compact profile
 
 The `.env` file and generated review data are ignored by Git. The embedding and clustering stages run locally; aspect extraction and topic refinement make paid OpenAI API calls.
 
+### Automatic extraction recovery
+
+The extractor constrains `review_key` to the exact IDs in each request's JSON
+schema. Local validation still rejects unknown IDs; it never guesses an ID or
+records a failed review as having zero aspects. If structured output is invalid,
+multi-review batches are automatically halved until individual reviews can be
+retried. This handles unexpected IDs, malformed JSON, and incomplete model output
+without asking the operator to change batch size. Valid partial responses retain
+their existing checkpoint behavior and retry only missing reviews.
+
+Single-review retries remain bounded by `--retries` and `--max-retry-seconds`.
+`--max-requests` still caps requests across all retries and splits. A persistently
+invalid single review stays pending while unrelated batches finish; the extractor
+then exits with a failure rather than claiming full coverage. Authentication,
+billing, and non-retryable API errors are not handled by splitting batches.
+
+Existing v2 checkpoints remain compatible: the extraction model, semantic prompt,
+record schema, and configuration identity are unchanged. Request envelopes now
+carry a separate `request_policy_version` for traceability. Each attempted API
+call has a usage-only checkpoint entry, including rejected responses, followed by
+separate validated review records. This prevents double counting and retains
+reported tokens for failed outputs. Network failures may not provide token usage;
+the logs cannot infer unreported billing. Earlier logs retain their original totals.
+
+Rerun the original pipeline command to resume; no manual batch-size adjustment is
+required for this recovery. Restart a stopped process to load updated code. A
+running process continues using the code it loaded when it started. Do not delete
+the run folder, change extraction models, or regenerate completed review embeddings
+to recover from a response-format error. Before suggesting commands for existing
+app runs, inspect their actual layout and checkpoint configuration so completed
+outputs are reused where supported.
+
 ## Individual stage commands
 
 Run these commands from the `review_parsing/` directory. Replace the CSV path with your copy of `app-store-reviews.csv`.

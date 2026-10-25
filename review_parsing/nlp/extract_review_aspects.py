@@ -9,6 +9,7 @@ inputs without making API requests or writing output files.
 
 import argparse
 import asyncio
+import copy
 import csv
 import hashlib
 import inspect
@@ -26,6 +27,12 @@ from pathlib import Path
 
 EXTRACTION_SCHEMA_VERSION = '2'
 PROMPT_VERSION = 'product_aspects_v3'
+REQUEST_POLICY_VERSION = 'batch_ids_adaptive_v1'
+
+
+class ResponseValidationError(ValueError):
+    """Model output failed validation; distinct from transport or billing errors."""
+
 KEY_PLACEHOLDERS = {'your-api-key', 'sk-proj-your-full-key'}
 CATEGORIES = ['bug', 'performance', 'usability', 'feature_request',
               'feature_removal', 'pricing', 'billing', 'ads', 'account_access',
@@ -158,6 +165,17 @@ review_text or review_title. Do not invent text, infer causes, add generic
 sentiment, or re-extract already accepted aspects. If an aspect cannot be
 repaired from the review, omit it from repairs. Preserve its review_key and
 original_index. Keep category, polarity, and signal_type distinct."""
+
+
+def schema_for_keys(keys, repair=False):
+    """Constrain model-generated IDs to this request without mutating globals."""
+    keys = list(dict.fromkeys(keys))
+    if not keys or any(not isinstance(key, str) or not key for key in keys):
+        raise ValueError('Request must contain nonempty review keys')
+    schema = copy.deepcopy(REPAIR_SCHEMA if repair else SCHEMA)
+    array = 'repairs' if repair else 'reviews'
+    schema['properties'][array]['items']['properties']['review_key']['enum'] = keys
+    return schema
 
 REVIEW_COLUMNS = ['review_key', 'cluster_id', 'feedback_id', 'app_name', 'text',
                   'title', 'stars', 'feedback_date', 'data_source', 'app_versions',
@@ -338,7 +356,7 @@ def request_aspects(client, model, rows, max_chars):
         instructions=SYSTEM,
         input=json.dumps(payload, ensure_ascii=False),
         text={'format': {'type': 'json_schema', 'name': 'review_aspects',
-                         'schema': SCHEMA, 'strict': True}},
+                         'schema': schema_for_keys(row['review_key'] for row in rows), 'strict': True}},
     )
     if getattr(response, 'status', None) != 'completed' or not response.output_text:
         raise RuntimeError(f'Model did not return completed structured output: {response.status}')
@@ -372,7 +390,7 @@ def request_aspect_repairs(client, model, rows, candidates, max_chars):
         model=model, instructions=REPAIR_SYSTEM,
         input=json.dumps(payload, ensure_ascii=False),
         text={'format': {'type': 'json_schema', 'name': 'aspect_repairs',
-                         'schema': REPAIR_SCHEMA, 'strict': True}},
+                         'schema': schema_for_keys(by_key, repair=True), 'strict': True}},
     )
     if getattr(response, 'status', None) != 'completed' or not response.output_text:
         raise RuntimeError(f'Model did not return completed repair output: {response.status}')
@@ -838,6 +856,9 @@ class ThroughputMetrics:
         self.retried = 0
         self.input_tokens = 0
         self.output_tokens = 0
+        self.validation_failures = 0
+        self.batch_splits = 0
+        self.checkpoint_queue = None
         self.input_price = input_price
         self.output_price = output_price
 
@@ -853,13 +874,14 @@ class ThroughputMetrics:
 
 
 async def _api_call(client, request, parser, estimated_tokens, governor, budget,
-                    metrics, retries, max_retry_seconds):
+                    metrics, retries, max_retry_seconds, split_on_invalid=False):
     started = time.monotonic()
     attempt = 0
     while True:
         await budget.take()
         await governor.acquire(estimated_tokens)
         metrics.inflight += 1
+        input_tokens = output_tokens = 0
         try:
             raw = await client.responses.with_raw_response.create(**request)
             # The SDK's legacy raw-response wrapper parses synchronously in
@@ -875,23 +897,37 @@ async def _api_call(client, request, parser, estimated_tokens, governor, budget,
             metrics.output_tokens += output_tokens
             await governor.observe(headers, estimated_tokens, input_tokens + output_tokens)
             if getattr(response, 'status', None) != 'completed' or not response.output_text:
-                raise ValueError('Model did not return completed structured output')
-            parsed = parser(json.loads(response.output_text))
+                raise ResponseValidationError('Model did not return completed structured output')
+            try:
+                parsed = parser(json.loads(response.output_text))
+            except ValueError as exc:
+                raise ResponseValidationError(str(exc)) from exc
             metrics.successful += 1
             return parsed, usage, attempt + 1
         except Exception as exc:
             metrics.failed += 1
+            if isinstance(exc, ResponseValidationError):
+                metrics.validation_failures += 1
             delay_hint = _retry_after(exc)
             delay = max(delay_hint or 0.0, min(2 ** attempt, 30) + random.uniform(0, 0.5))
             if getattr(exc, 'status_code', None) == 429:
                 await governor.rate_limited(delay)
-            if (not _retryable(exc) or attempt >= retries or
+            if ((split_on_invalid and isinstance(exc, ResponseValidationError)) or
+                    not _retryable(exc) or attempt >= retries or
                     time.monotonic() - started + delay > max_retry_seconds):
                 raise
             metrics.retried += 1
         finally:
             metrics.inflight -= 1
             await governor.release()
+            if metrics.checkpoint_queue is not None:
+                # Record usage even if the output was rejected or a request failed.
+                # Records themselves are saved separately after evidence checks.
+                await metrics.checkpoint_queue.put({
+                    'extraction_schema_version': EXTRACTION_SCHEMA_VERSION,
+                    'request_policy_version': REQUEST_POLICY_VERSION,
+                    'records': [], 'request_count': 1,
+                    'input_tokens': input_tokens, 'output_tokens': output_tokens})
         attempt += 1
         await asyncio.sleep(delay)
 
@@ -907,11 +943,12 @@ async def async_request_aspects(client, model, rows, max_chars, governor, budget
     input_text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
     request = {'model': model, 'instructions': SYSTEM, 'input': input_text,
                'text': {'format': {'type': 'json_schema', 'name': 'review_aspects',
-                                   'schema': SCHEMA, 'strict': True}}}
+                                   'schema': schema_for_keys(row['review_key'] for row in rows),
+                                   'strict': True}}}
     expected = {row['review_key'] for row in rows}
     return await _api_call(client, request, lambda body: normalize_partial_json(body, expected),
                            _estimate_tokens(input_text, SYSTEM, len(rows)), governor, budget,
-                           metrics, retries, max_retry_seconds)
+                           metrics, retries, max_retry_seconds, split_on_invalid=len(rows) > 1)
 
 
 async def async_request_repairs(client, model, rows, candidates, max_chars,
@@ -926,7 +963,7 @@ async def async_request_repairs(client, model, rows, candidates, max_chars,
     input_text = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
     request = {'model': model, 'instructions': REPAIR_SYSTEM, 'input': input_text,
                'text': {'format': {'type': 'json_schema', 'name': 'aspect_repairs',
-                                   'schema': REPAIR_SCHEMA, 'strict': True}}}
+                                   'schema': schema_for_keys(by_key, repair=True), 'strict': True}}}
     expected = {(item['review_key'], item['original_index']) for item in candidates}
 
     def parse_repairs(body):
@@ -1046,6 +1083,7 @@ def export_results(dest, selected, saved, app, model, calls, tokens_in, tokens_o
     atomic_json(dest / 'summary.json', {
         'extraction_schema_version': EXTRACTION_SCHEMA_VERSION,
         'app': app, 'model': model, 'sampled_unique_reviews': len(selected),
+        'request_policy_version': REQUEST_POLICY_VERSION,
         'processed_unique_reviews': len(meta_rows), 'aspect_rows': len(aspect_rows),
         'behavioral_signal_rows': len(behavior_rows),
         'validation_issue_rows': len(issue_rows),
@@ -1061,6 +1099,7 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
     governor = RateGovernor(args.concurrency, args.rpm, args.tpm)
     budget = RequestBudget(args.max_requests)
     queue = asyncio.Queue()
+    metrics.checkpoint_queue = queue
     stop = asyncio.Event()
 
     async def writer():
@@ -1083,7 +1122,25 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
                         'validation_issues': record['validation_issues'],
                     }
                 metrics.completed += len(records)
-                metrics.report()
+                if records:
+                    metrics.report()
+
+    async def split_batch(rows):
+        """Isolate output failures with bounded halving, down to single reviews."""
+        metrics.batch_splits += 1
+        metrics.retried += 1
+        middle = len(rows) // 2
+        print(f'Invalid batch output; automatically splitting {len(rows)} reviews '
+              f'into {middle} + {len(rows) - middle}.', flush=True)
+        outcomes = [await worker(rows[:middle]), await worker(rows[middle:])]
+        errors = [outcome for outcome in outcomes if outcome[0] == 'error']
+        if errors:
+            return ('error', [key for outcome in outcomes if outcome[0] != 'done'
+                              for key in outcome[1]], errors[0][2])
+        incomplete = [outcome for outcome in outcomes if outcome[0] != 'done']
+        if incomplete:
+            return (incomplete[0][0], [key for outcome in incomplete for key in outcome[1]])
+        return ('done', [])
 
     async def worker(batch):
         remaining = list(batch)
@@ -1095,6 +1152,12 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
                     budget, metrics, args.retries, args.max_retry_seconds)
             except RequestBudgetExhausted:
                 return ('request_limit', [row['review_key'] for row in remaining])
+            except ResponseValidationError as exc:
+                if len(remaining) > 1:
+                    return await split_batch(remaining)
+                # A persistent bad single review must remain pending, but should
+                # not cancel otherwise healthy batches or save an empty label.
+                return ('error', [row['review_key'] for row in remaining], exc)
             except Exception as exc:
                 stop.set()
                 return ('error', [row['review_key'] for row in remaining], exc)
@@ -1116,9 +1179,6 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
                                'recovered_local'))
                 processed[key] = reviewed
                 candidates.extend(repair_candidates(row, extracted[key], reviewed))
-            input_tokens = getattr(usage, 'input_tokens', 0) or 0
-            output_tokens = getattr(usage, 'output_tokens', 0) or 0
-            request_count = attempts
             if args.repair_invalid and candidates:
                 try:
                     repairs, repair_usage, repair_attempts = await async_request_repairs(
@@ -1130,15 +1190,11 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
                             _issue('repair_skipped_request_limit', 'Request cap reached',
                                    original_index=candidate['original_index']))
                 except Exception as exc:
-                    request_count += 1
                     for candidate in candidates:
                         processed[candidate['review_key']]['validation_issues'].append(
                             _issue('repair_request_failed', type(exc).__name__,
                                    original_index=candidate['original_index']))
                 else:
-                    request_count += repair_attempts
-                    input_tokens += getattr(repair_usage, 'input_tokens', 0) or 0
-                    output_tokens += getattr(repair_usage, 'output_tokens', 0) or 0
                     by_key = defaultdict(list)
                     for candidate in candidates:
                         by_key[candidate['review_key']].append(candidate)
@@ -1151,14 +1207,16 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
             records = [{'review_key': row['review_key'], **processed[row['review_key']]}
                        for row in returned]
             await queue.put({'extraction_schema_version': EXTRACTION_SCHEMA_VERSION,
-                             'records': records, 'input_tokens': input_tokens,
-                             'output_tokens': output_tokens, 'request_count': request_count})
+                             'request_policy_version': REQUEST_POLICY_VERSION,
+                             'records': records, 'input_tokens': 0,
+                             'output_tokens': 0, 'request_count': 0})
             remaining = [row for row in remaining if row['review_key'] not in extracted]
             if remaining:
                 missing_rounds += 1
                 metrics.retried += 1
                 if missing_rounds > args.retries:
-                    stop.set()
+                    if len(remaining) > 1:
+                        return await split_batch(remaining)
                     return ('error', [row['review_key'] for row in remaining],
                             RuntimeError('API repeatedly omitted requested review keys'))
         return ('stopped', [row['review_key'] for row in remaining]) if remaining else ('done', [])
@@ -1170,6 +1228,7 @@ async def run_batches_async(client, pending, args, log_path, saved, metrics):
     finally:
         await queue.put(None)
         await asyncio.shield(writer_task)
+        metrics.checkpoint_queue = None
     return outcomes, metrics, budget
 
 
@@ -1276,6 +1335,8 @@ def main():
                   'concurrency': args.concurrency, 'batch_size': args.batch_size,
                   'api_successes': metrics.successful, 'api_failures': metrics.failed,
                   'api_retries': metrics.retried, 'api_requests_attempted': budget.used,
+                  'validation_failures': metrics.validation_failures,
+                  'automatic_batch_splits': metrics.batch_splits,
                   'api_error_rate': round(metrics.failed / max(1, metrics.successful + metrics.failed), 4),
                   'batch_error_rate': round(sum(outcome[0] == 'error' for outcome in outcomes) /
                                             max(1, len(outcomes)), 4),
@@ -1286,6 +1347,9 @@ def main():
         atomic_json(dest / 'benchmark_report.json', report)
         print('Benchmark:', json.dumps(report, indent=2), flush=True)
     errors = [outcome for outcome in outcomes if outcome[0] == 'error']
+    if metrics.batch_splits or metrics.validation_failures:
+        print(f'Automatic recovery: {metrics.batch_splits} batch split(s); '
+              f'{metrics.validation_failures} invalid response(s).', flush=True)
     if errors:
         raise RuntimeError(f'{len(errors)} batch(es) failed; completed work was saved. '
                            f'First missing keys: {errors[0][1]}. Cause: {errors[0][2]}')
