@@ -2,6 +2,8 @@
 
 **Mapping where app users say they go when they leave, from 5.5 million app-store reviews.**
 
+**[Try Echo live →](https://unwrapathon.vercel.app)** — hosted on Vercel. No installation or API key required.
+
 Built at **Unwrapathon 2026** by a team of four. Echo turns unstructured app reviews into an interactive map of competitive switching: which apps reviewers say they left, which alternatives they chose, why they moved, and how those reports changed month to month.
 
 A low rating tells you someone is unhappy. Echo helps answer the next question: **where did they go, and what pushed them there?** Examples include reviewers reporting moves from Uber to Lyft over wait times and from Chrome to Brave over ads. Each connection links back to review evidence.
@@ -14,7 +16,7 @@ A low rating tells you someone is unhappy. Echo helps answer the next question: 
 - **Category drill-downs:** focus a category and explore its apps and competing alternatives.
 - **App topics:** inspect exported topic shares, rating distributions, monthly coverage, and representative reviews where topic data is available.
 
-The interface runs locally from bundled exports. No API key or Python pipeline is required to explore it.
+The hosted app loads bundled data exports in your browser. No API key or Python pipeline is required to explore it.
 
 ## Project at a glance
 
@@ -31,16 +33,9 @@ The interface runs locally from bundled exports. No API key or Python pipeline i
 
 Runtime and cost describe the team's hackathon run, not a benchmark or a current API price estimate. The model labels candidate reviews that mention competitors; it does **not** send the entire 5.5-million-review corpus to an LLM.
 
-## Run the app
+## Explore Echo
 
-Use Node.js 24, the version used during development, and npm. From the repository root:
-
-```sh
-npm install
-npm run dev
-```
-
-Open <http://localhost:5173>.
+Open **[unwrapathon.vercel.app](https://unwrapathon.vercel.app)** to use the deployed app.
 
 Select a category to focus the map, select an app to inspect its connections and available topic insights, and select a connection to read its supporting evidence. The category flow workspace provides period and relationship-layer controls.
 
@@ -122,7 +117,18 @@ The workflow combined agent implementation with human engineering decisions:
 
 The reported batch size describes the optimized hackathon run; current CLI defaults may differ.
 
-## Development checks
+## Local development
+
+To run your own development copy, use Node.js 24, the version used during development, and npm. From the repository root:
+
+```sh
+npm install
+npm run dev
+```
+
+Open <http://localhost:5173>. This is the local development server; the hosted app is available at [unwrapathon.vercel.app](https://unwrapathon.vercel.app).
+
+### Development checks
 
 From the repository root:
 
