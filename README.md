@@ -1,146 +1,193 @@
-# Unwrap
+# Echo
 
-**Review intelligence for app stores.** Unwrap turns app-store review corpora into a semantic map: apps are grouped into category clusters, sized by review volume, and scored by user reception. From there you can inspect an app, read its reviews, compare similar apps, or search the whole corpus by meaning.
+**Mapping where app users say they go when they leave, from 5.5 million app-store reviews.**
 
-Built for the hackathon demo with **SvelteKit 3 + Svelte 5 runes + TypeScript + Vite 8**. All charts, the force layout, and the design system are custom — no chart or UI component libraries.
+Built at **Unwrapathon 2026** by a team of four. Echo turns unstructured app reviews into an interactive map of competitive switching: which apps reviewers say they left, which alternatives they chose, why they moved, and how those reports changed month to month.
 
----
+A low rating tells you someone is unhappy. Echo helps answer the next question: **where did they go, and what pushed them there?** Examples include reviewers reporting moves from Uber to Lyft over wait times and from Chrome to Brave over ads. Each connection links back to review evidence.
 
-## Demo corpus
+## What you can explore
 
-The offline demo is seeded from the supplied app export:
+- **Competitive switching:** inspect directed connections between apps, with separate layers for reported switches/returns, switching intent, and preference.
+- **Reasons and evidence:** inspect the reasons behind a connection and the original review excerpts supporting it.
+- **Changes over time:** filter monthly flows and compare review-volume-normalized switching signals.
+- **Category drill-downs:** focus a category and explore its apps and competing alternatives.
+- **App topics:** inspect exported topic shares, rating distributions, monthly coverage, and representative reviews where topic data is available.
 
-| | |
-|---|---|
-| Apps | **60** |
-| Category clusters | **12** |
-| Indexed reviews | **5,529,110** |
-| Sampled reviews available in the UI | **9,000** |
-| Embedding model | `text-embedding-3-small` · **768 dimensions** |
+The interface runs locally from bundled exports. No API key or Python pipeline is required to explore it.
 
-Category clusters are semantic groups, **not publishers**:
+## Project at a glance
 
-`Social & Community` · `Entertainment` · `Learning & Reading` · `Shopping & Rewards` · `Finance & Banking` · `Health & Family` · `Photo & Video` · `Dating` · `Travel & Delivery` · `Games` · `Work & Productivity` · `Utilities & Browsers`
+| Measure | Hackathon scope / result |
+| --- | --- |
+| Source corpus | Approximately 5.5 million app-store reviews |
+| Frontend app catalog | 60 apps across 12 category clusters |
+| Initial music analysis | 12,380 candidate reviews |
+| Expanded labeling run | Approximately 83,000 candidate reviews |
+| Reported labeling runtime | Reduced from about 10 hours to under 1 hour |
+| Reported expanded-run cost | $10.61, with zero failed requests |
+| Human validation | 60 independently labeled reviews across rides, browsers, and payments |
+| Direction + relationship-type agreement | 50/60, or 83% (95% Wilson interval: 72–91%) |
 
-Review volumes and app names come from the export. Ratings, platform splits, trends, themes, and similarity edges are plausible demo metadata generated locally so the interface can be explored without a backend.
+Runtime and cost describe the team's hackathon run, not a benchmark or a current API price estimate. The model labels candidate reviews that mention competitors; it does **not** send the entire 5.5-million-review corpus to an LLM.
 
----
+## Run the app
 
-## Quick start
+Use Node.js 24, the version used during development, and npm. From the repository root:
 
 ```sh
 npm install
 npm run dev
 ```
 
-Open <http://localhost:5173>. The app starts in **Demo** mode, so no backend is required.
+Open <http://localhost:5173>.
+
+Select a category to focus the map, select an app to inspect its connections and available topic insights, and select a connection to read its supporting evidence. The category flow workspace provides period and relationship-layer controls.
+
+Useful shortcuts:
+
+| Shortcut | Action |
+| --- | --- |
+| `⌘K` / `Ctrl+K` | Open search |
+| `/` | Open search when not typing in a field |
+| `Esc` | Close overlays or clear the current selection/focus |
+| `I` | Toggle the inspector |
+
+Some interface labels and internal filenames still use the original hackathon name, **Unwrap**.
+
+## How the switching pipeline works
+
+1. **Find candidates.** Scan the review corpus for competitor names using category-specific app aliases. Reviews with no relevant competitor mention do not need LLM labeling.
+2. **Label mentions.** An LLM identifies the relationship to each competitor, reasons, and a verbatim evidence quote. Labels distinguish actual switches, returns, intent, preferences, and comparisons that should not create an arrow.
+3. **Validate evidence.** Reject extracted labels whose supporting quote cannot be matched to the source review, with normalization for typography such as curly apostrophes.
+4. **Build graph edges in code.** Deterministic rules convert labels into directions and relationship types. Actual switches, threatened switches, and preferences remain distinct.
+5. **Apply reporting rules.** Separate occupational roles where relevant, exclude configured forced migrations, deduplicate reports, and disambiguate markets such as Uber rides versus Uber Eats.
+6. **Aggregate and export.** Produce monthly edges, rates per 10,000 source-app reviews, reasons, and representative evidence for the frontend.
+
+The LLM labels the language; code decides how those labels become graph data. This makes the transformation inspectable and reproducible from saved labels without another model call.
+
+### Reviewed apps versus mentioned competitors
+
+The 60-app catalog is not the size of the competitor-name dictionary or the switching graph. Competitors outside the reviewed corpus can appear as graph endpoints because reviewers mention moving to or from them.
+
+For a reviewed app, we can inspect its own reviews. For a mentioned-only competitor, we see only what reviewers of other apps say about it. Those connections are useful context, but their coverage is one-sided. Expanding the alias dictionary adds possible competitors; it does not add those competitors' own review corpora.
+
+### What the numbers mean
+
+Echo measures **switching reports in reviews**, not verified user migrations, churn, market share, or user growth. A reviewer can describe an intention or preference without actually switching, and review authors are not a representative sample of all users.
+
+Monthly rates use the volume of reviews from the app whose corpus supplied the report. The switching-balance score uses only eligible actual switch/return reports between apps that are both in the dataset:
+
+```text
+balance = (incoming reports - outgoing reports)
+          / (incoming reports + outgoing reports)
+```
+
+Outside competitors remain visible context but do not contribute to this balance. Scores are null when there are no eligible reports; fewer than 20 eligible reports is marked as insufficient evidence. See the [network data documentation](scripts/network/README.md) for eligibility rules, buckets, and denominator details.
+
+## Validation
+
+The team created a blind 60-review validation set covering rides, browsers, and payments. Human labels were completed before comparing them with the model's output.
+
+| Metric | Agreement | 95% Wilson interval |
+| --- | --- | --- |
+| Exact relationship label | 49/60 (82%) | 70–89% |
+| Direction, including no-edge decisions | 51/60 (85%) | 74–92% |
+| Edge versus no edge | 53/60 (88%) | 78–94% |
+| Direction + relationship type | 50/60 (83%) | 72–91% |
+
+Two cases reversed the direction of an edge. Other disagreements included whether an edge should exist or whether the statement described an actual switch, intent, or preference. The 83% result is **direction plus type agreement**, not direction-only accuracy.
+
+This is a small, selected validation set across three domains, not an estimate of performance across every app or category.
+
+Reproduce the scoring from the repository root:
 
 ```sh
-npm run check     # svelte-check (TypeScript + Svelte diagnostics)
-npm run build     # production build
-npm run preview   # preview the build
+python3 results/switching/validation/score_validation.py
 ```
 
-Node 20+ is recommended. The project was developed on Node 24.
+See the [validation instructions](results/switching/validation/README.md) for the label definitions and blind-labeling procedure.
 
-The Python review processing pipeline is in [`review_parsing/`](review_parsing/README.md). Its setup, input requirements, and one-app command are documented there.
+## AI-assisted engineering workflow
 
----
+Kyle built the switching pipeline and integrated it into a teammate's existing SvelteKit/TypeScript frontend, using Claude Code and Codex as coding agents. The four-person team also contributed the app interface, topic-analysis pipeline, and supporting analytics.
 
-## Using the interface
+The workflow combined agent implementation with human engineering decisions:
 
-| Action | Result |
-|---|---|
-| Click a **category hull** | Focus that cluster and narrow the map to its apps |
-| Click **All category clusters** | Clear the focus and return to the overview |
-| Click an **app node** | Open its overview, reviews, and similar apps in the inspector |
-| `Esc` | Close a dialog, or clear the current app selection |
-| Drag a node | Pin it; double-click to release it |
-| Scroll / drag | Zoom / pan the map |
-| `⌘K` / `Ctrl+K` | Search apps, categories, and reviews by meaning |
-| `Themes` tab | Corpus-wide positive and negative theme ledger |
-| `Category` / `Reception` / `Platform` | Recolour the map |
-| **Data source** (top bar) | Switch between the demo corpus and a live API |
+- **Bounded parallel tasks:** separate agents handled pipeline work, stats, and frontend integration, with folder boundaries and shared API budgets.
+- **Pilots before large runs:** a 200-review pilot compared two models; disagreement review informed model selection before spending on the larger run.
+- **Review and debugging:** output inspection caught valid quotes being dropped because of curly apostrophes, and substring matching that found “ally bank” inside “especially banking.”
+- **Performance and recovery:** batching 10 reviews per request and increasing concurrency reduced the reported run from about 10 hours to under an hour. Saved progress supports resuming interrupted runs.
+- **Integration checks:** export tests check filtering, deduplication, and agreement between stats and frontend data. Feature branches, pull requests, and conflict resolution supported work across four contributors.
 
-The sidebar lists every category with its app count and average reception, and expands to show the apps in that category. On narrow screens the sidebar and inspector collapse into drawers.
+The reported batch size describes the optimized hackathon run; current CLI defaults may differ.
 
----
+## Development checks
 
-## Live backend
-
-Click **Data source → Live API**, enter a base URL, and connect. You can also set a default base URL for first load:
+From the repository root:
 
 ```sh
-cp .env.example .env
-# edit VITE_API_BASE
+npm run check
+node --test scripts/*.test.mjs
+python3 -m unittest discover -s scripts/network -p 'test_*.py'
+npm run build
 ```
 
-```dotenv
-VITE_API_BASE=http://localhost:8000/api
+Preview the production build with `npm run preview`. Topic export discovery and validation are documented in [INSIGHTS.md](INSIGHTS.md).
+
+## Re-running the data pipeline
+
+Large raw inputs and intermediate labeling outputs are not included in Git. The bundled frontend exports are enough to run the app, but a full data rebuild requires the original review CSV, saved music-stage labels, and the relevant intermediate outputs.
+
+The switching scripts expect this layout:
+
+```text
+Unwrapathon/
+├── .env                         # OPENAI_API_KEY; never commit
+├── data/
+│   └── reviews-clean.csv
+├── out/                         # Candidate, label, and aggregate outputs
+└── unwrapathon/                 # This repository
 ```
 
-`VITE_API_BASE` is only read at startup. A connection made through the dialog is remembered in `localStorage` and takes precedence on later visits. Switch back to **Demo** in the same dialog to clear it.
+From the **parent workspace directory**, build candidates without making model calls:
 
-The UI only needs four endpoints. The full request/response contract is in [`API.md`](./API.md):
-
-```
-GET /health
-GET /graph
-GET /apps/:appId/reviews
-GET /search
+```sh
+python3 unwrapathon/pipeline/switching/run_all_switches.py candidates
+python3 unwrapathon/pipeline/switching/run_all_switches.py report
 ```
 
-The HTTP adapter lives in [`src/lib/api/http.ts`](src/lib/api/http.ts). If your routes differ, change that file only — the rest of the UI talks to the `UnwrapApi` interface in [`src/lib/api/types.ts`](src/lib/api/types.ts).
+With the API key configured, run a pilot and inspect the results before labeling the full candidate set. These commands make paid API calls:
 
-CORS must allow the app origin. Requests time out after 20 seconds and non-2xx responses surface in the connection dialog and status bar.
-
----
-
-## Project structure
-
-```
-src/
-  routes/
-    +page.svelte              app shell, layout, global overlays
-    +layout.svelte            favicon + global CSS
-  lib/
-    api/
-      types.ts                UnwrapApi contract and payload types
-      index.ts                API factory, theme rollup, graph normalisation
-      mock.ts                 60-app demo corpus and generated reviews
-      http.ts                 live backend adapter
-    components/
-      GraphCanvas.svelte      force layout, category hulls, SVG map
-      Sidebar.svelte          category list and app drill-down
-      Inspector.svelte        app detail and cluster summary
-      NetworkView.svelte      graph toolbar and colour modes
-      ThemesView.svelte       positive/negative theme ledger
-      CommandPalette.svelte   app/category/review search
-      ReviewCard.svelte       review result card
-      ...                     charts, dialogs, status bar
-    state/
-      studio.svelte.ts        central runes store
-    utils/
-      force.ts                custom force simulation
-      palette.ts              category accents and reception colours
-      format.ts               number/date formatting
-  app.css                     design tokens and global styles
+```sh
+python3 unwrapathon/pipeline/switching/run_all_switches.py pilot --n 200 --batch 10 --workers 24
+python3 unwrapathon/pipeline/switching/run_all_switches.py full --batch 10 --workers 24 --max-cost 15
 ```
 
----
+`--max-cost` is an estimated budget guard checked between chunks, not a guaranteed billing cap. Coordinate concurrency when sharing an API key. The all-app pipeline reuses music labels; follow the [music pipeline instructions](pipeline/switching/README.md) if those outputs are missing. Use `--help` for the current CLI options.
 
-## Design notes
+For graph rebuilding, role labeling, correction rules, and export prerequisites, see the [pipeline overview](pipeline/README.md) and [network export guide](scripts/network/README.md). The [topic-analysis pipeline](review_parsing/README.md) has its own dependencies and execution instructions.
 
-- **Category clusters** use deterministic packed anchors, circular hulls, and per-category accents. Selecting a cluster keeps its apps in place and spreads them for readability.
-- **Reception** is a 0–100 composite of star rating, sentiment, and recent trend. It drives the ring around each node and the inspector gauge.
-- **Graph state** is kept in `$state.raw` and updated with a tick counter, so the force simulation does not pay for reactive proxies on every frame.
-- **No external UI libraries**: the design system, force simulation, sparklines, star bars, and distribution charts are all local SVG/CSS.
-- **Demo and live data share the same contract**, so every view works identically in both modes.
+## Repository guide
 
----
+| Path | Purpose |
+| --- | --- |
+| `src/lib/components/` | Interactive map, flow workspace, inspectors, and charts |
+| `src/lib/state/` | App selection, category scope, and flow state |
+| `src/lib/data/flows.json` | Bundled switching data used by the flow interface |
+| `src/lib/data/network.json` | Compact switch-report network export |
+| `static/data/insights/` | App-specific topic exports, loaded on demand |
+| `pipeline/switching/` | Candidate selection, LLM labeling, corrections, and aggregation |
+| `review_parsing/` | Review embeddings, aspect extraction, topic refinement, and aggregation |
+| `scripts/network/` | Network exporter and consistency tests |
+| `results/switching/validation/` | Human labels, model labels, and scoring script |
+| `INSIGHTS.md` | Topic export integration and data semantics |
+| `API.md` | Optional live-backend contract |
 
-## Deployment
+## Stack and data modes
 
-The project currently uses `@sveltejs/adapter-auto`. If you deploy somewhere adapter-auto does not detect, install the matching adapter (or `@sveltejs/adapter-static` for a fully static build) and update `vite.config.ts`. The app has no server-side data dependencies; all corpus access happens in the browser.
+**Frontend:** Svelte 5, SvelteKit 3, TypeScript, and Vite 8, with custom SVG/CSS charts and graph layout. **Switching pipeline:** Python standard library and OpenAI-compatible API requests. The separate topic pipeline uses embedding and clustering dependencies documented in its own setup guide.
 
-`npm run check` and `npm run build` print a `tsconfig_extends_missing` warning. The root `tsconfig.json` intentionally inlines the compiler options instead of extending `$app/tsconfig` to avoid an Oxc/Vite 8 transform crash in this setup.
+The default **Demo** mode loads bundled exports without a backend. Switching reports and available topic exports come from the processing pipelines. Uncovered app panels and parts of the map retain generated demo metadata; not every displayed rating, trend, or similarity is a measured result. Covered topic panels avoid substituting synthetic analytics for missing export fields; see [INSIGHTS.md](INSIGHTS.md).
+
+An optional **Live API** mode supports a backend through the data-source dialog or `VITE_API_BASE`. See [API.md](API.md) for the contract. Live mode requires a separately running compatible backend.
